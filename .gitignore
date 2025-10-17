@@ -1,0 +1,14 @@
+# Binaries
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log

@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

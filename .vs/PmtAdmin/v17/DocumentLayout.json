@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\pmtadmin.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\pmtadmin.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\pmtadmin.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\pmtadmin.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PmtAdmin.Api.csproj",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\PmtAdmin.Api.csproj",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\PmtAdmin.Api.csproj",
-              "RelativeToolTip": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-16T08:13:25.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PmtAdmin.Domain.csproj",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
-              "RelativeToolTip": "PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-16T08:02:30.017Z",
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\Users.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Users.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\Users.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Users.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA7wBcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T04:41:35.429Z",
               "EditorCaption": ""
             }
           ]

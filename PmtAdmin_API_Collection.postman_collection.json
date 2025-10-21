@@ -1,0 +1,135 @@
+{
+  "info": {
+    "name": "PmtAdmin Users API",
+    "description": "API collection for testing PmtAdmin User Management endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/user/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - Internal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"alice.johnson@company.com\",\n  \"password_Hash\": \"$2a$10$samplehash123\",\n  \"name\": \"Alice Johnson\",\n  \"avatar_Url\": \"https://ui-avatars.com/api/?name=Alice+Johnson\",\n  \"is_Active\": true,\n  \"is_Super_Admin\": true,\n  \"jira_Id\": \"JIRA-001\",\n  \"type\": \"Internal\",\n  \"created_By\": null\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - External",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"external.user@partner.com\",\n  \"password_Hash\": \"$2a$10$samplehash456\",\n  \"name\": \"External User\",\n  \"avatar_Url\": \"https://ui-avatars.com/api/?name=External+User\",\n  \"is_Active\": true,\n  \"is_Super_Admin\": false,\n  \"jira_Id\": \"JIRA-EXT-001\",\n  \"type\": \"External\",\n  \"created_By\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - Contractor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"contractor@freelance.com\",\n  \"name\": \"John Contractor\",\n  \"avatar_Url\": null,\n  \"is_Active\": true,\n  \"is_Super_Admin\": false,\n  \"jira_Id\": null,\n  \"type\": \"Contractor\",\n  \"created_By\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - Validation Error",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"invalid-email\",\n  \"name\": \"\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:7001",
+      "type": "string"
+    }
+  ]
+}

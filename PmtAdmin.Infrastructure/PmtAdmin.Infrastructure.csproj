@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\PmtAdmin.Domain\PmtAdmin.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,5 +9,11 @@ namespace PmtAdmin.Infrastructure.Services
         public Task<List<JiraBoard>> GetBoardsByProjectIdAsync(string baseUrl, string token, string projectId);
 
         public Task<List<JiraSprint>> GetSprintsByBoardIdAsync(string baseUrl, string token, int boardId);
+
+        public Task<List<JiraIssue>> GetIssuesByBoardIdAsync(string baseUrl, string token, string boardId);
+
+        public Task<List<JiraEpic>> GetEpicsByBoardIdAsync(string baseUrl, string token, string boardId);
+
+        public Task<List<JiraUser>> GetUsersByRoleAsync(string roleUrl, string token);
     }
 }

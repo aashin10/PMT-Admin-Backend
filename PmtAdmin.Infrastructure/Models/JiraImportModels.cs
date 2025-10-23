@@ -6,7 +6,6 @@ namespace PmtAdmin.Infrastructure.Models
     {
         public class JiraProject
         {
-            public string? Id { get; set; }
             public string? Key { get; set; }
             public string? Name { get; set; }
             public string? Description { get; set; }
@@ -21,6 +20,7 @@ namespace PmtAdmin.Infrastructure.Models
             public string DisplayName { get; set; }
         }
 
+
         public class JiraBoard
         {
             public int Id { get; set; }
@@ -30,7 +30,6 @@ namespace PmtAdmin.Infrastructure.Models
 
         public class JiraSprint
         {
-            public int Id { get; set; }
             public string? Name { get; set; }
             public string? State { get; set; }
             public DateTime? StartDate { get; set; }
@@ -41,7 +40,6 @@ namespace PmtAdmin.Infrastructure.Models
 
         public class JiraIssue
         {
-            public string Id { get; set; }
 
             public string Key { get; set; }
 
@@ -53,7 +51,10 @@ namespace PmtAdmin.Infrastructure.Models
 
             public JiraUser Reporter { get; set; }
 
+            public JiraSprint Sprint { get; set; }
+
             public JiraUser Creator { get; set; }
+
 
             public List<JiraComment> Comment { get; set; }
 
@@ -88,13 +89,13 @@ namespace PmtAdmin.Infrastructure.Models
             public string Id { get; set; }
             public string Name { get; set; }
 
-            public string Titile { get; set; }
+            public string Title { get; set; }
         }
 
         public class JiraComment
         {
-            public int Id { get; set; }
 
+            public string Id { get; set; }
             public JiraUser Author { get; set; }
 
             public string Body { get; set; }
@@ -105,6 +106,26 @@ namespace PmtAdmin.Infrastructure.Models
             [JsonProperty("updated")]
             public DateTime UpdatedAt { get; set; }
 
+        }
+
+        public class JiraProjectData
+        {
+            public JiraProject Project { get; set; }
+            public List<BoardWithDetails> Boards { get; set; }
+        }
+
+        public class BoardWithDetails
+        {
+            public JiraBoard BoardInfo { get; set; }
+            public List<JiraEpic> Epics { get; set; }
+            public List<JiraIssue> Issues { get; set; }
+            public List<JiraSprint> Sprints { get; set; }
+
+            public List<JiraRole> Roles { get; set; }
+
+            public class JiraRole
+            {
+            }
         }
     }
 

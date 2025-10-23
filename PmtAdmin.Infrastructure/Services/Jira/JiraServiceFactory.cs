@@ -1,7 +1,7 @@
 ﻿using RestSharp;
 using RestSharp.Authenticators.OAuth2;
 
-namespace PmtAdmin.Infrastructure.Services
+namespace PmtAdmin.Infrastructure.Services.Jira
 {
 
     public static class JiraServiceFactory

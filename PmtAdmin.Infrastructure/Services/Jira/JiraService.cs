@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 using RestSharp;
 using static PmtAdmin.Infrastructure.Models.JiraImportModels;
 
-namespace PmtAdmin.Infrastructure.Services
+namespace PmtAdmin.Infrastructure.Services.Jira
 {
     public class JiraService : IJiraService
     {
@@ -89,7 +89,6 @@ namespace PmtAdmin.Infrastructure.Services
 
                     var issue = new JiraIssue
                     {
-                        Id = item["id"]?.ToString(),
                         Key = item["key"]?.ToString(),
                         Summary = fields?["summary"]?.ToString(),
                         Assignee = fields?["assignee"].ToObject<JiraUser>(),
@@ -145,5 +144,35 @@ namespace PmtAdmin.Infrastructure.Services
 
             return users;
         }
+
+        public async Task<JiraProjectData> GetFullProjectDataAsync(string baseUrl, string token, string projectIdOrKey)
+        {
+            var project = await ImportProjectByIdAsync(baseUrl, token, projectIdOrKey);
+            var boards = await GetBoardsByProjectIdAsync(baseUrl, token, projectIdOrKey);
+
+            var boardDetailsList = new List<BoardWithDetails>();
+
+            foreach (var board in boards)
+            {
+                var sprints = await GetSprintsByBoardIdAsync(baseUrl, token, board.Id);
+                var issues = await GetIssuesByBoardIdAsync(baseUrl, token, board.Id.ToString());
+                var epics = await GetEpicsByBoardIdAsync(baseUrl, token, board.Id.ToString());
+
+                boardDetailsList.Add(new BoardWithDetails
+                {
+                    BoardInfo = board,
+                    Sprints = sprints,
+                    Issues = issues,
+                    Epics = epics
+                });
+            }
+
+            return new JiraProjectData
+            {
+                Project = project,
+                Boards = boardDetailsList
+            };
+        }
+
     }
 }

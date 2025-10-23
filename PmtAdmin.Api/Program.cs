@@ -1,7 +1,7 @@
-using PmtAdmin.Infrastructure.Services;
+using PmtAdmin.Api.Middleware;
 using PmtAdmin.Application;
 using PmtAdmin.Infrastructure;
-using PmtAdmin.Api.Middleware;
+using PmtAdmin.Infrastructure.Services.Jira;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +28,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IJiraService, JiraService>();
+
 // Add Application and Infrastructure services
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);

@@ -4,11 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PmtAdmin.Infrastructure.Services.Jira;
 
 namespace PmtAdmin.Infrastructure
 {
@@ -25,7 +21,7 @@ namespace PmtAdmin.Infrastructure
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
-
+            services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
             return services;
         }
     }

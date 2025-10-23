@@ -1,6 +1,6 @@
 ﻿using static PmtAdmin.Infrastructure.Models.JiraImportModels;
 
-namespace PmtAdmin.Infrastructure.Services
+namespace PmtAdmin.Infrastructure.Services.Jira
 {
     public interface IJiraService
     {
@@ -15,5 +15,7 @@ namespace PmtAdmin.Infrastructure.Services
         public Task<List<JiraEpic>> GetEpicsByBoardIdAsync(string baseUrl, string token, string boardId);
 
         public Task<List<JiraUser>> GetUsersByRoleAsync(string roleUrl, string token);
+
+        public Task<JiraProjectData> GetFullProjectDataAsync(string baseUrl, string token, string projectIdOrKey);
     }
 }

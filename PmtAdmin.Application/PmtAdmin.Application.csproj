@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\" />
-    <Folder Include="MappingProfiles\" />
     <Folder Include="Constants\" />
     <Folder Include="Handlers\" />
     <Folder Include="Wrappers\" />
@@ -27,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PmtAdmin.Domain\PmtAdmin.Domain.csproj" />
+    <ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

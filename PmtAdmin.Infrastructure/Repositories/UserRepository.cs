@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Infrastructure.Repositories
 {
-    public class UserRepository : GenericRepository<Users>, IUserRepository
+    public class UserRepository : GenericRepository<User>, IUserRepository
     {
         private readonly AppDbContext _context;
 
@@ -19,10 +19,10 @@ namespace PmtAdmin.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<IReadOnlyList<Users>> GetActiveUsersAsync()
+        public async Task<IReadOnlyList<User>> GetActiveUsersAsync()
         {
             return await _context.Users
-                .Where(u => u.Is_Active && !u.Is_Deleted)
+                .Where(u => u.IsActive && !u.IsDeleted)
                 .ToListAsync();
         }
 
@@ -36,7 +36,7 @@ namespace PmtAdmin.Infrastructure.Repositories
         public async Task<Users?> GetByEmailAsync(string email)
         {
             return await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == email && !u.Is_Deleted);
+                .FirstOrDefaultAsync(u => u.Email == email && !u.IsDeleted);
         }
 
         public async Task<Users?> GetByJiraIdAsync(string jiraId)

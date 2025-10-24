@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Persistance
 {
-    public interface IUserRepository : IGenericRepository<Users>
+    public interface IUserRepository : IGenericRepository<User>
     {
-        Task<Users?> GetByEmailAsync(string email);
-        Task<Users?> GetByJiraIdAsync(string jiraId);
-        Task<IReadOnlyList<Users>> GetActiveUsersAsync();
-        Task<IReadOnlyList<Users>> GetAllNonDeletedUsersAsync();
+        Task<User?> GetByEmailAsync(string email);
+        Task<IReadOnlyList<User>> GetActiveUsersAsync();
+        Task<IReadOnlyList<User>> GetActiveUsersAsync();
+        Task<IReadOnlyList<User>> GetAllNonDeletedUsersAsync();
         Task DeleteUsersByIdsAsync(IEnumerable<int> ids);
     }
 }

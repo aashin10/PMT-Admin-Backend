@@ -51,17 +51,17 @@ namespace PmtAdmin.Application.Handlers.Users
             }
 
             // Check if Jira ID already exists (if provided)
-            if (!string.IsNullOrWhiteSpace(request.Jira_Id))
+            if (!string.IsNullOrWhiteSpace(request.JiraId))
             {
-                var existingUserByJiraId = await _userRepository.GetByJiraIdAsync(request.Jira_Id);
+                var existingUserByJiraId = await _userRepository.GetByJiraIdAsync(request.JiraId);
                 if (existingUserByJiraId != null)
                 {
                     return ApiResponse<UserDto>.Fail("Jira ID already exists");
                 }
             }
 
-            var user = _mapper.Map<Domain.Entities.Users>(request);
-            user.Created_At = DateTime.UtcNow;
+            var user = _mapper.Map<Domain.Entities.User>(request);
+            user.CreatedAt = DateTime.UtcNow;
 
             var savedUser = await _userRepository.CreateAsync(user);
 

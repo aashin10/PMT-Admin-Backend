@@ -25,7 +25,7 @@ namespace PmtAdmin.Application.Handlers.Users
 
         public async Task<ApiResponse<List<UserDto>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _userRepository.GetAllAsync();
+            var users = await _userRepository.GetAllNonDeletedUsersAsync();
 
             if (users == null || !users.Any())
             {

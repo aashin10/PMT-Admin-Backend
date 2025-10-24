@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\persistance\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\persistance\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\persistance\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\persistance\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.infrastructure\\migrations\\20251021061301_initialdbsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\migrations\\20251021061301_initialdbsetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,28 +54,54 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20251021061301_InitialDbSetup.cs",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:13:01.57Z",
+              "WhenOpened": "2025-10-21T09:16:39.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
-              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-21T06:08:17.316Z",
+              "DocumentIndex": 3,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:05:54.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:05:46.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:04:42.953Z",
               "EditorCaption": ""
             },
             {
@@ -73,29 +119,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T06:07:26.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Users.cs",
               "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\Users.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Users.cs",
               "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\Users.cs",
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Users.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T04:41:35.429Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationServiceRegistration.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T09:05:11.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251021061301_InitialDbSetup.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251021061301_InitialDbSetup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T06:13:01.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-21T06:08:17.316Z"
             }
           ]
         }

@@ -26,6 +26,40 @@ namespace PmtAdmin.Application.Handlers.Users
 
         public async Task<ApiResponse<UserDto>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            // Validate required fields
+            if (string.IsNullOrWhiteSpace(request.Name))
+            {
+                return ApiResponse<UserDto>.Fail("Name is required");
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Email))
+            {
+                return ApiResponse<UserDto>.Fail("Email is required");
+            }
+
+            // Validate email format
+            if (!IsValidEmail(request.Email))
+            {
+                return ApiResponse<UserDto>.Fail("Invalid email format");
+            }
+
+            // Check if user with this email already exists
+            var existingUserByEmail = await _userRepository.GetByEmailAsync(request.Email);
+            if (existingUserByEmail != null)
+            {
+                return ApiResponse<UserDto>.Fail("Email already exists");
+            }
+
+            // Check if Jira ID already exists (if provided)
+            if (!string.IsNullOrWhiteSpace(request.Jira_Id))
+            {
+                var existingUserByJiraId = await _userRepository.GetByJiraIdAsync(request.Jira_Id);
+                if (existingUserByJiraId != null)
+                {
+                    return ApiResponse<UserDto>.Fail("Jira ID already exists");
+                }
+            }
+
             var user = _mapper.Map<Domain.Entities.Users>(request);
             user.Created_At = DateTime.UtcNow;
 
@@ -33,6 +67,19 @@ namespace PmtAdmin.Application.Handlers.Users
 
             var dto = _mapper.Map<UserDto>(savedUser);
             return ApiResponse<UserDto>.Created(dto, "User created successfully");
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

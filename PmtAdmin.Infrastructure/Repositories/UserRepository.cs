@@ -26,10 +26,37 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<IReadOnlyList<Users>> GetAllNonDeletedUsersAsync()
+        {
+            return await _context.Users
+                .Where(u => !u.Is_Deleted)
+                .ToListAsync();
+        }
+
         public async Task<Users?> GetByEmailAsync(string email)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == email && !u.Is_Deleted);
+        }
+
+        public async Task<Users?> GetByJiraIdAsync(string jiraId)
+        {
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Jira_Id == jiraId && !u.Is_Deleted);
+        }
+
+        public async Task DeleteUsersByIdsAsync(IEnumerable<int> ids)
+        {
+            var users = await _context.Users
+                .Where(u => ids.Contains(u.Id) && !u.Is_Deleted)
+                .ToListAsync();
+
+            foreach (var user in users)
+            {
+                user.Is_Deleted = true;
+            }
+
+            await _context.SaveChangesAsync();
         }
     }
 }

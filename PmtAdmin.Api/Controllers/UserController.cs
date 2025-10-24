@@ -39,5 +39,12 @@ namespace PmtAdmin.Api.Controllers
             var newUser = await _mediator.Send(command);
             return newUser;
         }
+
+        [HttpDelete]
+        public async Task<ApiResponse<string>> DeleteUsers([FromBody] DeleteUsersCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return result;
+        }
     }
 }

@@ -1,0 +1,10 @@
+﻿using MediatR;
+using PmtAdmin.Application.Dto;
+using PmtAdmin.Application.Wrappers;
+
+namespace PmtAdmin.Application.Query.Status
+{
+    public class GetAllProjectStatusQuery : IRequest<ApiResponse<List<ProjectStatusDto>>>
+    {
+    }
+}

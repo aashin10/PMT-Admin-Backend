@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\PmtAdmin.Application\PmtAdmin.Application.csproj" />
+    <ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

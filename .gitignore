@@ -1,10 +1,19 @@
 # Binaries
 bin/
 obj/
+**/bin/
+**/obj/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
 
 # User-specific files
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
 
 # NuGet
 packages/
@@ -12,3 +21,46 @@ packages/
 
 # Logs
 *.log
+logs/
+
+# Solution file backup
+/PmtAdmin.sln
+
+# Entity Framework migrations build artifacts
+**/Migrations/**/obj/
+
+# Local app settings and secrets (may contain connection strings)
+PmtAdmin.Api/appsettings.json
+PmtAdmin.Api/appsettings.*.json
+secrets.json
+.env
+.env.*
+
+# Database files
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Ignore local launchSettings
+**/Properties/launchSettings.json
+
+# OneDrive specific temp files
+~$*

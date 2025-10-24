@@ -8,18 +8,21 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("project_template")]
-    public class ProjectTemplate
+    [Table("channel")]
+    public class Channel
     {
         [Key]
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        [Column("name")]
-        public string? Name { get; set; }
+        [Column("team_id")]
+        public int? TeamId { get; set; }
 
         // Navigation properties
-        public ICollection<Project> Projects { get; set; }
+        [ForeignKey("TeamId")]
+        public Team? Team { get; set; }
+
+        public ICollection<Message> Messages { get; set; }
     }
 
 }

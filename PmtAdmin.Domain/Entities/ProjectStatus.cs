@@ -8,15 +8,24 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("project_template")]
-    public class ProjectTemplate
+
+    [Table("project_statuses")]
+    public class ProjectStatus
     {
         [Key]
         [Column("id")]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50)]
         [Column("name")]
-        public string? Name { get; set; }
+        public string Name { get; set; }
+
+        [Column("description")]
+        public string? Description { get; set; }
+
+        [Column("created_at")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
         public ICollection<Project> Projects { get; set; }

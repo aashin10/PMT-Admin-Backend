@@ -22,14 +22,14 @@ namespace PmtAdmin.Infrastructure.Repositories
         public async Task<IReadOnlyList<User>> GetActiveUsersAsync()
         {
             return await _context.Users
-                .Where(u => u.Is_Active && !u.Is_Deleted)
+                .Where(u => u.IsActive && !u.IsDeleted)
                 .ToListAsync();
         }
 
         public async Task<User?> GetByEmailAsync(string email)
         {
             return await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == email && !u.Is_Deleted);
+                .FirstOrDefaultAsync(u => u.Email == email && !u.IsDeleted);
         }
     }
 }

@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("project_template")]
-    public class ProjectTemplate
+
+    [Table("custom_fields")]
+    public class CustomField
     {
         [Key]
-        [Column("id")]
-        public int Id { get; set; }
+        [Column("projectid")]
+        public int ProjectId { get; set; }
 
         [Column("name")]
         public string? Name { get; set; }
 
-        // Navigation properties
-        public ICollection<Project> Projects { get; set; }
+        [Column("value")]
+        public string? Value { get; set; }
     }
 
 }

@@ -5,32 +5,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Collections.Specialized.BitVector32;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("issue_comments")]
-    public class IssueComment
+
+    [Table("mentions")]
+    public class Mention
     {
         [Key]
         [Column("id")]
         public Guid Id { get; set; }
 
-        [Required]
-        [Column("issue_id")]
-        public Guid? IssueId { get; set; }
+        [Column("mention_user_id")]
+        public int? MentionUserId { get; set; }
 
-        [Required]
-        [Column("author_id")]
-        public int AuthorId { get; set; }
-
-        [Required]
-        [Column("mention_id")]
-        public int MentionId { get; set; }
-
-        [Required]
-        [Column("body")]
-        public string Body { get; set; }
+        [Column("issue_comments_id")]
+        public Guid? IssueCommentsId { get; set; }
 
         [Column("created_by")]
         public int? CreatedBy { get; set; }
@@ -45,21 +35,17 @@ namespace PmtAdmin.Domain.Entities
         public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 
         // Navigation properties
-        [ForeignKey("IssueId")]
-        public Issue Issue { get; set; }
+        [ForeignKey("MentionUserId")]
+        public User? MentionedUser { get; set; }
 
-        [ForeignKey("AuthorId")]
-        public User Author { get; set; }
-
-        [ForeignKey("MentionId")]
-        public User MentionedUser { get; set; }
+        [ForeignKey("IssueCommentsId")]
+        public IssueComment? IssueComment { get; set; }
 
         [ForeignKey("CreatedBy")]
         public User? Creator { get; set; }
 
         [ForeignKey("UpdatedBy")]
         public User? Updater { get; set; }
-
-        public ICollection<Mention> Mentions { get; set; }
     }
+
 }

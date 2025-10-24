@@ -8,18 +8,23 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("project_template")]
-    public class ProjectTemplate
+    [Table("permissions")]
+    public class Permission
     {
         [Key]
         [Column("id")]
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(150)]
         [Column("name")]
-        public string? Name { get; set; }
+        public string Name { get; set; }
+
+        [Column("description")]
+        public string? Description { get; set; }
 
         // Navigation properties
-        public ICollection<Project> Projects { get; set; }
+        public ICollection<RolePermission> RolePermissions { get; set; }
     }
 
 }

@@ -1,48 +1,73 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
+    [Table("boards")]
     public class Board
     {
+        [Key]
+        [Column("id")]
         public int Id { get; set; }
 
         [Required]
-        public int ProjectId { get; set; }
+        [Column("project_id")]
+        public Guid ProjectId { get; set; }
 
+        [Column("team_id")]
         public int? TeamId { get; set; }
 
-        public string? Name { get; set; }
+        [Required]
+        [MaxLength(150)]
+        [Column("name")]
+        public string Name { get; set; }
 
+        [Column("description")]
         public string? Description { get; set; }
 
         [MaxLength(50)]
-        public string? Type { get; set; }
+        [Column("type")]
+        public string Type { get; set; } = "kanban";
 
+        [Column("is_active")]
         public bool IsActive { get; set; } = true;
         public int? CreatedById { get; set; }
         public int? UpdatedById { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
+        [Column("created_by")]
+        public int? CreatedBy { get; set; }
+
+        [Column("updated_by")]
+        public int? UpdatedBy { get; set; }
+
+        [Column("created_at")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        [Column("updated_at")]
+        public DateTime? UpdatedAt { get; set; }
+
+        [Column("metadata", TypeName = "jsonb")]
+        public string? Metadata { get; set; }
+
+        // Navigation properties
         [ForeignKey("ProjectId")]
-        public virtual Project? Project { get; set; }
+        public Project Project { get; set; }
 
         [ForeignKey("TeamId")]
-        public virtual Team? Team { get; set; }
+        public Team? Team { get; set; }
 
-        [ForeignKey("CreatedById")]
-        public virtual User? CreatedBy { get; set; }
+        [ForeignKey("CreatedBy")]
+        public User? Creator { get; set; }
 
-        [ForeignKey("UpdatedById")]
-        public virtual User? UpdatedBy { get; set; }
-
-        public virtual ICollection<Sprint>? Sprints { get; set; }
-
-        public virtual ICollection<Epic>? Epics { get; set; }
-
-        public virtual ICollection<Issue>? Issues { get; set; }
-
-
+        [ForeignKey("UpdatedBy")]
+        public User? Updater { get; set; }
     }
+
 }

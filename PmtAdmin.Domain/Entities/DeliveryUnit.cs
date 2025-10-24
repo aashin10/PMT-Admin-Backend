@@ -8,23 +8,30 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("roles")]
-    public class Role
+    [Table("delivery_units")]
+    public class DeliveryUnit
     {
         [Key]
         [Column("id")]
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(200)]
         [Column("name")]
         public string Name { get; set; }
+
+        [MaxLength(50)]
+        [Column("code")]
+        public string? Code { get; set; }
 
         [Column("description")]
         public string? Description { get; set; }
 
-        [Column("metadata", TypeName = "jsonb")]
-        public string? Metadata { get; set; }
+        [Column("manager_id")]
+        public int? ManagerId { get; set; }
+
+        [Column("is_active")]
+        public bool IsActive { get; set; } = true;
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
@@ -33,9 +40,10 @@ namespace PmtAdmin.Domain.Entities
         public DateTime? UpdatedAt { get; set; }
 
         // Navigation properties
-        public ICollection<RolePermission> RolePermissions { get; set; }
-        public ICollection<ProjectMember> ProjectMembers { get; set; }
-        public ICollection<Project> ProjectManagerRoles { get; set; }
-    }
+        [ForeignKey("ManagerId")]
+        public User? Manager { get; set; }
 
+        public ICollection<Project> Projects { get; set; }
+    }
 }
+

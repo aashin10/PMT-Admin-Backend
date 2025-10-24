@@ -30,6 +30,7 @@ namespace PmtAdmin.Infrastructure.Models
 
         public class JiraSprint
         {
+            public int Id { get; set; }
             public string? Name { get; set; }
             public string? State { get; set; }
             public DateTime? StartDate { get; set; }
@@ -40,6 +41,7 @@ namespace PmtAdmin.Infrastructure.Models
 
         public class JiraIssue
         {
+            public int Id { get; set; }
 
             public string Key { get; set; }
 
@@ -59,17 +61,23 @@ namespace PmtAdmin.Infrastructure.Models
             public List<JiraComment> Comment { get; set; }
 
             public JiraTeam Team { get; set; }
-            public DateTime UpdatedAt { get; set; }
+            public DateTimeOffset UpdatedAt { get; set; }
 
             public JiraPriority Priority { get; set; }
 
             public JiraStatus Status { get; set; }
 
+            public JiraEpic Epic { get; set; }
+
         }
 
-        public class JiraEpic : JiraIssue
+        public class JiraEpic
         {
+            public int Id { get; set; }
 
+            public string Key { get; set; }
+
+            public string Summary { get; set; }
         }
 
         public class JiraStatus

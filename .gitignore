@@ -24,7 +24,7 @@ packages/
 logs/
 
 # Solution file backup
-/PmtAdmin.sln
+# /PmtAdmin.sln
 
 # Entity Framework migrations build artifacts
 **/Migrations/**/obj/

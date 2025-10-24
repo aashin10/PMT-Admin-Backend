@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PmtAdmin.Domain.Entities
 {
     [Table("users")]
-    public class Users
+    public class User
     {
         [Column("id")]
         public int Id { get; set; }
@@ -63,12 +58,12 @@ namespace PmtAdmin.Domain.Entities
 
         // Navigation properties for foreign keys
         [ForeignKey("Created_By")]
-        public Users? CreatedByUser { get; set; }
+        public User? CreatedByUser { get; set; }
 
         [ForeignKey("Updated_By")]
-        public Users? UpdatedByUser { get; set; }
+        public User? UpdatedByUser { get; set; }
 
         [ForeignKey("Deleted_By")]
-        public Users? DeletedByUser { get; set; }
+        public User? DeletedByUser { get; set; }
     }
 }

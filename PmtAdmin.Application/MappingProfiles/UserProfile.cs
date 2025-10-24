@@ -16,7 +16,7 @@ namespace PmtAdmin.Application.MappingProfiles
         public UserProfile()
         {
             // Command to Entity
-            CreateMap<CreateUserCommand, Users>()
+            CreateMap<CreateUserCommand, User>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Created_At, opt => opt.Ignore())
                 .ForMember(dest => dest.Updated_At, opt => opt.Ignore())
@@ -27,7 +27,7 @@ namespace PmtAdmin.Application.MappingProfiles
                 .ForMember(dest => dest.Is_Deleted, opt => opt.Ignore());
 
             // Entity to DTO
-            CreateMap<Users, UserDto>()
+            CreateMap<User, UserDto>()
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Is_Active ? "Active" : "Inactive"))
                 .ForMember(dest => dest.Created_At, opt => opt.MapFrom(src =>
                     src.Created_At.ToString("MM/dd/yyyy")))

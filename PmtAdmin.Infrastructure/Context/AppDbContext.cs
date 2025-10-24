@@ -1,10 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -14,11 +9,25 @@ namespace PmtAdmin.Infrastructure.Context
         {
         }
 
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Project> Projects { get; set; }
+
+        public DbSet<Board> Boards { get; set; }
+
+        public DbSet<Issue> Issues { get; set; }
+
+        public DbSet<IssueComment> IssueComments { get; set; }
+
+        public DbSet<Epic> Epics { get; set; }
+
+        public DbSet<Sprint> Sprints { get; set; }
+
+        public DbSet<ImportJobs> ImportJobs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Users>(entity =>
+            modelBuilder.Entity<User>(entity =>
             {
                 // Configure primary key
                 entity.HasKey(e => e.Id);

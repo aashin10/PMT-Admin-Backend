@@ -26,7 +26,7 @@ namespace PmtAdmin.Application.Handlers.Users
 
         public async Task<ApiResponse<UserDto>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = _mapper.Map<Domain.Entities.Users>(request);
+            var user = _mapper.Map<Domain.Entities.User>(request);
             user.Created_At = DateTime.UtcNow;
 
             var savedUser = await _userRepository.CreateAsync(user);

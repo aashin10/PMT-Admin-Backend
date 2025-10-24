@@ -9,6 +9,6 @@ obj/
 # NuGet
 packages/
 *.nupkg
-
+.vs/
 # Logs
 *.log

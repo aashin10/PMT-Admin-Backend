@@ -10,6 +10,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
 
+
         public JiraDatabaseService(AppDbContext context, IMapper mapper)
         {
             _context = context;
@@ -23,6 +24,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             {
                 Project p1 = _mapper.Map<Project>(project.Project);
 
+
                 List<Board> boards = new List<Board>();
 
                 foreach (var board in project.Boards)
@@ -35,7 +37,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     foreach (var issue in board.Issues)
                     {
                         var c = _mapper.Map<Issue>(issue);
-                        c.Comments = _mapper.Map<List<IssueComment>>(issue.Comment);
+                        c.IssueComments = _mapper.Map<List<IssueComment>>(issue.Comment);
                         issues.Add(c);
                     }
 

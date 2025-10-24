@@ -11,6 +11,7 @@
     <Folder Include="Handlers\" />
     <Folder Include="Wrappers\" />
     <Folder Include="Query\" />
+	<Folder Include="Logging\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PmtAdmin.Domain\PmtAdmin.Domain.csproj" />
+	<ProjectReference Include="..\PmtAdmin.Application\PmtAdmin.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

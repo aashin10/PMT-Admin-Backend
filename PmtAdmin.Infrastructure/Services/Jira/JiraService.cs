@@ -68,7 +68,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         {
             var client = JiraServiceFactory.CreateClient(baseUrl, token);
 
-            var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/issue", Method.Get);
+            var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/issue?jql=issuetype != Epic", Method.Get);
             request.AddHeader("Accept", "application/json");
 
             var response = await client.ExecuteAsync(request);
@@ -99,7 +99,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
                         UpdatedAt = fields?["updated"] != null ? DateTime.Parse(fields["updated"].ToString()) : DateTime.MinValue,
                         Status = fields?["status"]?["statusCategory"]?.ToObject<JiraStatus>(),
-                        Priority = fields?["priority"]?.ToObject<JiraPriority>()
+                        Priority = fields?["priority"]?.ToObject<JiraPriority>(),
+                        Sprint = fields?["sprint"]?.ToObject<JiraSprint>(),
+                        Epic = fields?["parent"]?.ToObject<JiraEpic>()
                     };
 
                     issues.Add(issue);

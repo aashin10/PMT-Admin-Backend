@@ -20,10 +20,13 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
         public async Task PopulateDataBase(List<JiraProjectData> projects)
         {
+            Dictionary<string, int> UserIdToJiraIdMappingScheme = new Dictionary<string, int>();
+
             foreach (var project in projects)
             {
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
+
 
                 //Check if Project Manager exists in the database
                 if (project.Project.Lead.AccountId == null)
@@ -49,6 +52,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 Dictionary<int, string> EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
                 Dictionary<int, int> IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, int>();
                 Dictionary<int, string> SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
+
 
                 List<Epic> epics = new List<Epic>();
                 List<Issue> issues = new List<Issue>();
@@ -87,7 +91,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             var i = _mapper.Map<Issue>(issue);
                             i.ProjectId = p.Id;
-                            issues.Add(i);
+
+
                             i.SprintId = SprintEntityJiraSprintModelMappingScheme.ContainsKey(issue.Sprint.Id)
                                 ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Sprint.Id]) : (Guid?)null;
 
@@ -95,7 +100,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
 
                             i.IssueComments = _mapper.Map<List<IssueComment>>(issue.Comment);
-
+                            issues.Add(i);
                             //IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id;
                         }
                     }

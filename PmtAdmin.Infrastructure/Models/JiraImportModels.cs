@@ -120,6 +120,8 @@ namespace PmtAdmin.Infrastructure.Models
         {
             public JiraProject Project { get; set; }
             public List<BoardWithDetails> Boards { get; set; }
+
+            public Dictionary<string, List<JiraUser>> UsersByRole { get; set; }
         }
 
         public class BoardWithDetails

@@ -20,12 +20,52 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
         public async Task PopulateDataBase(List<JiraProjectData> projects)
         {
-            Dictionary<string, int> UserIdToJiraIdMappingScheme = new Dictionary<string, int>();
+            Dictionary<string, int> JiraIdToUserIdMappingScheme = new Dictionary<string, int>();
 
             foreach (var project in projects)
             {
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
+
+                //For each role
+                foreach (var role in project.UsersByRole.Keys)
+                {
+                    //For each user in the role
+                    foreach (var u in project.UsersByRole[role])
+                    {
+                        //If already gone through this user, skip   
+                        if (!JiraIdToUserIdMappingScheme.ContainsKey(u.AccountId))
+                        {
+                            //Check if user exists in the database
+                            var existingUser = await _context.User
+                                .FirstOrDefaultAsync(usr => usr.JiraId == u.AccountId);
+
+                            //If not, create new user
+                            if (existingUser == null)
+                            {
+                                // Create a new User entity if not found
+                                existingUser = _mapper.Map<User>(u);
+                                await _context.User.AddAsync(existingUser);
+                                await _context.SaveChangesAsync();
+                            }
+
+                            //Add to mapping scheme
+                            JiraIdToUserIdMappingScheme[u.AccountId] = existingUser.Id;
+                        }
+
+                        //Create ProjectMember entity
+                        var projectMember = new ProjectMember
+                        {
+                            ProjectId = p.Id,
+                            UserId = JiraIdToUserIdMappingScheme[u.AccountId],
+                            //Role = role
+                        };
+
+                        _context.ProjectMembers.Add(projectMember);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
 
 
                 //Check if Project Manager exists in the database
@@ -92,16 +132,20 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             var i = _mapper.Map<Issue>(issue);
                             i.ProjectId = p.Id;
 
-
-                            i.SprintId = SprintEntityJiraSprintModelMappingScheme.ContainsKey(issue.Sprint.Id)
+                            if (issue.Sprint != null)
+                            {
+                                i.SprintId = SprintEntityJiraSprintModelMappingScheme.ContainsKey(issue.Sprint.Id)
                                 ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Sprint.Id]) : (Guid?)null;
+                            }
 
-                            i.EpicId = EpicEntityJiraEpicModelMappingScheme.ContainsKey(issue.Epic.Id)
+                            if (issue.Epic != null)
+                            {
+                                i.EpicId = EpicEntityJiraEpicModelMappingScheme.ContainsKey(issue.Epic.Id)
                                 ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
+                            }
 
-                            i.IssueComments = _mapper.Map<List<IssueComment>>(issue.Comment);
+                            // i.IssueComments = _mapper.Map<List<IssueComment>>(issue.Comment);
                             issues.Add(i);
-                            //IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id;
                         }
                     }
                 }

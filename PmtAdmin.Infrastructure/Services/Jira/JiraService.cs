@@ -142,7 +142,16 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
             var json = JObject.Parse(response.Content);
 
-            var users = json["actors"]?.ToObject<List<JiraUser>>() ?? new List<JiraUser>();
+
+            var users = json["actors"]?
+                .Select(a => new JiraUser
+                {
+                    AccountId = a["actorUser"]?["accountId"]?.ToString(),
+                    DisplayName = a["displayName"]?.ToString()
+                })
+                .Where(u => u.AccountId != null)
+                .ToList() ?? new List<JiraUser>();
+
 
             return users;
         }
@@ -151,6 +160,24 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         {
             var project = await ImportProjectByIdAsync(baseUrl, token, projectIdOrKey);
             var boards = await GetBoardsByProjectIdAsync(baseUrl, token, projectIdOrKey);
+
+            Dictionary<string, List<JiraUser>> boardRolesDict = new Dictionary<string, List<JiraUser>>();
+
+            //Import roles and user associated with each role
+
+            //Ignore certain roles for apps and bots
+            HashSet<string> IgnoreRoles = new HashSet<string>() { "atlassian-addons-project-access" };
+
+            foreach (var roleEntry in project.Roles)
+            {
+                if (IgnoreRoles.Contains(roleEntry.Key))
+                    continue;
+
+                var roleUrl = roleEntry.Value;
+                var usersInRole = await GetUsersByRoleAsync(roleUrl, token);
+                boardRolesDict[roleEntry.Key] = usersInRole;
+            }
+
 
             var boardDetailsList = new List<BoardWithDetails>();
 
@@ -172,7 +199,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             return new JiraProjectData
             {
                 Project = project,
-                Boards = boardDetailsList
+                Boards = boardDetailsList,
+                UsersByRole = boardRolesDict
             };
         }
 

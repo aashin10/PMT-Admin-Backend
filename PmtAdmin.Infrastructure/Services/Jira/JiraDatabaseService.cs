@@ -27,6 +27,28 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
 
+
+                //Check if Project Manager exists in the database
+                if (project.Project.Lead.AccountId == null)
+                {
+                    throw new Exception("No Project Manager Assigned in Jira");
+                }
+                var user = await _context.User
+                    .FirstOrDefaultAsync<User>(u => u.JiraId == project.Project.Lead.AccountId);
+                if (user == null)
+                {
+                    // Create a user for entity if user with JiraId does not exists in the database
+                    user = _mapper.Map<User>(project.Project.Lead);
+                    await _context.User.AddAsync(user);
+                    await _context.SaveChangesAsync();
+
+                }
+                p.ProjectManagerId = user.Id;
+
+                _context.Projects.Add(p);
+
+                //TODO: Bug wherein multiple users is created with same JIRA ID
+
                 //For each role
                 foreach (var role in project.UsersByRole.Keys)
                 {
@@ -58,32 +80,13 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             ProjectId = p.Id,
                             UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                            //Role = role
+                            RoleId = 1, // Default RoleId, adjust as necessary
                         };
 
                         _context.ProjectMembers.Add(projectMember);
-                        await _context.SaveChangesAsync();
+
                     }
                 }
-
-
-
-                //Check if Project Manager exists in the database
-                if (project.Project.Lead.AccountId == null)
-                {
-                    throw new Exception("No Project Manager Assigned in Jira");
-                }
-                var user = await _context.User
-                    .FirstOrDefaultAsync<User>(u => u.JiraId == project.Project.Lead.AccountId);
-                if (user == null)
-                {
-                    // Create a user for entity if user with JiraId does not exists in the database
-                    user = _mapper.Map<User>(project.Project.Lead);
-                    await _context.User.AddAsync(user);
-                    await _context.SaveChangesAsync();
-
-                }
-                p.ProjectManagerId = user.Id;
 
                 await _context.SaveChangesAsync();
 
@@ -125,6 +128,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         }
                     }
 
+
+                    //ISSUE ID  = 0 ALWAYS BUG
                     foreach (var issue in board.Issues)
                     {
                         if (!IssueEntityJiraIssueModelMappingScheme.ContainsKey(issue.Id))
@@ -144,10 +149,26 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
                             }
 
-                            // i.IssueComments = _mapper.Map<List<IssueComment>>(issue.Comment);
+                            //Temp fix
+                            i.Labels = "[\"tag1\", \"tag2\"]";
+
+                            //foreach (var comment in issue.Comment)
+                            //{
+                            //    var ic = _mapper.Map<IssueComment>(comment);
+                            //    ic.IssueId = i.Id;
+                            //    ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
+                            //        ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0; // Default to 0 if not found
+                            //    i.IssueComments.Add(ic);
+                            //}
                             issues.Add(i);
                         }
                     }
+
+
+                    _context.Sprints.AddRange(sprints);
+                    _context.Epics.AddRange(epics);
+                    _context.Issues.AddRange(issues);
+                    await _context.SaveChangesAsync();
                 }
             }
         }

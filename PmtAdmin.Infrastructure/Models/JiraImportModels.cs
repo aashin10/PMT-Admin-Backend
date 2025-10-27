@@ -78,6 +78,7 @@ namespace PmtAdmin.Infrastructure.Models
             public string Key { get; set; }
 
             public string Summary { get; set; }
+
         }
 
         public class JiraStatus
@@ -109,10 +110,10 @@ namespace PmtAdmin.Infrastructure.Models
             public string Body { get; set; }
 
             [JsonProperty("created")]
-            public DateTime CreatedAt { get; set; }
+            public DateTimeOffset CreatedAt { get; set; }
 
             [JsonProperty("updated")]
-            public DateTime UpdatedAt { get; set; }
+            public DateTimeOffset UpdatedAt { get; set; }
 
         }
 

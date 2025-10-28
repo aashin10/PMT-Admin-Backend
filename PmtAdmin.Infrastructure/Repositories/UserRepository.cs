@@ -58,5 +58,43 @@ namespace PmtAdmin.Infrastructure.Repositories
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IReadOnlyList<User>> GetFilteredUsersAsync(string? type, string? status)
+        {
+            var query = _context.User.Where(u => !u.IsDeleted);
+
+            // Filter by Type if provided
+            if (!string.IsNullOrWhiteSpace(type))
+            {
+                // Normalize to capitalize first letter
+                var normalizedType = NormalizeEnum(type);
+                query = query.Where(u => u.Type == normalizedType);
+            }
+
+            // Filter by Status if provided
+            if (!string.IsNullOrWhiteSpace(status))
+            {
+                var normalizedStatus = NormalizeEnum(status);
+                if (normalizedStatus == "Active")
+                {
+                    query = query.Where(u => u.IsActive);
+                }
+                else if (normalizedStatus == "Inactive")
+                {
+                    query = query.Where(u => !u.IsActive);
+                }
+            }
+
+            return await query.ToListAsync();
+        }
+
+        private string NormalizeEnum(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return value;
+
+            // Capitalize first letter, lowercase rest
+            var trimmed = value.Trim();
+            return char.ToUpper(trimmed[0]) + trimmed.Substring(1).ToLower();
+        }
     }
 }

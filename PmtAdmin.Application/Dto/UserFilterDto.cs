@@ -1,15 +1,12 @@
-using MediatR;
-using PmtAdmin.Application.Dto;
-using PmtAdmin.Application.Wrappers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PmtAdmin.Application.Query
+namespace PmtAdmin.Application.Dto
 {
-    public class GetAllUsersQuery : IRequest<ApiResponse<List<UserDto>>>
+    public class UserFilterDto
     {
         public string? Type { get; set; }  // "Internal" or "External"
         public string? Status { get; set; }  // "Active" or "Inactive"

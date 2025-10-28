@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Repositories;
+using PmtAdmin.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +21,13 @@ namespace PmtAdmin.Infrastructure
             // Add PostgreSQL Connection
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(
-                    configuration.GetConnectionString("PmtAdminDbConnection")
+                    configuration.GetConnectionString("DefaultConnection")
                 )
             );
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPasswordHashingService, PasswordHashingService>();
 
             return services;
         }

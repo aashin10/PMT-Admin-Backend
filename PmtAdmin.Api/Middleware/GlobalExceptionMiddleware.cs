@@ -48,6 +48,16 @@ namespace PmtAdmin.Api.Middleware
                     };
                     break;
 
+                case DuplicateEntryException duplicateEx:
+                    statusCode = (int)HttpStatusCode.BadRequest;
+                    apiResponse = new
+                    {
+                        Status = statusCode,
+                        Data = (object)null,
+                        Message = duplicateEx.Message
+                    };
+                    break;
+
                 case NotFoundException notFoundEx:
                     statusCode = (int)HttpStatusCode.NotFound;
                     apiResponse = new
@@ -65,6 +75,37 @@ namespace PmtAdmin.Api.Middleware
                         Status = statusCode,
                         Data = (object)null,
                         Message = unauthorizedEx.Message
+                    };
+                    break;
+
+                case Microsoft.EntityFrameworkCore.DbUpdateException dbUpdateEx:
+                    statusCode = (int)HttpStatusCode.BadRequest;
+                    var errorMessage = "Database error occurred";
+
+                    // Check for duplicate key violations
+                    if (dbUpdateEx.InnerException?.Message?.ToLower().Contains("duplicate") == true ||
+                        dbUpdateEx.InnerException?.Message?.ToLower().Contains("unique") == true)
+                    {
+                        var innerMsg = dbUpdateEx.InnerException.Message.ToLower();
+                        if (innerMsg.Contains("email") || innerMsg.Contains("ix_users_email"))
+                        {
+                            errorMessage = "Email already exists";
+                        }
+                        else if (innerMsg.Contains("jira") || innerMsg.Contains("ix_users_jiraid"))
+                        {
+                            errorMessage = "Jira ID already exists";
+                        }
+                        else
+                        {
+                            errorMessage = "Duplicate entry detected";
+                        }
+                    }
+
+                    apiResponse = new
+                    {
+                        Status = statusCode,
+                        Data = (object)null,
+                        Message = errorMessage
                     };
                     break;
 

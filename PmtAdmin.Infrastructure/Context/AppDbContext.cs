@@ -1,11 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Infrastructure.Context.Seeding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -16,7 +11,7 @@ namespace PmtAdmin.Infrastructure.Context
         }
 
         // DbSets
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<RolePermission> RolePermissions { get; set; }
@@ -102,14 +97,19 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // DELIVERY UNITS CONFIGURATION
             // ============================================
+            //modelBuilder.Entity<DeliveryUnit>(entity =>
+            //{
+            //    entity.HasIndex(e => e.Code).IsUnique();
+
+            //    entity.HasOne(e => e.Manager)
+            //        .WithMany(u => u.ManagedDeliveryUnits)
+            //        .HasForeignKey(e => e.ManagerId)
+            //        .OnDelete(DeleteBehavior.SetNull);
+            //});
+
             modelBuilder.Entity<DeliveryUnit>(entity =>
             {
                 entity.HasIndex(e => e.Code).IsUnique();
-
-                entity.HasOne(e => e.Manager)
-                    .WithMany(u => u.ManagedDeliveryUnits)
-                    .HasForeignKey(e => e.ManagerId)
-                    .OnDelete(DeleteBehavior.SetNull);
             });
 
             // ============================================
@@ -162,6 +162,19 @@ namespace PmtAdmin.Infrastructure.Context
                     .WithMany(t => t.Projects)
                     .HasForeignKey(e => e.TemplateId)
                     .OnDelete(DeleteBehavior.SetNull);
+            });
+
+            // ============================================
+            // CUSTOM FIELDS CONFIGURATION
+            // ============================================
+            modelBuilder.Entity<CustomField>(entity =>
+            {
+                entity.HasIndex(e => e.ProjectId);
+
+                entity.HasOne(e => e.Project)
+                    .WithMany(p => p.CustomFields)
+                    .HasForeignKey(e => e.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             // ============================================
@@ -542,77 +555,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-            //modelBuilder.SeedUsers();              // First - no dependencies
-            //modelBuilder.SeedRoles();              // Second - no dependencies
-            //modelBuilder.SeedDeliveryUnits();      // Third - no dependencies
-            //modelBuilder.SeedProjectStatuses();    // Fourth - no dependencies
-            //modelBuilder.SeedProjectTemplates();
-            //modelBuilder.SeedProjects();
+            // ============================================
+            // SEED DATA
+            // ============================================
+            DatabaseSeeder.SeedData(modelBuilder);
         }
-
-        //public DbSet<Users> Users { get; set; }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Users>(entity =>
-        //    {
-        //        // Configure primary key
-        //        entity.HasKey(e => e.Id);
-
-        //        // Configure email unique constraint
-        //        entity.HasIndex(e => e.Email)
-        //              .IsUnique();
-
-        //        // Configure index on is_deleted
-        //        entity.HasIndex(e => e.Is_Deleted);
-
-        //        // Set default values
-        //        entity.Property(e => e.Is_Active)
-        //              .HasDefaultValue(true);
-
-        //        entity.Property(e => e.Is_Super_Admin)
-        //              .HasDefaultValue(false);
-
-        //        entity.Property(e => e.Created_At)
-        //              .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-        //        entity.Property(e => e.Is_Deleted)
-        //              .HasDefaultValue(false);
-
-        //        // Configure self-referencing foreign keys
-        //        entity.HasOne(e => e.CreatedByUser)
-        //              .WithMany()
-        //              .HasForeignKey(e => e.Created_By)
-        //              .OnDelete(DeleteBehavior.Restrict);
-
-        //        entity.HasOne(e => e.UpdatedByUser)
-        //              .WithMany()
-        //              .HasForeignKey(e => e.Updated_By)
-        //              .OnDelete(DeleteBehavior.Restrict);
-
-        //        entity.HasOne(e => e.DeletedByUser)
-        //              .WithMany()
-        //              .HasForeignKey(e => e.Deleted_By)
-        //              .OnDelete(DeleteBehavior.Restrict);
-
-        //        // Configure string lengths
-        //        entity.Property(e => e.Email)
-        //              .HasMaxLength(255);
-
-        //        entity.Property(e => e.Password_Hash)
-        //              .HasMaxLength(1024);
-
-        //        entity.Property(e => e.Name)
-        //              .HasMaxLength(150);
-
-        //        entity.Property(e => e.Avatar_Url)
-        //              .HasMaxLength(1000);
-
-        //        entity.Property(e => e.Jira_Id)
-        //              .HasMaxLength(1024);
-        //    });
-
-        //    base.OnModelCreating(modelBuilder);
-        //}
     }
 }

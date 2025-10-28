@@ -1,6 +1,7 @@
-﻿using PmtAdmin.Application;
+﻿using PmtAdmin.Api.Middleware;
+using PmtAdmin.Application;
 using PmtAdmin.Infrastructure;
-using PmtAdmin.Api.Middleware;
+using PmtAdmin.Infrastructure.Context.Seeding;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
 
+// Register the DataSeedingService
+//builder.Services.AddHostedService<DataSeedingService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

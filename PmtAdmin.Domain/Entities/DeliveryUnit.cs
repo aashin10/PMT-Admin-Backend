@@ -27,8 +27,13 @@ namespace PmtAdmin.Domain.Entities
         [Column("description")]
         public string? Description { get; set; }
 
-        [Column("manager_id")]
-        public int? ManagerId { get; set; }
+        [MaxLength(200)]
+        [Column("du_head_name")]
+        public string? DuHeadName { get; set; }
+
+        [MaxLength(255)]
+        [Column("du_head_email")]
+        public string? DuHeadEmail { get; set; }
 
         [Column("is_active")]
         public bool IsActive { get; set; } = true;
@@ -40,10 +45,6 @@ namespace PmtAdmin.Domain.Entities
         public DateTime? UpdatedAt { get; set; }
 
         // Navigation properties
-        [ForeignKey("ManagerId")]
-        public User? Manager { get; set; }
-
         public ICollection<Project> Projects { get; set; }
     }
 }
-

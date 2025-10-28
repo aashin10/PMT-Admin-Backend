@@ -19,7 +19,7 @@ namespace PmtAdmin.Infrastructure
             // Add PostgreSQL Connection
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(
-                    configuration.GetConnectionString("PmtAdminDbConnection")
+                    configuration.GetConnectionString("DefaultConnection")
                 )
             );
 

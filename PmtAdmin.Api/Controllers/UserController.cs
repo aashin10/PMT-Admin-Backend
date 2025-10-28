@@ -19,10 +19,10 @@ namespace PmtAdmin.Api.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<ApiResponse<List<UserDto>>> GetAllUsers()
+        [HttpPost("filter")]
+        public async Task<ApiResponse<List<UserDto>>> GetAllUsers([FromBody] GetAllUsersQuery query)
         {
-            var users = await _mediator.Send(new GetAllUsersQuery());
+            var users = await _mediator.Send(query);
             return users;
         }
 
@@ -34,10 +34,10 @@ namespace PmtAdmin.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ApiResponse<UserDto>> CreateUser([FromBody] CreateUserCommand command)
+        public async Task<ApiResponse<List<UserDto>>> CreateUser([FromBody] CreateUserCommand command)
         {
-            var newUser = await _mediator.Send(command);
-            return newUser;
+            var newUsers = await _mediator.Send(command);
+            return newUsers;
         }
 
         [HttpDelete]

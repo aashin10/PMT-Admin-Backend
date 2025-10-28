@@ -25,7 +25,17 @@ namespace PmtAdmin.Application.Handlers.Users
 
         public async Task<ApiResponse<List<UserDto>>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _userRepository.GetAllNonDeletedUsersAsync();
+            // Use filtered query if type or status is provided
+            IReadOnlyList<Domain.Entities.User> users;
+
+            if (!string.IsNullOrWhiteSpace(request.Type) || !string.IsNullOrWhiteSpace(request.Status))
+            {
+                users = await _userRepository.GetFilteredUsersAsync(request.Type, request.Status);
+            }
+            else
+            {
+                users = await _userRepository.GetAllNonDeletedUsersAsync();
+            }
 
             if (users == null || !users.Any())
             {

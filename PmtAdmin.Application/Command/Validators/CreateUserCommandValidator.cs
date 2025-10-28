@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Command.Validators
 {
-    public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
+    public class CreateUserCommandValidator : AbstractValidator<CreateUserDto>
     {
         public CreateUserCommandValidator()
         {
@@ -23,9 +23,6 @@ namespace PmtAdmin.Application.Command.Validators
 
             RuleFor(x => x.Type)
                 .MaximumLength(50).WithMessage("Type cannot exceed 50 characters");
-
-            RuleFor(x => x.AvatarUrl)
-                .MaximumLength(1000).WithMessage("Avatar URL cannot exceed 1000 characters");
 
             RuleFor(x => x.JiraId)
                 .MaximumLength(1024).WithMessage("Jira ID cannot exceed 1024 characters");

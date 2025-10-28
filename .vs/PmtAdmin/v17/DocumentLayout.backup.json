@@ -94,33 +94,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
-              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T06:20:33.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:07:26.463Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
@@ -177,9 +152,35 @@
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
               "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Program.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T06:07:55.408Z"
+              "WhenOpened": "2025-10-21T06:07:55.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-28T06:20:33.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T06:07:26.463Z"
             },
             {
               "$type": "Document",

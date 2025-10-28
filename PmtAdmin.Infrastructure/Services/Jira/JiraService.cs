@@ -89,6 +89,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                     var issue = new JiraIssue
                     {
+                        Id = item["id"] != null ? int.Parse(item["id"].ToString()) : 0,
                         Key = item["key"]?.ToString(),
                         Summary = fields?["summary"]?.ToString(),
                         Assignee = fields?["assignee"].ToObject<JiraUser>(),

@@ -93,18 +93,37 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 List<Board> boards = new List<Board>();
 
                 Dictionary<int, string> EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
-                Dictionary<int, int> IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, int>();
+                Dictionary<int, string> IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
                 Dictionary<int, string> SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
 
 
-                List<Epic> epics = new List<Epic>();
-                List<Issue> issues = new List<Issue>();
-                List<Sprint> sprints = new List<Sprint>();
+
 
                 foreach (var board in project.Boards)
                 {
 
+
+                    List<Issue> issues = new List<Issue>();
+                    List<Sprint> sprints = new List<Sprint>();
+                    List<Epic> epics = new List<Epic>();
+                    //Mapping Board
                     var b = _mapper.Map<Board>(board.BoardInfo);
+
+
+
+                    //Creating a Team for the Board
+                    var t = new Team
+                    {
+                        Name = b.Name + " Team",
+                        ProjectId = p.Id
+                    };
+
+                    _context.Teams.Add(t);
+                    await _context.SaveChangesAsync();
+
+                    b.TeamId = t.Id;
+                    b.ProjectId = p.Id;
+
 
                     foreach (var sprint in board.Sprints)
                     {
@@ -129,7 +148,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     }
 
 
-                    //ISSUE ID  = 0 ALWAYS BUG
+
                     foreach (var issue in board.Issues)
                     {
                         if (!IssueEntityJiraIssueModelMappingScheme.ContainsKey(issue.Id))
@@ -161,11 +180,14 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             //    i.IssueComments.Add(ic);
                             //}
                             issues.Add(i);
+                            IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                         }
                     }
 
 
                     _context.Sprints.AddRange(sprints);
+                    _context.Boards.Add(b);
+
                     _context.Epics.AddRange(epics);
                     _context.Issues.AddRange(issues);
                     await _context.SaveChangesAsync();

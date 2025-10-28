@@ -19,6 +19,7 @@ namespace PmtAdmin.Application.MappingProfiles
 
             CreateMap<JiraIssue, Issue>()
     .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
+    .ForMember(dest => dest.Creator, opt => opt.Ignore())
     .ForMember(dest => dest.ProjectId, opt => opt.Ignore())
     .ForMember(dest => dest.EpicId, opt => opt.Ignore())
     .ForMember(dest => dest.SprintId, opt => opt.Ignore())

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\migrations\\20251028055128_supabaseexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\migrations\\20251028055128_supabaseexp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\persistanceserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,10 +199,6 @@
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\boardcolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251024063554_InitialDBSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PmtAdmin.Infrastructure\\Migrations\\20251024063554_InitialDBSetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -298,7 +294,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -306,20 +302,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "20251028055128_SupaBaseexp.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028055128_SupaBaseexp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:51:28.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:51:28.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
@@ -327,12 +322,11 @@
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-23T11:37:20.967Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:37:20.967Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PersistanceServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
@@ -340,12 +334,11 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAcwBUAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:37:13.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:37:13.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
@@ -353,18 +346,17 @@
               "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:38:02.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:38:02.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwGwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMCAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T11:03:09.138Z",
               "EditorCaption": ""
@@ -379,8 +371,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\AuditLog.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:59:00.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:59:00.851Z"
             },
             {
               "$type": "Document",
@@ -392,8 +383,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Sprint.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAuwDsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:53:15.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:53:15.571Z"
             },
             {
               "$type": "Document",
@@ -405,8 +395,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\CustomField.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAuwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:51:25.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:51:25.502Z"
             },
             {
               "$type": "Document",
@@ -418,8 +407,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028053340_SupaBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:33:40.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:33:40.729Z"
             },
             {
               "$type": "Document",
@@ -431,8 +419,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028052645_SeedData5.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:26:45.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:26:45.53Z"
             },
             {
               "$type": "Document",
@@ -444,8 +431,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
               "ViewState": "AgIAAMsAAAAAAAAAAAAqwNIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T12:58:26.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T12:58:26.945Z"
             },
             {
               "$type": "Document",
@@ -457,8 +443,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\DeliveryUnit.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:45:28.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:45:28.527Z"
             },
             {
               "$type": "Document",
@@ -470,8 +455,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028052518_SeedData4.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:25:18.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:25:18.381Z"
             },
             {
               "$type": "Document",
@@ -483,8 +467,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028052028_SeedData3.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:20:29.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:20:29.114Z"
             },
             {
               "$type": "Document",
@@ -496,8 +479,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Message.cs",
               "ViewState": "AgIAACgAAAAAAAAAAADwvzYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:57:34.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:57:34.101Z"
             },
             {
               "$type": "Document",
@@ -509,8 +491,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028051833_SeedData2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:18:34.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T05:18:34.088Z"
             },
             {
               "$type": "Document",
@@ -522,8 +503,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251028040925_SeedData2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T04:09:25.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T04:09:25.793Z"
             },
             {
               "$type": "Document",
@@ -535,8 +515,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Project.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAswHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:37:50.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:37:50.746Z"
             },
             {
               "$type": "Document",
@@ -548,8 +527,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAIwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:02:54.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:02:54.977Z"
             },
             {
               "$type": "Document",
@@ -561,8 +539,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:48:26.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:48:26.122Z"
             },
             {
               "$type": "Document",
@@ -574,8 +551,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\GetAllUsersQueryHandler.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:09:39.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:09:39.981Z"
             },
             {
               "$type": "Document",
@@ -587,8 +563,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:12:09.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:12:09.607Z"
             },
             {
               "$type": "Document",
@@ -600,8 +575,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAxwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:45:30.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:45:30.945Z"
             },
             {
               "$type": "Document",
@@ -613,8 +587,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\GetUserByIdQueryHandler.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:10:41.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:10:41.028Z"
             },
             {
               "$type": "Document",
@@ -626,8 +599,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024130550_SeedData2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:05:50.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:05:50.677Z"
             },
             {
               "$type": "Document",
@@ -639,8 +611,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:09:29.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:09:29.264Z"
             },
             {
               "$type": "Document",
@@ -652,8 +623,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Role.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:47:01.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:47:01.06Z"
             },
             {
               "$type": "Document",
@@ -665,8 +635,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Issue.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAUwGsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:54:29.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:54:29.486Z"
             },
             {
               "$type": "Document",
@@ -678,8 +647,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024115425_SeedData.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T11:54:25.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T11:54:25.777Z"
             },
             {
               "$type": "Document",
@@ -691,8 +659,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024120259_SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T12:02:59.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T12:02:59.253Z"
             },
             {
               "$type": "Document",
@@ -704,8 +671,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024113622_SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T11:36:22.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T11:36:22.383Z"
             },
             {
               "$type": "Document",
@@ -717,8 +683,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024112846_SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T11:28:46.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T11:28:46.304Z"
             },
             {
               "$type": "Document",
@@ -730,8 +695,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024112000_SeedData.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T11:20:00.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T11:20:00.921Z"
             },
             {
               "$type": "Document",
@@ -743,8 +707,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024110232_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T11:02:33.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T11:02:33.063Z"
             },
             {
               "$type": "Document",
@@ -756,8 +719,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024104352_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:43:52.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:43:52.842Z"
             },
             {
               "$type": "Document",
@@ -769,8 +731,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024104307_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:43:07.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:43:07.231Z"
             },
             {
               "$type": "Document",
@@ -782,8 +743,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024103457_DBSetup.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAgwAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:34:57.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:34:57.62Z"
             },
             {
               "$type": "Document",
@@ -795,8 +755,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024102402_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:24:02.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:24:02.545Z"
             },
             {
               "$type": "Document",
@@ -808,8 +767,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024100637_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:06:37.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:06:37.914Z"
             },
             {
               "$type": "Document",
@@ -821,8 +779,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024100547_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T10:05:47.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T10:05:47.991Z"
             },
             {
               "$type": "Document",
@@ -834,8 +791,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ActivityLog.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAjwBcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:58:02.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:58:02.435Z"
             },
             {
               "$type": "Document",
@@ -847,8 +803,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024095041_DBSetup.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:50:41.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:50:41.322Z"
             },
             {
               "$type": "Document",
@@ -860,8 +815,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024095011_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:50:11.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:50:11.956Z"
             },
             {
               "$type": "Document",
@@ -873,8 +827,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024094907_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:49:07.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:49:07.818Z"
             },
             {
               "$type": "Document",
@@ -886,8 +839,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024094716_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:47:17.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:47:17.103Z"
             },
             {
               "$type": "Document",
@@ -899,8 +851,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024092416_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:24:16.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:24:16.816Z"
             },
             {
               "$type": "Document",
@@ -912,8 +863,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024091305_DBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:13:05.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T09:13:05.704Z"
             },
             {
               "$type": "Document",
@@ -925,8 +875,7 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Status.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:56:09.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:56:09.217Z"
             },
             {
               "$type": "Document",
@@ -938,25 +887,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\BoardColumn.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:56:38.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:56:38.887Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 49,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Users.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Users.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Users.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Users.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T09:41:03.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
               "Title": "20251024063554_InitialDBSetup.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251024063554_InitialDBSetup.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251024063554_InitialDBSetup.cs",
@@ -964,12 +899,11 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024063554_InitialDBSetup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T06:35:54.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T06:35:54.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "20251024062925_SeedInitialData.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251024062925_SeedInitialData.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251024062925_SeedInitialData.cs",
@@ -977,12 +911,11 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Migrations\\20251024062925_SeedInitialData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T06:29:25.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T06:29:25.239Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 51,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Team.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Team.cs",
@@ -990,12 +923,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Team.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAQwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:39:16.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:39:16.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 52,
               "Title": "RolePermission.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
@@ -1003,12 +935,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:48:55.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:48:55.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 53,
               "Title": "ProjectTemplate.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectTemplate.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectTemplate.cs",
@@ -1016,12 +947,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectTemplate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:50:14.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:50:14.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 54,
               "Title": "ProjectStatus.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
@@ -1029,12 +959,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:49:39.967Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:49:39.967Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 55,
               "Title": "ProjectMember.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
@@ -1042,12 +971,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:35:47.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:35:47.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 56,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Permission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Permission.cs",
@@ -1055,12 +983,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Permission.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:48:24.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:48:24.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 57,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Notification.cs",
@@ -1068,12 +995,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Notification.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAA5wDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:58:33.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:58:33.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 58,
               "Title": "Mention.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Mention.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Mention.cs",
@@ -1081,12 +1007,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Mention.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:55:36.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:55:36.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 59,
               "Title": "JiraAuthorization.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\JiraAuthorization.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\JiraAuthorization.cs",
@@ -1094,12 +1019,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\JiraAuthorization.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:00:19.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:00:19.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 60,
               "Title": "IssueComment.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\IssueComment.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\IssueComment.cs",
@@ -1107,12 +1031,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\IssueComment.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAgwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:55:05.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:55:05.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 61,
               "Title": "ImportJob.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ImportJob.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ImportJob.cs",
@@ -1120,12 +1043,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ImportJob.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAA5wDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:59:40.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:59:40.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 62,
               "Title": "Epic.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Epic.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Epic.cs",
@@ -1133,12 +1055,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Epic.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAgwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:53:54.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:53:54.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 63,
               "Title": "Channel.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Channel.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Channel.cs",
@@ -1146,12 +1067,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Channel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:57:08.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:57:08.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 64,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Board.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Board.cs",
@@ -1159,12 +1079,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Board.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAgwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:52:13.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:52:13.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 65,
               "Title": "PmtAdmin.Api.http",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\PmtAdmin.Api.http",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.http",
@@ -1172,12 +1091,11 @@
               "RelativeToolTip": "PmtAdmin.Api\\PmtAdmin.Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-10-23T11:37:59.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:37:59.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 66,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
@@ -1185,12 +1103,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:39:01.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:39:01.626Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 67,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
@@ -1198,12 +1115,11 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:52:08.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:52:08.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 68,
               "Title": "GlobalExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
@@ -1211,12 +1127,11 @@
               "RelativeToolTip": "PmtAdmin.Api\\Middleware\\GlobalExceptionMiddleware.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T16:02:15.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T16:02:15.427Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 69,
               "Title": "PmtAdmin.Api.csproj",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
@@ -1224,12 +1139,11 @@
               "RelativeToolTip": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-23T11:59:56.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:59:56.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 70,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\UserProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\UserProfile.cs",
@@ -1237,8 +1151,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\MappingProfiles\\UserProfile.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAArwB4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:46:54.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T11:46:54.775Z"
             }
           ]
         }

@@ -12,13 +12,13 @@ namespace PmtAdmin.Application.Command
     public class CreateUserCommand : IRequest<ApiResponse<UserDto>>
     {
         public string? Email { get; set; }
-        public string? Password_Hash { get; set; }
+        public string? PasswordHash { get; set; }
         public string? Name { get; set; }
-        public string? Avatar_Url { get; set; }
-        public bool Is_Active { get; set; } = true;
-        public bool Is_Super_Admin { get; set; } = false;
-        public string? Jira_Id { get; set; }
+        public string? AvatarUrl { get; set; }
+        public bool IsActive { get; set; } = true;
+        public bool IsSuperAdmin { get; set; } = false;
+        public string? JiraId { get; set; }
         public string? Type { get; set; }
-        public int? Created_By { get; set; }
+        public int? CreatedBy { get; set; }
     }
 }

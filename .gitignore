@@ -12,3 +12,17 @@ packages/
 
 # Logs
 *.log
+
+# Temporary files
+.vs
+# --- IGNORE ---
+# Visual Studio Code
+.vscode/
+# --- END IGNORE ---
+Migrations/
+
+
+bin/
+obj/
+out/
+publish/

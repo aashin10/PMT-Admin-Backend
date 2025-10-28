@@ -547,7 +547,7 @@ namespace PmtAdmin.Infrastructure.Context
             //modelBuilder.SeedDeliveryUnits();      // Third - no dependencies
             //modelBuilder.SeedProjectStatuses();    // Fourth - no dependencies
             //modelBuilder.SeedProjectTemplates();
-            modelBuilder.SeedProjects();
+            //modelBuilder.SeedProjects();
         }
 
         //public DbSet<Users> Users { get; set; }

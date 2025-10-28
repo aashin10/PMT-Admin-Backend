@@ -31,7 +31,7 @@ namespace PmtAdmin.Application.Wrappers
             return new ApiResponse<T>(StatusCode.Created, data, message);
         }
 
-        public static ApiResponse<T> Fail(string message)
+        public static ApiResponse<T> Fail(string message, int notFound)
         {
             return new ApiResponse<T>(StatusCode.BadRequest, default, message);
         }

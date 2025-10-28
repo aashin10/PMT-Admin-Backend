@@ -2,6 +2,7 @@
 using PmtAdmin.Infrastructure;
 using PmtAdmin.Api.Middleware;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

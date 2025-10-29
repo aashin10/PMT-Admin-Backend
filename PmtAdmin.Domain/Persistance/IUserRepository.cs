@@ -14,6 +14,13 @@ namespace PmtAdmin.Domain.Persistance
         Task<IReadOnlyList<User>> GetActiveUsersAsync();
         Task<IReadOnlyList<User>> GetAllNonDeletedUsersAsync();
         Task<IReadOnlyList<User>> GetFilteredUsersAsync(string? type, string? status);
+        Task<(IReadOnlyList<User> Users, int TotalCount)> GetUsersWithPaginationAsync(
+            int pageNumber,
+            int pageSize,
+            string sortBy,
+            string sortOrder,
+            string? type,
+            string? status);
         Task DeleteUsersByIdsAsync(IEnumerable<int> ids);
     }
 }

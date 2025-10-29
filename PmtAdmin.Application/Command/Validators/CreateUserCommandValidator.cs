@@ -24,6 +24,12 @@ namespace PmtAdmin.Application.Command.Validators
             RuleFor(x => x.Type)
                 .MaximumLength(50).WithMessage("Type cannot exceed 50 characters");
 
+            RuleFor(x => x.Status)
+                .Must(status => string.IsNullOrWhiteSpace(status) ||
+                    new[] { "Active", "Inactive", "Suspended" }.Contains(status, System.StringComparer.OrdinalIgnoreCase))
+                .WithMessage("Status must be 'Active', 'Inactive', or 'Suspended'")
+                .MaximumLength(50).WithMessage("Status cannot exceed 50 characters");
+
             RuleFor(x => x.JiraId)
                 .MaximumLength(1024).WithMessage("Jira ID cannot exceed 1024 characters");
         }

@@ -122,16 +122,16 @@ namespace PmtAdmin.Infrastructure.Context.Seeding
         {
             var users = new List<User>
             {
-                new User { Id = 1, Email = "admin@company.com", Name = "System Admin", IsActive = true, IsSuperAdmin = true, CreatedAt = _staticDate },
-                new User { Id = 2, Email = "pm1@company.com", Name = "Project Manager 1", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 3, Email = "pm2@company.com", Name = "Project Manager 2", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 4, Email = "dev1@company.com", Name = "Developer 1", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 5, Email = "dev2@company.com", Name = "Developer 2", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 6, Email = "dev3@company.com", Name = "Developer 3", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 7, Email = "dev4@company.com", Name = "Developer 4", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 8, Email = "qa1@company.com", Name = "QA Engineer 1", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 9, Email = "qa2@company.com", Name = "QA Engineer 2", IsActive = true, CreatedAt = _staticDate },
-                new User { Id = 10, Email = "designer1@company.com", Name = "Designer 1", IsActive = true, CreatedAt = _staticDate }
+                new User { Id = 1, Email = "sarah.johnson@experionglobal.com", Name = "Sarah Johnson", Type = "Internal", Status = "Active", IsActive = true, IsSuperAdmin = true, JiraId = "SJOHN001", AvatarUrl = "https://avatar.iran.liara.run/username?username=Sarah+Johnson", CreatedAt = _staticDate },
+                new User { Id = 2, Email = "michael.chen@experionglobal.com", Name = "Michael Chen", Type = "Internal", Status = "Active", IsActive = true, JiraId = "MCHEN002", AvatarUrl = "https://avatar.iran.liara.run/username?username=Michael+Chen", CreatedAt = _staticDate },
+                new User { Id = 3, Email = "emily.rodriguez@experionglobal.com", Name = "Emily Rodriguez", Type = "Internal", Status = "Active", IsActive = true, JiraId = "EROD003", AvatarUrl = "https://avatar.iran.liara.run/username?username=Emily+Rodriguez", CreatedAt = _staticDate },
+                new User { Id = 4, Email = "david.kumar@experionglobal.com", Name = "David Kumar", Type = "Internal", Status = "Active", IsActive = true, JiraId = "DKUM004", AvatarUrl = "https://avatar.iran.liara.run/username?username=David+Kumar", CreatedAt = _staticDate },
+                new User { Id = 5, Email = "jessica.anderson@experionglobal.com", Name = "Jessica Anderson", Type = "Internal", Status = "Inactive", IsActive = false, JiraId = "JAND005", AvatarUrl = "https://avatar.iran.liara.run/username?username=Jessica+Anderson", CreatedAt = _staticDate },
+                new User { Id = 6, Email = "robert.wilson@techpartners.com", Name = "Robert Wilson", Type = "External", Status = "Active", IsActive = true, JiraId = "RWIL006", AvatarUrl = "https://avatar.iran.liara.run/username?username=Robert+Wilson", CreatedAt = _staticDate },
+                new User { Id = 7, Email = "amanda.taylor@experionglobal.com", Name = "Amanda Taylor", Type = "Internal", Status = "Suspended", IsActive = false, JiraId = "ATAY007", AvatarUrl = "https://avatar.iran.liara.run/username?username=Amanda+Taylor", CreatedAt = _staticDate },
+                new User { Id = 8, Email = "james.patel@experionglobal.com", Name = "James Patel", Type = "Internal", Status = "Active", IsActive = true, JiraId = "JPAT008", AvatarUrl = "https://avatar.iran.liara.run/username?username=James+Patel", CreatedAt = _staticDate },
+                new User { Id = 9, Email = "maria.garcia@clientcorp.com", Name = "Maria Garcia", Type = "External", Status = "Active", IsActive = true, JiraId = "MGAR009", AvatarUrl = "https://avatar.iran.liara.run/username?username=Maria+Garcia", CreatedAt = _staticDate },
+                new User { Id = 10, Email = "christopher.lee@experionglobal.com", Name = "Christopher Lee", Type = "Internal", Status = "Inactive", IsActive = false, JiraId = "CLEE010", AvatarUrl = "https://avatar.iran.liara.run/username?username=Christopher+Lee", CreatedAt = _staticDate }
             };
 
             modelBuilder.Entity<User>().HasData(users);
@@ -205,8 +205,8 @@ namespace PmtAdmin.Infrastructure.Context.Seeding
         //    modelBuilder.Entity<DeliveryUnit>().HasData(deliveryUnits);
         //}
         private static void SeedDeliveryUnits(ModelBuilder modelBuilder)
-{
-    var deliveryUnits = new List<DeliveryUnit>
+        {
+            var deliveryUnits = new List<DeliveryUnit>
     {
         new DeliveryUnit { Id = 1, Name = "Automotive", Code = "AUTO", Description = "Automotive Solutions", DuHeadName = "Project Manager 1", DuHeadEmail = "pm1@company.com", IsActive = true, CreatedAt = _staticDate },
         new DeliveryUnit { Id = 2, Name = "Travel & Transportation", Code = "TNT", Description = "Travel & Transportation Solutions", DuHeadName = "Project Manager 2", DuHeadEmail = "pm2@company.com", IsActive = true, CreatedAt = _staticDate },
@@ -220,8 +220,8 @@ namespace PmtAdmin.Infrastructure.Context.Seeding
         new DeliveryUnit { Id = 10, Name = "VantX Financial Solutions", Code = "VFS", Description = "VantX Financial Solutions", DuHeadName = "Project Manager 1", DuHeadEmail = "pm1@company.com", IsActive = true, CreatedAt = _staticDate }
     };
 
-    modelBuilder.Entity<DeliveryUnit>().HasData(deliveryUnits);
-}
+            modelBuilder.Entity<DeliveryUnit>().HasData(deliveryUnits);
+        }
 
         private static void SeedProjectStatuses(ModelBuilder modelBuilder)
         {

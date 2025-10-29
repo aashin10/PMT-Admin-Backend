@@ -40,6 +40,10 @@ namespace PmtAdmin.Domain.Entities
         [Column("is_active")]
         public bool IsActive { get; set; } = true;
 
+        [MaxLength(50)]
+        [Column("status")]
+        public string? Status { get; set; } = "Active";  // "Active", "Inactive", or "Suspended"
+
         [Column("is_super_admin")]
         public bool IsSuperAdmin { get; set; } = false;
 

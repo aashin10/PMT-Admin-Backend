@@ -20,6 +20,7 @@ namespace PmtAdmin.Application.Command
         public string? Name { get; set; }
         public string? JiraId { get; set; }
         public string? Type { get; set; }  // "Internal" or "External"
+        public string? Status { get; set; }  // "Active", "Inactive", or "Suspended"
         public int? CreatedBy { get; set; }
     }
 }

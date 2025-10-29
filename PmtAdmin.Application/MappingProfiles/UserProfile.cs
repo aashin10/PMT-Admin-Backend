@@ -28,7 +28,7 @@ namespace PmtAdmin.Application.MappingProfiles
 
             // Entity to DTO
             CreateMap<User, UserDto>()
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.IsActive ? "Active" : "Inactive"))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status ?? "Active"))
                 .ForMember(dest => dest.Created_At, opt => opt.MapFrom(src =>
                     src.CreatedAt.ToString("MM/dd/yyyy")))
                 .ForMember(dest => dest.Last_Login, opt => opt.MapFrom(src =>

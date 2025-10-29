@@ -48,7 +48,7 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<AppDbContext>();
 
         // Apply pending migrations (creates database if it doesn't exist)
-        context.Database.Migrate();
+        //context.Database.Migrate();
 
         Console.WriteLine("Database migration completed successfully.");
     }

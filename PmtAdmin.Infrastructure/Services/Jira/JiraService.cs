@@ -67,50 +67,71 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         public async Task<List<JiraIssue>> GetIssuesByBoardIdAsync(string baseUrl, string token, string boardId)
         {
             var client = JiraServiceFactory.CreateClient(baseUrl, token);
-
-            var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/issue?jql=issuetype != Epic", Method.Get);
-            request.AddHeader("Accept", "application/json");
-
-            var response = await client.ExecuteAsync(request);
-
-            if (string.IsNullOrEmpty(response.Content))
-                return new List<JiraIssue>();
-
-            var json = JObject.Parse(response.Content);
-            var issuesArray = json["issues"];
-
             var issues = new List<JiraIssue>();
 
-            if (issuesArray != null)
+            int startAt = 0;
+            const int maxResults = 100;
+            bool hasMore = true;
+
+            while (hasMore)
             {
-                foreach (var item in issuesArray)
+                var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/issue", Method.Get);
+                request.AddHeader("Accept", "application/json");
+                request.AddQueryParameter("jql", "issuetype != Epic");
+                request.AddQueryParameter("startAt", startAt.ToString());
+                request.AddQueryParameter("maxResults", maxResults.ToString());
+
+                var response = await client.ExecuteAsync(request);
+
+                if (!response.IsSuccessful || string.IsNullOrEmpty(response.Content))
                 {
-                    var fields = item["fields"];
 
-                    var issue = new JiraIssue
-                    {
-                        Id = item["id"] != null ? int.Parse(item["id"].ToString()) : 0,
-                        Key = item["key"]?.ToString(),
-                        Summary = fields?["summary"]?.ToString(),
-                        Assignee = fields?["assignee"].ToObject<JiraUser>(),
-                        Labels = fields?["labels"]?.ToObject<List<string>>(),
-                        Reporter = fields?["reporter"].ToObject<JiraUser>(),
-                        Creator = fields?["creator"].ToObject<JiraUser>(),
-                        Comment = fields?["comment"]?["comments"]?.ToObject<List<JiraComment>>(),
-                        Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
-                        UpdatedAt = fields?["updated"] != null ? DateTime.Parse(fields["updated"].ToString()) : DateTime.MinValue,
-                        Status = fields?["status"]?["statusCategory"]?.ToObject<JiraStatus>(),
-                        Priority = fields?["priority"]?.ToObject<JiraPriority>(),
-                        Sprint = fields?["sprint"]?.ToObject<JiraSprint>(),
-                        Epic = fields?["parent"]?.ToObject<JiraEpic>()
-                    };
-
-                    issues.Add(issue);
+                    break;
                 }
+
+                var json = JObject.Parse(response.Content);
+                var issuesArray = json["issues"];
+                int total = json["total"]?.Value<int>() ?? 0;
+                int fetched = issuesArray?.Count() ?? 0;
+
+                if (issuesArray != null)
+                {
+                    foreach (var item in issuesArray)
+                    {
+                        var fields = item["fields"];
+
+                        var issue = new JiraIssue
+                        {
+                            Id = item["id"] != null ? int.Parse(item["id"].ToString()) : 0,
+                            Key = item["key"]?.ToString(),
+                            Summary = fields?["summary"]?.ToString(),
+                            Assignee = fields?["assignee"]?.ToObject<JiraUser>(),
+                            Labels = fields?["labels"]?.ToObject<List<string>>(),
+                            Reporter = fields?["reporter"]?.ToObject<JiraUser>(),
+                            Creator = fields?["creator"]?.ToObject<JiraUser>(),
+                            Comment = fields?["comment"]?["comments"]?.ToObject<List<JiraComment>>(),
+                            Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
+                            UpdatedAt = fields?["updated"] != null
+                                ? DateTime.Parse(fields["updated"]!.ToString())
+                                : DateTime.MinValue,
+                            Status = fields?["status"]?["statusCategory"]?.ToObject<JiraStatus>(),
+                            Priority = fields?["priority"]?.ToObject<JiraPriority>(),
+                            Sprint = fields?["sprint"]?.ToObject<JiraSprint>(),
+                            Epic = fields?["parent"]?.ToObject<JiraEpic>()
+                        };
+
+                        issues.Add(issue);
+                    }
+                }
+
+                // Pagination control
+                startAt += fetched;
+                hasMore = startAt < total && fetched > 0;
             }
 
             return issues;
         }
+
 
         public async Task<List<JiraEpic>> GetEpicsByBoardIdAsync(string baseUrl, string token, string boardId)
         {

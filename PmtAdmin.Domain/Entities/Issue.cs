@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
@@ -51,7 +46,7 @@ namespace PmtAdmin.Domain.Entities
 
         [MaxLength(50)]
         [Column("status")]
-        public string Status { get; set; } = "TODO";
+        public int StatusId { get; set; }
 
         [Column("assignee_id")]
         public int? AssigneeId { get; set; }
@@ -95,6 +90,9 @@ namespace PmtAdmin.Domain.Entities
 
         [ForeignKey("ParentIssueId")]
         public Issue? ParentIssue { get; set; }
+
+        [ForeignKey("StatusId")]
+        public Status? Status { get; set; }
 
         [ForeignKey("AssigneeId")]
         public User? Assignee { get; set; }

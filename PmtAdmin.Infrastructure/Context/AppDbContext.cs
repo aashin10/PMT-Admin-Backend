@@ -29,6 +29,8 @@ namespace PmtAdmin.Infrastructure.Context
         public DbSet<Mention> Mentions { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<BoardColumn> BoardColumns { get; set; }
+
+        public DbSet<BoardColumnMapping> BoardColumnMappings { get; set; }
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<ActivityLog> ActivityLogs { get; set; }

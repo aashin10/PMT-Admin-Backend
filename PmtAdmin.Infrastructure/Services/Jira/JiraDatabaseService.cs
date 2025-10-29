@@ -22,10 +22,43 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         {
             Dictionary<string, int> JiraIdToUserIdMappingScheme = new Dictionary<string, int>();
 
+            List<string> issueStatuses = new List<string>
+            {
+             "TODO",
+             "INPROGRESS",
+             "DONE",
+            };
+
+
+
+            // Get existing status names from the database
+            var existingStatuses = _context.Statuses
+                .Where(s => issueStatuses.Contains(s.StatusName))
+                .Select(s => s.StatusName)
+                .ToList();
+
+            // Filter out statuses that already exist
+            var newStatuses = issueStatuses
+                .Except(existingStatuses)
+                .Select(status => new Status { StatusName = status })
+                .ToList();
+
+            // Add only new statuses
+            if (newStatuses.Any())
+            {
+                _context.Statuses.AddRange(newStatuses);
+                _context.SaveChanges();
+            }
+
+            var allStatuses = _context.Statuses.ToList();
+
             foreach (var project in projects)
             {
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
+
+                p.Key = "JIRA" + p.Key;
+
 
                 //Check if Project Manager exists in the database
                 if (project.Project.Lead.AccountId == null)
@@ -96,14 +129,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 Dictionary<int, string> EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
                 Dictionary<int, string> IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
                 Dictionary<int, string> SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
-
-
-
+                Dictionary<int, string> IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
 
                 foreach (var board in project.Boards)
                 {
 
-
+                    int BoardColumnCount = 0;
                     List<Issue> issues = new List<Issue>();
                     List<Sprint> sprints = new List<Sprint>();
                     List<Epic> epics = new List<Epic>();
@@ -158,6 +189,54 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Sprint.Id]) : (Guid?)null;
                             }
 
+                            if (!IssueEntityStatusJiraIssueStatusMappingScheme.ContainsKey(issue.Status.Id))
+                            {
+                                //Create a board
+                                var boardcolumn = new BoardColumn
+                                {
+                                    BoardColumnName = issue.Status.Name,
+                                    BoardColor = "#FFFFFF",
+                                    Position = BoardColumnCount
+                                };
+
+                                BoardColumnCount++;
+                                _context.BoardColumns.Add(boardcolumn);
+                                await _context.SaveChangesAsync();
+
+                                // Replace lines 215-235 with:
+                                var tempStatusName = issue.Status.Name.ToUpper().Replace(" ", "");
+                                var searchedStatus = allStatuses.Find(s => s.StatusName == tempStatusName);
+
+                                Status statusToUse;
+                                if (searchedStatus == null)
+                                {
+                                    statusToUse = new Status { StatusName = tempStatusName };
+                                    _context.Statuses.Add(statusToUse);
+                                    await _context.SaveChangesAsync();
+                                    allStatuses.Add(statusToUse);
+                                }
+                                else
+                                {
+                                    statusToUse = searchedStatus;
+                                }
+
+                                boardcolumn.StatusId = statusToUse.Id;
+
+                                await _context.SaveChangesAsync();
+
+                                var boardColumnMapping = new BoardColumnMapping
+                                {
+                                    BoardId = b.Id,
+                                    BoardColumnId = boardcolumn.Id
+                                };
+                                _context.BoardColumnMappings.Add(boardColumnMapping);
+                                IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id.ToString();
+
+                                await _context.SaveChangesAsync();
+                            }
+
+                            //i.StatusId = IssueEntityStatusJiraIssueStatusMappingScheme.ContainsKey(issue.Status.Id) ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Status.Id]) : (Guid?)null;
+
                             if (issue.Epic != null)
                             {
                                 i.EpicId = EpicEntityJiraEpicModelMappingScheme.ContainsKey(issue.Epic.Id)
@@ -181,6 +260,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0;
                                 i.IssueComments.Add(ic);
                             }
+                            i.Status = null; // To avoid EF Core tracking issues
                             issues.Add(i);
                             IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                         }

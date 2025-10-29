@@ -103,11 +103,14 @@ namespace PmtAdmin.Infrastructure.Models
 
             public string Summary { get; set; }
 
+            public string Description { get; set; }
+
+
         }
 
         public class JiraStatus
         {
-            public string Id { get; set; }
+            public int Id { get; set; }
             public string Name { get; set; }
         }
 

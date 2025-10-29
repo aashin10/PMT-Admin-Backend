@@ -26,13 +26,13 @@ namespace PmtAdmin.Application.MappingProfiles
     .ForMember(dest => dest.Sprint, opt => opt.Ignore())
     .ForMember(dest => dest.Epic, opt => opt.Ignore())
     .ForMember(dest => dest.Assignee, opt => opt.Ignore())
-        .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.Name))
     .ForMember(dest => dest.Reporter, opt => opt.Ignore())
         .ForMember(dest => dest.Epic, opt => opt.Ignore())
     .ForMember(dest => dest.Project, opt => opt.Ignore())
     .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow))
     .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(_ => DateTime.UtcNow))
-            .ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority.Name));
+            .ForMember(dest => dest.Priority, opt => opt.MapFrom(src => src.Priority.Name))
+            .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.IssueType.Name));
 
             CreateMap<JiraEpic, Epic>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
@@ -43,10 +43,17 @@ namespace PmtAdmin.Application.MappingProfiles
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.DisplayName));
 
             CreateMap<JiraSprint, Sprint>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
+                .ForMember(dest => dest.DueDate, opt => opt.MapFrom(src => src.EndDate))
+                .ForMember(dest => dest.SprintGoal, opt => opt.MapFrom(src => src.Goal));
+
             CreateMap<JiraComment, IssueComment>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore());
-            CreateMap<JiraTeam, Team>();
+
+            CreateMap<JiraStatus, Status>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.StatusName, opt => opt.MapFrom(src => src.Name));
+            //CreateMap<JiraTeam, Team>();
 
 
         }

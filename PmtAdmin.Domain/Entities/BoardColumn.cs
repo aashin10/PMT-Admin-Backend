@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
@@ -17,10 +12,10 @@ namespace PmtAdmin.Domain.Entities
         public Guid Id { get; set; }
 
         [Column("status_id")]
-        public Guid? StatusId { get; set; }
+        public int? StatusId { get; set; }
 
-        [Column("board_name")]
-        public string? BoardName { get; set; }
+        [Column("board_column_name")]
+        public string? BoardColumnName { get; set; }
 
         [Column("board_color")]
         public string? BoardColor { get; set; }

@@ -108,12 +108,21 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             Assignee = fields?["assignee"]?.ToObject<JiraUser>(),
                             Labels = fields?["labels"]?.ToObject<List<string>>(),
                             Reporter = fields?["reporter"]?.ToObject<JiraUser>(),
+                            StoryPoints = int.TryParse(fields?["customfield_10016"]?.ToString(), out var sp) ? sp : 0,
                             Creator = fields?["creator"]?.ToObject<JiraUser>(),
+                            Description = fields?["description"]?.ToString(),
+                            ////DueDate = fields?["duedate"] != null
+                            //    ? DateTime.Parse(fields["duedate"]!.ToString())
+                            //    : (DateTime?)null,
+                            //StartDate = fields?["customfield_10015"] != null
+                            //    ? DateTime.Parse(fields["customfield_10015"]!.ToString())
+                            //    : (DateTime?)null,
                             Comment = fields?["comment"]?["comments"]?.ToObject<List<JiraComment>>(),
-                            Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
+                            //Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
                             UpdatedAt = fields?["updated"] != null
                                 ? DateTime.Parse(fields["updated"]!.ToString())
                                 : DateTime.MinValue,
+                            IssueType = fields?["issuetype"]?.ToObject<JiraIssueType>(),
                             Status = fields?["status"]?["statusCategory"]?.ToObject<JiraStatus>(),
                             Priority = fields?["priority"]?.ToObject<JiraPriority>(),
                             Sprint = fields?["sprint"]?.ToObject<JiraSprint>(),
@@ -136,20 +145,56 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         public async Task<List<JiraEpic>> GetEpicsByBoardIdAsync(string baseUrl, string token, string boardId)
         {
             var client = JiraServiceFactory.CreateClient(baseUrl, token);
+            var epics = new List<JiraEpic>();
+            int startAt = 0;
+            const int maxResults = 100;
+            bool hasMore = true;
 
-            var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/epic", Method.Get);
-            request.AddHeader("Accept", "application/json");
+            while (hasMore)
+            {
+                var request = new RestRequest($"/rest/agile/1.0/board/{boardId}/issue", Method.Get);
+                request.AddHeader("Accept", "application/json");
+                request.AddQueryParameter("jql", "issuetype = Epic");
+                request.AddQueryParameter("startAt", startAt.ToString());
+                request.AddQueryParameter("maxResults", maxResults.ToString());
 
-            var response = await client.ExecuteAsync(request);
+                var response = await client.ExecuteAsync(request);
+                if (!response.IsSuccessful || string.IsNullOrEmpty(response.Content))
+                    break;
 
-            if (string.IsNullOrEmpty(response.Content))
-                return new List<JiraEpic>();
+                var json = JObject.Parse(response.Content);
+                var issuesArray = json["issues"];
+                int total = json["total"]?.Value<int>() ?? 0;
+                int fetched = issuesArray?.Count() ?? 0;
 
-            var json = JObject.Parse(response.Content);
-            var epics = json["values"]?.ToObject<List<JiraEpic>>() ?? new List<JiraEpic>();
+                if (issuesArray != null)
+                {
+                    foreach (var item in issuesArray)
+                    {
+                        var fields = item["fields"];
+
+                        var epic = new JiraEpic
+                        {
+                            Id = item["id"] != null ? int.Parse(item["id"].ToString()) : 0,
+                            Key = item["key"]?.ToString(),
+
+                            Summary = fields?["summary"]?.ToString(),
+                            Description = fields?["description"]?.ToString(),
+
+                        };
+
+                        epics.Add(epic);
+                    }
+                }
+
+                // Pagination control
+                startAt += fetched;
+                hasMore = startAt < total && fetched > 0;
+            }
 
             return epics;
         }
+
 
         public async Task<List<JiraUser>> GetUsersByRoleAsync(string roleUrl, string token)
         {

@@ -1,11 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
-using PmtAdmin.Infrastructure.Context.Seeding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -547,7 +541,7 @@ namespace PmtAdmin.Infrastructure.Context
             //modelBuilder.SeedDeliveryUnits();      // Third - no dependencies
             //modelBuilder.SeedProjectStatuses();    // Fourth - no dependencies
             //modelBuilder.SeedProjectTemplates();
-            modelBuilder.SeedProjects();
+            //modelBuilder.SeedProjects();
         }
 
         //public DbSet<Users> Users { get; set; }

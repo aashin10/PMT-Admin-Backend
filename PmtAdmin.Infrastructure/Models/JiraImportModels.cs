@@ -37,15 +37,20 @@ namespace PmtAdmin.Infrastructure.Models
             public DateTime? EndDate { get; set; }
             public DateTime? CompleteDate { get; set; }
 
+            public string Goal { get; set; }
+
         }
 
         public class JiraIssue
         {
+
             public int Id { get; set; }
 
             public string Key { get; set; }
 
             public string Summary { get; set; }
+
+            public string Description { get; set; }
 
             public JiraUser Assignee { get; set; }
 
@@ -63,12 +68,31 @@ namespace PmtAdmin.Infrastructure.Models
             public JiraTeam Team { get; set; }
             public DateTimeOffset UpdatedAt { get; set; }
 
+            public int StoryPoints { get; set; }
+
             public JiraPriority Priority { get; set; }
+
+            public JiraIssueType IssueType { get; set; }
 
             public JiraStatus Status { get; set; }
 
             public JiraEpic Epic { get; set; }
 
+            public DateTime? DueDate { get; set; }
+
+            public DateTime? StartDate { get; set; }
+
+
+
+        }
+
+        public class JiraIssueType
+        {
+            public int Id { get; set; }
+
+            public string Name { get; set; }
+
+            public string Description { get; set; }
         }
 
         public class JiraEpic

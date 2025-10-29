@@ -27,14 +27,15 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
 
-
                 //Check if Project Manager exists in the database
                 if (project.Project.Lead.AccountId == null)
                 {
                     throw new Exception("No Project Manager Assigned in Jira");
                 }
+
                 var user = await _context.User
                     .FirstOrDefaultAsync<User>(u => u.JiraId == project.Project.Lead.AccountId);
+
                 if (user == null)
                 {
                     // Create a user for entity if user with JiraId does not exists in the database
@@ -47,9 +48,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                 _context.Projects.Add(p);
 
-                //TODO: Bug wherein multiple users is created with same JIRA ID
 
                 //For each role
+                //If not an admin, the roles wont be available/imported
                 foreach (var role in project.UsersByRole.Keys)
                 {
                     //For each user in the role
@@ -109,8 +110,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     //Mapping Board
                     var b = _mapper.Map<Board>(board.BoardInfo);
 
-
-
                     //Creating a Team for the Board
                     var t = new Team
                     {
@@ -123,7 +122,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                     b.TeamId = t.Id;
                     b.ProjectId = p.Id;
-
 
                     foreach (var sprint in board.Sprints)
                     {
@@ -147,8 +145,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         }
                     }
 
-
-
                     foreach (var issue in board.Issues)
                     {
                         if (!IssueEntityJiraIssueModelMappingScheme.ContainsKey(issue.Id))
@@ -168,17 +164,23 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
                             }
 
+                            i.AssigneeId = issue.Assignee != null && JiraIdToUserIdMappingScheme.ContainsKey(issue.Assignee.AccountId)
+                                ? JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] : (int?)null;
+
+                            i.ReporterId = issue.Reporter != null && JiraIdToUserIdMappingScheme.ContainsKey(issue.Reporter.AccountId) ?
+                                JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] : (int?)null;
+
                             //Temp fix
                             i.Labels = "[\"tag1\", \"tag2\"]";
 
-                            //foreach (var comment in issue.Comment)
-                            //{
-                            //    var ic = _mapper.Map<IssueComment>(comment);
-                            //    ic.IssueId = i.Id;
-                            //    ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
-                            //        ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0; // Default to 0 if not found
-                            //    i.IssueComments.Add(ic);
-                            //}
+                            foreach (var comment in issue.Comment)
+                            {
+                                var ic = _mapper.Map<IssueComment>(comment);
+                                ic.IssueId = i.Id;
+                                ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
+                                    ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0;
+                                i.IssueComments.Add(ic);
+                            }
                             issues.Add(i);
                             IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                         }

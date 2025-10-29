@@ -1,7 +1,9 @@
 ﻿using PmtAdmin.Api.Middleware;
 using PmtAdmin.Application;
 using PmtAdmin.Infrastructure;
+using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Context.Seeding;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,9 +37,27 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
 
-// Register the DataSeedingService
-//builder.Services.AddHostedService<DataSeedingService>();
 var app = builder.Build();
+
+// Auto-migrate and seed database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<AppDbContext>();
+
+        // Apply pending migrations (creates database if it doesn't exist)
+        context.Database.Migrate();
+
+        Console.WriteLine("Database migration completed successfully.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred while migrating the database: {ex.Message}");
+        throw;
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

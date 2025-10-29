@@ -3197,6 +3197,11 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("character varying(1024)")
                         .HasColumnName("password_hash");
 
+                    b.Property<string>("Status")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
+                        .HasColumnName("status");
+
                     b.Property<string>("Type")
                         .HasColumnType("text")
                         .HasColumnName("type");
@@ -3226,102 +3231,142 @@ namespace PmtAdmin.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Sarah+Johnson",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "admin@company.com",
+                            Email = "sarah.johnson@experionglobal.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = true,
-                            Name = "System Admin"
+                            JiraId = "SJOHN001",
+                            Name = "Sarah Johnson",
+                            Status = "Active",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 2,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Michael+Chen",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "pm1@company.com",
+                            Email = "michael.chen@experionglobal.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Project Manager 1"
+                            JiraId = "MCHEN002",
+                            Name = "Michael Chen",
+                            Status = "Active",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 3,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Emily+Rodriguez",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "pm2@company.com",
+                            Email = "emily.rodriguez@experionglobal.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Project Manager 2"
+                            JiraId = "EROD003",
+                            Name = "Emily Rodriguez",
+                            Status = "Active",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 4,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=David+Kumar",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev1@company.com",
+                            Email = "david.kumar@experionglobal.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Developer 1"
+                            JiraId = "DKUM004",
+                            Name = "David Kumar",
+                            Status = "Active",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 5,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Jessica+Anderson",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev2@company.com",
-                            IsActive = true,
+                            Email = "jessica.anderson@experionglobal.com",
+                            IsActive = false,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Developer 2"
+                            JiraId = "JAND005",
+                            Name = "Jessica Anderson",
+                            Status = "Inactive",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 6,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Robert+Wilson",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev3@company.com",
+                            Email = "robert.wilson@techpartners.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Developer 3"
+                            JiraId = "RWIL006",
+                            Name = "Robert Wilson",
+                            Status = "Active",
+                            Type = "External"
                         },
                         new
                         {
                             Id = 7,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Amanda+Taylor",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev4@company.com",
-                            IsActive = true,
+                            Email = "amanda.taylor@experionglobal.com",
+                            IsActive = false,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Developer 4"
+                            JiraId = "ATAY007",
+                            Name = "Amanda Taylor",
+                            Status = "Suspended",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 8,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=James+Patel",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "qa1@company.com",
+                            Email = "james.patel@experionglobal.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "QA Engineer 1"
+                            JiraId = "JPAT008",
+                            Name = "James Patel",
+                            Status = "Active",
+                            Type = "Internal"
                         },
                         new
                         {
                             Id = 9,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Maria+Garcia",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "qa2@company.com",
+                            Email = "maria.garcia@clientcorp.com",
                             IsActive = true,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "QA Engineer 2"
+                            JiraId = "MGAR009",
+                            Name = "Maria Garcia",
+                            Status = "Active",
+                            Type = "External"
                         },
                         new
                         {
                             Id = 10,
+                            AvatarUrl = "https://avatar.iran.liara.run/username?username=Christopher+Lee",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "designer1@company.com",
-                            IsActive = true,
+                            Email = "christopher.lee@experionglobal.com",
+                            IsActive = false,
                             IsDeleted = false,
                             IsSuperAdmin = false,
-                            Name = "Designer 1"
+                            JiraId = "CLEE010",
+                            Name = "Christopher Lee",
+                            Status = "Inactive",
+                            Type = "Internal"
                         });
                 });
 

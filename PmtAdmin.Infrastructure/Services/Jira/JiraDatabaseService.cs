@@ -11,25 +11,22 @@ namespace PmtAdmin.Infrastructure.Services.Jira
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
 
-
         public JiraDatabaseService(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public async Task PopulateDataBase(List<JiraProjectData> projects)
+        public async Task<List<User>> PopulateDataBase(List<JiraProjectData> projects)
         {
             Dictionary<string, int> JiraIdToUserIdMappingScheme = new Dictionary<string, int>();
-
+            List<User> returnUsers = new List<User>();
             List<string> issueStatuses = new List<string>
             {
              "TODO",
              "INPROGRESS",
              "DONE",
             };
-
-
 
             // Get existing status names from the database
             var existingStatuses = _context.Statuses
@@ -74,13 +71,15 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     // Create a user for entity if user with JiraId does not exists in the database
                     user = _mapper.Map<User>(project.Project.Lead);
                     await _context.User.AddAsync(user);
+                    returnUsers.Add(user);
                     await _context.SaveChangesAsync();
 
                 }
                 p.ProjectManagerId = user.Id;
+                p.ProjectManagerRoleId = 1; //1=>Admin
 
                 _context.Projects.Add(p);
-
+                await _context.SaveChangesAsync();
 
                 //For each role
                 //If not an admin, the roles wont be available/imported
@@ -103,6 +102,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 existingUser = _mapper.Map<User>(u);
                                 await _context.User.AddAsync(existingUser);
                                 await _context.SaveChangesAsync();
+                                returnUsers.Add(existingUser);
                             }
 
                             //Add to mapping scheme
@@ -118,6 +118,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         };
 
                         _context.ProjectMembers.Add(projectMember);
+                        await _context.SaveChangesAsync();
 
                     }
                 }
@@ -153,6 +154,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                     b.TeamId = t.Id;
                     b.ProjectId = p.Id;
+                    _context.Boards.Add(b);
+                    await _context.SaveChangesAsync();
 
                     foreach (var sprint in board.Sprints)
                     {
@@ -252,14 +255,14 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             //Temp fix
                             i.Labels = "[\"tag1\", \"tag2\"]";
 
-                            foreach (var comment in issue.Comment)
-                            {
-                                var ic = _mapper.Map<IssueComment>(comment);
-                                ic.IssueId = i.Id;
-                                ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
-                                    ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0;
-                                i.IssueComments.Add(ic);
-                            }
+                            //foreach (var comment in issue.Comment)
+                            //{
+                            //    var ic = _mapper.Map<IssueComment>(comment);
+                            //    ic.IssueId = i.Id;
+                            //    ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
+                            //        ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0;
+                            //    i.IssueComments.Add(ic);
+                            //}
                             i.Status = null; // To avoid EF Core tracking issues
                             issues.Add(i);
                             IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
@@ -268,13 +271,15 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
 
                     _context.Sprints.AddRange(sprints);
-                    _context.Boards.Add(b);
+
 
                     _context.Epics.AddRange(epics);
                     _context.Issues.AddRange(issues);
                     await _context.SaveChangesAsync();
                 }
             }
+
+            return returnUsers;
         }
     }
 }

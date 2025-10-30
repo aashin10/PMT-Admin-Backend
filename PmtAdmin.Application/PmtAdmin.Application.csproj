@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Dto\" />
     <Folder Include="Constants\" />
-    <Folder Include="Handlers\" />
     <Folder Include="Wrappers\" />
     <Folder Include="Query\" />
   </ItemGroup>
@@ -26,7 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PmtAdmin.Domain\PmtAdmin.Domain.csproj" />
-    <ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
+	<ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

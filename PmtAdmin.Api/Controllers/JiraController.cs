@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using PmtAdmin.Infrastructure.Services.Jira;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using PmtAdmin.Application.Command;
+using PmtAdmin.Application.Dto;
+using PmtAdmin.Application.Wrappers;
 using System.Net;
 using static PmtAdmin.Infrastructure.Models.JiraImportModels;
 
@@ -9,31 +12,32 @@ namespace PmtAdmin.Api.Controllers
     [ApiController]
     public class JiraController : ControllerBase
     {
-        private readonly IJiraService _jiraService;
-        private readonly IJiraDatabaseService _jiraDatabaseService;
-        public JiraController(IJiraService jiraService, IJiraDatabaseService jiraDatabaseService)
+        private readonly IMediator _mediator;
+
+        public JiraController(IMediator mediator)
         {
-            _jiraService = jiraService;
-            _jiraDatabaseService = jiraDatabaseService;
+            _mediator = mediator;
         }
 
 
         [HttpGet("import/{baseUrl}")]
-        public async Task<IActionResult> ImportProjects(string baseUrl, [FromQuery] string projectIds)
+        public async Task<ApiResponse<List<UserDto>>> ImportProjects(string baseUrl, [FromQuery] string projectIds)
         {
+
             string decodedUrl = WebUtility.UrlDecode(baseUrl);
             string jiraToken = Request.Headers["Jira-Access-Token"].ToString();
 
             var ids = projectIds.Split(','); // Split comma-separated IDs
             var results = new List<JiraProjectData>();
 
-            foreach (var id in ids)
+            var users = await _mediator.Send(new ImportFromJiraCommand
             {
-                var project = await _jiraService.GetFullProjectDataAsync(decodedUrl, jiraToken, id.Trim());
-                results.Add(project);
-            }
-            await _jiraDatabaseService.PopulateDataBase(results);
-            return Ok(results);
+                BaseUrl = decodedUrl,
+                ProjectIds = ids,
+                JiraAccessToken = jiraToken
+            });
+
+            return users;
         }
     }
 }

@@ -9,6 +9,6 @@ namespace PmtAdmin.Domain.Persistance
 {
     public interface IRoleRepository : IGenericRepository<Role>
     {
-
+        Task UpdateRolePermissionsAsync(Role role, IEnumerable<int> newPermissionIds);
     }
 }

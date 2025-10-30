@@ -23,6 +23,9 @@ namespace PmtAdmin.Application.Handlers.Role
         {
             var roles = await _rolesRepository.GetAllAsync();
 
+            if (roles == null)
+                return null;
+
             var pagedRoles = roles
                 .Skip((request.Page - 1) * request.PageSize)
                 .Take(request.PageSize)
@@ -33,8 +36,13 @@ namespace PmtAdmin.Application.Handlers.Role
                     Description = role.Description,
                     Metadata = role.Metadata,
                     CreatedAt = role.CreatedAt.ToString("o"),
-                    
-                    // Map other properties as needed
+                    UserCount = role.ProjectMembers?.Count ?? 0,
+                    Permissions = role.RolePermissions?.Select(rp => new PermissionDto
+                    {
+                        Id = rp.Permission!.Id,
+                        Name = rp.Permission.Name,
+                        Description = rp.Permission.Description
+                    }).ToList() ?? new List<PermissionDto>()
                 })
                 .ToList();
 

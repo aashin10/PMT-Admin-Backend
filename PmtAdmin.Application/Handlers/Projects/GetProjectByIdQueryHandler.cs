@@ -49,7 +49,29 @@ namespace PmtAdmin.Application.Handlers.Projects
                 StatusId = project.StatusId,
                 StatusName = project.Status?.Name,
                 DeliveryUnitId = project.DeliveryUnitId,
-                DeliveryUnitName = project.DeliveryUnit?.Description,
+                DeliveryUnitName = project.DeliveryUnit?.Name,
+                DeliveryUnitCode = project.DeliveryUnit?.Code,
+                TeamSize = project.ProjectMembers?.Count ?? 0,
+                SprintCount = project.Sprints?.Count ?? 0,
+                AdditionalInformation = project.CustomFields?.Select(cf => new CustomFieldDTO
+                {
+                    Id = cf.Id,
+                    Name = cf.Name,
+                    Value = cf.Value
+                }).ToList() ?? new List<CustomFieldDTO>(),
+                Teams = project.Teams?.Select(t => new TeamDTO
+                {
+                    Id = t.Id,
+                    Name = t.Name
+                }).ToList() ?? new List<TeamDTO>(),
+                TeamMembers = project.ProjectMembers?.Select(pm => new TeamMemberDTO
+                {
+                    Id = pm.Id,
+                    Name = pm.User?.Name,
+                    Role = pm.ProjectRole,
+                    Email = pm.User?.Email,
+                    Team = pm.TeamId?.ToString()
+                }).ToList() ?? new List<TeamMemberDTO>(),
                 IsImportedFromJira = project.IsImportedFromJira,
                 CreatedAt = project.CreatedAt,
                 UpdatedAt = project.UpdatedAt

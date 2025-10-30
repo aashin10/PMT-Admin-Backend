@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Projects
 {
-    public class GetAllProjectsQueryHandler : IRequestHandler<GetAllProjectsQuery, ApiResponse<List<ProjectDTO>>>
+    public class GetAllProjectsQueryHandler : IRequestHandler<GetAllProjectsQuery, ApiResponse<PaginatedResponse<ProjectTableDTO>>>
     {
         private readonly IMapper _mapper;
         private readonly IProjectRepository _projectRepository;
@@ -23,39 +23,85 @@ namespace PmtAdmin.Application.Handlers.Projects
             _projectRepository = projectRepository;
         }
 
-        public async Task<ApiResponse<List<ProjectDTO>>> Handle(GetAllProjectsQuery request, CancellationToken cancellationToken)
+        public async Task<ApiResponse<PaginatedResponse<ProjectTableDTO>>> Handle(GetAllProjectsQuery request, CancellationToken cancellationToken)
         {
-            var projects = await _projectRepository.GetAllProjectsWithDetailsAsync();
+            // Validate pagination parameters
+            if (request.Page < 1)
+                request.Page = 1;
+
+            if (request.PageSize < 1)
+                request.PageSize = 10;
+
+            // Limit page size to prevent performance issues (10, 25, 50, max 100)
+            if (request.PageSize > 100)
+                request.PageSize = 100;
+
+            // Get paginated and filtered projects
+            var (projects, totalCount) = await _projectRepository.GetProjectsForTableAsync(
+                request.Page,
+                request.PageSize,
+                request.SearchTerm,
+                request.StatusIds,
+                request.DeliveryUnitIds,
+                request.ProjectManagerIds
+            );
 
             if (projects == null || !projects.Any())
             {
-                return ApiResponse<List<ProjectDTO>>.Success(new List<ProjectDTO>(), "No projects found");
+                var emptyResponse = new PaginatedResponse<ProjectTableDTO>
+                {
+                    Items = new List<ProjectTableDTO>(),
+                    TotalCount = 0,
+                    Page = request.Page,
+                    PageSize = request.PageSize,
+                    TotalPages = 0
+                };
+                return ApiResponse<PaginatedResponse<ProjectTableDTO>>.Success(emptyResponse, "No projects found");
             }
 
-            var projectDtos = projects.Select(p => new ProjectDTO
+            // Map to simplified table DTOs
+            var projectTableDtos = projects.Select(p => new ProjectTableDTO
             {
                 Id = p.Id,
                 Name = p.Name,
                 Key = p.Key,
-                Description = p.Description,
-                CustomerOrgName = p.CustomerOrgName,
-                CustomerDomainUrl = p.CustomerDomainUrl,
-                CustomerDescription = p.CustomerDescription,
-                PocEmail = p.PocEmail,
-                PocPhone = p.PocPhone,
-                ProjectManagerId = p.ProjectManagerId,
-                ProjectManagerName = p.ProjectManager?.Name,
-                ProjectManagerRoleId = p.ProjectManagerRoleId,
-                StatusId = p.StatusId,
-                StatusName = p.Status?.Name,
-                DeliveryUnitId = p.DeliveryUnitId,
-                DeliveryUnitName = p.DeliveryUnit?.Description,
-                IsImportedFromJira = p.IsImportedFromJira,
-                CreatedAt = p.CreatedAt,
-                UpdatedAt = p.UpdatedAt
+                Status = p.Status != null ? new ProjectStatusDto
+                {
+                    Id = p.Status.Id,
+                    Name = p.Status.Name,
+                    Description = p.Status.Description
+                } : null,
+                DeliveryUnit = p.DeliveryUnit != null ? new DeliveryUnitDto
+                {
+                    Id = p.DeliveryUnit.Id,
+                    Name = p.DeliveryUnit.Name,
+                    Code = p.DeliveryUnit.Code
+                } : null,
+                TeamSize = p.ProjectMembers?.Count ?? 0,
+                ProjectManager = p.ProjectManager != null ? new ProjectManagerDto
+                {
+                    Id = p.ProjectManager.Id,
+                    Name = p.ProjectManager.Name
+                } : null,
+                IsImportedFromJira = p.IsImportedFromJira
             }).ToList();
 
-            return ApiResponse<List<ProjectDTO>>.Success(projectDtos);
+            // Calculate total pages
+            var totalPages = (int)Math.Ceiling(totalCount / (double)request.PageSize);
+
+            var paginatedResponse = new PaginatedResponse<ProjectTableDTO>
+            {
+                Items = projectTableDtos,
+                TotalCount = totalCount,
+                Page = request.Page,
+                PageSize = request.PageSize,
+                TotalPages = totalPages
+            };
+
+            return ApiResponse<PaginatedResponse<ProjectTableDTO>>.Success(
+                paginatedResponse,
+                $"Retrieved {projectTableDtos.Count} projects from {totalCount} total"
+            );
         }
     }
 }

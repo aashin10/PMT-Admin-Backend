@@ -9,8 +9,16 @@ namespace PmtAdmin.Domain.Persistance
 {
     public interface IProjectRepository : IGenericRepository<Project>
     {
-        Task<IReadOnlyList<Project>> GetAllProjectsWithDetailsAsync();
         Task<Project?> GetProjectByIdWithDetailsAsync(Guid id);
         Task<bool> SoftDeleteProjectAsync(Guid id);
+        Task<int> GetTotalProjectCountAsync();
+        Task<int> GetProjectTeamSizeAsync(Guid projectId);
+        Task<(IReadOnlyList<Project> Projects, int TotalCount)> GetProjectsForTableAsync(
+            int page,
+            int pageSize,
+            string? searchTerm,
+            List<int>? statusIds,
+            List<int>? deliveryUnitIds,
+            List<int>? projectManagerIds);
     }
 }

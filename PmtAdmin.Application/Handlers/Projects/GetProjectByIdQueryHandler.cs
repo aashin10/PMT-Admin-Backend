@@ -4,11 +4,6 @@ using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Query.Projects;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Projects
 {
@@ -68,9 +63,9 @@ namespace PmtAdmin.Application.Handlers.Projects
                 {
                     Id = pm.Id,
                     Name = pm.User?.Name,
-                    Role = pm.ProjectRole,
+                    //Role = pm.ProjectRole,
                     Email = pm.User?.Email,
-                    Team = pm.TeamId?.ToString()
+                    // Team = pm.TeamId?.ToString()
                 }).ToList() ?? new List<TeamMemberDTO>(),
                 IsImportedFromJira = project.IsImportedFromJira,
                 CreatedAt = project.CreatedAt,

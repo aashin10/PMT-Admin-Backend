@@ -7,12 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\" />
     <Folder Include="MappingProfiles\" />
     <Folder Include="Constants\" />
-    <Folder Include="Handlers\" />
     <Folder Include="Wrappers\" />
-    <Folder Include="Query\" />
   </ItemGroup>
 
   <ItemGroup>

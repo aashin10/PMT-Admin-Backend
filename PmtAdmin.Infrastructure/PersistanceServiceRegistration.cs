@@ -3,8 +3,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
+using PmtAdmin.Domain.Persistance.Dashboard;
 using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Repositories;
+using PmtAdmin.Infrastructure.Repositories.Dashboard;
 using PmtAdmin.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,9 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
+            services.AddScoped<IDashboardRepository, DashboardRepository>();
+            services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
+
 
             return services;
         }

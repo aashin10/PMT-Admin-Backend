@@ -19,6 +19,8 @@ namespace PmtAdmin.Infrastructure.Context
         public DbSet<ProjectStatus> ProjectStatuses { get; set; }
         public DbSet<ProjectTemplate> ProjectTemplates { get; set; }
         public DbSet<Project> Projects { get; set; }
+
+        public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<CustomField> CustomFields { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Board> Boards { get; set; }

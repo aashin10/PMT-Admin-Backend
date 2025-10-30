@@ -54,7 +54,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 //Map JiraProject to Project entity
                 Project p = _mapper.Map<Project>(project.Project);
 
-                p.Key = "JIRA" + p.Key;
+                p.Key = "JIRA - " + p.Key;
 
 
                 //Check if Project Manager exists in the database
@@ -81,6 +81,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 _context.Projects.Add(p);
                 await _context.SaveChangesAsync();
 
+
+                //          // check user.Count property
+                bool noUsers = true;
+
+
+
                 //For each role
                 //If not an admin, the roles wont be available/imported
                 foreach (var role in project.UsersByRole.Keys)
@@ -88,6 +94,10 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     //For each user in the role
                     foreach (var u in project.UsersByRole[role])
                     {
+                        if (noUsers)
+                        {
+                            noUsers = false;
+                        }
                         //If already gone through this user, skip   
                         if (!JiraIdToUserIdMappingScheme.ContainsKey(u.AccountId))
                         {
@@ -122,6 +132,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                     }
                 }
+
+                if (noUsers)
+                {
+                    throw new InvalidOperationException("UnAuthorized");
+                }
+
 
                 await _context.SaveChangesAsync();
 
@@ -287,7 +303,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
                                     JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] = existingUser.Id;
                                 }
-                                TeamMembersIds.Add(issue.Assignee.AccountId);
+                                TeamMembersIds.Add(issue.Reporter.AccountId);
                                 i.ReporterId = JiraIdToUserIdMappingScheme[issue.Reporter.AccountId];
                             }
 
@@ -306,6 +322,20 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             issues.Add(i);
                             IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                         }
+
+                        foreach (var id in TeamMembersIds)
+                        {
+                            var pmid = _context.ProjectMembers
+                                     .FirstOrDefault(pm => pm.User.JiraId == id && pm.ProjectId == p.Id).Id;
+                            var newMember = new TeamMember()
+                            {
+                                TeamId = t.Id,
+                                ProjectMemberId = pmid
+
+                            };
+                            _context.TeamMembers.Add(newMember);
+                        }
+                        await _context.SaveChangesAsync();
                     }
 
 

@@ -13,8 +13,15 @@ namespace PmtAdmin.Domain.Entities
     public class CustomField
     {
         [Key]
-        [Column("projectid")]
-        public int ProjectId { get; set; }
+        [Column("id")]
+        public Guid Id { get; set; }
+
+        [Required]
+        [Column("project_id")]
+        public Guid ProjectId { get; set; }
+
+        [ForeignKey("ProjectId")]
+        public Project? Project { get; set; }
 
         [Column("name")]
         public string? Name { get; set; }

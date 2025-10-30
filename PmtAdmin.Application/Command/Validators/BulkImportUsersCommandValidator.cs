@@ -8,9 +8,21 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Command.Validators
 {
-    public class CreateUserCommandValidator : AbstractValidator<CreateUserDto>
+    public class BulkImportUsersCommandValidator : AbstractValidator<BulkImportUsersCommand>
     {
-        public CreateUserCommandValidator()
+        public BulkImportUsersCommandValidator()
+        {
+            RuleFor(x => x.Users)
+                .NotEmpty().WithMessage("Users list cannot be empty")
+                .Must(users => users.Count <= 1000).WithMessage("Cannot import more than 1000 users at once");
+
+            RuleForEach(x => x.Users).SetValidator(new BulkImportUserDtoValidator());
+        }
+    }
+
+    public class BulkImportUserDtoValidator : AbstractValidator<BulkImportUserDto>
+    {
+        public BulkImportUserDtoValidator()
         {
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("Email is required")
@@ -20,9 +32,6 @@ namespace PmtAdmin.Application.Command.Validators
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Name is required")
                 .MaximumLength(150).WithMessage("Name cannot exceed 150 characters");
-
-            RuleFor(x => x.Type)
-                .MaximumLength(50).WithMessage("Type cannot exceed 50 characters");
 
             RuleFor(x => x.JiraId)
                 .MaximumLength(1024).WithMessage("Jira ID cannot exceed 1024 characters");

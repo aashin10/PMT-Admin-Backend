@@ -58,5 +58,122 @@ namespace PmtAdmin.Infrastructure.Repositories
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IReadOnlyList<User>> GetFilteredUsersAsync(string? type, string? status)
+        {
+            var query = _context.User.Where(u => !u.IsDeleted);
+
+            // Filter by Type if provided
+            if (!string.IsNullOrWhiteSpace(type))
+            {
+                // Normalize to capitalize first letter
+                var normalizedType = NormalizeEnum(type);
+                query = query.Where(u => u.Type == normalizedType);
+            }
+
+            // Filter by Status if provided
+            if (!string.IsNullOrWhiteSpace(status))
+            {
+                var normalizedStatus = NormalizeEnum(status);
+                if (normalizedStatus == "Active")
+                {
+                    query = query.Where(u => u.IsActive);
+                }
+                else if (normalizedStatus == "Inactive")
+                {
+                    query = query.Where(u => !u.IsActive);
+                }
+            }
+
+            return await query.ToListAsync();
+        }
+
+        private string NormalizeEnum(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return value;
+
+            // Capitalize first letter, lowercase rest
+            var trimmed = value.Trim();
+            return char.ToUpper(trimmed[0]) + trimmed.Substring(1).ToLower();
+        }
+
+        public async Task<(IReadOnlyList<User> Users, int TotalCount)> GetUsersWithPaginationAsync(
+            int page,
+            int pageSize,
+            string? sortBy,
+            string? sortOrder,
+            string? type,
+            string? status,
+            string? searchTerm)
+        {
+            var query = _context.User.Where(u => !u.IsDeleted);
+
+            // Apply filters
+            if (!string.IsNullOrWhiteSpace(type))
+            {
+                var normalizedType = NormalizeEnum(type);
+                query = query.Where(u => u.Type == normalizedType);
+            }
+
+            if (!string.IsNullOrWhiteSpace(status))
+            {
+                var normalizedStatus = NormalizeEnum(status);
+                if (normalizedStatus == "Active")
+                {
+                    query = query.Where(u => u.IsActive);
+                }
+                else if (normalizedStatus == "Inactive")
+                {
+                    query = query.Where(u => !u.IsActive);
+                }
+            }
+
+            // Apply search term (search by name or email)
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                var lowerSearchTerm = searchTerm.ToLower();
+                query = query.Where(u =>
+                    (u.Name != null && u.Name.ToLower().Contains(lowerSearchTerm)) ||
+                    u.Email.ToLower().Contains(lowerSearchTerm));
+            }
+
+            // Get total count before pagination
+            var totalCount = await query.CountAsync();
+
+            // Apply sorting
+            sortBy = sortBy?.ToLower() ?? "name";
+            sortOrder = sortOrder?.ToLower() ?? "asc";
+
+            query = sortBy switch
+            {
+                "email" => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.Email)
+                    : query.OrderBy(u => u.Email),
+                "type" => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.Type)
+                    : query.OrderBy(u => u.Type),
+                "status" => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.IsActive)
+                    : query.OrderBy(u => u.IsActive),
+                "createdat" => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.CreatedAt)
+                    : query.OrderBy(u => u.CreatedAt),
+                "name" => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.Name)
+                    : query.OrderBy(u => u.Name),
+                _ => sortOrder == "desc"
+                    ? query.OrderByDescending(u => u.Name)
+                    : query.OrderBy(u => u.Name)
+            };
+
+            // Apply pagination
+            var skip = (page - 1) * pageSize;
+            var users = await query
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (users, totalCount);
+        }
     }
 }

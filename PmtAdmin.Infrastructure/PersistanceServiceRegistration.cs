@@ -1,9 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Repositories;
+using PmtAdmin.Infrastructure.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using PmtAdmin.Infrastructure.Services.Jira;
 
 namespace PmtAdmin.Infrastructure
@@ -15,12 +22,15 @@ namespace PmtAdmin.Infrastructure
             // Add PostgreSQL Connection
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(
-                    configuration.GetConnectionString("PmtAdminDbConnection")
+                    configuration.GetConnectionString("DefaultConnection")
                 )
             );
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
+            services.AddScoped<IPasswordHashingService, PasswordHashingService>();
             services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
             services.AddScoped<IJiraService, JiraService>();
 

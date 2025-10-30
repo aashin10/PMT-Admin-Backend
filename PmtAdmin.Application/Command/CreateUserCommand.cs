@@ -9,16 +9,18 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Command
 {
-    public class CreateUserCommand : IRequest<ApiResponse<UserDto>>
+    public class CreateUserCommand : IRequest<ApiResponse<List<UserDto>>>
+    {
+        public List<CreateUserDto> Users { get; set; } = new List<CreateUserDto>();
+    }
+
+    public class CreateUserDto
     {
         public string? Email { get; set; }
-        public string? PasswordHash { get; set; }
         public string? Name { get; set; }
-        public string? AvatarUrl { get; set; }
-        public bool IsActive { get; set; } = true;
-        public bool IsSuperAdmin { get; set; } = false;
         public string? JiraId { get; set; }
-        public string? Type { get; set; }
+        public string? Type { get; set; }  // "Internal" or "External"
+        public string? Status { get; set; }  // "Active" or "Inactive"
         public int? CreatedBy { get; set; }
     }
 }

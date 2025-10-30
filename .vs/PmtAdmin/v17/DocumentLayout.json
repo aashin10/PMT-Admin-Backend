@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\.NetWorkspace\\PMT-.NET\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\.networkspace\\pmt-.net\\pmt_admin.test\\roles and permissions\\handler\\getrolesqueryhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\roles and permissions\\handler\\getrolesqueryhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\dto\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\persistance\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\persistance\\irolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\dto\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\.networkspace\\pmt-.net\\pmt_admin.test\\pmt_admin.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\pmt_admin.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -33,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\handlers\\role\\getrolesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\role\\getrolesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\handlers\\role\\updaterolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\permissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\command\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,10 +155,6 @@
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\pmtadmin.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\pmtadmin.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -183,20 +195,8 @@
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\deleterolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\dto\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -206,17 +206,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StatusController.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\StatusController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\StatusController.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\StatusController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\StatusController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T12:29:36.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T12:29:32.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GetRolesQueryHandlerTest.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Handler\\GetRolesQueryHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Roles and Permissions\\Handler\\GetRolesQueryHandlerTest.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Handler\\GetRolesQueryHandlerTest.cs",
               "RelativeToolTip": "Pmt_Admin.Test\\Roles and Permissions\\Handler\\GetRolesQueryHandlerTest.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T06:58:39.468Z",
               "EditorCaption": ""
@@ -224,32 +250,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "RoleMock.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
-              "RelativeToolTip": "Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:52:18.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Pmt_Admin.Test",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj*",
-              "RelativeToolTip": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-30T06:50:54.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "RoleDto.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Dto\\RoleDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\RoleDto.cs",
@@ -262,7 +262,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PermissionController.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T11:38:48.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Project.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Project.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Project.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Project.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAA6wHQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T06:49:52.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Role.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Role.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Role.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Role.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwCAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T08:31:20.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectMember.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:04:51.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IPermissionRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Persistance\\IPermissionRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IPermissionRepository.cs",
@@ -275,7 +327,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
+              "Title": "Pmt_Admin.Test",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
+              "RelativeToolTip": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-30T06:50:54.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoleMock.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Roles and Permissions\\Mock\\RoleMock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T06:52:18.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
@@ -288,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "IRoleRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Persistance\\IRoleRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IRoleRepository.cs",
@@ -301,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "UpdateRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Role\\UpdateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\UpdateRoleCommandHandler.cs",
@@ -314,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Repositories\\RoleRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\RoleRepository.cs",
@@ -327,20 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Role.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Role.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Role.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Role.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T08:31:20.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "GetRolesQueryHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Role\\GetRolesQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\GetRolesQueryHandler.cs",
@@ -353,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Permission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Permission.cs",
@@ -366,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "UpdateRoleCommand.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Command\\UpdateRoleCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\UpdateRoleCommand.cs",
@@ -379,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\RoleController.cs",
@@ -392,20 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PermissionController.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:38:48.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "CreateRoleCommand.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Command\\CreateRoleCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\CreateRoleCommand.cs",
@@ -418,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "CreateRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Role\\CreateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\CreateRoleCommandHandler.cs",
@@ -431,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "20251030041652_newtestdb.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251030041652_newtestdb.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251030041652_newtestdb.cs",
@@ -444,20 +496,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\appsettings.json",
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-24T05:00:26.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Program.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
@@ -470,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "DatabaseSeeder.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
@@ -483,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "20251030041327_newtestdb.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251030041327_newtestdb.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251030041327_newtestdb.cs",
@@ -496,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "PersistanceServiceRegistration.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
@@ -509,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "GetAllPermissionsQuery.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
@@ -522,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
@@ -535,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "GetAllPermissionsQueryHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
@@ -548,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "PermissionProfile.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
@@ -561,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "RoleProfile.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
@@ -574,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "PermissionRepository.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
@@ -587,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "ApplicationServiceRegistration.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
@@ -600,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Wrappers\\ApiResponse.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Wrappers\\ApiResponse.cs",
@@ -613,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "GetRoleByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Role\\GetRoleByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\GetRoleByIdQueryHandler.cs",
@@ -626,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "GetRoleByIdQuery.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
@@ -639,38 +691,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T08:58:04.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ProjectController.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\ProjectController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\ProjectController.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Controllers\\ProjectController.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBQAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:11:38.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "PmtAdmin.Application.csproj",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
-              "RelativeToolTip": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\PmtAdmin.Application.csproj*",
+              "RelativeToolTip": "PmtAdmin.Application\\PmtAdmin.Application.csproj*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-28T12:34:43.609Z",
@@ -678,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "PmtAdmin.Infrastructure.csproj",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
@@ -691,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "GetRolesQuery.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Query\\GetRolesQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRolesQuery.cs",
@@ -704,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "PasswordHashingService.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
@@ -717,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "GetAllUsersQuery.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
@@ -730,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "PmtAdmin.Api.csproj",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
@@ -743,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "GetUserByIdQuery.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
@@ -756,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "DeleteRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Role\\DeleteRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\DeleteRoleCommandHandler.cs",
@@ -769,20 +808,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "CreateUserCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAqwJ4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAqwKcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T05:53:54.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "DeleteRoleCommand.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
@@ -795,20 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ProjectMember.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAYwDwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:04:51.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "RolePermission.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
@@ -817,32 +843,6 @@
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T05:04:10.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ProjectDto.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Dto\\ProjectDto.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\ProjectDto.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Dto\\ProjectDto.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Dto\\ProjectDto.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:08:36.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Project.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Project.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Domain\\Entities\\Project.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\Project.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAA8wHQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T06:49:52.004Z",
               "EditorCaption": ""
             }
           ]

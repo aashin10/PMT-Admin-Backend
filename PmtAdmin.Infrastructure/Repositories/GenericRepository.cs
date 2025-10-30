@@ -42,6 +42,11 @@ namespace PmtAdmin.Infrastructure.Repositories
 
         }
 
+        public IQueryable<T> GetQueryable()
+        {
+            return _context.Set<T>();
+        }
+
         public async Task<T> UpdateAsync(T entity)
         {
             _context.Set<T>().Update(entity);

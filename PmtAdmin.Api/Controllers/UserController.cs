@@ -46,5 +46,19 @@ namespace PmtAdmin.Api.Controllers
             var result = await _mediator.Send(command);
             return result;
         }
+
+        [HttpPost("bulk-import")]
+        public async Task<ApiResponse<BulkImportResultDto>> BulkImportUsers([FromBody] BulkImportUsersCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return result;
+        }
+
+        [HttpPost("paginated")]
+        public async Task<ApiResponse<PaginatedUserResponseDto>> GetUsersWithPagination([FromBody] GetUsersWithPaginationQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return result;
+        }
     }
 }

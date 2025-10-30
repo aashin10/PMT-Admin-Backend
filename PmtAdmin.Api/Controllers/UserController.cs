@@ -60,5 +60,13 @@ namespace PmtAdmin.Api.Controllers
             var result = await _mediator.Send(query);
             return result;
         }
+
+        [HttpPut("{id}")]
+        public async Task<ApiResponse<UserDto>> UpdateUser(int id, [FromBody] UpdateUserCommand command)
+        {
+            command.Id = id;
+            var result = await _mediator.Send(command);
+            return result;
+        }
     }
 }

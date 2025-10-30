@@ -21,10 +21,34 @@ namespace PmtAdmin.Api.Controllers
             _mediator = mediator;
         }
 
+        /// <summary>
+        /// Get all projects for table view with pagination and multi-select filtering
+        /// </summary>
+        /// <param name="page">Page number (default: 1)</param>
+        /// <param name="pageSize">Items per page (default: 10, options: 10, 25, 50)</param>
+        /// <param name="searchTerm">Search by project name, key, or manager name</param>
+        /// <param name="statusIds">Filter by multiple project status IDs (comma-separated)</param>
+        /// <param name="deliveryUnitIds">Filter by multiple delivery unit IDs (comma-separated)</param>
+        /// <param name="projectManagerIds">Filter by multiple project manager IDs (comma-separated)</param>
         [HttpGet]
-        public async Task<IActionResult> GetAllProjects()
+        public async Task<IActionResult> GetAllProjects(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10,
+            [FromQuery] string? searchTerm = null,
+            [FromQuery] List<int>? statusIds = null,
+            [FromQuery] List<int>? deliveryUnitIds = null,
+            [FromQuery] List<int>? projectManagerIds = null)
         {
-            var query = new GetAllProjectsQuery();
+            var query = new GetAllProjectsQuery
+            {
+                Page = page,
+                PageSize = pageSize,
+                SearchTerm = searchTerm,
+                StatusIds = statusIds,
+                DeliveryUnitIds = deliveryUnitIds,
+                ProjectManagerIds = projectManagerIds
+            };
+
             var result = await _mediator.Send(query);
             
             if (result.Status == 200)

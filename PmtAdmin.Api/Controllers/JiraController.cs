@@ -4,7 +4,8 @@ using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Wrappers;
 using System.Net;
-using static PmtAdmin.Infrastructure.Models.JiraImportModels;
+using static PmtAdmin.Domain.Models.JiraImportModels;
+
 
 namespace PmtAdmin.Api.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using static PmtAdmin.Infrastructure.Models.JiraImportModels;
+﻿using static PmtAdmin.Domain.Models.JiraImportModels;
+
 
 namespace PmtAdmin.Infrastructure.Services.Jira
 {

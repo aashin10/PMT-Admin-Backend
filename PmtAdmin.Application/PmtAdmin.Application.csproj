@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PmtAdmin.Domain\PmtAdmin.Domain.csproj" />
-	<ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
-using PmtAdmin.Infrastructure.Context.Seeding;
+//using PmtAdmin.Infrastructure.Context.Seeding;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -560,7 +560,7 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // SEED DATA
             // ============================================
-            DatabaseSeeder.SeedData(modelBuilder);
+            //DatabaseSeeder.SeedData(modelBuilder);
         }
     }
 }

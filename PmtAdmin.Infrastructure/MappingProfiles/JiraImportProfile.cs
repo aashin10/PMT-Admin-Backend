@@ -3,7 +3,6 @@ using PmtAdmin.Domain.Entities;
 using static PmtAdmin.Domain.Models.JiraImportModels;
 
 
-
 namespace PmtAdmin.Application.MappingProfiles
 {
     public class JiraImportProfile : Profile

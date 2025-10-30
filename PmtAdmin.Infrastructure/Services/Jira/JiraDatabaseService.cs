@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Infrastructure.Context;
-using static PmtAdmin.Infrastructure.Models.JiraImportModels;
+using static PmtAdmin.Domain.Models.JiraImportModels;
 
 namespace PmtAdmin.Infrastructure.Services.Jira
 {

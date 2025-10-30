@@ -4,7 +4,7 @@ using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Infrastructure.Services.Jira;
-using static PmtAdmin.Infrastructure.Models.JiraImportModels;
+using static PmtAdmin.Domain.Models.JiraImportModels;
 
 namespace PmtAdmin.Application.Handlers.Jira
 {

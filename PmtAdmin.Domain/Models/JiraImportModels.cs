@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PmtAdmin.Infrastructure.Models
+namespace PmtAdmin.Domain.Models
 {
     public static class JiraImportModels
     {

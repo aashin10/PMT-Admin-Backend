@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
@@ -15,12 +11,12 @@ namespace PmtAdmin.Domain.Entities
         [Column("id")]
         public Guid Id { get; set; }
 
-        [Required]
         [Column("project_id")]
-        public Guid? ProjectId { get; set; }
+        public Guid? ProjectId { get; set; } // Now optional
 
         [Column("name")]
-        public string? Name { get; set; }
+        [Required]
+        public string Name { get; set; } 
 
         [Column("sprint_goal")]
         public string? SprintGoal { get; set; }
@@ -31,9 +27,8 @@ namespace PmtAdmin.Domain.Entities
         [Column("due_date")]
         public DateTime? DueDate { get; set; }
 
-        [MaxLength(50)]
         [Column("status")]
-        public string Status { get; set; } = "PLANNED";
+        public string? Status { get; set; } = "PLANNED";
 
         [Column("story_point")]
         public decimal? StoryPoint { get; set; }
@@ -45,22 +40,12 @@ namespace PmtAdmin.Domain.Entities
         public int? UpdatedBy { get; set; }
 
         [Column("created_at")]
-        public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTimeOffset? CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
         [Column("updated_at")]
-        public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTimeOffset? UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 
-        // Navigation properties
-        [ForeignKey("ProjectId")]
-        public Project Project { get; set; }
-
-        [ForeignKey("CreatedBy")]
-        public User? Creator { get; set; }
-
-        [ForeignKey("UpdatedBy")]
-        public User? Updater { get; set; }
-
-        public ICollection<Issue> Issues { get; set; }
+        [Column("team_id")]
+        public int? TeamId { get; set; }
     }
-
 }

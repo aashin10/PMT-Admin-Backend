@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entities\RefreshToken.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Entities\RefreshToken.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 

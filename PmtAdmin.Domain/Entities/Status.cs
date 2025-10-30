@@ -8,9 +8,11 @@ namespace PmtAdmin.Domain.Entities
     {
         [Key]
         [Column("id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column("status_name")]
+        [Required]
         public string? StatusName { get; set; }
 
         // Navigation properties

@@ -18,6 +18,9 @@ namespace PmtAdmin.Domain.Entities
         [Column("team_id")]
         public int? TeamId { get; set; }
 
+        [Column("channel_name")]
+        public string Name { get; set; } = string.Empty;
+
         // Navigation properties
         [ForeignKey("TeamId")]
         public Team? Team { get; set; }

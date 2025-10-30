@@ -227,7 +227,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                                 await _context.SaveChangesAsync();
 
-                                var boardColumnMapping = new BoardColumnMapping
+                                var boardColumnMapping = new BoardBoardColumnMap
                                 {
                                     BoardId = b.Id,
                                     BoardColumnId = boardcolumn.Id
@@ -250,7 +250,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] : (int?)null;
 
                             i.ReporterId = issue.Reporter != null && JiraIdToUserIdMappingScheme.ContainsKey(issue.Reporter.AccountId) ?
-                                JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] : (int?)null;
+                                JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] : 0;
 
                             //Temp fix
                             i.Labels = "[\"tag1\", \"tag2\"]";

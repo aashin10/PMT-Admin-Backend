@@ -31,7 +31,7 @@ namespace PmtAdmin.Infrastructure.Context
         public DbSet<Status> Statuses { get; set; }
         public DbSet<BoardColumn> BoardColumns { get; set; }
 
-        public DbSet<BoardColumnMapping> BoardColumnMappings { get; set; }
+        public DbSet<BoardBoardColumnMap> BoardColumnMappings { get; set; }
         public DbSet<Channel> Channels { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<ActivityLog> ActivityLogs { get; set; }
@@ -191,20 +191,20 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.ProjectId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.Lead)
-                    .WithMany(u => u.LeadTeams)
-                    .HasForeignKey(e => e.LeadId)
-                    .OnDelete(DeleteBehavior.SetNull);
+                //entity.HasOne(e => e.Lead)
+                //    .WithMany(u => u.LeadTeams)
+                //    .HasForeignKey(e => e.LeadId)
+                //    .OnDelete(DeleteBehavior.SetNull);
 
-                entity.HasOne(e => e.Creator)
-                    .WithMany()
-                    .HasForeignKey(e => e.CreatedBy)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.Creator)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.CreatedBy)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.Updater)
-                    .WithMany()
-                    .HasForeignKey(e => e.UpdatedBy)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.Updater)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.UpdatedBy)
+                //    .OnDelete(DeleteBehavior.Restrict);
             });
 
             // ============================================
@@ -219,10 +219,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.ProjectId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.Team)
-                    .WithMany(t => t.Boards)
-                    .HasForeignKey(e => e.TeamId)
-                    .OnDelete(DeleteBehavior.SetNull);
+                //entity.HasOne(e => e.Team)
+                //    .WithMany(t => t.Boards)
+                //    .HasForeignKey(e => e.TeamId)
+                //    .OnDelete(DeleteBehavior.SetNull);
 
                 entity.HasOne(e => e.Creator)
                     .WithMany()
@@ -240,17 +240,17 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             modelBuilder.Entity<ProjectMember>(entity =>
             {
-                entity.HasIndex(e => new { e.ProjectId, e.TeamId, e.UserId }).IsUnique();
+                //entity.HasIndex(e => new { e.ProjectId, e.TeamId, e.UserId }).IsUnique();
 
                 entity.HasOne(e => e.Project)
                     .WithMany(p => p.ProjectMembers)
                     .HasForeignKey(e => e.ProjectId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.Team)
-                    .WithMany(t => t.ProjectMembers)
-                    .HasForeignKey(e => e.TeamId)
-                    .OnDelete(DeleteBehavior.SetNull);
+                //entity.HasOne(e => e.Team)
+                //    .WithMany(t => t.ProjectMembers)
+                //    .HasForeignKey(e => e.TeamId)
+                //    .OnDelete(DeleteBehavior.SetNull);
 
                 entity.HasOne(e => e.User)
                     .WithMany(u => u.ProjectMembers)
@@ -262,10 +262,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.RoleId)
                     .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.AddedByUser)
-                    .WithMany()
-                    .HasForeignKey(e => e.AddedBy)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.AddedByUser)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.AddedBy)
+                //    .OnDelete(DeleteBehavior.Restrict);
             });
 
             // ============================================
@@ -275,20 +275,20 @@ namespace PmtAdmin.Infrastructure.Context
             {
                 entity.HasIndex(e => e.ProjectId);
 
-                entity.HasOne(e => e.Project)
-                    .WithMany(p => p.Sprints)
-                    .HasForeignKey(e => e.ProjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                //entity.HasOne(e => e.Project)
+                //    .WithMany(p => p.Sprints)
+                //    .HasForeignKey(e => e.ProjectId)
+                //    .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.Creator)
-                    .WithMany()
-                    .HasForeignKey(e => e.CreatedBy)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.Creator)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.CreatedBy)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                entity.HasOne(e => e.Updater)
-                    .WithMany()
-                    .HasForeignKey(e => e.UpdatedBy)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.Updater)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.UpdatedBy)
+                //    .OnDelete(DeleteBehavior.Restrict);
             });
 
             // ============================================
@@ -335,7 +335,7 @@ namespace PmtAdmin.Infrastructure.Context
                 entity.HasIndex(e => e.EpicId);
 
                 // Check constraint for story_points >= 0
-                entity.HasCheckConstraint("CK_Issues_StoryPoints", "story_points >= 0");
+                // entity.HasCheckConstraint("CK_Issues_StoryPoints", "story_points >= 0");
 
                 entity.HasOne(e => e.Project)
                     .WithMany(p => p.Issues)
@@ -347,10 +347,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.EpicId)
                     .OnDelete(DeleteBehavior.SetNull);
 
-                entity.HasOne(e => e.Sprint)
-                    .WithMany(s => s.Issues)
-                    .HasForeignKey(e => e.SprintId)
-                    .OnDelete(DeleteBehavior.SetNull);
+                //entity.HasOne(e => e.Sprint)
+                //    .WithMany(s => s.Issues)
+                //    .HasForeignKey(e => e.SprintId)
+                //    .OnDelete(DeleteBehavior.SetNull);
 
                 entity.HasOne(e => e.ParentIssue)
                     .WithMany(i => i.ChildIssues)
@@ -451,13 +451,13 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // CHANNELS CONFIGURATION
             // ============================================
-            modelBuilder.Entity<Channel>(entity =>
-            {
-                entity.HasOne(e => e.Team)
-                    .WithMany(t => t.Channels)
-                    .HasForeignKey(e => e.TeamId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
+            //modelBuilder.Entity<Channel>(entity =>
+            //{
+            //    entity.HasOne(e => e.Team)
+            //        .WithMany(t => t.Channels)
+            //        .HasForeignKey(e => e.TeamId)
+            //        .OnDelete(DeleteBehavior.Cascade);
+            //});
 
             // ============================================
             // MESSAGES CONFIGURATION
@@ -544,18 +544,18 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // JIRA AUTHORIZATION CONFIGURATION
             // ============================================
-            modelBuilder.Entity<JiraAuthorization>(entity =>
-            {
-                entity.HasOne(e => e.User)
-                    .WithMany()
-                    .HasForeignKey(e => e.UserId)
-                    .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<JiraAuthorization>(entity =>
+            //{
+            //    entity.HasOne(e => e.User)
+            //        .WithMany()
+            //        .HasForeignKey(e => e.UserId)
+            //        .OnDelete(DeleteBehavior.Cascade);
 
-                entity.HasOne(e => e.Project)
-                    .WithMany(p => p.JiraAuthorizations)
-                    .HasForeignKey(e => e.ProjectId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
+            //    entity.HasOne(e => e.Project)
+            //        .WithMany(p => p.JiraAuthorizations)
+            //        .HasForeignKey(e => e.ProjectId)
+            //        .OnDelete(DeleteBehavior.Cascade);
+            //});
 
             // ============================================
             // SEED DATA

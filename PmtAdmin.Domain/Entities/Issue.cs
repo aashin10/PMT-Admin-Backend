@@ -42,7 +42,7 @@ namespace PmtAdmin.Domain.Entities
         public string? Priority { get; set; }
 
         [Column("status")]
-        public int? StatusId { get; set; } // Changed to int? and renamed to StatusId
+        public Guid? StatusId { get; set; } // Changed to int? and renamed to StatusId
 
         [Column("assignee_id")]
         public int? AssigneeId { get; set; }

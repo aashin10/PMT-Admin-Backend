@@ -9,7 +9,7 @@ namespace PmtAdmin.Domain.Entities
         [Key]
         [Column("id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Column("status_name")]
         [Required]

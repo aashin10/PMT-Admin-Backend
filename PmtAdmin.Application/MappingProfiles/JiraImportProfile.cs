@@ -24,6 +24,8 @@ namespace PmtAdmin.Application.MappingProfiles
     .ForMember(dest => dest.ProjectId, opt => opt.Ignore())
     .ForMember(dest => dest.EpicId, opt => opt.Ignore())
     .ForMember(dest => dest.SprintId, opt => opt.Ignore())
+    .ForMember(dest => dest.Status, opt => opt.Ignore())
+    .ForMember(dest => dest.StatusId, opt => opt.Ignore())
     .ForMember(dest => dest.Sprint, opt => opt.Ignore())
     .ForMember(dest => dest.Epic, opt => opt.Ignore())
     .ForMember(dest => dest.Assignee, opt => opt.Ignore())
@@ -37,7 +39,7 @@ namespace PmtAdmin.Application.MappingProfiles
 
             CreateMap<JiraEpic, Epic>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()))
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Summary));
+                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Summary ?? ""));
 
             CreateMap<JiraUser, User>()
                 .ForMember(dest => dest.JiraId, opt => opt.MapFrom(src => src.AccountId))

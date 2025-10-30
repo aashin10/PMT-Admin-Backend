@@ -12,7 +12,7 @@ namespace PmtAdmin.Domain.Entities
         public Guid Id { get; set; }
 
         [Column("status_id")]
-        public int? StatusId { get; set; }
+        public Guid? StatusId { get; set; }
 
         [Column("board_column_name")]
         public string? BoardColumnName { get; set; }

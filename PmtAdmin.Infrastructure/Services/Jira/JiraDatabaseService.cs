@@ -132,6 +132,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 Dictionary<int, string> SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
                 Dictionary<int, string> IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
 
+
                 foreach (var board in project.Boards)
                 {
 
@@ -156,6 +157,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     b.ProjectId = p.Id;
                     _context.Boards.Add(b);
                     await _context.SaveChangesAsync();
+
+                    HashSet<string> TeamMembersIds = new HashSet<string>();
 
                     foreach (var sprint in board.Sprints)
                     {
@@ -185,6 +188,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             var i = _mapper.Map<Issue>(issue);
                             i.ProjectId = p.Id;
+                            i.Title = issue.Summary;
 
                             if (issue.Sprint != null)
                             {
@@ -246,11 +250,46 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
                             }
 
-                            i.AssigneeId = issue.Assignee != null && JiraIdToUserIdMappingScheme.ContainsKey(issue.Assignee.AccountId)
-                                ? JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] : (int?)null;
+                            // Assignee
+                            if (issue.Assignee != null)
+                            {
+                                if (!JiraIdToUserIdMappingScheme.ContainsKey(issue.Assignee.AccountId))
+                                {
+                                    var existingUser = await _context.User.FirstOrDefaultAsync(u => u.JiraId == issue.Assignee.AccountId);
+                                    if (existingUser == null)
+                                    {
 
-                            i.ReporterId = issue.Reporter != null && JiraIdToUserIdMappingScheme.ContainsKey(issue.Reporter.AccountId) ?
-                                JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] : 0;
+                                        existingUser = _mapper.Map<User>(issue.Assignee);
+                                        await _context.User.AddAsync(existingUser);
+                                        await _context.SaveChangesAsync();
+                                    }
+                                    JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] = existingUser.Id;
+                                }
+                                TeamMembersIds.Add(issue.Assignee.AccountId);
+                                i.AssigneeId = JiraIdToUserIdMappingScheme[issue.Assignee.AccountId];
+                            }
+                            else
+                            {
+                                i.AssigneeId = null;
+                            }
+
+                            // Reporter
+                            if (issue.Reporter != null)
+                            {
+                                if (!JiraIdToUserIdMappingScheme.ContainsKey(issue.Reporter.AccountId))
+                                {
+                                    var existingUser = await _context.User.FirstOrDefaultAsync(u => u.JiraId == issue.Reporter.AccountId);
+                                    if (existingUser == null)
+                                    {
+                                        existingUser = _mapper.Map<User>(issue.Reporter);
+                                        await _context.User.AddAsync(existingUser);
+                                        await _context.SaveChangesAsync();
+                                    }
+                                    JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] = existingUser.Id;
+                                }
+                                TeamMembersIds.Add(issue.Assignee.AccountId);
+                                i.ReporterId = JiraIdToUserIdMappingScheme[issue.Reporter.AccountId];
+                            }
 
                             //Temp fix
                             i.Labels = "[\"tag1\", \"tag2\"]";

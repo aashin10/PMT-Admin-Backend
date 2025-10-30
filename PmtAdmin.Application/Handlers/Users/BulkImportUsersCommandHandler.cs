@@ -38,6 +38,15 @@ namespace PmtAdmin.Application.Handlers.Users
 
             foreach (var userDto in request.Users)
             {
+                // Skip users with "Suspended" status
+                if (!string.IsNullOrWhiteSpace(userDto.Status) &&
+                    userDto.Status.Trim().Equals("Suspended", StringComparison.OrdinalIgnoreCase))
+                {
+                    result.Skipped.Add($"Suspended user skipped: {userDto.Name} ({userDto.Email})");
+                    result.SkippedCount++;
+                    continue;
+                }
+
                 // Validate required fields
                 if (string.IsNullOrWhiteSpace(userDto.Name))
                 {
@@ -88,7 +97,7 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Map Status to IsActive boolean
                 // "Active" -> true
                 // "Inactive" -> false
-                // "Suspended" -> false (convert to Inactive)
+                // "Suspended" users are already skipped above
                 bool isActive = MapStatusToIsActive(userDto.Status);
 
                 // Extract name parts
@@ -181,7 +190,7 @@ namespace PmtAdmin.Application.Handlers.Users
 
             // "Active" -> true
             // "Inactive" -> false
-            // "Suspended" -> false (convert to Inactive)
+            // Note: "Suspended" users are skipped before reaching this method
             return normalizedStatus.Equals("Active", StringComparison.OrdinalIgnoreCase);
         }
 
@@ -205,6 +214,11 @@ namespace PmtAdmin.Application.Handlers.Users
                 $"Processed {result.TotalProcessed} users",
                 $"Successfully imported: {result.SuccessCount}"
             };
+
+            if (result.SkippedCount > 0)
+            {
+                messageParts.Add($"Suspended users skipped: {result.SkippedCount}");
+            }
 
             if (result.DuplicateCount > 0)
             {

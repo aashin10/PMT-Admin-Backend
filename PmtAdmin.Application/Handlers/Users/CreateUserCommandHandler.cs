@@ -86,6 +86,15 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Normalize Type to capitalize first letter
                 var normalizedType = NormalizeEnum(userDto.Type);
 
+                // If Type is not provided, infer from email domain
+                if (string.IsNullOrWhiteSpace(normalizedType))
+                {
+                    normalizedType = InferTypeFromEmail(userDto.Email);
+                }
+
+                // Map Status to IsActive boolean
+                bool isActive = MapStatusToIsActive(userDto.Status);
+
                 // Create user entity
                 var user = new User
                 {
@@ -93,7 +102,7 @@ namespace PmtAdmin.Application.Handlers.Users
                     Name = userDto.Name,
                     PasswordHash = passwordHash,
                     AvatarUrl = avatarUrl,
-                    IsActive = true,
+                    IsActive = isActive,
                     IsSuperAdmin = false,
                     JiraId = userDto.JiraId,
                     Type = normalizedType,
@@ -164,6 +173,30 @@ namespace PmtAdmin.Application.Handlers.Users
             {
                 return false;
             }
+        }
+
+        private string InferTypeFromEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return "External";
+
+            // Check if email domain is experionglobal.com
+            return email.EndsWith("@experionglobal.com", StringComparison.OrdinalIgnoreCase)
+                ? "Internal"
+                : "External";
+        }
+
+        private bool MapStatusToIsActive(string? status)
+        {
+            if (string.IsNullOrWhiteSpace(status))
+                return true; // Default to Active
+
+            var normalizedStatus = NormalizeEnum(status);
+
+            // "Active" -> true
+            // "Inactive" -> false
+            // "Suspended" -> false (convert to Inactive)
+            return normalizedStatus.Equals("Active", StringComparison.OrdinalIgnoreCase);
         }
     }
 }

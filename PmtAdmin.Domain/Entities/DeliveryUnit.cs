@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
-{
+{ 
     [Table("delivery_units")]
     public class DeliveryUnit
     {
@@ -18,7 +18,7 @@ namespace PmtAdmin.Domain.Entities
         [Required]
         [MaxLength(200)]
         [Column("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [MaxLength(50)]
         [Column("code")]

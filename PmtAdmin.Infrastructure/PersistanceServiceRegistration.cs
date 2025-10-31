@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.MappingProfiles;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
@@ -30,6 +31,10 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+
 
             return services;
         }

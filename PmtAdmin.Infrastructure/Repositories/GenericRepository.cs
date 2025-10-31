@@ -36,9 +36,10 @@ namespace PmtAdmin.Infrastructure.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task<T> GetById(int id)
+        public virtual async Task<T> GetById(int id)
         {
             return await _context.Set<T>().FindAsync(id);
+
         }
 
         public IQueryable<T> GetQueryable()

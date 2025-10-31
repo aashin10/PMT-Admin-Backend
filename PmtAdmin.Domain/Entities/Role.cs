@@ -18,7 +18,7 @@ namespace PmtAdmin.Domain.Entities
         [Required]
         [MaxLength(100)]
         [Column("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Column("description")]
         public string? Description { get; set; }
@@ -33,9 +33,9 @@ namespace PmtAdmin.Domain.Entities
         public DateTime? UpdatedAt { get; set; }
 
         // Navigation properties
-        public ICollection<RolePermission> RolePermissions { get; set; }
-        public ICollection<ProjectMember> ProjectMembers { get; set; }
-        public ICollection<Project> ProjectManagerRoles { get; set; }
+        public ICollection<RolePermission>? RolePermissions { get; set; }
+        public ICollection<ProjectMember>? ProjectMembers { get; set; }
+        public ICollection<Project>? ProjectManagerRoles { get; set; }
     }
 
 }

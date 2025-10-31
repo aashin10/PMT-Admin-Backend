@@ -49,16 +49,16 @@ namespace PmtAdmin.Domain.Entities
 
         // Navigation properties
         [ForeignKey("ProjectId")]
-        public Project Project { get; set; }
+        public Project? Project { get; set; }
 
         [ForeignKey("TeamId")]
         public Team? Team { get; set; }
 
         [ForeignKey("UserId")]
-        public User User { get; set; }
+        public User? User { get; set; }
 
         [ForeignKey("RoleId")]
-        public Role Role { get; set; }
+        public Role? Role { get; set; }
 
         [ForeignKey("AddedBy")]
         public User? AddedByUser { get; set; }

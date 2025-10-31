@@ -83,5 +83,22 @@ namespace PmtAdmin.Api.Controllers
             }
             return StatusCode(result.Status, result);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProject(Guid id, [FromBody] UpdateProjectCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("ID mismatch between route and body");
+
+            var result = await _mediator.Send(command);
+            
+            if (result.Status == 404)
+                return NotFound(result.Message);
+            
+            if (result.Status != 200)
+                return BadRequest(result.Message);
+
+            return Ok(result);
+        }
     }
 }

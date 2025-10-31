@@ -13,6 +13,8 @@ namespace PmtAdmin.Application.Dto
         public string? Email { get; set; }
         public string? Type { get; set; }
         public string? Status { get; set; }
+        public string? AvatarUrl { get; set; }
+        public string? JiraId { get; set; }
         public string? Created_At { get; set; }
         public string? Last_Login { get; set; }
     }

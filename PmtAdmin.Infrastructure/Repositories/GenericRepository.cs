@@ -13,6 +13,7 @@ namespace PmtAdmin.Infrastructure.Repositories
     {
         private readonly AppDbContext _context;
 
+
         public GenericRepository(AppDbContext context)
         {
             _context = context;

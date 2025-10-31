@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PmtAdmin.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -49,9 +50,11 @@ namespace PmtAdmin.Domain.Entities
         [Column("priority")]
         public string Priority { get; set; } = "MEDIUM";
 
-        [MaxLength(50)]
+        //[MaxLength(50)]
+        //[Column("status")]
+        //public string Status { get; set; } = "TODO";
         [Column("status")]
-        public string Status { get; set; } = "TODO";
+        public int? StatusId { get; set; }
 
         [Column("assignee_id")]
         public int? AssigneeId { get; set; }
@@ -108,8 +111,23 @@ namespace PmtAdmin.Domain.Entities
         [ForeignKey("UpdatedBy")]
         public User? Updater { get; set; }
 
+        // Navigation properties
+        [ForeignKey("StatusId")]
+        public Status? Status { get; set; }
+
         public ICollection<Issue> ChildIssues { get; set; }
         public ICollection<IssueComment> IssueComments { get; set; }
     }
 
 }
+
+
+
+
+//[MaxLength(50)]
+//[Column("status")]
+//public string Status { get; set; } = "TODO";
+
+//
+//[ForeignKey("StatusId")]
+//public Status? Status { get; set; }

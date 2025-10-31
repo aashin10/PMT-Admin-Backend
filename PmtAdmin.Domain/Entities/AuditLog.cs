@@ -27,7 +27,7 @@ namespace PmtAdmin.Domain.Entities
         public string? EntityType { get; set; }
 
         [Column("entity_id")]
-        public int? EntityId { get; set; }
+        public int? EntityId { get; set; }    
 
         [Column("details", TypeName = "jsonb")]
         public string? Details { get; set; }

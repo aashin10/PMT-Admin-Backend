@@ -2,12 +2,6 @@ using AutoMapper;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.MappingProfiles
 {
@@ -33,6 +27,8 @@ namespace PmtAdmin.Application.MappingProfiles
                     src.CreatedAt.ToString("MM/dd/yyyy")))
                 .ForMember(dest => dest.Last_Login, opt => opt.MapFrom(src =>
                     src.LastLogin.HasValue ? src.LastLogin.Value.ToString("MM/dd/yyyy") : null));
+
+            CreateMap<JiraCsvUserDto, User>();
         }
     }
 }

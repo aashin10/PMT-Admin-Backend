@@ -52,9 +52,9 @@ namespace PmtAdmin.Domain.Entities
         [Column("updated_at")]
         public DateTime? UpdatedAt { get; set; }
 
-        [Column("Label")]
+        [Column("labels", TypeName = "text[]")]
+        public List<string>? Label { get; set; } = new();
 
-        public List<string>? Label { get; set; }
 
 
         // Navigation properties
@@ -82,7 +82,7 @@ namespace PmtAdmin.Domain.Entities
         public ICollection<TeamMember> TeamMembers { get; set; } = new List<TeamMember>();
 
         public ICollection<Board> Boards { get; set; }
-        public ICollection<ProjectMember> ProjectMembers { get; set; }
+        //public ICollection<ProjectMember> ProjectMembers { get; set; }
         public ICollection<Channel> Channels { get; set; }
         public ICollection<Sprint>? Sprints { get; set; }
 

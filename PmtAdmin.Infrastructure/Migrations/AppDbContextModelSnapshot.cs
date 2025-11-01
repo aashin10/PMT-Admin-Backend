@@ -1275,6 +1275,10 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("assignee_id");
 
+                    b.Property<string>("AttachmentUrl")
+                        .HasColumnType("text")
+                        .HasColumnName("attachment_url");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
@@ -1330,8 +1334,10 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("start_date");
 
-                    b.Property<int?>("StatusId")
-                        .HasColumnType("integer")
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)")
                         .HasColumnName("status");
 
                     b.Property<int>("StoryPoints")
@@ -1380,8 +1386,6 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("SprintId");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("issues", t =>
@@ -1404,7 +1408,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
-                            StatusId = 1,
+                            Status = "TODO",
                             StoryPoints = 3,
                             Summary = "Issue 1 for Project 1",
                             Title = "Task 1",
@@ -1425,7 +1429,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
-                            StatusId = 2,
+                            Status = "TODO",
                             StoryPoints = 6,
                             Summary = "Issue 2 for Project 1",
                             Title = "Task 2",
@@ -1446,7 +1450,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
-                            StatusId = 4,
+                            Status = "TODO",
                             StoryPoints = 9,
                             Summary = "Issue 3 for Project 1",
                             Title = "Task 3",
@@ -1466,7 +1470,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "HIGH",
                             ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
                             ReporterId = 1,
-                            StatusId = 1,
+                            Status = "TODO",
                             StoryPoints = 3,
                             Summary = "Issue 1 for Project 2",
                             Title = "Task 1",
@@ -1486,7 +1490,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "MEDIUM",
                             ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
                             ReporterId = 1,
-                            StatusId = 2,
+                            Status = "TODO",
                             StoryPoints = 6,
                             Summary = "Issue 2 for Project 2",
                             Title = "Task 2",
@@ -1506,7 +1510,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "MEDIUM",
                             ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
                             ReporterId = 1,
-                            StatusId = 4,
+                            Status = "TODO",
                             StoryPoints = 9,
                             Summary = "Issue 3 for Project 2",
                             Title = "Task 3",
@@ -1527,7 +1531,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
-                            StatusId = 1,
+                            Status = "TODO",
                             StoryPoints = 3,
                             Summary = "Issue 1 for Project 3",
                             Title = "Task 1",
@@ -1548,7 +1552,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
-                            StatusId = 2,
+                            Status = "TODO",
                             StoryPoints = 6,
                             Summary = "Issue 2 for Project 3",
                             Title = "Task 2",
@@ -1569,7 +1573,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
-                            StatusId = 4,
+                            Status = "TODO",
                             StoryPoints = 9,
                             Summary = "Issue 3 for Project 3",
                             Title = "Task 3",
@@ -1589,7 +1593,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "HIGH",
                             ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
                             ReporterId = 1,
-                            StatusId = 1,
+                            Status = "TODO",
                             StoryPoints = 3,
                             Summary = "Issue 1 for Project 4",
                             Title = "Task 1",
@@ -1609,7 +1613,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "MEDIUM",
                             ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
                             ReporterId = 1,
-                            StatusId = 2,
+                            Status = "TODO",
                             StoryPoints = 6,
                             Summary = "Issue 2 for Project 4",
                             Title = "Task 2",
@@ -1629,7 +1633,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Priority = "MEDIUM",
                             ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
                             ReporterId = 1,
-                            StatusId = 4,
+                            Status = "TODO",
                             StoryPoints = 9,
                             Summary = "Issue 3 for Project 4",
                             Title = "Task 3",
@@ -1650,7 +1654,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
-                            StatusId = 1,
+                            Status = "TODO",
                             StoryPoints = 3,
                             Summary = "Issue 1 for Project 5",
                             Title = "Task 1",
@@ -1671,7 +1675,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
-                            StatusId = 2,
+                            Status = "TODO",
                             StoryPoints = 6,
                             Summary = "Issue 2 for Project 5",
                             Title = "Task 2",
@@ -1692,7 +1696,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
                             ReporterId = 1,
                             SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
-                            StatusId = 4,
+                            Status = "TODO",
                             StoryPoints = 9,
                             Summary = "Issue 3 for Project 5",
                             Title = "Task 3",
@@ -2427,9 +2431,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("role_id");
 
-                    b.Property<int?>("TeamId")
-                        .HasColumnType("integer");
-
                     b.Property<int?>("UserId")
                         .HasColumnType("integer")
                         .HasColumnName("user_id");
@@ -2440,14 +2441,12 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("TeamId");
-
                     b.HasIndex("UserId");
 
                     b.HasIndex("ProjectId", "UserId")
                         .IsUnique();
 
-                    b.ToTable("ProjectMembers");
+                    b.ToTable("project_members");
 
                     b.HasData(
                         new
@@ -3093,7 +3092,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "ACTIVE",
                             StoryPoint = 30m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 10, 31, 11, 58, 56, 164, DateTimeKind.Unspecified).AddTicks(8468), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(4037), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3108,7 +3107,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "PLANNED",
                             StoryPoint = 35m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 10, 31, 11, 58, 56, 165, DateTimeKind.Unspecified).AddTicks(8975), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6184), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3123,7 +3122,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "COMPLETED",
                             StoryPoint = 25m,
                             TeamId = 2,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 10, 31, 11, 58, 56, 165, DateTimeKind.Unspecified).AddTicks(9009), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6189), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -3934,10 +3933,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasForeignKey("SprintId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("PmtAdmin.Domain.Entities.Status", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-
                     b.HasOne("PmtAdmin.Domain.Entities.User", "Updater")
                         .WithMany()
                         .HasForeignKey("UpdatedBy")
@@ -3956,8 +3951,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("Reporter");
 
                     b.Navigation("Sprint");
-
-                    b.Navigation("Status");
 
                     b.Navigation("Updater");
                 });
@@ -4176,10 +4169,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .WithMany("ProjectMembers")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("PmtAdmin.Domain.Entities.Team", null)
-                        .WithMany("ProjectMembers")
-                        .HasForeignKey("TeamId");
 
                     b.HasOne("PmtAdmin.Domain.Entities.User", "User")
                         .WithMany("ProjectMembers")
@@ -4456,8 +4445,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("Boards");
 
                     b.Navigation("Channels");
-
-                    b.Navigation("ProjectMembers");
 
                     b.Navigation("Sprints");
 

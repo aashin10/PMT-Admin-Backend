@@ -13,6 +13,7 @@ namespace PmtAdmin.Domain.Entities
     // ============================================
     // PROJECT MEMBERS
     // ============================================
+    [Table("project_members")]
     public class ProjectMember
     {
         [Key]

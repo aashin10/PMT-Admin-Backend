@@ -1,15 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-
+    // ============================================
+    // PROJECTS
+    // ============================================
     [Table("projects")]
     public class Project
     {
         [Key]
         [Column("id")]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
 
         [Required]
         [MaxLength(255)]
@@ -108,6 +116,7 @@ namespace PmtAdmin.Domain.Entities
         public ICollection<Sprint> Sprints { get; set; }
         public ICollection<Epic> Epics { get; set; }
         public ICollection<Issue> Issues { get; set; }
+        public ICollection<JiraAuthorization> JiraAuthorizations { get; set; }
         public ICollection<CustomField> CustomFields { get; set; }
         public ICollection<StarredProjects>? StarredProjects { get; set; }
 

@@ -263,7 +263,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                         BoardId = b.Id,
                                         BoardColumnId = boardcolumn.Id
                                     };
-                                    _context.BoardColumnMappings.Add(boardColumnMapping);
+                                    _context.BoardBoardColumnMaps.Add(boardColumnMapping);
                                     IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id.ToString();
 
                                     await _context.SaveChangesAsync();

@@ -38,7 +38,6 @@ namespace PmtAdmin.Infrastructure.Context
 
         public DbSet<Board> Boards { get; set; }
         public DbSet<ProjectMember> ProjectMembers { get; set; }
-        public DbSet<TeamMember> TeamMembers { get; set; }
 
         public DbSet<Sprint> Sprints { get; set; }
         public DbSet<Epic> Epics { get; set; }

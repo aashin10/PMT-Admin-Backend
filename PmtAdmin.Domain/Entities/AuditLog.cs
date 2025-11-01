@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
@@ -27,7 +22,7 @@ namespace PmtAdmin.Domain.Entities
         public string? EntityType { get; set; }
 
         [Column("entity_id")]
-        public int? EntityId { get; set; }    
+        public int? EntityId { get; set; }
 
         [Column("details", TypeName = "jsonb")]
         public string? Details { get; set; }

@@ -3,111 +3,118 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PmtAdmin.Domain.Entities
 {
-    [Table("issues")]
-    public class Issue
-    {
-        [Key]
-        [Column("id")]
-        [Required]
-        public Guid Id { get; set; }
+        [Table("issues")]
+        public class Issue
+        {
+                [Key]
+                [Column("id")]
+                [Required]
+                public Guid Id { get; set; }
 
-        [Column("key")]
-        public string? Key { get; set; }
+                [Column("key")]
+                public string? Key { get; set; }
 
-        [Column("project_id")]
-        [Required]
-        public Guid ProjectId { get; set; }
+                [Column("project_id")]
+                [Required]
+                public Guid ProjectId { get; set; }
 
-        [Column("epic_id")]
-        public Guid? EpicId { get; set; }
+                [Column("epic_id")]
+                public Guid? EpicId { get; set; }
 
-        [Column("sprint_id")]
-        public Guid? SprintId { get; set; }
+                [Column("sprint_id")]
+                public Guid? SprintId { get; set; }
 
-        [Column("parent_issue_id")]
-        public Guid? ParentIssueId { get; set; }
+                [Column("parent_issue_id")]
+                public Guid? ParentIssueId { get; set; }
 
-        [Column("title")]
-        [Required]
-        public string Title { get; set; }
+                [Column("attachment_url")]
+                public string? AttachmentUrl { get; set; }
 
-        [Column("description")]
-        public string? Description { get; set; }
+                [Required]
+                [Column("summary")]
+                public string Summary { get; set; }
 
-        [Column("type")]
-        [Required]
-        public string Type { get; set; }
+                [Column("title")]
+                [Required]
+                public string Title { get; set; }
 
-        [Column("priority")]
-        public string? Priority { get; set; }
+                [Column("description")]
+                public string? Description { get; set; }
 
-        [Column("status")]
-        public Guid? StatusId { get; set; } // Changed to int? and renamed to StatusId
+                [Column("type")]
+                [Required]
+                public string Type { get; set; }
 
-        [Column("assignee_id")]
-        public int? AssigneeId { get; set; }
+                [Column("priority")]
+                public string? Priority { get; set; }
 
-        [Column("reporter_id")]
-        [Required]
-        public int ReporterId { get; set; }
+                [Column("status")]
+                public Guid? StatusId { get; set; } // Changed to int? and renamed to StatusId
 
-        [Column("story_points")]
-        public int? StoryPoints { get; set; }
+                [Column("assignee_id")]
+                public int? AssigneeId { get; set; }
 
-        [Column("labels", TypeName = "jsonb")]
-        public string? Labels { get; set; }
+                [Column("reporter_id")]
+                [Required]
+                public int ReporterId { get; set; }
 
-        [Column("start_date")]
-        public DateTimeOffset? StartDate { get; set; }
+                [Column("story_points")]
+                public int? StoryPoints { get; set; }
 
-        [Column("due_date")]
-        public DateTimeOffset? DueDate { get; set; }
+                [Column("labels", TypeName = "jsonb")]
+                public string? Labels { get; set; } = "[]";
 
-        [Column("created_by")]
-        public int? CreatedBy { get; set; }
+                [Column("start_date")]
+                public DateTimeOffset? StartDate { get; set; }
 
-        [Column("updated_by")]
-        public int? UpdatedBy { get; set; }
+                [Column("due_date")]
+                public DateTimeOffset? DueDate { get; set; }
 
-        [Column("created_at")]
-        public DateTimeOffset? CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+                [Column("created_by")]
+                public int? CreatedBy { get; set; }
 
-        [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+                [Column("updated_by")]
+                public int? UpdatedBy { get; set; }
 
-        [Column("attachment_url")]
-        public string? AttachmentUrl { get; set; }
+                [Column("created_at")]
+                public DateTimeOffset? CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
-        // Navigation properties
-        [ForeignKey("ProjectId")]
-        public Project Project { get; set; }
+                [Column("updated_at")]
+                public DateTimeOffset? UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 
-        [ForeignKey("EpicId")]
-        public Epic? Epic { get; set; }
+                [Column("attachment_url")]
+                public string? AttachmentUrl { get; set; }
 
-        [ForeignKey("SprintId")]
-        public Sprint? Sprint { get; set; }
+                // Navigation properties
+                [ForeignKey("ProjectId")]
+                public Project Project { get; set; }
 
-        [ForeignKey("ParentIssueId")]
-        public Issue? ParentIssue { get; set; }
+                [ForeignKey("EpicId")]
+                public Epic? Epic { get; set; }
 
-        [ForeignKey("StatusId")]
-        public Status? Status { get; set; }
+                [ForeignKey("SprintId")]
+                public Sprint? Sprint { get; set; }
 
-        [ForeignKey("AssigneeId")]
-        public User? Assignee { get; set; }
+                [ForeignKey("ParentIssueId")]
+                public Issue? ParentIssue { get; set; }
 
-        [ForeignKey("ReporterId")]
-        public User? Reporter { get; set; }
+                [ForeignKey("StatusId")]
+                public Status? Status { get; set; }
 
-        [ForeignKey("CreatedBy")]
-        public User? Creator { get; set; }
+                [ForeignKey("AssigneeId")]
+                public User? Assignee { get; set; }
 
-        [ForeignKey("UpdatedBy")]
-        public User? Updater { get; set; }
+                [ForeignKey("ReporterId")]
+                public User? Reporter { get; set; }
 
-        public ICollection<Issue> ChildIssues { get; set; }
-        public ICollection<IssueComment> IssueComments { get; set; }
-    }
+                [ForeignKey("CreatedBy")]
+                public User? Creator { get; set; }
+
+                [ForeignKey("UpdatedBy")]
+                public User? Updater { get; set; }
+
+                public ICollection<Issue> ChildIssues { get; set; }
+                public ICollection<IssueComment> IssueComments { get; set; }
+        }
 
 }

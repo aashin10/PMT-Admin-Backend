@@ -182,6 +182,128 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("boards");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 1",
+                            IsActive = true,
+                            Name = "Board 1",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            TeamId = 1,
+                            Type = "scrum"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 2",
+                            IsActive = true,
+                            Name = "Board 2",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            TeamId = 2,
+                            Type = "kanban"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 3",
+                            IsActive = true,
+                            Name = "Board 3",
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            TeamId = 3,
+                            Type = "scrum"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 4",
+                            IsActive = true,
+                            Name = "Board 4",
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            TeamId = 4,
+                            Type = "kanban"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 5",
+                            IsActive = true,
+                            Name = "Board 5",
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            TeamId = 5,
+                            Type = "scrum"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 6",
+                            IsActive = true,
+                            Name = "Board 6",
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
+                            TeamId = 6,
+                            Type = "kanban"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 7",
+                            IsActive = true,
+                            Name = "Board 7",
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
+                            TeamId = 7,
+                            Type = "scrum"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 8",
+                            IsActive = true,
+                            Name = "Board 8",
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
+                            TeamId = 8,
+                            Type = "kanban"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 9",
+                            IsActive = true,
+                            Name = "Board 9",
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
+                            TeamId = 9,
+                            Type = "scrum"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Main board for Project 10",
+                            IsActive = true,
+                            Name = "Board 10",
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            TeamId = 10,
+                            Type = "kanban"
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.BoardBoardColumnMap", b =>
@@ -216,6 +338,136 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("BoardId");
 
                     b.ToTable("board_boardcolumn_map");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            BoardColumnId = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff"),
+                            BoardId = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            BoardId = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000002"),
+                            BoardId = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            BoardId = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            BoardColumnId = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff"),
+                            BoardId = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            BoardId = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000002"),
+                            BoardId = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            BoardId = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            BoardColumnId = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff"),
+                            BoardId = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            BoardId = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000002"),
+                            BoardId = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            BoardId = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            BoardColumnId = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff"),
+                            BoardId = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            BoardId = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000002"),
+                            BoardId = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            BoardColumnId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            BoardId = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.BoardColumn", b =>
@@ -246,6 +498,40 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("StatusId");
 
                     b.ToTable("board_columns");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("ffffffff-ffff-ffff-ffff-ffffffffffff"),
+                            BoardColor = "#FF6B6B",
+                            BoardColumnName = "To Do",
+                            Position = 1,
+                            StatusId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000001"),
+                            BoardColor = "#4ECDC4",
+                            BoardColumnName = "In Progress",
+                            Position = 2,
+                            StatusId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000002"),
+                            BoardColor = "#45B7D1",
+                            BoardColumnName = "In Review",
+                            Position = 3,
+                            StatusId = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000003"),
+                            BoardColor = "#96CEB4",
+                            BoardColumnName = "Done",
+                            Position = 4,
+                            StatusId = 4
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Channel", b =>
@@ -269,6 +555,68 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("TeamId");
 
                     b.ToTable("channel");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000004"),
+                            Name = "General",
+                            TeamId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000005"),
+                            Name = "Development Updates",
+                            TeamId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000006"),
+                            Name = "UI-UX Discussions",
+                            TeamId = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000007"),
+                            Name = "Testing Reports",
+                            TeamId = 4
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000008"),
+                            Name = "QA Coordination",
+                            TeamId = 5
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000009"),
+                            Name = "Client Support",
+                            TeamId = 6
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000010"),
+                            Name = "Ops Daily Standup",
+                            TeamId = 7
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000011"),
+                            Name = "Research & Insights",
+                            TeamId = 8
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000012"),
+                            Name = "Marketing Campaigns",
+                            TeamId = 9
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000013"),
+                            Name = "Finance Planning",
+                            TeamId = 10
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.CustomField", b =>
@@ -383,9 +731,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("due_date");
 
-                    b.Property<string>("Labels")
-                        .IsRequired()
-                        .HasColumnType("jsonb")
+                    b.PrimitiveCollection<List<string>>("Labels")
+                        .HasColumnType("text[]")
                         .HasColumnName("labels");
 
                     b.Property<Guid>("ProjectId")
@@ -426,6 +773,138 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("epics");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000019"),
+                            AssigneeId = 2,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Core functionality for Project 1",
+                            Labels = new List<string> { "Backend", "Core" },
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            ReporterId = 1,
+                            Title = "Epic 1: Core Features",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000020"),
+                            AssigneeId = 3,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Build and test APIs for Project 2",
+                            Labels = new List<string> { "API", "Integration" },
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            ReporterId = 1,
+                            Title = "Epic 2: API Integration",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000021"),
+                            AssigneeId = 2,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Design core UI for Project 3",
+                            Labels = new List<string> { "Frontend", "UI" },
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            ReporterId = 1,
+                            Title = "Epic 3: UI Components",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000022"),
+                            AssigneeId = 3,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Setup initial schema and relations",
+                            Labels = new List<string> { "Database", "Migration" },
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            ReporterId = 1,
+                            Title = "Epic 4: Database Setup",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000023"),
+                            AssigneeId = 2,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Implement login & roles",
+                            Labels = new List<string> { "Auth", "Security" },
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            ReporterId = 1,
+                            Title = "Epic 5: Authentication",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000024"),
+                            AssigneeId = 3,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Push/email notifications",
+                            Labels = new List<string> { "Alerts", "UX" },
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
+                            ReporterId = 1,
+                            Title = "Epic 6: Notifications",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000025"),
+                            AssigneeId = 2,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Optimize DB and API response",
+                            Labels = new List<string> { "Performance", "Backend" },
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
+                            ReporterId = 1,
+                            Title = "Epic 7: Performance Optimization",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000026"),
+                            AssigneeId = 3,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Build analytics and reporting UI",
+                            Labels = new List<string> { "Reports", "Analytics" },
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
+                            ReporterId = 1,
+                            Title = "Epic 8: Reporting Dashboard",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000027"),
+                            AssigneeId = 2,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Sync data with external systems",
+                            Labels = new List<string> { "Sync", "Integration" },
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
+                            ReporterId = 1,
+                            Title = "Epic 9: Data Sync",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000028"),
+                            AssigneeId = 3,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Run pre-release QA tests",
+                            Labels = new List<string> { "QA", "Testing" },
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            ReporterId = 1,
+                            Title = "Epic 10: Final QA",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ImportJob", b =>
@@ -500,7 +979,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("attachment_url");
 
-                    b.Property<DateTimeOffset?>("CreatedAt")
+                    b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
@@ -601,7 +1080,321 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("UpdatedBy");
 
-                    b.ToTable("issues");
+                    b.ToTable("issues", t =>
+                        {
+                            t.HasCheckConstraint("CK_Issues_StoryPoints", "story_points >= 0");
+                        });
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000029"),
+                            AssigneeId = 4,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 1 in project 1",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000019"),
+                            Key = "PROJ001-1",
+                            Labels = "[]",
+                            Priority = "HIGH",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
+                            Status = "TODO",
+                            StoryPoints = 3,
+                            Summary = "Issue 1 for Project 1",
+                            Title = "Task 1",
+                            Type = "STORY",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000030"),
+                            AssigneeId = 5,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 2 in project 1",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000019"),
+                            Key = "PROJ001-2",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
+                            Status = "TODO",
+                            StoryPoints = 6,
+                            Summary = "Issue 2 for Project 1",
+                            Title = "Task 2",
+                            Type = "TASK",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000031"),
+                            AssigneeId = 8,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 3 in project 1",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000019"),
+                            Key = "PROJ001-3",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000014"),
+                            Status = "TODO",
+                            StoryPoints = 9,
+                            Summary = "Issue 3 for Project 1",
+                            Title = "Task 3",
+                            Type = "BUG",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000032"),
+                            AssigneeId = 4,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 1 in project 2",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000020"),
+                            Key = "PROJ002-1",
+                            Labels = "[]",
+                            Priority = "HIGH",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 3,
+                            Summary = "Issue 1 for Project 2",
+                            Title = "Task 1",
+                            Type = "STORY",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000033"),
+                            AssigneeId = 5,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 2 in project 2",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000020"),
+                            Key = "PROJ002-2",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 6,
+                            Summary = "Issue 2 for Project 2",
+                            Title = "Task 2",
+                            Type = "TASK",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000034"),
+                            AssigneeId = 8,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 3 in project 2",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000020"),
+                            Key = "PROJ002-3",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 9,
+                            Summary = "Issue 3 for Project 2",
+                            Title = "Task 3",
+                            Type = "BUG",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000035"),
+                            AssigneeId = 4,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 1 in project 3",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000021"),
+                            Key = "PROJ003-1",
+                            Labels = "[]",
+                            Priority = "HIGH",
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
+                            Status = "TODO",
+                            StoryPoints = 3,
+                            Summary = "Issue 1 for Project 3",
+                            Title = "Task 1",
+                            Type = "STORY",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000036"),
+                            AssigneeId = 5,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 2 in project 3",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000021"),
+                            Key = "PROJ003-2",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
+                            Status = "TODO",
+                            StoryPoints = 6,
+                            Summary = "Issue 2 for Project 3",
+                            Title = "Task 2",
+                            Type = "TASK",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000037"),
+                            AssigneeId = 8,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 3 in project 3",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000021"),
+                            Key = "PROJ003-3",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000015"),
+                            Status = "TODO",
+                            StoryPoints = 9,
+                            Summary = "Issue 3 for Project 3",
+                            Title = "Task 3",
+                            Type = "BUG",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000038"),
+                            AssigneeId = 4,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 1 in project 4",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000022"),
+                            Key = "PROJ004-1",
+                            Labels = "[]",
+                            Priority = "HIGH",
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 3,
+                            Summary = "Issue 1 for Project 4",
+                            Title = "Task 1",
+                            Type = "STORY",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000039"),
+                            AssigneeId = 5,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 2 in project 4",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000022"),
+                            Key = "PROJ004-2",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 6,
+                            Summary = "Issue 2 for Project 4",
+                            Title = "Task 2",
+                            Type = "TASK",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000040"),
+                            AssigneeId = 8,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 3 in project 4",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000022"),
+                            Key = "PROJ004-3",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            ReporterId = 1,
+                            Status = "TODO",
+                            StoryPoints = 9,
+                            Summary = "Issue 3 for Project 4",
+                            Title = "Task 3",
+                            Type = "BUG",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000041"),
+                            AssigneeId = 4,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 1 in project 5",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000023"),
+                            Key = "PROJ005-1",
+                            Labels = "[]",
+                            Priority = "HIGH",
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
+                            Status = "TODO",
+                            StoryPoints = 3,
+                            Summary = "Issue 1 for Project 5",
+                            Title = "Task 1",
+                            Type = "STORY",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000042"),
+                            AssigneeId = 5,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 2 in project 5",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000023"),
+                            Key = "PROJ005-2",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
+                            Status = "TODO",
+                            StoryPoints = 6,
+                            Summary = "Issue 2 for Project 5",
+                            Title = "Task 2",
+                            Type = "TASK",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000043"),
+                            AssigneeId = 8,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            Description = "Description for issue 3 in project 5",
+                            EpicId = new Guid("00000000-0000-0000-0000-000000000023"),
+                            Key = "PROJ005-3",
+                            Labels = "[]",
+                            Priority = "MEDIUM",
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            ReporterId = 1,
+                            SprintId = new Guid("00000000-0000-0000-0000-000000000016"),
+                            Status = "TODO",
+                            StoryPoints = 9,
+                            Summary = "Issue 3 for Project 5",
+                            Title = "Task 3",
+                            Type = "BUG",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.IssueComment", b =>
@@ -715,6 +1508,73 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("jira_authorizations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AccessToken = "sample_access_token",
+                            BaseUrl = "https://company.atlassian.net",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ExpiresAt = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            RefreshToken = "sample_refresh_token",
+                            Scopes = "read write",
+                            UserId = 1
+                        });
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.Label", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Colour")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("colour");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("label");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Colour = "#FF0000",
+                            Name = "Bug"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Colour = "#00FF00",
+                            Name = "Feature"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Colour = "#0000FF",
+                            Name = "Improvement"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Colour = "#FFA500",
+                            Name = "Documentation"
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Mention", b =>
@@ -997,6 +1857,168 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("projects");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
+                            CreatedAt = new DateTime(2024, 1, 5, 5, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 1",
+                            DeliveryUnitId = 1,
+                            Description = "Description for Project 1",
+                            Key = "PROJ001",
+                            Name = "Project 1",
+                            PocEmail = "customer1@example.com",
+                            ProjectManagerId = 2,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
+                            CreatedAt = new DateTime(2024, 3, 15, 3, 30, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 2",
+                            DeliveryUnitId = 2,
+                            Description = "Description for Project 2",
+                            Key = "PROJ002",
+                            Name = "Project 2",
+                            PocEmail = "customer2@example.com",
+                            ProjectManagerId = 3,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
+                            CreatedAt = new DateTime(2023, 8, 12, 9, 15, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 3",
+                            DeliveryUnitId = 3,
+                            Description = "Description for Project 3",
+                            Key = "PROJ003",
+                            Name = "Project 3",
+                            PocEmail = "customer3@example.com",
+                            ProjectManagerId = 2,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("44444444-4444-4444-4444-444444444444"),
+                            CreatedAt = new DateTime(2025, 5, 1, 2, 45, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 4",
+                            DeliveryUnitId = 4,
+                            Description = "Description for Project 4",
+                            Key = "PROJ004",
+                            Name = "Project 4",
+                            PocEmail = "customer4@example.com",
+                            ProjectManagerId = 3,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("55555555-5555-5555-5555-555555555555"),
+                            CreatedAt = new DateTime(2022, 11, 20, 11, 30, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 5",
+                            DeliveryUnitId = 5,
+                            Description = "Description for Project 5",
+                            Key = "PROJ005",
+                            Name = "Project 5",
+                            PocEmail = "customer5@example.com",
+                            ProjectManagerId = 2,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("66666666-6666-6666-6666-666666666666"),
+                            CreatedAt = new DateTime(2021, 6, 10, 6, 15, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 6",
+                            DeliveryUnitId = 6,
+                            Description = "Description for Project 6",
+                            Key = "PROJ006",
+                            Name = "Project 6",
+                            PocEmail = "customer6@example.com",
+                            ProjectManagerId = 3,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("77777777-7777-7777-7777-777777777777"),
+                            CreatedAt = new DateTime(2020, 9, 18, 9, 50, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 7",
+                            DeliveryUnitId = 7,
+                            Description = "Description for Project 7",
+                            Key = "PROJ007",
+                            Name = "Project 7",
+                            PocEmail = "customer7@example.com",
+                            ProjectManagerId = 2,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 1,
+                            TemplateId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("88888888-8888-8888-8888-888888888888"),
+                            CreatedAt = new DateTime(2023, 2, 7, 7, 40, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 8",
+                            DeliveryUnitId = 8,
+                            Description = "Description for Project 8",
+                            Key = "PROJ008",
+                            Name = "Project 8",
+                            PocEmail = "customer8@example.com",
+                            ProjectManagerId = 3,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 2,
+                            TemplateId = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("99999999-9999-9999-9999-999999999999"),
+                            CreatedAt = new DateTime(2021, 12, 29, 12, 30, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 9",
+                            DeliveryUnitId = 9,
+                            Description = "Description for Project 9",
+                            Key = "PROJ009",
+                            Name = "Project 9",
+                            PocEmail = "customer9@example.com",
+                            ProjectManagerId = 2,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 2,
+                            TemplateId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            CreatedAt = new DateTime(2019, 4, 12, 4, 45, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            CustomerOrgName = "Customer Org 10",
+                            DeliveryUnitId = 10,
+                            Description = "Description for Project 10",
+                            Key = "PROJ010",
+                            Name = "Project 10",
+                            PocEmail = "customer10@example.com",
+                            ProjectManagerId = 3,
+                            ProjectManagerRoleId = 2,
+                            StatusId = 3,
+                            TemplateId = 2
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ProjectMember", b =>
@@ -1040,7 +2062,238 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
+                    b.HasIndex("ProjectId", "UserId")
+                        .IsUnique();
+
                     b.ToTable("project_members");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            RoleId = 4,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            RoleId = 5,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            RoleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            RoleId = 4,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            RoleId = 5,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 9,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 11,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            RoleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 12,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            RoleId = 4,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 13,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 14,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 15,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
+                            RoleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 16,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
+                            RoleId = 4,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 17,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 18,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 19,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
+                            RoleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 20,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
+                            RoleId = 4,
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 21,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 22,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 23,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            IsOwner = true,
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            RoleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 24,
+                            AddedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            AddedBy = 1,
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            RoleId = 4,
+                            UserId = 5
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ProjectStatus", b =>
@@ -1090,6 +2343,80 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("project_template");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Scrum"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Kanban"
+                        });
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
+
+                    b.Property<DateTimeOffset>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("expires_at");
+
+                    b.Property<string>("ReplacedByToken")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
+                        .HasColumnName("replaced_by_token");
+
+                    b.Property<DateTimeOffset?>("RevokedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("revoked_at");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
+                        .HasColumnName("token");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("refresh_tokens");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("11111111-aaaa-bbbb-cccc-111111111111"),
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ExpiresAt = new DateTimeOffset(new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Token = "sample-refresh-token-admin",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("22222222-aaaa-bbbb-cccc-222222222222"),
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ExpiresAt = new DateTimeOffset(new DateTime(2025, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Token = "sample-refresh-token-pm1",
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Role", b =>
@@ -1210,7 +2537,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasColumnName("team_id");
 
-                    b.Property<DateTimeOffset?>("UpdatedAt")
+                    b.Property<DateTimeOffset>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
@@ -1222,7 +2549,165 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("ProjectId");
 
+                    b.HasIndex("TeamId");
+
+                    b.HasIndex("UpdatedBy");
+
                     b.ToTable("sprints");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000014"),
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            DueDate = new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Sprint 1 - Kickoff",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            SprintGoal = "Setup project structure and CI/CD",
+                            StartDate = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "ACTIVE",
+                            StoryPoint = 30m,
+                            TeamId = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(4037), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000015"),
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            DueDate = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Sprint 2 - Core Features",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            SprintGoal = "Implement authentication and dashboard",
+                            StartDate = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "PLANNED",
+                            StoryPoint = 35m,
+                            TeamId = 1,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6184), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = new Guid("00000000-0000-0000-0000-000000000016"),
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1,
+                            DueDate = new DateTime(2024, 2, 14, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Sprint 1 - Discovery",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            SprintGoal = "Gather requirements and create wireframes",
+                            StartDate = new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "COMPLETED",
+                            StoryPoint = 25m,
+                            TeamId = 2,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6189), new TimeSpan(0, 0, 0, 0, 0))
+                        });
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.StarredProjects", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
+
+                    b.Property<Guid>("ProjectId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("project_id");
+
+                    b.Property<DateTimeOffset?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_at");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("ProjectId", "UserId")
+                        .IsUnique();
+
+                    b.ToTable("starred_projects");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Status", b =>
@@ -1242,6 +2727,28 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("status");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            StatusName = "To Do"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            StatusName = "In Progress"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            StatusName = "In Review"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            StatusName = "Done"
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Team", b =>
@@ -1270,8 +2777,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("is_active");
 
                     b.PrimitiveCollection<List<string>>("Label")
-                        .HasColumnType("text[]")
-                        .HasColumnName("Label");
+                        .HasColumnType("jsonb")
+                        .HasColumnName("label");
 
                     b.Property<int?>("LeadId")
                         .HasColumnType("integer")
@@ -1310,6 +2817,128 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("teams");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 1",
+                            IsActive = true,
+                            Label = new List<string> { "Backend", "API" },
+                            LeadId = 4,
+                            Name = "Team 1",
+                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111")
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 2",
+                            IsActive = true,
+                            Label = new List<string> { "Frontend", "UI" },
+                            LeadId = 5,
+                            Name = "Team 2",
+                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222")
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 3",
+                            IsActive = true,
+                            Label = new List<string> { "Integration", "DevOps" },
+                            LeadId = 4,
+                            Name = "Team 3",
+                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333")
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 4",
+                            IsActive = true,
+                            Label = new List<string> { "Testing", "QA" },
+                            LeadId = 5,
+                            Name = "Team 4",
+                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444")
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 5",
+                            IsActive = true,
+                            Label = new List<string> { "Mobile", "Flutter" },
+                            LeadId = 4,
+                            Name = "Team 5",
+                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555")
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 6",
+                            IsActive = true,
+                            Label = new List<string> { "AI", "ML" },
+                            LeadId = 5,
+                            Name = "Team 6",
+                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666")
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 7",
+                            IsActive = true,
+                            Label = new List<string> { "Security", "Infra" },
+                            LeadId = 4,
+                            Name = "Team 7",
+                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777")
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 8",
+                            IsActive = true,
+                            Label = new List<string> { "Data", "ETL" },
+                            LeadId = 5,
+                            Name = "Team 8",
+                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888")
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 9",
+                            IsActive = true,
+                            Label = new List<string> { "Web", "React" },
+                            LeadId = 4,
+                            Name = "Team 9",
+                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999")
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            CreatedBy = 1,
+                            Description = "Development team for Project 10",
+                            IsActive = true,
+                            Label = new List<string> { "Cloud", "AWS" },
+                            LeadId = 5,
+                            Name = "Team 10",
+                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa")
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.TeamMember", b =>
@@ -1341,9 +2970,54 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("ProjectMemberId");
 
-                    b.HasIndex("TeamId");
+                    b.HasIndex("TeamId", "ProjectMemberId")
+                        .IsUnique();
 
                     b.ToTable("team_members");
+
+                    b.HasData(
+                        new
+                        {
+                            TeamMemberId = 1L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 2,
+                            TeamId = 1
+                        },
+                        new
+                        {
+                            TeamMemberId = 2L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 3,
+                            TeamId = 1
+                        },
+                        new
+                        {
+                            TeamMemberId = 3L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 4,
+                            TeamId = 1
+                        },
+                        new
+                        {
+                            TeamMemberId = 4L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 6,
+                            TeamId = 2
+                        },
+                        new
+                        {
+                            TeamMemberId = 5L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 7,
+                            TeamId = 2
+                        },
+                        new
+                        {
+                            TeamMemberId = 6L,
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            ProjectMemberId = 8,
+                            TeamId = 2
+                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.User", b =>
@@ -1492,14 +3166,15 @@ namespace PmtAdmin.Infrastructure.Migrations
             modelBuilder.Entity("PmtAdmin.Domain.Entities.BoardBoardColumnMap", b =>
                 {
                     b.HasOne("PmtAdmin.Domain.Entities.BoardColumn", "BoardColumn")
-                        .WithMany()
+                        .WithMany("BoardBoardColumnMaps")
                         .HasForeignKey("BoardColumnId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PmtAdmin.Domain.Entities.Board", "Board")
-                        .WithMany()
-                        .HasForeignKey("BoardId");
+                        .WithMany("BoardBoardColumnMaps")
+                        .HasForeignKey("BoardId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Board");
 
@@ -1855,6 +3530,11 @@ namespace PmtAdmin.Infrastructure.Migrations
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ProjectMember", b =>
                 {
+                    b.HasOne("PmtAdmin.Domain.Entities.User", "Users")
+                        .WithMany()
+                        .HasForeignKey("AddedBy")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("PmtAdmin.Domain.Entities.Project", "Project")
                         .WithMany("ProjectMembers")
                         .HasForeignKey("ProjectId")
@@ -1874,6 +3554,19 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("Project");
 
                     b.Navigation("Role");
+
+                    b.Navigation("User");
+
+                    b.Navigation("Users");
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("PmtAdmin.Domain.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -1901,18 +3594,57 @@ namespace PmtAdmin.Infrastructure.Migrations
                 {
                     b.HasOne("PmtAdmin.Domain.Entities.Project", null)
                         .WithMany("Sprints")
-                        .HasForeignKey("ProjectId");
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PmtAdmin.Domain.Entities.Team", "Team")
+                        .WithMany("Sprints")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("PmtAdmin.Domain.Entities.User", "Updater")
+                        .WithMany()
+                        .HasForeignKey("UpdatedBy")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Creator");
+
+                    b.Navigation("Project");
+
+                    b.Navigation("Team");
+
+                    b.Navigation("Updater");
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.StarredProjects", b =>
+                {
+                    b.HasOne("PmtAdmin.Domain.Entities.Project", "Project")
+                        .WithMany("StarredProjects")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PmtAdmin.Domain.Entities.User", "User")
+                        .WithMany("StarredProjects")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Project");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Team", b =>
                 {
-                    b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "CreatedByMember")
+                    b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Creator")
                         .WithMany()
                         .HasForeignKey("CreatedBy");
 
                     b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Lead")
                         .WithMany()
-                        .HasForeignKey("LeadId");
+                        .HasForeignKey("LeadId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("PmtAdmin.Domain.Entities.Project", "Project")
                         .WithMany("Teams")
@@ -1920,7 +3652,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "UpdatedByMember")
+                    b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Updater")
                         .WithMany()
                         .HasForeignKey("UpdatedBy");
 
@@ -1928,13 +3660,17 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .WithMany("LeadTeams")
                         .HasForeignKey("UserId");
 
-                    b.Navigation("CreatedByMember");
+                    b.HasOne("PmtAdmin.Domain.Entities.User", null)
+                        .WithMany("LeadTeams")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Creator");
 
                     b.Navigation("Lead");
 
                     b.Navigation("Project");
 
-                    b.Navigation("UpdatedByMember");
+                    b.Navigation("Updater");
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.TeamMember", b =>
@@ -1985,6 +3721,16 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("Notifications");
                 });
 
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.Board", b =>
+                {
+                    b.Navigation("BoardBoardColumnMaps");
+                });
+
+            modelBuilder.Entity("PmtAdmin.Domain.Entities.BoardColumn", b =>
+                {
+                    b.Navigation("BoardBoardColumnMaps");
+                });
+
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Channel", b =>
                 {
                     b.Navigation("Messages");
@@ -2031,6 +3777,8 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.Navigation("Sprints");
 
+                    b.Navigation("StarredProjects");
+
                     b.Navigation("Teams");
                 });
 
@@ -2060,6 +3808,12 @@ namespace PmtAdmin.Infrastructure.Migrations
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Team", b =>
                 {
+                    b.Navigation("Boards");
+
+                    b.Navigation("Channels");
+
+                    b.Navigation("Sprints");
+
                     b.Navigation("TeamMembers");
                 });
 
@@ -2072,6 +3826,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("ManagedProjects");
 
                     b.Navigation("ProjectMembers");
+
+                    b.Navigation("StarredProjects");
                 });
 #pragma warning restore 612, 618
         }

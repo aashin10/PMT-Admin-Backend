@@ -59,6 +59,9 @@ namespace PmtAdmin.Domain.Entities
 
         [ForeignKey("UpdatedBy")]
         public User? Updater { get; set; }
+
+        public ICollection<BoardBoardColumnMap>? BoardBoardColumnMaps { get; set; }
+
     }
 
 }

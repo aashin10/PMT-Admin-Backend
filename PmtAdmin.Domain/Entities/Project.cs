@@ -109,6 +109,8 @@ namespace PmtAdmin.Domain.Entities
         public ICollection<Epic> Epics { get; set; }
         public ICollection<Issue> Issues { get; set; }
         public ICollection<CustomField> CustomFields { get; set; }
+        public ICollection<StarredProjects>? StarredProjects { get; set; }
+
 
     }
 }

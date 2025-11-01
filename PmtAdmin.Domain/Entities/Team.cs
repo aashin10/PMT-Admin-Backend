@@ -4,67 +4,85 @@ namespace PmtAdmin.Domain.Entities
 {
 
 
-    [Table("teams")]
-    public class Team
-    {
-        [Column("id")]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Table("teams")]
+        public class Team
+        {
 
-        [Column("project_id")]
-        public Guid ProjectId { get; set; }
+                [Key]
+                [Column("id")]
+                [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        [Column("name")]
-        public string Name { get; set; } = string.Empty;
+                public int Id { get; set; }
 
-        [Column("description")]
-        public string? Description { get; set; }
+                [Column("project_id")]
+                public Guid ProjectId { get; set; }
 
-        // 🔹 LeadId now references ProjectMembers.Id
-        [Column("lead_id")]
-        public int? LeadId { get; set; }
+                [Column("name")]
+                public string Name { get; set; } = string.Empty;
 
-        [Column("is_active")]
-        public bool? IsActive { get; set; } = true;
+                [Column("description")]
+                public string? Description { get; set; }
 
-        [Column("created_by")]
-        public int? CreatedBy { get; set; }
+                // 🔹 LeadId now references ProjectMembers.Id
+                [Column("lead_id")]
+                public int? LeadId { get; set; }
 
-        [Column("updated_by")]
-        public int? UpdatedBy { get; set; }
+                [Column("is_active")]
+                public bool? IsActive { get; set; } = true;
 
-        [Column("created_at")]
-        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
+                [Column("created_by")]
+                public int? CreatedBy { get; set; }
 
-        [Column("updated_at")]
-        public DateTime? UpdatedAt { get; set; }
+                [Column("updated_by")]
+                public int? UpdatedBy { get; set; }
 
-        [Column("Label")]
-        public List<string>? Label { get; set; }
+                [Column("created_at")]
+                public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
 
-        // 🔹 Lead is now a ProjectMember, not a User
-        [ForeignKey("LeadId")]
-        public ProjectMember? Lead { get; set; }
+                [Column("updated_at")]
+                public DateTime? UpdatedAt { get; set; }
 
-        // ✅ These remain linked to the Users table
-        [ForeignKey("CreatedBy")]
-        public ProjectMember? CreatedByMember { get; set; }
+                [Column("labels", TypeName = "text[]")]
+                public List<string>? Label { get; set; } = new();
 
 
-        [ForeignKey("UpdatedBy")]
-        public ProjectMember? UpdatedByMember { get; set; }
 
-        [ForeignKey("ProjectId")]
-        public Project? Project { get; set; }
+                // Navigation properties
+                [ForeignKey("ProjectId")]
+                public Project Project { get; set; }
 
-        [NotMapped]
-        public int MemberCount { get; set; }
+                // 🔹 Lead is now a ProjectMember, not a User
+                [ForeignKey("LeadId")]
+                //public User? Lead { get; set; }
+                public ProjectMember? Lead { get; set; }
 
-        [NotMapped]
-        public int ActiveSprintCount { get; set; }
+                // ✅ These remain linked to the Users table
+                [ForeignKey("CreatedBy")]
+                //public User? Creator { get; set; }
+                public ProjectMember? Creator { get; set; }
 
-        //✅ Add this navigation property
-        public ICollection<TeamMember> TeamMembers { get; set; } = new List<TeamMember>();
-    }
+                [ForeignKey("UpdatedBy")]
+                //public User? Updater { get; set; }
+                public ProjectMember? Updater { get; set; }
+
+                [NotMapped]
+                public int MemberCount { get; set; }
+
+                [NotMapped]
+                public int ActiveSprintCount { get; set; }
+
+                public ICollection<TeamMember> TeamMembers { get; set; } = new List<TeamMember>();
+
+                public ICollection<Board> Boards { get; set; }
+                //public ICollection<ProjectMember> ProjectMembers { get; set; }
+                public ICollection<Channel> Channels { get; set; }
+                public ICollection<Sprint>? Sprints { get; set; }
+
+        }
 }
 
+
+
+//public User? Lead { get; set; }
+//public User? Creator { get; set; }
+//public User? Updater { get; set; }

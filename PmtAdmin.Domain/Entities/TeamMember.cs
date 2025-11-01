@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
-
     [Table("team_members")]
     public class TeamMember
     {
@@ -27,8 +26,9 @@ namespace PmtAdmin.Domain.Entities
         public DateTime? UpdatedAt { get; set; }
 
         // No 'virtual' keyword — plain references
+        [ForeignKey(nameof(TeamId))]
         public Team? Team { get; set; }
+        [ForeignKey(nameof(ProjectMemberId))]
         public ProjectMember? ProjectMember { get; set; }
     }
-
 }

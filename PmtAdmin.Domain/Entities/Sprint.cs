@@ -16,7 +16,7 @@ namespace PmtAdmin.Domain.Entities
 
         [Column("name")]
         [Required]
-        public string Name { get; set; } 
+        public string Name { get; set; }
 
         [Column("sprint_goal")]
         public string? SprintGoal { get; set; }
@@ -43,9 +43,33 @@ namespace PmtAdmin.Domain.Entities
         public DateTimeOffset? CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
         [Column("updated_at")]
-        public DateTimeOffset? UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
 
         [Column("team_id")]
         public int? TeamId { get; set; }
+
+        // Navigation properties
+        [ForeignKey("ProjectId")]
+        public Project Project { get; set; }
+
+        [ForeignKey("CreatedBy")]
+        public User? Creator { get; set; }
+
+        [ForeignKey("UpdatedBy")]
+        public User? Updater { get; set; }
+
+        [ForeignKey(nameof(TeamId))]
+        public Team? Team { get; set; }
+
+        public ICollection<Issue> Issues { get; set; }
     }
+
 }
+
+
+
+//team id iaaded
+//foreighkey aded for team
+//
+//
+//

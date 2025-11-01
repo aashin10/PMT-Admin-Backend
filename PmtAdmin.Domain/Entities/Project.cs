@@ -118,6 +118,8 @@ namespace PmtAdmin.Domain.Entities
         public ICollection<Issue> Issues { get; set; }
         public ICollection<JiraAuthorization> JiraAuthorizations { get; set; }
         public ICollection<CustomField> CustomFields { get; set; }
+        public ICollection<StarredProjects>? StarredProjects { get; set; }
+
 
     }
 }

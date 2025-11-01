@@ -4,8 +4,12 @@ using Microsoft.Extensions.DependencyInjection;
 using PmtAdmin.Application.MappingProfiles;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
+using PmtAdmin.Domain.Persistance.Dashboard;
+using PmtAdmin.Domain.Persistance.Settings;
 using PmtAdmin.Infrastructure.Context;
 using PmtAdmin.Infrastructure.Repositories;
+using PmtAdmin.Infrastructure.Repositories.Dashboard;
+using PmtAdmin.Infrastructure.Repositories.Settings;
 using PmtAdmin.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
@@ -31,9 +35,9 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
-            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
-            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IDashboardRepository, DashboardRepository>();
+            services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
+            services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
 
 
             return services;

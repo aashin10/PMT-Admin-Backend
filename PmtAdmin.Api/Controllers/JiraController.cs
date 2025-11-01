@@ -22,7 +22,7 @@ namespace PmtAdmin.Api.Controllers
 
 
         [HttpGet("import/{baseUrl}")]
-        public async Task<ApiResponse<List<UserDto>>> ImportProjects(string baseUrl, [FromQuery] string projectIds)
+        public async Task<ApiResponse<JiraImportResult>> ImportProjects(string baseUrl, [FromQuery] string projectIds)
         {
 
             string decodedUrl = WebUtility.UrlDecode(baseUrl);

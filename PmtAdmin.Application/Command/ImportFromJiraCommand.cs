@@ -4,7 +4,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Application.Command
 {
-    public class ImportFromJiraCommand : IRequest<ApiResponse<List<UserDto>>>
+    public class ImportFromJiraCommand : IRequest<ApiResponse<JiraImportResult>>
     {
         public string BaseUrl { get; set; } = string.Empty;
 

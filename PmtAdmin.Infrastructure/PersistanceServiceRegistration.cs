@@ -39,6 +39,9 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IRoleRepository, RoleRepository>();
             //services.AddAutoMapper(typeof(RoleProfile).Assembly);
             services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
+            services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
+            services.AddScoped<IBoardRepository, BoardRepository>();
 
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IPermissionRepository, PermissionRepository>();

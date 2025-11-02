@@ -2575,7 +2575,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "ACTIVE",
                             StoryPoint = 30m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(4442), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 0, 18, 386, DateTimeKind.Unspecified).AddTicks(4947), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -2590,7 +2590,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "PLANNED",
                             StoryPoint = 35m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(8028), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 0, 18, 386, DateTimeKind.Unspecified).AddTicks(7430), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -2605,7 +2605,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "COMPLETED",
                             StoryPoint = 25m,
                             TeamId = 2,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(8035), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 0, 18, 386, DateTimeKind.Unspecified).AddTicks(7436), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 

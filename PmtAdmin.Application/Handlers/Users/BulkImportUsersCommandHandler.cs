@@ -55,28 +55,24 @@ namespace PmtAdmin.Application.Handlers.Users
                     continue;
                 }
 
-                if (string.IsNullOrWhiteSpace(userDto.Email))
+                // Validate email format if provided
+                if (!string.IsNullOrWhiteSpace(userDto.Email))
                 {
-                    result.Errors.Add($"Email is required for user: {userDto.Name}");
-                    result.ErrorCount++;
-                    continue;
-                }
+                    if (!IsValidEmail(userDto.Email))
+                    {
+                        result.Errors.Add($"Invalid email format: {userDto.Email}");
+                        result.ErrorCount++;
+                        continue;
+                    }
 
-                // Validate email format
-                if (!IsValidEmail(userDto.Email))
-                {
-                    result.Errors.Add($"Invalid email format: {userDto.Email}");
-                    result.ErrorCount++;
-                    continue;
-                }
-
-                // Check if user with this email already exists
-                var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
-                if (existingUserByEmail != null)
-                {
-                    result.Duplicates.Add($"Email already exists: {userDto.Email}");
-                    result.DuplicateCount++;
-                    continue;
+                    // Check if user with this email already exists
+                    var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
+                    if (existingUserByEmail != null)
+                    {
+                        result.Duplicates.Add($"Email already exists: {userDto.Email}");
+                        result.DuplicateCount++;
+                        continue;
+                    }
                 }
 
                 // Check if Jira ID already exists (if provided)
@@ -91,8 +87,8 @@ namespace PmtAdmin.Application.Handlers.Users
                     }
                 }
 
-                // Infer type from email domain
-                var type = InferTypeFromEmail(userDto.Email);
+                // Infer type from email domain (null if no email)
+                var type = string.IsNullOrEmpty(userDto.Email) ? null : InferTypeFromEmail(userDto.Email);
 
                 // Map Status to IsActive boolean
                 // "Active" -> true
@@ -113,13 +109,13 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Create user entity
                 var user = new User
                 {
-                    Email = userDto.Email,
+                    Email = string.IsNullOrWhiteSpace(userDto.Email) ? null : userDto.Email,
                     Name = userDto.Name,
                     PasswordHash = passwordHash,
                     AvatarUrl = avatarUrl,
                     IsActive = isActive,
                     IsSuperAdmin = false,
-                    JiraId = userDto.JiraId,
+                    JiraId = string.IsNullOrWhiteSpace(userDto.JiraId) ? null : userDto.JiraId,
                     Type = type,
                     CreatedBy = request.CreatedBy,
                     CreatedAt = DateTime.UtcNow,

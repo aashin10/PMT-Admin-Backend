@@ -40,6 +40,16 @@ namespace PmtAdmin.Application.Handlers.Users
                 throw new NotFoundException($"User with ID {request.Id} has been deleted");
             }
 
+            // Check if Email is being changed and if it already exists
+            if (!string.IsNullOrEmpty(request.Email) && request.Email != existingUser.Email)
+            {
+                var userWithEmail = await _userRepository.GetByEmailAsync(request.Email);
+                if (userWithEmail != null && userWithEmail.Id != request.Id)
+                {
+                    throw new DuplicateEntryException($"Email '{request.Email}' already exists for another user");
+                }
+            }
+
             // Check if JiraId is being changed and if it already exists
             if (!string.IsNullOrEmpty(request.JiraId) && request.JiraId != existingUser.JiraId)
             {
@@ -51,9 +61,27 @@ namespace PmtAdmin.Application.Handlers.Users
             }
 
             // Update only the editable fields
+            if (request.Email != null)
+            {
+                existingUser.Email = string.IsNullOrWhiteSpace(request.Email) ? null : request.Email;
+
+                // Automatically set type based on email domain
+                if (!string.IsNullOrWhiteSpace(request.Email))
+                {
+                    existingUser.Type = request.Email.EndsWith("@experionglobal.com", StringComparison.OrdinalIgnoreCase)
+                        ? "Internal"
+                        : "External";
+                }
+                else
+                {
+                    // If email is cleared, set type to null
+                    existingUser.Type = null;
+                }
+            }
+
             if (request.JiraId != null)
             {
-                existingUser.JiraId = request.JiraId;
+                existingUser.JiraId = string.IsNullOrWhiteSpace(request.JiraId) ? null : request.JiraId;
             }
 
             if (request.Type != null)

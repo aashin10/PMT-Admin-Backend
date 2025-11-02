@@ -39,6 +39,18 @@ namespace PmtAdmin.Application.Handlers.Settings
             if (existingUser.IsDeleted)
                 return ApiResponse<SuperAdminDto>.Fail("SuperAdmin already deleted");
 
+            // ✅ Check if this is the last SuperAdmin
+            var activeSuperAdminCount = await _superAdminRepository.CountActiveSuperAdminsAsync();
+            if (activeSuperAdminCount <= 1)
+                return ApiResponse<SuperAdminDto>.Fail("Cannot delete the last remaining SuperAdmin.");
+
+            // ✅ Check active superadmin count (should be > 1 if this one is active)
+            var activeSuperAdmins = await _superAdminRepository.CountActiveEnabledSuperAdminsAsync();
+
+            // If this superadmin is active and it's the only active one left → block deletion
+            if (existingUser.IsActive && activeSuperAdmins <= 1)
+                return ApiResponse<SuperAdminDto>.Fail("Cannot delete the only active SuperAdmin. There must be at least one active SuperAdmin left.");
+
             // Soft delete: Set IsDeleted to true and DeletedAt timestamp
             existingUser.IsDeleted = true;
             existingUser.DeletedAt = DateTime.UtcNow;

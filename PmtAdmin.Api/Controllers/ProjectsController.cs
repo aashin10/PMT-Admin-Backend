@@ -118,5 +118,24 @@ namespace PmtAdmin.Api.Controllers
             }
             return StatusCode(result.Status, result);
         }
+
+        /// <summary>
+        /// Get all members of a specific team within a project
+        /// </summary>
+        /// <param name="projectId">The ID of the project</param>
+        /// <param name="teamId">The ID of the team</param>
+        /// <returns>Team members with count</returns>
+        [HttpGet("{projectId}/teams/{teamId}/members")]
+        public async Task<IActionResult> GetTeamMembers(Guid projectId, int teamId)
+        {
+            var query = new GetTeamMembersByTeamQuery { ProjectId = projectId, TeamId = teamId };
+            var result = await _mediator.Send(query);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+        }
     }
 }

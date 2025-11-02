@@ -87,13 +87,13 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .Include(p => p.Status)
                 .Include(p => p.DeliveryUnit)
                 .Include(p => p.ProjectManager)
-                .Include(p => p.ProjectMembers)
-                    .ThenInclude(pm => pm.User)
-                .Include(p => p.ProjectMembers)
-                    .ThenInclude(pm => pm.Team)
                 .Include(p => p.Sprints)
                 .Include(p => p.CustomFields)
                 .Include(p => p.Teams)
+                    .ThenInclude(t => t.TeamMembers)
+                .Include(p => p.Teams)
+                    .ThenInclude(t => t.Lead)
+                        .ThenInclude(pm => pm!.User)
                 .Where(p => p.Id == id && p.DeletedAt == null)
                 .FirstOrDefaultAsync();
         }
@@ -143,6 +143,20 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .Distinct()
                 .OrderBy(pm => pm.Name)
                 .ToListAsync();
+        }
+
+        public async Task<Team?> GetTeamWithMembersAsync(int teamId, Guid projectId)
+        {
+            return await _context.Teams
+                .Include(t => t.TeamMembers)
+                    .ThenInclude(tm => tm.ProjectMember!)
+                        .ThenInclude(pm => pm.User!)
+                .Include(t => t.TeamMembers)
+                    .ThenInclude(tm => tm.ProjectMember!)
+                        .ThenInclude(pm => pm.Role!)
+                .Include(t => t.Lead)
+                    .ThenInclude(lead => lead!.User!)
+                .FirstOrDefaultAsync(t => t.Id == teamId && t.ProjectId == projectId);
         }
     }
 }

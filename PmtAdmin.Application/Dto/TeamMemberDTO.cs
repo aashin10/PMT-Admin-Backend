@@ -12,6 +12,8 @@ namespace PmtAdmin.Application.Dto
         public string? Name { get; set; }
         public string? Role { get; set; }
         public string? Email { get; set; }
-        public string? Team { get; set; }
+        public int? UserId { get; set; }
+        public bool? IsOwner { get; set; }
+        public DateTimeOffset? AddedAt { get; set; }
     }
 }

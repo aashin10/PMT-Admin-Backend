@@ -55,9 +55,9 @@ namespace Pmt_Admin.Test.Handlers.Projects
                         {
                             Id = 1,
                             UserId = 1,
+                            RoleId = 1,
                             User = new User { Id = 1, Name = "User 1", Email = "user1@test.com" },
-                            ProjectRole = "Developer",
-                            TeamId = 1
+                            Role = new Role { Id = 1, Name = "Developer" }
                         }
                     }
                 }

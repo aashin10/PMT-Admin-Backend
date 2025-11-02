@@ -33,6 +33,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 .Select(s => s.StatusName)
                 .ToList();
 
+            HashSet<int> ProjectMembers = new HashSet<int>();
+
             var newStatuses = issueStatuses
                 .Except(existingStatuses)
                 .Select(x => new Status { StatusName = x })
@@ -56,7 +58,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     p.Key = "JIRA - " + p.Key;
 
                     if (project.Project.Lead.AccountId == null)
-                        throw new Exception("No Project Manager Assigned ");
+                        throw new Exception("No Project Manager Assigned");
+
+                    p.IsImportedFromJira = true;
 
                     var user = await _context.User
                         .FirstOrDefaultAsync(u => u.JiraId == project.Project.Lead.AccountId);
@@ -70,8 +74,28 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                     p.ProjectManagerId = user.Id;
                     p.ProjectManagerRoleId = 1;
+
                     _context.Projects.Add(p);
                     await _context.SaveChangesAsync();
+
+                    // ensure PM exists in project members only once
+                    bool pmExists = await _context.ProjectMembers
+                        .AnyAsync(pm => pm.ProjectId == p.Id && pm.UserId == user.Id);
+
+                    if (!pmExists)
+                    {
+                        var pm = new ProjectMember
+                        {
+                            ProjectId = p.Id,
+                            UserId = user.Id,
+                            RoleId = 1
+                        };
+                        ProjectMembers.Add(user.Id);
+                        await _context.ProjectMembers.AddAsync(pm);
+                        await _context.SaveChangesAsync();
+                    }
+
+
 
                     bool noUsers = true;
 
@@ -96,17 +120,24 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 }
 
                                 JiraIdToUserIdMappingScheme[u.AccountId] = existingUser.Id;
+
+                                if (!ProjectMembers.Contains(JiraIdToUserIdMappingScheme[u.AccountId]))
+                                {
+                                    var projectMember = new ProjectMember
+                                    {
+                                        ProjectId = p.Id,
+                                        UserId = JiraIdToUserIdMappingScheme[u.AccountId],
+                                        RoleId = 2  //2 for Member Role
+                                    };
+
+                                    _context.ProjectMembers.Add(projectMember);
+                                    ProjectMembers.Add(projectMember.Id);
+                                    await _context.SaveChangesAsync();
+                                }
                             }
 
-                            var projectMember = new ProjectMember
-                            {
-                                ProjectId = p.Id,
-                                UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                                RoleId = 2
-                            };
 
-                            _context.ProjectMembers.Add(projectMember);
-                            await _context.SaveChangesAsync();
+
                         }
                     }
 
@@ -244,7 +275,24 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Assignee);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+
                                         }
+
+                                        if (!ProjectMembers.Contains(existingUser.Id))
+                                        {
+                                            var projectMember = new ProjectMember
+                                            {
+                                                ProjectId = p.Id,
+                                                UserId = existingUser.Id,
+                                                RoleId = 2  //2 for Member Role
+                                            };
+
+                                            await _context.ProjectMembers.AddAsync(projectMember);
+                                            await _context.SaveChangesAsync();
+                                            ProjectMembers.Add(existingUser.Id);
+                                        }
+
+
                                         tempUsers.Add(existingUser);
 
                                         JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] = existingUser.Id;
@@ -270,9 +318,25 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Reporter);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+
                                         }
 
                                         tempUsers.Add(existingUser);
+
+                                        if (!ProjectMembers.Contains(existingUser.Id))
+                                        {
+                                            var projectMember = new ProjectMember
+                                            {
+                                                ProjectId = p.Id,
+                                                UserId = existingUser.Id,
+                                                RoleId = 2  //2 for Member Role
+                                            };
+
+                                            await _context.ProjectMembers.AddAsync(projectMember);
+                                            await _context.SaveChangesAsync();
+                                            ProjectMembers.Add(existingUser.Id);
+                                        }
+
 
                                         JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] = existingUser.Id;
                                     }
@@ -288,21 +352,23 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                             }
 
-                            foreach (var id in TeamMembersIds)
-                            {
-                                var pmid = _context.ProjectMembers
-                                    .FirstOrDefault(pm => pm.User.JiraId == id && pm.ProjectId == p.Id).Id;
 
-                                var newMember = new TeamMember
-                                {
-                                    TeamId = t.Id,
-                                    ProjectMemberId = pmid
-                                };
-
-                                _context.TeamMembers.Add(newMember);
-                            }
 
                             await _context.SaveChangesAsync();
+                        }
+
+                        foreach (var id in TeamMembersIds)
+                        {
+                            var pmid = _context.ProjectMembers
+                                .FirstOrDefault(pm => pm.User.JiraId == id && pm.ProjectId == p.Id).Id;
+
+                            var newMember = new TeamMember
+                            {
+                                TeamId = t.Id,
+                                ProjectMemberId = pmid
+                            };
+
+                            _context.TeamMembers.Add(newMember);
                         }
 
                         _context.Sprints.AddRange(sprints);

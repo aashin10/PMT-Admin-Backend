@@ -1,3 +1,4 @@
+
 using AutoMapper;
 using FluentAssertions;
 using Moq;
@@ -84,7 +85,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Data.TotalCount.Should().Be(1);
             result.Data.Page.Should().Be(1);
             result.Data.PageSize.Should().Be(10);
-            
+
             var projectDto = result.Data.Items.First();
             projectDto.Id.Should().Be(projectId);
             projectDto.Name.Should().Be("Test Project");
@@ -203,7 +204,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             };
 
             _projectRepositoryMock
-                .Setup(x => x.GetProjectsForTableAsync(1, 10, null, 
+                .Setup(x => x.GetProjectsForTableAsync(1, 10, null,
                     It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 1),
                     It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 2),
                     It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 3)))
@@ -220,7 +221,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Data.Items.First().DeliveryUnit!.Id.Should().Be(2);
             result.Data.Items.First().ProjectManager!.Id.Should().Be(3);
 
-            _projectRepositoryMock.Verify(x => x.GetProjectsForTableAsync(1, 10, null, 
+            _projectRepositoryMock.Verify(x => x.GetProjectsForTableAsync(1, 10, null,
                 It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 1),
                 It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 2),
                 It.Is<List<int>>(list => list != null && list.Count == 1 && list[0] == 3)), Times.Once);
@@ -264,7 +265,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             };
 
             _projectRepositoryMock
-                .Setup(x => x.GetProjectsForTableAsync(1, 10, null, 
+                .Setup(x => x.GetProjectsForTableAsync(1, 10, null,
                     It.Is<List<int>>(list => list != null && list.Count == 2 && list.Contains(1) && list.Contains(2)),
                     null, null))
                 .ReturnsAsync((projects, 2));
@@ -278,7 +279,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Data.Items.Should().HaveCount(2);
             result.Data.TotalCount.Should().Be(2);
 
-            _projectRepositoryMock.Verify(x => x.GetProjectsForTableAsync(1, 10, null, 
+            _projectRepositoryMock.Verify(x => x.GetProjectsForTableAsync(1, 10, null,
                 It.Is<List<int>>(list => list != null && list.Count == 2 && list.Contains(1) && list.Contains(2)),
                 null, null), Times.Once);
         }

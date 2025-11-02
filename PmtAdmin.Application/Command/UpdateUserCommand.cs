@@ -12,6 +12,7 @@ namespace PmtAdmin.Application.Command
     public class UpdateUserCommand : IRequest<ApiResponse<UserDto>>
     {
         public int Id { get; set; }
+        public string? Email { get; set; }
         public string? JiraId { get; set; }
         public string? Type { get; set; }
         public bool? IsActive { get; set; }

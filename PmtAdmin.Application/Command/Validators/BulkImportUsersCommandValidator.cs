@@ -25,9 +25,9 @@ namespace PmtAdmin.Application.Command.Validators
         public BulkImportUserDtoValidator()
         {
             RuleFor(x => x.Email)
-                .NotEmpty().WithMessage("Email is required")
                 .EmailAddress().WithMessage("Invalid email format")
-                .MaximumLength(255).WithMessage("Email cannot exceed 255 characters");
+                .MaximumLength(255).WithMessage("Email cannot exceed 255 characters")
+                .When(x => !string.IsNullOrEmpty(x.Email));
 
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Name is required")

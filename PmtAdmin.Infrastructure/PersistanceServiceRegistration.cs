@@ -34,6 +34,8 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
+            services.AddScoped<IDuRepository, DeliveryUnitRepository>();
+
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();

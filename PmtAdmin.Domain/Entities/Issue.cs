@@ -1,6 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace PmtAdmin.Domain.Entities
 {
     [Table("issues")]
@@ -14,9 +18,9 @@ namespace PmtAdmin.Domain.Entities
         [Column("key")]
         public string? Key { get; set; }
 
-        [Column("project_id")]
         [Required]
-        public Guid ProjectId { get; set; }
+        [Column("project_id")]
+        public Guid? ProjectId { get; set; }
 
         [Column("epic_id")]
         public Guid? EpicId { get; set; }
@@ -26,6 +30,9 @@ namespace PmtAdmin.Domain.Entities
 
         [Column("parent_issue_id")]
         public Guid? ParentIssueId { get; set; }
+
+        [Column("attachment_url")]
+        public string? AttachmentUrl { get; set; }
 
         [Column("title")]
         [Required]
@@ -42,7 +49,7 @@ namespace PmtAdmin.Domain.Entities
         public string? Priority { get; set; }
 
         [Column("status")]
-        public int? StatusId { get; set; } // Changed to int? and renamed to StatusId
+        public int? StatusId { get; set; }
 
         [Column("assignee_id")]
         public int? AssigneeId { get; set; }
@@ -75,9 +82,6 @@ namespace PmtAdmin.Domain.Entities
         [Column("updated_at")]
         public DateTimeOffset? UpdatedAt { get; set; }
 
-        [Column("attachment_url")]
-        public string? AttachmentUrl { get; set; }
-
         // Navigation properties
         [ForeignKey("StatusId")]
         public Status? Status { get; set; }
@@ -105,6 +109,8 @@ namespace PmtAdmin.Domain.Entities
 
         [ForeignKey("UpdatedBy")]
         public User? Updater { get; set; }
+        public ICollection<Issue> ChildIssues { get; set; }
+        public ICollection<IssueComment> IssueComments { get; set; }
     }
 }
 

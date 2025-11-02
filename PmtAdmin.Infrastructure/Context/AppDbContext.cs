@@ -127,6 +127,11 @@ namespace PmtAdmin.Infrastructure.Context
             {
                 entity.HasIndex(e => e.Key).IsUnique();
                 entity.HasIndex(e => e.StatusId);
+                entity.HasIndex(e => e.DeliveryUnitId);
+                entity.HasIndex(e => e.ProjectManagerId);
+                entity.HasIndex(e => e.DeletedAt);
+                entity.HasIndex(e => e.Name);
+                entity.HasIndex(e => new { e.DeletedAt, e.StatusId, e.DeliveryUnitId, e.ProjectManagerId });
 
                 entity.HasOne(e => e.ProjectManager)
                     .WithMany(u => u.ManagedProjects)

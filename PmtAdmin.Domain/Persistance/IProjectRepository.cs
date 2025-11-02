@@ -20,5 +20,12 @@ namespace PmtAdmin.Domain.Persistance
             List<int>? statusIds,
             List<int>? deliveryUnitIds,
             List<int>? projectManagerIds);
+        Task<IReadOnlyList<ProjectManagerInfo>> GetUniqueProjectManagersAsync();
+    }
+
+    public class ProjectManagerInfo
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
     }
 }

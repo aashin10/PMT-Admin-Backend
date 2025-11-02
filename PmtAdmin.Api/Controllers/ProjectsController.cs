@@ -35,18 +35,37 @@ namespace PmtAdmin.Api.Controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null,
-            [FromQuery] List<int>? statusIds = null,
-            [FromQuery] List<int>? deliveryUnitIds = null,
-            [FromQuery] List<int>? projectManagerIds = null)
+            [FromQuery] string? statusIds = null,
+            [FromQuery] string? deliveryUnitIds = null,
+            [FromQuery] string? projectManagerIds = null)
         {
+            // Parse comma-separated strings to lists
+            List<int>? statusIdList = null;
+            if (!string.IsNullOrWhiteSpace(statusIds))
+            {
+                statusIdList = statusIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? deliveryUnitIdList = null;
+            if (!string.IsNullOrWhiteSpace(deliveryUnitIds))
+            {
+                deliveryUnitIdList = deliveryUnitIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? projectManagerIdList = null;
+            if (!string.IsNullOrWhiteSpace(projectManagerIds))
+            {
+                projectManagerIdList = projectManagerIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
             var query = new GetAllProjectsQuery
             {
                 Page = page,
                 PageSize = pageSize,
                 SearchTerm = searchTerm,
-                StatusIds = statusIds,
-                DeliveryUnitIds = deliveryUnitIds,
-                ProjectManagerIds = projectManagerIds
+                StatusIds = statusIdList,
+                DeliveryUnitIds = deliveryUnitIdList,
+                ProjectManagerIds = projectManagerIdList
             };
 
             var result = await _mediator.Send(query);
@@ -76,6 +95,22 @@ namespace PmtAdmin.Api.Controllers
         {
             var command = new DeleteProjectCommand { Id = id };
             var result = await _mediator.Send(command);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
+        /// <summary>
+        /// Get all unique project managers
+        /// </summary>
+        [HttpGet("managers")]
+        public async Task<IActionResult> GetUniqueProjectManagers()
+        {
+            var query = new GetUniqueProjectManagersQuery();
+            var result = await _mediator.Send(query);
             
             if (result.Status == 200)
             {

@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
-//using PmtAdmin.Infrastructure.Context.Seeding;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -30,14 +29,13 @@ namespace PmtAdmin.Infrastructure.Context
         public DbSet<ProjectStatus> ProjectStatuses { get; set; }
         public DbSet<ProjectTemplate> ProjectTemplates { get; set; }
         public DbSet<Project> Projects { get; set; }
-
-        public DbSet<TeamMember> TeamMembers { get; set; }
         public DbSet<CustomField> CustomFields { get; set; }
         public DbSet<Team> Teams { get; set; }
         public ICollection<StarredProjects> StarredProjects { get; set; }
 
         public DbSet<Board> Boards { get; set; }
         public DbSet<ProjectMember> ProjectMembers { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
 
         public DbSet<Sprint> Sprints { get; set; }
         public DbSet<Epic> Epics { get; set; }
@@ -330,10 +328,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.ProjectId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                //entity.HasOne(e => e.Team)
-                //    .WithMany(t => t.Boards)
-                //    .HasForeignKey(e => e.TeamId)
-                //    .OnDelete(DeleteBehavior.SetNull);
+                entity.HasOne(e => e.Team)
+                    .WithMany(t => t.Boards)
+                    .HasForeignKey(e => e.TeamId)
+                    .OnDelete(DeleteBehavior.SetNull);
 
                 entity.HasOne(e => e.Creator)
                     .WithMany()
@@ -483,10 +481,10 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.CreatedBy)
                     .OnDelete(DeleteBehavior.Restrict);
 
-                //entity.HasOne(e => e.Updater)
-                //    .WithMany()
-                //    .HasForeignKey(e => e.UpdatedBy)
-                //    .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(e => e.Updater)
+                    .WithMany()
+                    .HasForeignKey(e => e.UpdatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
 
@@ -534,7 +532,7 @@ namespace PmtAdmin.Infrastructure.Context
                 entity.HasIndex(e => e.EpicId);
 
                 // Check constraint for story_points >= 0
-                // entity.HasCheckConstraint("CK_Issues_StoryPoints", "story_points >= 0");
+                entity.HasCheckConstraint("CK_Issues_StoryPoints", "story_points >= 0");
 
                 entity.HasOne(e => e.Project)
                     .WithMany(p => p.Issues)
@@ -546,15 +544,15 @@ namespace PmtAdmin.Infrastructure.Context
                     .HasForeignKey(e => e.EpicId)
                     .OnDelete(DeleteBehavior.SetNull);
 
-                //entity.HasOne(e => e.Sprint)
-                //    .WithMany(s => s.Issues)
-                //    .HasForeignKey(e => e.SprintId)
-                //    .OnDelete(DeleteBehavior.SetNull);
+                entity.HasOne(e => e.Sprint)
+                    .WithMany(s => s.Issues)
+                    .HasForeignKey(e => e.SprintId)
+                    .OnDelete(DeleteBehavior.SetNull);
 
-                //entity.HasOne(e => e.ParentIssue)
-                //    .WithMany(i => i.ChildIssues)
-                //    .HasForeignKey(e => e.ParentIssueId)
-                //    .OnDelete(DeleteBehavior.Restrict);
+                entity.HasOne(e => e.ParentIssue)
+                    .WithMany(i => i.ChildIssues)
+                    .HasForeignKey(e => e.ParentIssueId)
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(e => e.Assignee)
                     .WithMany()
@@ -584,10 +582,10 @@ namespace PmtAdmin.Infrastructure.Context
             {
                 entity.HasIndex(e => e.IssueId);
 
-                //entity.HasOne(e => e.Issue)
-                //    .WithMany(i => i.IssueComments)
-                //    .HasForeignKey(e => e.IssueId)
-                //    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(e => e.Issue)
+                    .WithMany(i => i.IssueComments)
+                    .HasForeignKey(e => e.IssueId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(e => e.Author)
                     .WithMany()
@@ -668,35 +666,15 @@ namespace PmtAdmin.Infrastructure.Context
             });
 
             // ============================================
-            // BOARD ? BOARD COLUMN MAP CONFIGURATION
-            // ============================================
-            modelBuilder.Entity<BoardBoardColumnMap>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-
-                // Board relationship
-                entity.HasOne(e => e.Board)
-                    .WithMany(b => b.BoardBoardColumnMaps)
-                    .HasForeignKey(e => e.BoardId)
-                    .OnDelete(DeleteBehavior.Cascade); // or SetNull if you prefer
-
-                // BoardColumn relationship
-                entity.HasOne(e => e.BoardColumn)
-                    .WithMany(bc => bc.BoardBoardColumnMaps)
-                    .HasForeignKey(e => e.BoardColumnId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
-
-            // ============================================
             // CHANNELS CONFIGURATION
             // ============================================
-            //modelBuilder.Entity<Channel>(entity =>
-            //{
-            //    entity.HasOne(e => e.Team)
-            //        .WithMany(t => t.Channels)
-            //        .HasForeignKey(e => e.TeamId)
-            //        .OnDelete(DeleteBehavior.Cascade);
-            //});
+            modelBuilder.Entity<Channel>(entity =>
+            {
+                entity.HasOne(e => e.Team)
+                    .WithMany(t => t.Channels)
+                    .HasForeignKey(e => e.TeamId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 
             // ============================================
             // MESSAGES CONFIGURATION
@@ -783,23 +761,23 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // JIRA AUTHORIZATION CONFIGURATION
             // ============================================
-            //modelBuilder.Entity<JiraAuthorization>(entity =>
-            //{
-            //    entity.HasOne(e => e.User)
-            //        .WithMany()
-            //        .HasForeignKey(e => e.UserId)
-            //        .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<JiraAuthorization>(entity =>
+            {
+                entity.HasOne(e => e.User)
+                    .WithMany()
+                    .HasForeignKey(e => e.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
-            //    entity.HasOne(e => e.Project)
-            //        .WithMany(p => p.JiraAuthorizations)
-            //        .HasForeignKey(e => e.ProjectId)
-            //        .OnDelete(DeleteBehavior.Cascade);
-            //});
+                entity.HasOne(e => e.Project)
+                    .WithMany(p => p.JiraAuthorizations)
+                    .HasForeignKey(e => e.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 
             // ============================================
             // SEED DATA
             // ============================================
-            //DatabaseSeeder.SeedData(modelBuilder);
+            DatabaseSeeder.SeedData(modelBuilder);
         }
     }
 }

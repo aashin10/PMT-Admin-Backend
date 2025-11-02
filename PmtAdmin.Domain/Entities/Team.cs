@@ -46,7 +46,7 @@ namespace PmtAdmin.Domain.Entities
         [Column("updated_at")]
         public DateTime? UpdatedAt { get; set; }
 
-        [Column("Label")]
+        [Column("labels")]
         public List<string>? Label { get; set; } = new();
 
 

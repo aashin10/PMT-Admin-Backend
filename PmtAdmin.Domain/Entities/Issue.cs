@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace PmtAdmin.Domain.Entities
 {
     [Table("issues")]
@@ -12,7 +7,6 @@ namespace PmtAdmin.Domain.Entities
     {
         [Key]
         [Column("id")]
-        [Required]
         public Guid Id { get; set; }
 
         [Column("key")]
@@ -41,12 +35,13 @@ namespace PmtAdmin.Domain.Entities
         [Column("description")]
         public string? Description { get; set; }
 
+        [MaxLength(50)]
         [Column("type")]
-        [Required]
-        public string Type { get; set; }
+        public string Type { get; set; } = "Story";
 
+        [MaxLength(50)]
         [Column("priority")]
-        public string? Priority { get; set; }
+        public string? Priority { get; set; } = "Medium";
 
         [Column("status")]
         public int? StatusId { get; set; }

@@ -20,10 +20,9 @@ namespace PmtAdmin.Domain.Entities
         [Column("id")]
         public int Id { get; set; }
 
-        [Required]
         [MaxLength(255)]
         [Column("email")]
-        public string? Email { get; set; }   
+        public string? Email { get; set; }
 
         [MaxLength(1024)]
         [Column("password_hash")]

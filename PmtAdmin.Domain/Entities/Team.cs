@@ -15,8 +15,11 @@ namespace PmtAdmin.Domain.Entities
     [Table("teams")]
     public class Team
     {
+
         [Key]
         [Column("id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         public int Id { get; set; }
 
         [Required]
@@ -49,21 +52,45 @@ namespace PmtAdmin.Domain.Entities
         [Column("updated_at")]
         public DateTime? UpdatedAt { get; set; }
 
+        [Column("labels", TypeName = "text[]")]
+        public List<string>? Label { get; set; } = new();
+
+
+
         // Navigation properties
         [ForeignKey("ProjectId")]
         public Project Project { get; set; }
 
         [ForeignKey("LeadId")]
-        public User? Lead { get; set; }
+        //public User? Lead { get; set; }
+        public ProjectMember? Lead { get; set; }
 
         [ForeignKey("CreatedBy")]
-        public User? Creator { get; set; }
+        //public User? Creator { get; set; }
+        public ProjectMember? Creator { get; set; }
 
         [ForeignKey("UpdatedBy")]
-        public User? Updater { get; set; }
+        //public User? Updater { get; set; }
+        public ProjectMember? Updater { get; set; }
+
+        [NotMapped]
+        public int MemberCount { get; set; }
+
+        [NotMapped]
+        public int ActiveSprintCount { get; set; }
+
+        public ICollection<TeamMember> TeamMembers { get; set; } = new List<TeamMember>();
 
         public ICollection<Board> Boards { get; set; }
-        public ICollection<ProjectMember> ProjectMembers { get; set; }
+        //public ICollection<ProjectMember> ProjectMembers { get; set; }
         public ICollection<Channel> Channels { get; set; }
+        public ICollection<Sprint>? Sprints { get; set; }
+
     }
 }
+
+
+
+//public User? Lead { get; set; }
+//public User? Creator { get; set; }
+//public User? Updater { get; set; }

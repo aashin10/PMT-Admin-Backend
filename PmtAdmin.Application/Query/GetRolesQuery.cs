@@ -2,7 +2,7 @@
 using PmtAdmin.Application.Dto;
 using System.Collections.Generic;
 
-namespace RoleManagement.Application.Queries
+namespace PmtAdmin.Application.Query
 {
     public class GetRolesQuery : IRequest<List<RoleDto>>
     {

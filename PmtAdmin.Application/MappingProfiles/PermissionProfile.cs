@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using PmtAdmin.Application.Dto;
 using PmtAdmin.Domain.Entities;
-using RoleManagement.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +9,12 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.MappingProfiles
 {
-   
-    
-        public class PermissionProfile : Profile
+    public class PermissionProfile : Profile
+    {
+        public PermissionProfile()
         {
-            public PermissionProfile()
-            {
-                CreateMap<Permission, PermissionDto>();
-            }
+            CreateMap<Permission, PermissionDto>();
         }
     }
+}
 

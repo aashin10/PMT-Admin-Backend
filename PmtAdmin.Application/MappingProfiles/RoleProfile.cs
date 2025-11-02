@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using PmtAdmin.Application.Dto;
 using PmtAdmin.Domain.Entities;
-using RoleManagement.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

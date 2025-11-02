@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using MediatR;
 using Moq;
+using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Handlers.Role;
+using PmtAdmin.Application.Query;
 using PmtAdmin.Domain.Entities; // Correct namespace for domain entities
 using PmtAdmin.Domain.Persistance;
-using RoleManagement.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

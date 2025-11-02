@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RoleManagement.Application.Queries
+namespace PmtAdmin.Application.Dto
 {
     public class RoleDto
     {

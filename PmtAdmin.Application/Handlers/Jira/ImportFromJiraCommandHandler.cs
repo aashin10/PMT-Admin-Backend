@@ -37,6 +37,7 @@ namespace PmtAdmin.Application.Handlers.Jira
             response.ImportFailed = false;
             response.Users = usersDto;
             response.Projects = projectsDto;
+            response.Results = users.Results;
 
             return ApiResponse<JiraImportResult>.Success(response);
         }

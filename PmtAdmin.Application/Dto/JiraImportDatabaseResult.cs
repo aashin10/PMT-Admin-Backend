@@ -8,6 +8,15 @@ namespace PmtAdmin.Application.Dto
 
         public List<Project> Projects { get; set; }
 
-        public bool ImportFailed { get; set; }
+        public List<OperationResult> Results { get; set; }
+
+
     }
+
+    public class OperationResult
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+    }
+
 }

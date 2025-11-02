@@ -21,161 +21,121 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
         public async Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects)
         {
+            List<OperationResult> operationResults = new List<OperationResult>();
             var response = new JiraImportDatabaseResult();
-            // Start a database transaction
-            using var transaction = await _context.Database.BeginTransactionAsync();
+            var JiraIdToUserIdMappingScheme = new Dictionary<string, int>();
+            var returnUsers = new List<User>();
+            var returnProjects = new List<Project>();
 
-            try
+            var issueStatuses = new List<string> { "To Do", "In Progress", "Done" };
+            var existingStatuses = _context.Statuses
+                .Where(s => issueStatuses.Contains(s.StatusName))
+                .Select(s => s.StatusName)
+                .ToList();
+
+            var newStatuses = issueStatuses
+                .Except(existingStatuses)
+                .Select(x => new Status { StatusName = x })
+                .ToList();
+
+            if (newStatuses.Any())
             {
-                Dictionary<string, int> JiraIdToUserIdMappingScheme = new Dictionary<string, int>();
+                _context.Statuses.AddRange(newStatuses);
+                await _context.SaveChangesAsync();
+            }
 
-                List<User> returnUsers = new List<User>();
-                List<Project> returnProjects = new List<Project>();
+            var allStatuses = _context.Statuses.ToList();
 
-                List<string> issueStatuses = new List<string>
+            foreach (var project in projects)
+            {
+                await using var transaction = await _context.Database.BeginTransactionAsync();
+                List<User> tempUsers = new List<User>();
+                try
                 {
-                 "To Do",
-                 "In Progress",
-                 "Done",
-                };
-
-                // Get existing status names from the database
-                var existingStatuses = _context.Statuses
-                    .Where(s => issueStatuses.Contains(s.StatusName))
-                    .Select(s => s.StatusName)
-                    .ToList();
-
-                // Filter out statuses that already exist
-                var newStatuses = issueStatuses
-                    .Except(existingStatuses)
-                    .Select(status => new Status { StatusName = status })
-                    .ToList();
-
-                // Add only new statuses
-                if (newStatuses.Any())
-                {
-                    _context.Statuses.AddRange(newStatuses);
-                    await _context.SaveChangesAsync();
-                }
-
-                var allStatuses = _context.Statuses.ToList();
-
-                foreach (var project in projects)
-                {
-                    //Map JiraProject to Project entity
-                    Project p = _mapper.Map<Project>(project.Project);
-
+                    var p = _mapper.Map<Project>(project.Project);
                     p.Key = "JIRA - " + p.Key;
 
-
-                    //Check if Project Manager exists in the database
                     if (project.Project.Lead.AccountId == null)
-                    {
-                        throw new Exception("No Project Manager Assigned in Jira");
-                    }
+                        throw new Exception("No Project Manager Assigned ");
 
                     var user = await _context.User
-                        .FirstOrDefaultAsync<User>(u => u.JiraId == project.Project.Lead.AccountId);
+                        .FirstOrDefaultAsync(u => u.JiraId == project.Project.Lead.AccountId);
 
                     if (user == null)
                     {
-                        // Create a user for entity if user with JiraId does not exists in the database
                         user = _mapper.Map<User>(project.Project.Lead);
                         await _context.User.AddAsync(user);
-                        returnUsers.Add(user);
                         await _context.SaveChangesAsync();
-
                     }
-                    p.ProjectManagerId = user.Id;
-                    p.ProjectManagerRoleId = 1; //1=>Admin
 
+                    p.ProjectManagerId = user.Id;
+                    p.ProjectManagerRoleId = 1;
                     _context.Projects.Add(p);
                     await _context.SaveChangesAsync();
 
-
-                    //          // check user.Count property
                     bool noUsers = true;
 
-
-
-                    //For each role
-                    //If not an admin, the roles wont be available/imported
                     foreach (var role in project.UsersByRole.Keys)
                     {
-                        //For each user in the role
                         foreach (var u in project.UsersByRole[role])
                         {
                             if (noUsers)
-                            {
                                 noUsers = false;
-                            }
-                            //If already gone through this user, skip   
+
                             if (!JiraIdToUserIdMappingScheme.ContainsKey(u.AccountId))
                             {
-                                //Check if user exists in the database
                                 var existingUser = await _context.User
                                     .FirstOrDefaultAsync(usr => usr.JiraId == u.AccountId);
 
-                                //If not, create new user
                                 if (existingUser == null)
                                 {
-                                    // Create a new User entity if not found
                                     existingUser = _mapper.Map<User>(u);
                                     await _context.User.AddAsync(existingUser);
                                     await _context.SaveChangesAsync();
                                     returnUsers.Add(existingUser);
                                 }
 
-                                //Add to mapping scheme
                                 JiraIdToUserIdMappingScheme[u.AccountId] = existingUser.Id;
                             }
 
-                            //Create ProjectMember entity
                             var projectMember = new ProjectMember
                             {
                                 ProjectId = p.Id,
                                 UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                                RoleId = 2, // Default RoleId, adjust as necessary
+                                RoleId = 2
                             };
 
                             _context.ProjectMembers.Add(projectMember);
                             await _context.SaveChangesAsync();
-
                         }
                     }
 
                     if (noUsers)
                     {
-                        throw new InvalidOperationException("UnAuthorized");
+                        throw new Exception("Insufficient Jira permissions.");
                     }
-
 
                     await _context.SaveChangesAsync();
 
-                    List<Board> boards = new List<Board>();
-
-                    Dictionary<int, string> EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
-                    Dictionary<int, string> IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
-                    Dictionary<int, string> SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
-                    Dictionary<int, string> IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
-
+                    var boards = new List<Board>();
+                    var EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
+                    var IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
+                    var SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
+                    var IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
 
                     foreach (var board in project.Boards)
                     {
-
                         int BoardColumnCount = 0;
-                        List<Issue> issues = new List<Issue>();
-                        List<Sprint> sprints = new List<Sprint>();
-                        List<Epic> epics = new List<Epic>();
-                        //Mapping Board
+                        var issues = new List<Issue>();
+                        var sprints = new List<Sprint>();
+                        var epics = new List<Epic>();
+
                         var b = _mapper.Map<Board>(board.BoardInfo);
 
-                        //Creating a Team for the Board
                         var t = new Team
                         {
                             Name = b.Name + " Team",
-                            ProjectId = p.Id,
-                            // Label = Array.Empty<string>()
+                            ProjectId = p.Id
                         };
 
                         _context.Teams.Add(t);
@@ -183,10 +143,11 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                         b.TeamId = t.Id;
                         b.ProjectId = p.Id;
+                        boards.Add(b);
                         _context.Boards.Add(b);
                         await _context.SaveChangesAsync();
 
-                        HashSet<string> TeamMembersIds = new HashSet<string>();
+                        var TeamMembersIds = new HashSet<string>();
 
                         foreach (var sprint in board.Sprints)
                         {
@@ -219,14 +180,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 i.Title = issue.Summary;
 
                                 if (issue.Sprint != null)
-                                {
                                     i.SprintId = SprintEntityJiraSprintModelMappingScheme.ContainsKey(issue.Sprint.Id)
-                                    ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Sprint.Id]) : (Guid?)null;
-                                }
+                                        ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Sprint.Id])
+                                        : (Guid?)null;
 
                                 if (!IssueEntityStatusJiraIssueStatusMappingScheme.ContainsKey(issue.Status.Id))
                                 {
-                                    //Create a board
                                     var boardcolumn = new BoardColumn
                                     {
                                         BoardColumnName = issue.Status.Name,
@@ -238,7 +197,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     _context.BoardColumns.Add(boardcolumn);
                                     await _context.SaveChangesAsync();
 
-                                    // Replace lines 215-235 with:
                                     var tempStatusName = issue.Status.Name.ToUpper().Replace(" ", "");
                                     var searchedStatus = allStatuses.Find(s => s.StatusName == tempStatusName);
 
@@ -256,7 +214,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
 
                                     boardcolumn.StatusId = statusToUse.Id;
-
                                     await _context.SaveChangesAsync();
 
                                     var boardColumnMapping = new BoardBoardColumnMap
@@ -264,35 +221,35 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                         BoardId = b.Id,
                                         BoardColumnId = boardcolumn.Id
                                     };
+
                                     _context.BoardBoardColumnMaps.Add(boardColumnMapping);
                                     IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id.ToString();
-
                                     await _context.SaveChangesAsync();
                                 }
 
-                                //i.StatusId = IssueEntityStatusJiraIssueStatusMappingScheme.ContainsKey(issue.Status.Id) ? Guid.Parse(SprintEntityJiraSprintModelMappingScheme[issue.Status.Id]) : (Guid?)null;
-
                                 if (issue.Epic != null)
-                                {
                                     i.EpicId = EpicEntityJiraEpicModelMappingScheme.ContainsKey(issue.Epic.Id)
-                                    ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id]) : (Guid?)null;
-                                }
+                                        ? Guid.Parse(EpicEntityJiraEpicModelMappingScheme[issue.Epic.Id])
+                                        : (Guid?)null;
 
-                                // Assignee
                                 if (issue.Assignee != null)
                                 {
                                     if (!JiraIdToUserIdMappingScheme.ContainsKey(issue.Assignee.AccountId))
                                     {
-                                        var existingUser = await _context.User.FirstOrDefaultAsync(u => u.JiraId == issue.Assignee.AccountId);
+                                        var existingUser = await _context.User
+                                            .FirstOrDefaultAsync(u => u.JiraId == issue.Assignee.AccountId);
+
                                         if (existingUser == null)
                                         {
-
                                             existingUser = _mapper.Map<User>(issue.Assignee);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
                                         }
+                                        tempUsers.Add(existingUser);
+
                                         JiraIdToUserIdMappingScheme[issue.Assignee.AccountId] = existingUser.Id;
                                     }
+
                                     TeamMembersIds.Add(issue.Assignee.AccountId);
                                     i.AssigneeId = JiraIdToUserIdMappingScheme[issue.Assignee.AccountId];
                                 }
@@ -301,36 +258,32 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     i.AssigneeId = null;
                                 }
 
-                                // Reporter
                                 if (issue.Reporter != null)
                                 {
                                     if (!JiraIdToUserIdMappingScheme.ContainsKey(issue.Reporter.AccountId))
                                     {
-                                        var existingUser = await _context.User.FirstOrDefaultAsync(u => u.JiraId == issue.Reporter.AccountId);
+                                        var existingUser = await _context.User
+                                            .FirstOrDefaultAsync(u => u.JiraId == issue.Reporter.AccountId);
+
                                         if (existingUser == null)
                                         {
                                             existingUser = _mapper.Map<User>(issue.Reporter);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
                                         }
+
+                                        tempUsers.Add(existingUser);
+
                                         JiraIdToUserIdMappingScheme[issue.Reporter.AccountId] = existingUser.Id;
                                     }
+
                                     TeamMembersIds.Add(issue.Reporter.AccountId);
                                     i.ReporterId = JiraIdToUserIdMappingScheme[issue.Reporter.AccountId];
                                 }
 
-                                //Temp fix
                                 i.Labels = JsonConvert.SerializeObject(issue.Labels);
+                                i.Status = null;
 
-                                //foreach (var comment in issue.Comment)
-                                //{
-                                //    var ic = _mapper.Map<IssueComment>(comment);
-                                //    ic.IssueId = i.Id;
-                                //    ic.AuthorId = JiraIdToUserIdMappingScheme.ContainsKey(comment.Author.AccountId)
-                                //        ? JiraIdToUserIdMappingScheme[comment.Author.AccountId] : 0;
-                                //    i.IssueComments.Add(ic);
-                                //}
-                                i.Status = null; // To avoid EF Core tracking issues
                                 issues.Add(i);
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                             }
@@ -338,45 +291,51 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             foreach (var id in TeamMembersIds)
                             {
                                 var pmid = _context.ProjectMembers
-                                         .FirstOrDefault(pm => pm.User.JiraId == id && pm.ProjectId == p.Id).Id;
-                                var newMember = new TeamMember()
+                                    .FirstOrDefault(pm => pm.User.JiraId == id && pm.ProjectId == p.Id).Id;
+
+                                var newMember = new TeamMember
                                 {
                                     TeamId = t.Id,
-                                    ProjectMemberId = pmid,
-
-
+                                    ProjectMemberId = pmid
                                 };
+
                                 _context.TeamMembers.Add(newMember);
                             }
+
                             await _context.SaveChangesAsync();
                         }
 
-
                         _context.Sprints.AddRange(sprints);
-
-
                         _context.Epics.AddRange(epics);
                         _context.Issues.AddRange(issues);
                         await _context.SaveChangesAsync();
                     }
+                    operationResults.Add(new OperationResult
+                    {
+                        Success = true,
+                        Message = $"Success: {p.Name} imported successfully."
+                    });
 
+                    returnUsers.Add(user);
+                    returnUsers.AddRange(tempUsers);
                     returnProjects.Add(p);
+                    await transaction.CommitAsync();
                 }
-
-                // If everything succeeds, commit the transaction
-                await transaction.CommitAsync();
-                response.Users = returnUsers;
-                response.Projects = returnProjects;
-                return response;
+                catch (Exception ex)
+                {
+                    operationResults.Add(new OperationResult
+                    {
+                        Success = false,
+                        Message = $"Failed: {project.Project.Name} - {ex.Message}"
+                    });
+                    await transaction.RollbackAsync();
+                }
             }
-            catch (Exception ex)
-            {
-                // If any error occurs, rollback all changes
-                await transaction.RollbackAsync();
 
-                // Log the exception or rethrow with additional context
-                throw new Exception($"Failed to populate database from Jira data. All changes have been rolled back. Error: {ex.Message}", ex);
-            }
+            response.Users = returnUsers;
+            response.Projects = returnProjects;
+            response.Results = operationResults;
+            return response;
         }
     }
 }

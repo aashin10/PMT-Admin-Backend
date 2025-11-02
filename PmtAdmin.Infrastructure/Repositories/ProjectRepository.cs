@@ -88,7 +88,7 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .Include(p => p.ProjectMembers)
                     .ThenInclude(pm => pm.User)
                 .Include(p => p.ProjectMembers)
-                    .ThenInclude(pm => pm.Team)
+                    //.ThenInclude(pm => pm.Team)
                 .Include(p => p.Sprints)
                 .Include(p => p.CustomFields)
                 .Include(p => p.Teams)

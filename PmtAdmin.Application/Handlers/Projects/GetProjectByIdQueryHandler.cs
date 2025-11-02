@@ -68,9 +68,9 @@ namespace PmtAdmin.Application.Handlers.Projects
                 {
                     Id = pm.Id,
                     Name = pm.User?.Name,
-                    Role = pm.ProjectRole,
-                    Email = pm.User?.Email,
-                    Team = pm.TeamId?.ToString()
+                    //Role = pm.ProjectRole,
+                    //Email = pm.User?.Email,
+                    //Team = pm.TeamId?.ToString()
                 }).ToList() ?? new List<TeamMemberDTO>(),
                 IsImportedFromJira = project.IsImportedFromJira,
                 CreatedAt = project.CreatedAt,

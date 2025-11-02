@@ -1304,7 +1304,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("key");
 
                     b.Property<string>("Labels")
-                        .IsRequired()
                         .HasColumnType("jsonb")
                         .HasColumnName("labels");
 
@@ -3092,7 +3091,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "ACTIVE",
                             StoryPoint = 30m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(4037), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 5, 20, 1, 252, DateTimeKind.Unspecified).AddTicks(1552), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3107,7 +3106,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "PLANNED",
                             StoryPoint = 35m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6184), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 5, 20, 1, 253, DateTimeKind.Unspecified).AddTicks(2877), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3122,7 +3121,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "COMPLETED",
                             StoryPoint = 25m,
                             TeamId = 2,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6189), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 5, 20, 1, 253, DateTimeKind.Unspecified).AddTicks(2889), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 

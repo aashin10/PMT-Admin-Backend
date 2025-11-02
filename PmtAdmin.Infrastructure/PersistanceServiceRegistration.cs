@@ -38,6 +38,11 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IBoardRepository, BoardRepository>();
+            services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
+            services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
 
 
             return services;

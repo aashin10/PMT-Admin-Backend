@@ -71,6 +71,18 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateProject([FromBody] CreateProjectCommand command)
+        {
+            var result = await _mediator.Send(command);
+            
+            if (result.Status == 201)
+            {
+                return Created($"/api/projects/{result.Data?.Id}", result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(Guid id)
         {

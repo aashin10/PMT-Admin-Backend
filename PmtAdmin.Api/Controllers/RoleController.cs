@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command;
-using RoleManagement.Application.Commands;
-using RoleManagement.Application.Queries;
+using PmtAdmin.Application.Query;
 using System.Threading.Tasks;
 
-namespace RoleManagement.API.Controllers
+namespace PmtAdmin.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

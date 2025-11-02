@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Moq;
 using PmtAdmin.Application.Command;
+using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Handlers.Role;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
-using RoleManagement.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

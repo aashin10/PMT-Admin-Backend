@@ -11,8 +11,6 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using RoleManagement.Application.Commands;
-using RoleManagement.Application.Queries;
 
 namespace PmtAdmin.Application.Handlers.Role
 {

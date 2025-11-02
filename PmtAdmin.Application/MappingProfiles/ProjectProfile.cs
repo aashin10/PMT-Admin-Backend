@@ -15,15 +15,7 @@ namespace PmtAdmin.Application.MappingProfiles
                 .ForMember(dest => dest.DeliveryUnitName, opt => opt.MapFrom(src => src.DeliveryUnit != null ? src.DeliveryUnit.Name : null))
                 .ForMember(dest => dest.DeliveryUnitCode, opt => opt.MapFrom(src => src.DeliveryUnit != null ? src.DeliveryUnit.Code : null))
                 .ForMember(dest => dest.AdditionalInformation, opt => opt.MapFrom(src => src.CustomFields))
-                .ForMember(dest => dest.Teams, opt => opt.MapFrom(src => src.Teams))
-                .ForMember(dest => dest.TeamMembers, opt => opt.MapFrom(src => src.ProjectMembers.Select(pm => new TeamMemberDTO
-                {
-                    //Id = pm.UserId,
-                    //Name = pm.User != null ? pm.User.Name : null,
-                    //Email = pm.User != null ? pm.User.Email : null,
-                    //Role = pm.Role != null ? pm.Role.Name : null,
-                    //Team = pm.TeamId.HasValue ? pm.TeamId.Value.ToString() : null
-                })));
+                .ForMember(dest => dest.Teams, opt => opt.MapFrom(src => src.Teams));
 
             CreateMap<CustomField, CustomFieldDTO>().ReverseMap();
             

@@ -3,7 +3,6 @@ using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Constants;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Persistance;
-using RoleManagement.Application.Commands;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

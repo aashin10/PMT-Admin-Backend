@@ -115,10 +115,6 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
-<<<<<<< HEAD
-        /// <summary>
-        /// Get all unique project managers
-        /// </summary>
         [HttpGet("managers")]
         public async Task<IActionResult> GetUniqueProjectManagers()
         {
@@ -132,12 +128,6 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
-        /// <summary>
-        /// Get all members of a specific team within a project
-        /// </summary>
-        /// <param name="projectId">The ID of the project</param>
-        /// <param name="teamId">The ID of the team</param>
-        /// <returns>Team members with count</returns>
         [HttpGet("{projectId}/teams/{teamId}/members")]
         public async Task<IActionResult> GetTeamMembers(Guid projectId, int teamId)
         {
@@ -149,7 +139,8 @@ namespace PmtAdmin.Api.Controllers
                 return Ok(result);
             }
             return StatusCode(result.Status, result);
-=======
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProject(Guid id, [FromBody] UpdateProjectCommand command)
         {
@@ -165,7 +156,6 @@ namespace PmtAdmin.Api.Controllers
                 return BadRequest(result.Message);
 
             return Ok(result);
->>>>>>> b2b76aebcde69396c1dfbc448964cdda89e48851
         }
     }
 }

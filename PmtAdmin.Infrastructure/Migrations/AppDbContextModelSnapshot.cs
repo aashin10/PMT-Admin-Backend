@@ -1841,10 +1841,14 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasIndex("CreatedBy");
 
+                    b.HasIndex("DeletedAt");
+
                     b.HasIndex("DeliveryUnitId");
 
                     b.HasIndex("Key")
                         .IsUnique();
+
+                    b.HasIndex("Name");
 
                     b.HasIndex("ProjectManagerId");
 
@@ -1855,6 +1859,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("TemplateId");
 
                     b.HasIndex("UpdatedBy");
+
+                    b.HasIndex("DeletedAt", "StatusId", "DeliveryUnitId", "ProjectManagerId");
 
                     b.ToTable("projects");
 
@@ -2569,7 +2575,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "ACTIVE",
                             StoryPoint = 30m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(4037), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(4442), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -2584,7 +2590,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "PLANNED",
                             StoryPoint = 35m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6184), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(8028), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -2599,7 +2605,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "COMPLETED",
                             StoryPoint = 25m,
                             TeamId = 2,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 1, 13, 44, 23, 287, DateTimeKind.Unspecified).AddTicks(6189), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 1, 52, 41, 974, DateTimeKind.Unspecified).AddTicks(8035), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -2777,8 +2783,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("is_active");
 
                     b.PrimitiveCollection<List<string>>("Label")
-                        .HasColumnType("jsonb")
-                        .HasColumnName("label");
+                        .HasColumnType("text[]")
+                        .HasColumnName("labels");
 
                     b.Property<int?>("LeadId")
                         .HasColumnType("integer")

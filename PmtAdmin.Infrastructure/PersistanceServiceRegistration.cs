@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.MappingProfiles;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Domain.Persistance.Dashboard;
@@ -29,10 +30,19 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
+            services.AddScoped<IDuRepository, DeliveryUnitRepository>();
+
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
+<<<<<<< HEAD
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
+=======
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+>>>>>>> b2b76aebcde69396c1dfbc448964cdda89e48851
+
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IPermissionRepository, PermissionRepository>();
             services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();

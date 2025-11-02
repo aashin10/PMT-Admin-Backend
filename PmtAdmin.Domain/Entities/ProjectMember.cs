@@ -40,11 +40,22 @@ namespace PmtAdmin.Domain.Entities
         public int? AddedBy { get; set; }
 
         // Navigation properties
+<<<<<<< HEAD
         [ForeignKey("UserId")]
         public User? User { get; set; }
 
         [ForeignKey("ProjectId")]
         public Project? Project { get; set; }
+=======
+        [ForeignKey("ProjectId")]
+        public Project? Project { get; set; }
+
+        [ForeignKey("TeamId")]
+        public Team? Team { get; set; }
+
+        [ForeignKey("UserId")]
+        public User? User { get; set; }
+>>>>>>> b2b76aebcde69396c1dfbc448964cdda89e48851
 
         [ForeignKey("RoleId")]
         public Role? Role { get; set; }

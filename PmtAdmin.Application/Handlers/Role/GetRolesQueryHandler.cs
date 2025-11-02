@@ -2,7 +2,6 @@
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Query;
 using PmtAdmin.Domain.Persistance;
-using RoleManagement.Application.Queries;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;

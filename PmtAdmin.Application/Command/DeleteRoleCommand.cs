@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using PmtAdmin.Application.Wrappers;
-namespace RoleManagement.Application.Commands
+
+namespace PmtAdmin.Application.Command
 {
     public class DeleteRoleCommand : IRequest<ApiResponse<string>>
     {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using PmtAdmin.Application.Dto;
 
-namespace RoleManagement.Application.Queries
+namespace PmtAdmin.Application.Query
 {
     public class GetRoleByIdQuery : IRequest<RoleDto>
     {

@@ -103,6 +103,7 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
+<<<<<<< HEAD
         /// <summary>
         /// Get all unique project managers
         /// </summary>
@@ -136,6 +137,23 @@ namespace PmtAdmin.Api.Controllers
                 return Ok(result);
             }
             return StatusCode(result.Status, result);
+=======
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProject(Guid id, [FromBody] UpdateProjectCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("ID mismatch between route and body");
+
+            var result = await _mediator.Send(command);
+            
+            if (result.Status == 404)
+                return NotFound(result.Message);
+            
+            if (result.Status != 200)
+                return BadRequest(result.Message);
+
+            return Ok(result);
+>>>>>>> b2b76aebcde69396c1dfbc448964cdda89e48851
         }
     }
 }

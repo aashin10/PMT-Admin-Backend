@@ -14,7 +14,7 @@ packages/
 *.log
 
 # Temporary files
-.vs
+.vs/
 # --- IGNORE ---
 # Visual Studio Code
 .vscode/

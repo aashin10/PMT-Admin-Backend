@@ -10,11 +10,6 @@ using PmtAdmin.Infrastructure.Repositories;
 using PmtAdmin.Infrastructure.Repositories.Dashboard;
 using PmtAdmin.Infrastructure.Repositories.Settings;
 using PmtAdmin.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PmtAdmin.Infrastructure.Services.Jira;
 
 namespace PmtAdmin.Infrastructure
@@ -38,7 +33,8 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
-
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
             services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
             services.AddScoped<IJiraService, JiraService>();
 

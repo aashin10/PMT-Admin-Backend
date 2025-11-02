@@ -1,16 +1,9 @@
-﻿using PmtAdmin.Application.Constants;
-using PmtAdmin.Application.Dto;
+﻿using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
 using RoleManagement.Application.Queries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace PmtAdmin.Infrastructure.Repositories
 {
@@ -32,14 +25,14 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public override async Task<Role?> GetById(int id)
-        {
-            return await _context.Set<Role>()
-                .Include(r => r.RolePermissions!)
-                    .ThenInclude(rp => rp.Permission)
-                .Include(r => r.ProjectMembers)
-                .FirstOrDefaultAsync(r => r.Id == id);
-        }
+        //public override async Task<Role?> GetById(int id)
+        //{
+        //    return await _context.Set<Role>()
+        //        .Include(r => r.RolePermissions!)
+        //            .ThenInclude(rp => rp.Permission)
+        //        .Include(r => r.ProjectMembers)
+        //        .FirstOrDefaultAsync(r => r.Id == id);
+        //}
 
         // Better async version
         public async Task<ApiResponse<RoleDto>> GetRoleDtoByIdAsync(int roleId)

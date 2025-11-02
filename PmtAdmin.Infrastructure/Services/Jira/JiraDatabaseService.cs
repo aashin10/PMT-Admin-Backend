@@ -34,9 +34,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                 List<string> issueStatuses = new List<string>
                 {
-                 "TODO",
-                 "INPROGRESS",
-                 "DONE",
+                 "To Do",
+                 "In Progress",
+                 "Done",
                 };
 
                 // Get existing status names from the database
@@ -135,7 +135,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             {
                                 ProjectId = p.Id,
                                 UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                                RoleId = 1, // Default RoleId, adjust as necessary
+                                RoleId = 2, // Default RoleId, adjust as necessary
                             };
 
                             _context.ProjectMembers.Add(projectMember);
@@ -174,7 +174,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         var t = new Team
                         {
                             Name = b.Name + " Team",
-                            ProjectId = p.Id
+                            ProjectId = p.Id,
+                            // Label = Array.Empty<string>()
                         };
 
                         _context.Teams.Add(t);
@@ -341,7 +342,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 var newMember = new TeamMember()
                                 {
                                     TeamId = t.Id,
-                                    ProjectMemberId = pmid
+                                    ProjectMemberId = pmid,
+
 
                                 };
                                 _context.TeamMembers.Add(newMember);

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Domain.Entities
 {
@@ -13,14 +8,15 @@ namespace PmtAdmin.Domain.Entities
     {
         [Key]
         [Column("id")]
+        [Required]
         public Guid Id { get; set; }
 
         [Column("key")]
         public string? Key { get; set; }
 
-        [Required]
         [Column("project_id")]
-        public Guid? ProjectId { get; set; }
+        [Required]
+        public Guid ProjectId { get; set; }
 
         [Column("epic_id")]
         public Guid? EpicId { get; set; }
@@ -31,48 +27,41 @@ namespace PmtAdmin.Domain.Entities
         [Column("parent_issue_id")]
         public Guid? ParentIssueId { get; set; }
 
-        [Column("attachment_url")]
-        public string? AttachmentUrl { get; set; }
-
-        [Required]
-        [Column("summary")]
-        public string Summary { get; set; }
-
         [Column("title")]
-        public string? Title { get; set; }
+        [Required]
+        public string Title { get; set; }
 
         [Column("description")]
         public string? Description { get; set; }
 
-        [MaxLength(50)]
         [Column("type")]
-        public string Type { get; set; } = "STORY";
+        [Required]
+        public string Type { get; set; }
 
-        [MaxLength(50)]
         [Column("priority")]
-        public string Priority { get; set; } = "MEDIUM";
+        public string? Priority { get; set; }
 
-        [MaxLength(50)]
         [Column("status")]
-        public string Status { get; set; } = "TODO";
+        public int? StatusId { get; set; } // Changed to int? and renamed to StatusId
 
         [Column("assignee_id")]
         public int? AssigneeId { get; set; }
 
         [Column("reporter_id")]
-        public int? ReporterId { get; set; }
+        [Required]
+        public int ReporterId { get; set; }
 
         [Column("story_points")]
-        public int StoryPoints { get; set; } = 0;
+        public int? StoryPoints { get; set; }
 
         [Column("labels", TypeName = "jsonb")]
-        public string? Labels { get; set; } = "[]";
+        public string? Labels { get; set; }
 
         [Column("start_date")]
-        public DateTime? StartDate { get; set; }
+        public DateTimeOffset? StartDate { get; set; }
 
         [Column("due_date")]
-        public DateTime? DueDate { get; set; }
+        public DateTimeOffset? DueDate { get; set; }
 
         [Column("created_by")]
         public int? CreatedBy { get; set; }
@@ -81,14 +70,20 @@ namespace PmtAdmin.Domain.Entities
         public int? UpdatedBy { get; set; }
 
         [Column("created_at")]
-        public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTimeOffset? CreatedAt { get; set; }
 
         [Column("updated_at")]
-        public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+        public DateTimeOffset? UpdatedAt { get; set; }
+
+        [Column("attachment_url")]
+        public string? AttachmentUrl { get; set; }
 
         // Navigation properties
+        [ForeignKey("StatusId")]
+        public Status? Status { get; set; }
+
         [ForeignKey("ProjectId")]
-        public Project Project { get; set; }
+        public Project? Project { get; set; }
 
         [ForeignKey("EpicId")]
         public Epic? Epic { get; set; }
@@ -103,16 +98,13 @@ namespace PmtAdmin.Domain.Entities
         public User? Assignee { get; set; }
 
         [ForeignKey("ReporterId")]
-        public User? Reporter { get; set; }
+        public User Reporter { get; set; }
 
         [ForeignKey("CreatedBy")]
         public User? Creator { get; set; }
 
         [ForeignKey("UpdatedBy")]
         public User? Updater { get; set; }
-
-        public ICollection<Issue> ChildIssues { get; set; }
-        public ICollection<IssueComment> IssueComments { get; set; }
     }
-
 }
+

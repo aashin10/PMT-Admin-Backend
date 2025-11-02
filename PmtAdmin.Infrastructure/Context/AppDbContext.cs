@@ -546,10 +546,10 @@ namespace PmtAdmin.Infrastructure.Context
                 //    .HasForeignKey(e => e.SprintId)
                 //    .OnDelete(DeleteBehavior.SetNull);
 
-                entity.HasOne(e => e.ParentIssue)
-                    .WithMany(i => i.ChildIssues)
-                    .HasForeignKey(e => e.ParentIssueId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.ParentIssue)
+                //    .WithMany(i => i.ChildIssues)
+                //    .HasForeignKey(e => e.ParentIssueId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(e => e.Assignee)
                     .WithMany()
@@ -579,10 +579,10 @@ namespace PmtAdmin.Infrastructure.Context
             {
                 entity.HasIndex(e => e.IssueId);
 
-                entity.HasOne(e => e.Issue)
-                    .WithMany(i => i.IssueComments)
-                    .HasForeignKey(e => e.IssueId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                //entity.HasOne(e => e.Issue)
+                //    .WithMany(i => i.IssueComments)
+                //    .HasForeignKey(e => e.IssueId)
+                //    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(e => e.Author)
                     .WithMany()

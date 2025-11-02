@@ -39,6 +39,8 @@ namespace PmtAdmin.Application.Handlers.Users
                     }
                     else
                     {
+                        searchedUser.Name = user.Name;
+                        searchedUser.Email = user.Email;
                         await _userRepository.UpdateAsync(searchedUser);
                     }
 

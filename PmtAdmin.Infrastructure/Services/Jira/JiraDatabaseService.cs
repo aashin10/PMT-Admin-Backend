@@ -70,6 +70,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         user = _mapper.Map<User>(project.Project.Lead);
                         await _context.User.AddAsync(user);
                         await _context.SaveChangesAsync();
+                        returnUsers.Add(user);
                     }
 
                     p.ProjectManagerId = user.Id;

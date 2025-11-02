@@ -28,40 +28,40 @@
 //            _handler = new GetAllProjectsQueryHandler(_mapperMock.Object, _projectRepositoryMock.Object);
 //        }
 
-//        [Fact]
-//        public async Task Handle_WhenProjectsExist_ReturnsSuccessWithProjects()
-//        {
-//            // Arrange
-//            var projectId = Guid.NewGuid();
-//            var projects = new List<Project>
-//            {
-//                new Project
-//                {
-//                    Id = projectId,
-//                    Name = "Test Project",
-//                    Key = "TEST001",
-//                    Description = "Test Description",
-//                    StatusId = 1,
-//                    Status = new PmtAdmin.Domain.Entities.ProjectStatus { Id = 1, Name = "Active" },
-//                    DeliveryUnitId = 1,
-//                    DeliveryUnit = new DeliveryUnit { Id = 1, Name = "DU1", Code = "DU001" },
-//                    ProjectManagerId = 1,
-//                    ProjectManager = new User { Id = 1, Name = "John Doe" },
-//                    IsImportedFromJira = true,
-//                    CreatedAt = DateTime.UtcNow,
-//                    ProjectMembers = new List<ProjectMember>
-//                    {
-//                        new ProjectMember
-//                        {
-//                            Id = 1,
-//                            UserId = 1,
-//                            User = new User { Id = 1, Name = "User 1", Email = "user1@test.com" },
-//                            ProjectRole = "Developer",
-//                            TeamId = 1
-//                        }
-//                    }
-//                }
-//            };
+        [Fact]
+        public async Task Handle_WhenProjectsExist_ReturnsSuccessWithProjects()
+        {
+            // Arrange
+            var projectId = Guid.NewGuid();
+            var projects = new List<Project>
+            {
+                new Project
+                {
+                    Id = projectId,
+                    Name = "Test Project",
+                    Key = "TEST001",
+                    Description = "Test Description",
+                    StatusId = 1,
+                    Status = new PmtAdmin.Domain.Entities.ProjectStatus { Id = 1, Name = "Active" },
+                    DeliveryUnitId = 1,
+                    DeliveryUnit = new DeliveryUnit { Id = 1, Name = "DU1", Code = "DU001" },
+                    ProjectManagerId = 1,
+                    ProjectManager = new User { Id = 1, Name = "John Doe" },
+                    IsImportedFromJira = true,
+                    CreatedAt = DateTime.UtcNow,
+                    ProjectMembers = new List<ProjectMember>
+                    {
+                        new ProjectMember
+                        {
+                            Id = 1,
+                            UserId = 1,
+                            RoleId = 1,
+                            User = new User { Id = 1, Name = "User 1", Email = "user1@test.com" },
+                            Role = new Role { Id = 1, Name = "Developer" }
+                        }
+                    }
+                }
+            };
 
 //            var query = new GetAllProjectsQuery
 //            {

@@ -35,18 +35,37 @@ namespace PmtAdmin.Api.Controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null,
-            [FromQuery] List<int>? statusIds = null,
-            [FromQuery] List<int>? deliveryUnitIds = null,
-            [FromQuery] List<int>? projectManagerIds = null)
+            [FromQuery] string? statusIds = null,
+            [FromQuery] string? deliveryUnitIds = null,
+            [FromQuery] string? projectManagerIds = null)
         {
+            // Parse comma-separated strings to lists
+            List<int>? statusIdList = null;
+            if (!string.IsNullOrWhiteSpace(statusIds))
+            {
+                statusIdList = statusIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? deliveryUnitIdList = null;
+            if (!string.IsNullOrWhiteSpace(deliveryUnitIds))
+            {
+                deliveryUnitIdList = deliveryUnitIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? projectManagerIdList = null;
+            if (!string.IsNullOrWhiteSpace(projectManagerIds))
+            {
+                projectManagerIdList = projectManagerIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
             var query = new GetAllProjectsQuery
             {
                 Page = page,
                 PageSize = pageSize,
                 SearchTerm = searchTerm,
-                StatusIds = statusIds,
-                DeliveryUnitIds = deliveryUnitIds,
-                ProjectManagerIds = projectManagerIds
+                StatusIds = statusIdList,
+                DeliveryUnitIds = deliveryUnitIdList,
+                ProjectManagerIds = projectManagerIdList
             };
 
             var result = await _mediator.Send(query);
@@ -96,6 +115,41 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
+<<<<<<< HEAD
+        /// <summary>
+        /// Get all unique project managers
+        /// </summary>
+        [HttpGet("managers")]
+        public async Task<IActionResult> GetUniqueProjectManagers()
+        {
+            var query = new GetUniqueProjectManagersQuery();
+            var result = await _mediator.Send(query);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
+        /// <summary>
+        /// Get all members of a specific team within a project
+        /// </summary>
+        /// <param name="projectId">The ID of the project</param>
+        /// <param name="teamId">The ID of the team</param>
+        /// <returns>Team members with count</returns>
+        [HttpGet("{projectId}/teams/{teamId}/members")]
+        public async Task<IActionResult> GetTeamMembers(Guid projectId, int teamId)
+        {
+            var query = new GetTeamMembersByTeamQuery { ProjectId = projectId, TeamId = teamId };
+            var result = await _mediator.Send(query);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+=======
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProject(Guid id, [FromBody] UpdateProjectCommand command)
         {
@@ -111,6 +165,7 @@ namespace PmtAdmin.Api.Controllers
                 return BadRequest(result.Message);
 
             return Ok(result);
+>>>>>>> b2b76aebcde69396c1dfbc448964cdda89e48851
         }
     }
 }

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\.NetWorkspace\\PMT-.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\handlers\\projects\\createprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\projects\\createprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.application\\handlers\\projects\\createprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\projects\\createprojectcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251102052002_ForProjectCreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -314,7 +314,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -337,27 +337,27 @@
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\GetProjectByIdQueryHandlerTests.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Projects\\GetProjectByIdQueryHandlerTests.cs",
               "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\Projects\\GetProjectByIdQueryHandlerTests.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAACsBAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAAAD4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T05:18:42.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\appsettings.json",
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-24T05:00:26.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CreateProjectCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Projects\\CreateProjectCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Projects\\CreateProjectCommandHandler.cs",
@@ -467,7 +467,7 @@
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCwAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T09:34:40.129Z",
               "EditorCaption": ""
@@ -610,7 +610,7 @@
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEgAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T15:20:17.882Z",
               "EditorCaption": ""
@@ -623,7 +623,7 @@
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAwwFoAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T16:30:12.877Z",
               "EditorCaption": ""
@@ -649,7 +649,7 @@
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Api\\Program.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADgvyQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADgvyoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T05:19:17.415Z",
               "EditorCaption": ""
@@ -716,7 +716,8 @@
               "RelativeToolTip": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-30T06:50:54.444Z"
+              "WhenOpened": "2025-10-30T06:50:54.444Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1162,7 +1163,8 @@
               "RelativeToolTip": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T12:34:43.609Z"
+              "WhenOpened": "2025-10-28T12:34:43.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1172,9 +1174,10 @@
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
               "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T12:35:08.462Z"
+              "WhenOpened": "2025-10-28T12:35:08.462Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1222,7 +1225,8 @@
               "RelativeToolTip": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-22T04:05:12.483Z"
+              "WhenOpened": "2025-10-22T04:05:12.483Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

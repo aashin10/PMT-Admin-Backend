@@ -1,31 +1,32 @@
-//using AutoMapper;
-//using FluentAssertions;
-//using Moq;
-//using PmtAdmin.Application.Dto;
-//using PmtAdmin.Application.Handlers.Projects;
-//using PmtAdmin.Application.Query.Projects;
-//using PmtAdmin.Domain.Entities;
-//using PmtAdmin.Domain.Persistance;
-//using System;
-//using System.Collections.Generic;
-//using System.Threading;
-//using System.Threading.Tasks;
-//using Xunit;
 
-//namespace Pmt_Admin.Test.Handlers.Projects
-//{
-//    public class GetProjectByIdQueryHandlerTests
-//    {
-//        private readonly Mock<IMapper> _mapperMock;
-//        private readonly Mock<IProjectRepository> _projectRepositoryMock;
-//        private readonly GetProjectByIdQueryHandler _handler;
+using AutoMapper;
+using FluentAssertions;
+using Moq;
+using PmtAdmin.Application.Dto;
+using PmtAdmin.Application.Handlers.Projects;
+using PmtAdmin.Application.Query.Projects;
+using PmtAdmin.Domain.Entities;
+using PmtAdmin.Domain.Persistance;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
 
-//        public GetProjectByIdQueryHandlerTests()
-//        {
-//            _mapperMock = new Mock<IMapper>();
-//            _projectRepositoryMock = new Mock<IProjectRepository>();
-//            _handler = new GetProjectByIdQueryHandler(_mapperMock.Object, _projectRepositoryMock.Object);
-//        }
+namespace Pmt_Admin.Test.Handlers.Projects
+{
+    public class GetProjectByIdQueryHandlerTests
+    {
+        private readonly Mock<IMapper> _mapperMock;
+        private readonly Mock<IProjectRepository> _projectRepositoryMock;
+        private readonly GetProjectByIdQueryHandler _handler;
+
+        public GetProjectByIdQueryHandlerTests()
+        {
+            _mapperMock = new Mock<IMapper>();
+            _projectRepositoryMock = new Mock<IProjectRepository>();
+            _handler = new GetProjectByIdQueryHandler(_mapperMock.Object, _projectRepositoryMock.Object);
+        }
 
         [Fact]
         public async Task Handle_WhenProjectExists_ReturnsSuccessWithProject()
@@ -83,10 +84,10 @@
                 },
                 Teams = new List<Team>
                 {
-                    new Team 
-                    { 
-                        Id = 1, 
-                        Name = "Team Alpha", 
+                    new Team
+                    {
+                        Id = 1,
+                        Name = "Team Alpha",
                         TeamMembers = new List<TeamMember>
                         {
                             new TeamMember { TeamMemberId = 1, TeamId = 1, ProjectMemberId = 1, ProjectMember = new ProjectMember { Id = 1, User = new User { Id = 1, Name = "Developer 1", Email = "dev1@test.com" } } },
@@ -97,20 +98,20 @@
                 }
             };
 
-//            var query = new GetProjectByIdQuery { Id = projectId };
+            var query = new GetProjectByIdQuery { Id = projectId };
 
-//            _projectRepositoryMock
-//                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
-//                .ReturnsAsync(project);
+            _projectRepositoryMock
+                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
+                .ReturnsAsync(project);
 
-//            // Act
-//            var result = await _handler.Handle(query, CancellationToken.None);
+            // Act
+            var result = await _handler.Handle(query, CancellationToken.None);
 
-//            // Assert
-//            result.Should().NotBeNull();
-//            result.Status.Should().Be(200);
-//            result.Data.Should().NotBeNull();
-            
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(200);
+            result.Data.Should().NotBeNull();
+
             var projectDto = result.Data;
             projectDto.Id.Should().Be(projectId);
             projectDto.Name.Should().Be("Test Project");
@@ -128,66 +129,66 @@
             projectDto.AdditionalInformation.Should().HaveCount(2);
             projectDto.Teams.Should().HaveCount(2);
 
-//            _projectRepositoryMock.Verify(x => x.GetProjectByIdWithDetailsAsync(projectId), Times.Once);
-//        }
+            _projectRepositoryMock.Verify(x => x.GetProjectByIdWithDetailsAsync(projectId), Times.Once);
+        }
 
-//        [Fact]
-//        public async Task Handle_WhenProjectDoesNotExist_ReturnsNotFound()
-//        {
-//            // Arrange
-//            var projectId = Guid.NewGuid();
-//            var query = new GetProjectByIdQuery { Id = projectId };
+        [Fact]
+        public async Task Handle_WhenProjectDoesNotExist_ReturnsNotFound()
+        {
+            // Arrange
+            var projectId = Guid.NewGuid();
+            var query = new GetProjectByIdQuery { Id = projectId };
 
-//            _projectRepositoryMock
-//                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
-//                .ReturnsAsync((Project?)null);
+            _projectRepositoryMock
+                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
+                .ReturnsAsync((Project?)null);
 
-//            // Act
-//            var result = await _handler.Handle(query, CancellationToken.None);
+            // Act
+            var result = await _handler.Handle(query, CancellationToken.None);
 
-//            // Assert
-//            result.Should().NotBeNull();
-//            result.Status.Should().Be(404);
-//            result.Message.Should().Be("Project not found");
-//            result.Data.Should().BeNull();
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(404);
+            result.Message.Should().Be("Project not found");
+            result.Data.Should().BeNull();
 
-//            _projectRepositoryMock.Verify(x => x.GetProjectByIdWithDetailsAsync(projectId), Times.Once);
-//        }
+            _projectRepositoryMock.Verify(x => x.GetProjectByIdWithDetailsAsync(projectId), Times.Once);
+        }
 
-//        [Fact]
-//        public async Task Handle_WhenProjectHasNullCollections_ReturnsProjectWithEmptyCollections()
-//        {
-//            // Arrange
-//            var projectId = Guid.NewGuid();
-//            var project = new Project
-//            {
-//                Id = projectId,
-//                Name = "Test Project",
-//                Key = "TEST001",
-//                CreatedAt = DateTime.UtcNow,
-//                ProjectMembers = null,
-//                Sprints = null,
-//                CustomFields = null,
-//                Teams = null,
-//                Status = null,
-//                DeliveryUnit = null,
-//                ProjectManager = null
-//            };
+        [Fact]
+        public async Task Handle_WhenProjectHasNullCollections_ReturnsProjectWithEmptyCollections()
+        {
+            // Arrange
+            var projectId = Guid.NewGuid();
+            var project = new Project
+            {
+                Id = projectId,
+                Name = "Test Project",
+                Key = "TEST001",
+                CreatedAt = DateTime.UtcNow,
+                ProjectMembers = null,
+                Sprints = null,
+                CustomFields = null,
+                Teams = null,
+                Status = null,
+                DeliveryUnit = null,
+                ProjectManager = null
+            };
 
-//            var query = new GetProjectByIdQuery { Id = projectId };
+            var query = new GetProjectByIdQuery { Id = projectId };
 
-//            _projectRepositoryMock
-//                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
-//                .ReturnsAsync(project);
+            _projectRepositoryMock
+                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
+                .ReturnsAsync(project);
 
-//            // Act
-//            var result = await _handler.Handle(query, CancellationToken.None);
+            // Act
+            var result = await _handler.Handle(query, CancellationToken.None);
 
-//            // Assert
-//            result.Should().NotBeNull();
-//            result.Status.Should().Be(200);
-//            result.Data.Should().NotBeNull();
-            
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(200);
+            result.Data.Should().NotBeNull();
+
             var projectDto = result.Data;
             projectDto.TeamSize.Should().Be(0);
             projectDto.SprintCount.Should().Be(0);
@@ -198,14 +199,14 @@
             projectDto.ProjectManagerName.Should().BeNull();
         }
 
-//        [Fact]
-//        public async Task Handle_WhenProjectHasCompleteData_MapsAllFieldsCorrectly()
-//        {
-//            // Arrange
-//            var projectId = Guid.NewGuid();
-//            var customFieldId1 = Guid.NewGuid();
-//            var customFieldId2 = Guid.NewGuid();
-            
+        [Fact]
+        public async Task Handle_WhenProjectHasCompleteData_MapsAllFieldsCorrectly()
+        {
+            // Arrange
+            var projectId = Guid.NewGuid();
+            var customFieldId1 = Guid.NewGuid();
+            var customFieldId2 = Guid.NewGuid();
+
             var leadProjectMember = new ProjectMember
             {
                 Id = 5,
@@ -259,9 +260,9 @@
                 },
                 Teams = new List<Team>
                 {
-                    new Team 
-                    { 
-                        Id = 5, 
+                    new Team
+                    {
+                        Id = 5,
                         Name = "Core Team",
                         Description = "Main development team",
                         IsActive = true,
@@ -276,45 +277,45 @@
                 }
             };
 
-//            var query = new GetProjectByIdQuery { Id = projectId };
+            var query = new GetProjectByIdQuery { Id = projectId };
 
-//            _projectRepositoryMock
-//                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
-//                .ReturnsAsync(project);
+            _projectRepositoryMock
+                .Setup(x => x.GetProjectByIdWithDetailsAsync(projectId))
+                .ReturnsAsync(project);
 
-//            // Act
-//            var result = await _handler.Handle(query, CancellationToken.None);
+            // Act
+            var result = await _handler.Handle(query, CancellationToken.None);
 
-//            // Assert
-//            result.Should().NotBeNull();
-//            result.Status.Should().Be(200);
-            
-//            var dto = result.Data;
-//            dto.Id.Should().Be(projectId);
-//            dto.Name.Should().Be("Complete Project");
-//            dto.Key.Should().Be("COMP001");
-//            dto.Description.Should().Be("Complete Description");
-//            dto.CustomerOrgName.Should().Be("Complete Org");
-//            dto.CustomerDomainUrl.Should().Be("complete.com");
-//            dto.CustomerDescription.Should().Be("Complete Customer");
-//            dto.PocEmail.Should().Be("complete@test.com");
-//            dto.PocPhone.Should().Be("9876543210");
-//            dto.ProjectManagerId.Should().Be(5);
-//            dto.ProjectManagerName.Should().Be("PM Name");
-//            dto.ProjectManagerRoleId.Should().Be(2);
-//            dto.StatusId.Should().Be(2);
-//            dto.StatusName.Should().Be("Inactive");
-//            dto.DeliveryUnitId.Should().Be(3);
-//            dto.DeliveryUnitName.Should().Be("DU Complete");
-//            dto.DeliveryUnitCode.Should().Be("DUC001");
-//            dto.IsImportedFromJira.Should().BeTrue();
-//            dto.CreatedAt.Should().Be(new DateTime(2024, 1, 1));
-//            dto.UpdatedAt.Should().Be(new DateTime(2024, 2, 1));
+            // Assert
+            result.Should().NotBeNull();
+            result.Status.Should().Be(200);
 
-//            // Verify custom fields
-//            dto.AdditionalInformation.Should().HaveCount(2);
-//            dto.AdditionalInformation.Should().Contain(cf => cf.Name == "Cost Center" && cf.Value == "CC-001");
-//            dto.AdditionalInformation.Should().Contain(cf => cf.Name == "Region" && cf.Value == "Asia Pacific");
+            var dto = result.Data;
+            dto.Id.Should().Be(projectId);
+            dto.Name.Should().Be("Complete Project");
+            dto.Key.Should().Be("COMP001");
+            dto.Description.Should().Be("Complete Description");
+            dto.CustomerOrgName.Should().Be("Complete Org");
+            dto.CustomerDomainUrl.Should().Be("complete.com");
+            dto.CustomerDescription.Should().Be("Complete Customer");
+            dto.PocEmail.Should().Be("complete@test.com");
+            dto.PocPhone.Should().Be("9876543210");
+            dto.ProjectManagerId.Should().Be(5);
+            dto.ProjectManagerName.Should().Be("PM Name");
+            dto.ProjectManagerRoleId.Should().Be(2);
+            dto.StatusId.Should().Be(2);
+            dto.StatusName.Should().Be("Inactive");
+            dto.DeliveryUnitId.Should().Be(3);
+            dto.DeliveryUnitName.Should().Be("DU Complete");
+            dto.DeliveryUnitCode.Should().Be("DUC001");
+            dto.IsImportedFromJira.Should().BeTrue();
+            dto.CreatedAt.Should().Be(new DateTime(2024, 1, 1));
+            dto.UpdatedAt.Should().Be(new DateTime(2024, 2, 1));
+
+            // Verify custom fields
+            dto.AdditionalInformation.Should().HaveCount(2);
+            dto.AdditionalInformation.Should().Contain(cf => cf.Name == "Cost Center" && cf.Value == "CC-001");
+            dto.AdditionalInformation.Should().Contain(cf => cf.Name == "Region" && cf.Value == "Asia Pacific");
 
             // Verify teams
             dto.Teams.Should().HaveCount(1);

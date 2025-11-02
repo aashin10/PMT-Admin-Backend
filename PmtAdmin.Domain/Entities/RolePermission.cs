@@ -28,10 +28,10 @@ namespace PmtAdmin.Domain.Entities
 
         // Navigation properties
         [ForeignKey("RoleId")]
-        public Role Role { get; set; }
+        public Role? Role { get; set; }
 
         [ForeignKey("PermissionId")]
-        public Permission Permission { get; set; }
+        public Permission? Permission { get; set; }
     }
 
 }

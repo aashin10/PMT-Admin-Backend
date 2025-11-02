@@ -35,18 +35,37 @@ namespace PmtAdmin.Api.Controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10,
             [FromQuery] string? searchTerm = null,
-            [FromQuery] List<int>? statusIds = null,
-            [FromQuery] List<int>? deliveryUnitIds = null,
-            [FromQuery] List<int>? projectManagerIds = null)
+            [FromQuery] string? statusIds = null,
+            [FromQuery] string? deliveryUnitIds = null,
+            [FromQuery] string? projectManagerIds = null)
         {
+            // Parse comma-separated strings to lists
+            List<int>? statusIdList = null;
+            if (!string.IsNullOrWhiteSpace(statusIds))
+            {
+                statusIdList = statusIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? deliveryUnitIdList = null;
+            if (!string.IsNullOrWhiteSpace(deliveryUnitIds))
+            {
+                deliveryUnitIdList = deliveryUnitIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
+            List<int>? projectManagerIdList = null;
+            if (!string.IsNullOrWhiteSpace(projectManagerIds))
+            {
+                projectManagerIdList = projectManagerIds.Split(',').Select(s => int.Parse(s.Trim())).ToList();
+            }
+
             var query = new GetAllProjectsQuery
             {
                 Page = page,
                 PageSize = pageSize,
                 SearchTerm = searchTerm,
-                StatusIds = statusIds,
-                DeliveryUnitIds = deliveryUnitIds,
-                ProjectManagerIds = projectManagerIds
+                StatusIds = statusIdList,
+                DeliveryUnitIds = deliveryUnitIdList,
+                ProjectManagerIds = projectManagerIdList
             };
 
             var result = await _mediator.Send(query);
@@ -71,6 +90,18 @@ namespace PmtAdmin.Api.Controllers
             return StatusCode(result.Status, result);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateProject([FromBody] CreateProjectCommand command)
+        {
+            var result = await _mediator.Send(command);
+            
+            if (result.Status == 201)
+            {
+                return Created($"/api/projects/{result.Data?.Id}", result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(Guid id)
         {
@@ -82,6 +113,49 @@ namespace PmtAdmin.Api.Controllers
                 return Ok(result);
             }
             return StatusCode(result.Status, result);
+        }
+
+        [HttpGet("managers")]
+        public async Task<IActionResult> GetUniqueProjectManagers()
+        {
+            var query = new GetUniqueProjectManagersQuery();
+            var result = await _mediator.Send(query);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
+        [HttpGet("{projectId}/teams/{teamId}/members")]
+        public async Task<IActionResult> GetTeamMembers(Guid projectId, int teamId)
+        {
+            var query = new GetTeamMembersByTeamQuery { ProjectId = projectId, TeamId = teamId };
+            var result = await _mediator.Send(query);
+            
+            if (result.Status == 200)
+            {
+                return Ok(result);
+            }
+            return StatusCode(result.Status, result);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProject(Guid id, [FromBody] UpdateProjectCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("ID mismatch between route and body");
+
+            var result = await _mediator.Send(command);
+            
+            if (result.Status == 404)
+                return NotFound(result.Message);
+            
+            if (result.Status != 200)
+                return BadRequest(result.Message);
+
+            return Ok(result);
         }
     }
 }

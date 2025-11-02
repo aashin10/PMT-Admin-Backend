@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\ilp022025\\project\\back-end\\pmtadmin\\pmtadmin.application\\handlers\\users\\updateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -126,8 +126,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\UpdateUserCommandHandler.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T10:29:43.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T10:29:43.862Z"
             },
             {
               "$type": "Document",
@@ -155,25 +154,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\User.cs",
               "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Domain\\Entities\\User.cs",
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T04:41:35.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
-              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json*",
-              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json*",
+              "ToolTip": "C:\\ILP022025\\Project\\Back-End\\PmtAdmin\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-28T06:20:33.349Z",
@@ -189,8 +188,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\GetUserByIdQueryHandler.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T10:29:19.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T10:29:19.158Z"
             },
             {
               "$type": "Document",
@@ -202,8 +200,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\GetUsersWithPaginationQueryHandler.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T10:29:22.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T10:29:22.739Z"
             },
             {
               "$type": "Document",
@@ -215,8 +212,7 @@
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T09:16:39.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T09:16:39.007Z"
             },
             {
               "$type": "Document",
@@ -228,8 +224,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
               "ViewState": "AgIAAIAAAAAAAAAAAAD4v28AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T08:53:35.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T08:53:35.607Z"
             },
             {
               "$type": "Document",
@@ -241,8 +236,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\GetAllUsersQueryHandler.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T16:30:01.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T16:30:01.324Z"
             },
             {
               "$type": "Document",

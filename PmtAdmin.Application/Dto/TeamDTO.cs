@@ -10,5 +10,9 @@ namespace PmtAdmin.Application.Dto
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+        public string? Description { get; set; }
+        public int MemberCount { get; set; }
+        public string? LeadName { get; set; }
+        public bool IsActive { get; set; }
     }
 }

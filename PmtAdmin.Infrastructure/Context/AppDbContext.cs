@@ -177,6 +177,11 @@ namespace PmtAdmin.Infrastructure.Context
             {
                 entity.HasIndex(e => e.Key).IsUnique();
                 entity.HasIndex(e => e.StatusId);
+                entity.HasIndex(e => e.DeliveryUnitId);
+                entity.HasIndex(e => e.ProjectManagerId);
+                entity.HasIndex(e => e.DeletedAt);
+                entity.HasIndex(e => e.Name);
+                entity.HasIndex(e => new { e.DeletedAt, e.StatusId, e.DeliveryUnitId, e.ProjectManagerId });
 
                 entity.HasOne(e => e.ProjectManager)
                     .WithMany(u => u.ManagedProjects)
@@ -257,37 +262,37 @@ namespace PmtAdmin.Infrastructure.Context
             //});
             modelBuilder.Entity<Team>(entity =>
             {
-                // ?? Index for faster lookup by Project
+                // Index for faster lookup by Project
                 entity.HasIndex(e => e.ProjectId);
 
-                // ?? Project ? Teams (1:N)
+                // Project ? Teams (1:N)
                 entity.HasOne(e => e.Project)
                     .WithMany(p => p.Teams)
                     .HasForeignKey(e => e.ProjectId)
                     .OnDelete(DeleteBehavior.Cascade);
 
-                // ?? Lead ? Teams (optional, ProjectMember as Lead)
+                // Lead ? Teams (optional, ProjectMember as Lead)
                 entity.HasOne(e => e.Lead)
                     .WithMany()
                     .HasForeignKey(e => e.LeadId)
                     .OnDelete(DeleteBehavior.SetNull);
 
-                // ?? Creator ? Teams (optional, ProjectMember as Creator)
+                // Creator ? Teams (optional, ProjectMember as Creator)
                 entity.HasOne(e => e.Creator)
                     .WithMany()
                     .HasForeignKey(e => e.CreatedBy)
                     .OnDelete(DeleteBehavior.Restrict);
 
-                // ?? Updater ? Teams (optional, ProjectMember as Updater)
+                // Updater ? Teams (optional, ProjectMember as Updater)
                 entity.HasOne(e => e.Updater)
                     .WithMany()
                     .HasForeignKey(e => e.UpdatedBy)
                     .OnDelete(DeleteBehavior.Restrict);
 
-                // ?? Labels column as JSONB (optional but recommended for PostgreSQL)
+                // Labels column as text[] array (PostgreSQL)
                 entity.Property(e => e.Label)
-                    .HasColumnName("label")
-                    .HasColumnType("jsonb");
+                    .HasColumnName("labels")
+                    .HasColumnType("text[]");
             });
 
             // ============================================

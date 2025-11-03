@@ -1,7 +1,7 @@
 ﻿using BACKEND_CQRS.Application.Command;
 using BACKEND_CQRS.Application.Dto;
-using BACKEND_CQRS.Application.Wrapper;
-using BACKEND_CQRS.Domain.Entities;
+//using BACKEND_CQRS.Application.Wrapper;
+//using BACKEND_CQRS.Domain.Entities;
 using BACKEND_CQRS.Domain.Persistance;
 using BACKEND_CQRS.Domain.Services;
 using MediatR;
@@ -45,10 +45,9 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                 _logger.LogInformation("Login attempt for email: {Email}", request.Email);
 
                 // Find user by email
-                var users = await _userRepository.FindAsync(u => u.Email.ToLower() == request.Email.ToLower());
-                var user = users.FirstOrDefault();
+                var user = await _userRepository.GetByEmailAsync(request.Email);
 
-                if (user == null)
+                if (user == null || !string.Equals(user.Email, request.Email, StringComparison.OrdinalIgnoreCase))
                 {
                     _logger.LogWarning("Login failed: User not found with email {Email}", request.Email);
                     return ApiResponse<LoginResponseDto>.Fail("Invalid email or password");
@@ -106,8 +105,8 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                     RefreshToken = refreshToken,
                     AccessTokenExpires = DateTime.UtcNow.AddMinutes(accessTokenExpirationMinutes),
                     RefreshTokenExpires = refreshTokenEntity.ExpiresAt,
-                    IsActive = user.IsActive ?? false,
-                    IsSuperAdmin = user.IsSuperAdmin ?? false
+                    IsActive = user.IsActive,
+                   // IsSuperAdmin = user.IsSuperAdmin ?? false
                 };
 
                 return ApiResponse<LoginResponseDto>.Success(response, "Login successful");

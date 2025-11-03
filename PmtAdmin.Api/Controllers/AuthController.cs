@@ -1,6 +1,6 @@
 ﻿using BACKEND_CQRS.Application.Command;
 using BACKEND_CQRS.Application.Dto;
-using BACKEND_CQRS.Application.Wrapper;
+//using BACKEND_CQRS.Application.Wrapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -69,14 +69,14 @@ namespace BACKEND_CQRS.Api.Controllers
         /// <returns>Success status</returns>
         [HttpPost("logout")]
         [Authorize]
-        public async Task<ApiResponse<bool>> Logout()
+        public async Task<ApiResponse<object>> Logout()
         {
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? User.FindFirst("sub")?.Value;
 
             if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
             {
                 _logger.LogWarning("Logout failed: Invalid user ID in token");
-                return ApiResponse<bool>.Fail("Invalid user session");
+                return ApiResponse<object>.Fail("Invalid user session");
             }
 
             _logger.LogInformation("Logout endpoint called for user: {UserId}", userId);

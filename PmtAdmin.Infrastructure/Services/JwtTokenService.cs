@@ -1,10 +1,12 @@
-﻿using BACKEND_CQRS.Domain.Entities;
+﻿//using BACKEND_CQRS.Domain.Entities;
 using BACKEND_CQRS.Domain.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using PmtAdmin.Domain.Entities;
 using System.IdentityModel.Tokens.Jwt;
+
+//using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -28,17 +30,17 @@ namespace BACKEND_CQRS.Infrastructure.Services
             _accessTokenExpirationMinutes = int.Parse(_configuration["Jwt:AccessTokenExpirationMinutes"] ?? "60");
         }
 
-        public string GenerateAccessToken(Users user)
+        public string GenerateAccessToken(User user)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(JwtRegisteredClaimNames.Name, user.Name ?? string.Empty),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Name, user.Name ?? string.Empty),
+                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim("is_active", user.IsActive.ToString() ?? "false"),
                 new Claim("is_super_admin", user.IsSuperAdmin.ToString() ?? "false"),
                 new Claim(ClaimTypes.Role, user.IsSuperAdmin == true ? "SuperAdmin" : "User")
@@ -86,7 +88,7 @@ namespace BACKEND_CQRS.Infrastructure.Services
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var userIdClaim = jwtToken.Claims.First(x => x.Type == JwtRegisteredClaimNames.Sub).Value;
+                var userIdClaim = jwtToken.Claims.First(x => x.Type == System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub).Value;
 
                 return int.Parse(userIdClaim);
             }

@@ -37,15 +37,9 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IDuRepository, DeliveryUnitRepository>();
 
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
-<<<<<<< HEAD
-            services.AddScoped<IRoleRepository, RoleRepository>();
-            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
-            services.AddScoped<IPermissionRepository, PermissionRepository>();
-=======
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
->>>>>>> 7bdbe23c4a2b7edbfbc45461bd1415d0aa8902a0
 
 
             return services;

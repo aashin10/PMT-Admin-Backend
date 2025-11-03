@@ -1,5 +1,4 @@
-﻿using BACKEND_CQRS.Domain.Entities;
-using PmtAdmin.Domain.Entities;
+﻿using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
 
 namespace BACKEND_CQRS.Domain.Persistance

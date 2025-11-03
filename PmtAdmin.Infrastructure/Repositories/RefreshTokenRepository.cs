@@ -1,6 +1,6 @@
-﻿using BACKEND_CQRS.Domain.Entities;
+﻿//using BACKEND_CQRS.Domain.Entities;
 using BACKEND_CQRS.Domain.Persistance;
-using BACKEND_CQRS.Infrastructure.Context;
+//using BACKEND_CQRS.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Infrastructure.Context;

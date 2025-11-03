@@ -1,7 +1,7 @@
 ﻿using BACKEND_CQRS.Application.Command;
 using BACKEND_CQRS.Application.Dto;
-using BACKEND_CQRS.Application.Wrapper;
-using BACKEND_CQRS.Domain.Entities;
+//using BACKEND_CQRS.Application.Wrapper;
+//using BACKEND_CQRS.Domain.Entities;
 using BACKEND_CQRS.Domain.Persistance;
 using BACKEND_CQRS.Domain.Services;
 using MediatR;
@@ -58,8 +58,7 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                 }
 
                 // Get the user
-                var users = await _userRepository.FindAsync(u => u.Id == refreshToken.UserId);
-                var user = users.FirstOrDefault();
+                var user = await _userRepository.GetById(refreshToken.UserId);
 
                 if (user == null)
                 {
@@ -110,8 +109,8 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                     RefreshToken = newRefreshToken,
                     AccessTokenExpires = DateTimeOffset.UtcNow.AddMinutes(accessTokenExpirationMinutes),
                     RefreshTokenExpires = newRefreshTokenEntity.ExpiresAt,
-                    IsActive = user.IsActive ?? false,
-                    IsSuperAdmin = user.IsSuperAdmin ?? false
+                    IsActive = user.IsActive,
+                    IsSuperAdmin = user.IsSuperAdmin
                 };
 
                 return ApiResponse<LoginResponseDto>.Success(response, "Token refreshed successfully");

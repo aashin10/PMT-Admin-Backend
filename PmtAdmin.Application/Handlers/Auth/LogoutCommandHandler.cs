@@ -1,5 +1,4 @@
 ﻿using BACKEND_CQRS.Application.Command;
-using BACKEND_CQRS.Application.Wrapper;
 using BACKEND_CQRS.Domain.Persistance;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -7,7 +6,9 @@ using PmtAdmin.Application.Wrappers;
 
 namespace BACKEND_CQRS.Application.Handler.Auth
 {
-    public class LogoutCommandHandler : IRequestHandler<LogoutCommand, ApiResponse<bool>>
+    // Fix for CS0311: Ensure LogoutCommand implements IRequest<ApiResponse<bool>>
+    // Fix for CS0452: Change ApiResponse<bool> to ApiResponse<object> since T must be a reference type
+    public class LogoutCommandHandler : IRequestHandler<LogoutCommand, ApiResponse<object>>
     {
         private readonly IRefreshTokenRepository _refreshTokenRepository;
         private readonly ILogger<LogoutCommandHandler> _logger;
@@ -20,7 +21,7 @@ namespace BACKEND_CQRS.Application.Handler.Auth
             _logger = logger;
         }
 
-        public async Task<ApiResponse<bool>> Handle(LogoutCommand request, CancellationToken cancellationToken)
+        public async Task<ApiResponse<object>> Handle(LogoutCommand request, CancellationToken cancellationToken)
         {
             try
             {
@@ -31,12 +32,12 @@ namespace BACKEND_CQRS.Application.Handler.Auth
 
                 _logger.LogInformation("Logout successful for user: {UserId}", request.UserId);
 
-                return ApiResponse<bool>.Success(true, "Logout successful");
+                return ApiResponse<object>.Success(null, "Logout successful");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error during logout for user: {UserId}", request.UserId);
-                return ApiResponse<bool>.Fail("An error occurred during logout");
+                return ApiResponse<object>.Fail("An error occurred during logout");
             }
         }
     }

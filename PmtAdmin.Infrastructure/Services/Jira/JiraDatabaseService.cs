@@ -40,6 +40,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 .Select(x => new Status { StatusName = x })
                 .ToList();
 
+            int PmRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Project Manager")?.Id ?? 1;
+            int MemberRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Developer")?.Id ?? 2;
+
             if (newStatuses.Any())
             {
                 _context.Statuses.AddRange(newStatuses);
@@ -74,7 +77,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     }
 
                     p.ProjectManagerId = user.Id;
-                    p.ProjectManagerRoleId = 1;
+                    p.ProjectManagerRoleId = PmRoleId;   // 2 for PM Role
 
                     _context.Projects.Add(p);
                     await _context.SaveChangesAsync();
@@ -89,7 +92,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             ProjectId = p.Id,
                             UserId = user.Id,
-                            RoleId = 1
+                            RoleId = PmRoleId //2 for PM Role
                         };
                         ProjectMembers.Add(user.Id);
                         await _context.ProjectMembers.AddAsync(pm);
@@ -128,7 +131,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     {
                                         ProjectId = p.Id,
                                         UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                                        RoleId = 2  //2 for Member Role
+                                        RoleId = MemberRoleId  //2 for Member Role
                                     };
 
                                     _context.ProjectMembers.Add(projectMember);
@@ -285,7 +288,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             {
                                                 ProjectId = p.Id,
                                                 UserId = existingUser.Id,
-                                                RoleId = 2  //2 for Member Role
+                                                RoleId = MemberRoleId  //2 for Member Role
                                             };
 
                                             await _context.ProjectMembers.AddAsync(projectMember);
@@ -330,7 +333,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             {
                                                 ProjectId = p.Id,
                                                 UserId = existingUser.Id,
-                                                RoleId = 2  //2 for Member Role
+                                                RoleId = MemberRoleId  //2 for Member Role
                                             };
 
                                             await _context.ProjectMembers.AddAsync(projectMember);

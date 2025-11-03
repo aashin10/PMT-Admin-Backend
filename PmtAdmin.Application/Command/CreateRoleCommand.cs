@@ -1,9 +1,9 @@
 ﻿using MediatR;
+using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Wrappers;
-using RoleManagement.Application.Queries;
 using System.Collections.Generic;
 
-namespace RoleManagement.Application.Commands
+namespace PmtAdmin.Application.Command
 {
     public class CreateRoleCommand : IRequest<ApiResponse<RoleDto>>
     {

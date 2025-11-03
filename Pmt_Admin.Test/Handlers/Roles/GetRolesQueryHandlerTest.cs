@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Moq;
 using Xunit;
 using PmtAdmin.Application.Handlers.Role;
+using PmtAdmin.Application.Query;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Application.Dto;
-using RoleManagement.Application.Queries;
 
 namespace Pmt_Admin.Test.Roles_and_Permissions.Handler
 {

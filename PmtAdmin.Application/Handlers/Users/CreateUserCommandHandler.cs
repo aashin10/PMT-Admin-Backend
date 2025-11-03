@@ -41,25 +41,22 @@ namespace PmtAdmin.Application.Handlers.Users
                     continue;
                 }
 
-                if (string.IsNullOrWhiteSpace(userDto.Email))
+                // Validate email format if provided
+                if (!string.IsNullOrWhiteSpace(userDto.Email))
                 {
-                    errors.Add($"Email is required for user: {userDto.Name}");
-                    continue;
-                }
+                    if (!IsValidEmail(userDto.Email))
+                    {
+                        errors.Add($"Invalid email format: {userDto.Email}");
+                        continue;
+                    }
 
-                // Validate email format
-                if (!IsValidEmail(userDto.Email))
-                {
-                    errors.Add($"Invalid email format: {userDto.Email}");
-                    continue;
-                }
-
-                // Check if user with this email already exists
-                var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
-                if (existingUserByEmail != null)
-                {
-                    errors.Add($"Email already exists: {userDto.Email}");
-                    continue;
+                    // Check if user with this email already exists
+                    var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
+                    if (existingUserByEmail != null)
+                    {
+                        errors.Add($"Email already exists: {userDto.Email}");
+                        continue;
+                    }
                 }
 
                 // Check if Jira ID already exists (if provided)
@@ -86,10 +83,10 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Normalize Type to capitalize first letter
                 var normalizedType = NormalizeEnum(userDto.Type);
 
-                // If Type is not provided, infer from email domain
+                // If Type is not provided, infer from email domain (null if no email)
                 if (string.IsNullOrWhiteSpace(normalizedType))
                 {
-                    normalizedType = InferTypeFromEmail(userDto.Email);
+                    normalizedType = string.IsNullOrEmpty(userDto.Email) ? null : InferTypeFromEmail(userDto.Email);
                 }
 
                 // Map Status to IsActive boolean
@@ -98,13 +95,13 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Create user entity
                 var user = new User
                 {
-                    Email = userDto.Email,
+                    Email = string.IsNullOrWhiteSpace(userDto.Email) ? null : userDto.Email,
                     Name = userDto.Name,
                     PasswordHash = passwordHash,
                     AvatarUrl = avatarUrl,
                     IsActive = isActive,
                     IsSuperAdmin = false,
-                    JiraId = userDto.JiraId,
+                    JiraId = string.IsNullOrWhiteSpace(userDto.JiraId) ? null : userDto.JiraId,
                     Type = normalizedType,
                     CreatedBy = userDto.CreatedBy,
                     CreatedAt = DateTime.UtcNow,

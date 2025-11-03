@@ -1,3 +1,4 @@
+
 using AutoMapper;
 using FluentAssertions;
 using Moq;
@@ -58,17 +59,17 @@ namespace Pmt_Admin.Test.Handlers.Projects
                     {
                         Id = 1,
                         UserId = 1,
+                        RoleId = 1,
                         User = new User { Id = 1, Name = "Developer 1", Email = "dev1@test.com" },
-                        ProjectRole = "Developer",
-                        TeamId = 1
+                        Role = new Role { Id = 1, Name = "Developer" }
                     },
                     new ProjectMember
                     {
                         Id = 2,
                         UserId = 2,
+                        RoleId = 2,
                         User = new User { Id = 2, Name = "Developer 2", Email = "dev2@test.com" },
-                        ProjectRole = "Senior Developer",
-                        TeamId = 1
+                        Role = new Role { Id = 2, Name = "Senior Developer" }
                     }
                 },
                 Sprints = new List<Sprint>
@@ -83,8 +84,17 @@ namespace Pmt_Admin.Test.Handlers.Projects
                 },
                 Teams = new List<Team>
                 {
-                    new Team { Id = 1, Name = "Team Alpha" },
-                    new Team { Id = 2, Name = "Team Beta" }
+                    new Team
+                    {
+                        Id = 1,
+                        Name = "Team Alpha",
+                        TeamMembers = new List<TeamMember>
+                        {
+                            new TeamMember { TeamMemberId = 1, TeamId = 1, ProjectMemberId = 1, ProjectMember = new ProjectMember { Id = 1, User = new User { Id = 1, Name = "Developer 1", Email = "dev1@test.com" } } },
+                            new TeamMember { TeamMemberId = 2, TeamId = 1, ProjectMemberId = 2, ProjectMember = new ProjectMember { Id = 2, User = new User { Id = 2, Name = "Developer 2", Email = "dev2@test.com" } } }
+                        }
+                    },
+                    new Team { Id = 2, Name = "Team Beta", TeamMembers = new List<TeamMember>() }
                 }
             };
 
@@ -101,7 +111,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
             result.Data.Should().NotBeNull();
-            
+
             var projectDto = result.Data;
             projectDto.Id.Should().Be(projectId);
             projectDto.Name.Should().Be("Test Project");
@@ -118,7 +128,6 @@ namespace Pmt_Admin.Test.Handlers.Projects
             projectDto.SprintCount.Should().Be(2);
             projectDto.AdditionalInformation.Should().HaveCount(2);
             projectDto.Teams.Should().HaveCount(2);
-            projectDto.TeamMembers.Should().HaveCount(2);
 
             _projectRepositoryMock.Verify(x => x.GetProjectByIdWithDetailsAsync(projectId), Times.Once);
         }
@@ -179,13 +188,12 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
             result.Data.Should().NotBeNull();
-            
+
             var projectDto = result.Data;
             projectDto.TeamSize.Should().Be(0);
             projectDto.SprintCount.Should().Be(0);
             projectDto.AdditionalInformation.Should().BeEmpty();
             projectDto.Teams.Should().BeEmpty();
-            projectDto.TeamMembers.Should().BeEmpty();
             projectDto.StatusName.Should().BeNull();
             projectDto.DeliveryUnitName.Should().BeNull();
             projectDto.ProjectManagerName.Should().BeNull();
@@ -198,7 +206,15 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var projectId = Guid.NewGuid();
             var customFieldId1 = Guid.NewGuid();
             var customFieldId2 = Guid.NewGuid();
-            
+
+            var leadProjectMember = new ProjectMember
+            {
+                Id = 5,
+                UserId = 5,
+                User = new User { Id = 5, Name = "Team Lead", Email = "lead@test.com" },
+                Role = new Role { Id = 3, Name = "Team Lead" }
+            };
+
             var project = new Project
             {
                 Id = projectId,
@@ -226,9 +242,11 @@ namespace Pmt_Admin.Test.Handlers.Projects
                     {
                         Id = 10,
                         UserId = 10,
+                        RoleId = 1,
                         User = new User { Id = 10, Name = "Team Member 1", Email = "tm1@test.com" },
-                        ProjectRole = "Tech Lead",
-                        TeamId = 5
+                        Role = new Role { Id = 1, Name = "Tech Lead" },
+                        IsOwner = true,
+                        AddedAt = DateTimeOffset.UtcNow
                     }
                 },
                 Sprints = new List<Sprint>
@@ -242,7 +260,20 @@ namespace Pmt_Admin.Test.Handlers.Projects
                 },
                 Teams = new List<Team>
                 {
-                    new Team { Id = 5, Name = "Core Team" }
+                    new Team
+                    {
+                        Id = 5,
+                        Name = "Core Team",
+                        Description = "Main development team",
+                        IsActive = true,
+                        LeadId = 5,
+                        Lead = leadProjectMember,
+                        TeamMembers = new List<TeamMember>
+                        {
+                            new TeamMember { TeamMemberId = 1, TeamId = 5, ProjectMemberId = 10 },
+                            new TeamMember { TeamMemberId = 2, TeamId = 5, ProjectMemberId = 5 }
+                        }
+                    }
                 }
             };
 
@@ -258,7 +289,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             // Assert
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
-            
+
             var dto = result.Data;
             dto.Id.Should().Be(projectId);
             dto.Name.Should().Be("Complete Project");
@@ -290,15 +321,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
             dto.Teams.Should().HaveCount(1);
             dto.Teams.First().Id.Should().Be(5);
             dto.Teams.First().Name.Should().Be("Core Team");
-
-            // Verify team members
-            dto.TeamMembers.Should().HaveCount(1);
-            var teamMember = dto.TeamMembers.First();
-            teamMember.Id.Should().Be(10);
-            teamMember.Name.Should().Be("Team Member 1");
-            teamMember.Email.Should().Be("tm1@test.com");
-            teamMember.Role.Should().Be("Tech Lead");
-            teamMember.Team.Should().Be("5");
+            dto.Teams.First().Description.Should().Be("Main development team");
+            dto.Teams.First().IsActive.Should().BeTrue();
+            dto.Teams.First().MemberCount.Should().Be(2);
+            dto.Teams.First().LeadName.Should().Be("Team Lead");
         }
     }
 }

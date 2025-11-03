@@ -29,7 +29,6 @@ namespace PmtAdmin.Application.Dto
         public int SprintCount { get; set; }
         public List<CustomFieldDTO> AdditionalInformation { get; set; } = new List<CustomFieldDTO>();
         public List<TeamDTO> Teams { get; set; } = new List<TeamDTO>();
-        public List<TeamMemberDTO> TeamMembers { get; set; } = new List<TeamMemberDTO>();
         public bool? IsImportedFromJira { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }

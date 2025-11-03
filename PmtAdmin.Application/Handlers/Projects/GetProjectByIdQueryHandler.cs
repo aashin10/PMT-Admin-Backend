@@ -4,11 +4,6 @@ using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Query.Projects;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Projects
 {
@@ -51,7 +46,7 @@ namespace PmtAdmin.Application.Handlers.Projects
                 DeliveryUnitId = project.DeliveryUnitId,
                 DeliveryUnitName = project.DeliveryUnit?.Name,
                 DeliveryUnitCode = project.DeliveryUnit?.Code,
-                TeamSize = project.ProjectMembers?.Count ?? 0,
+                TeamSize = project.Teams?.Sum(t => t.TeamMembers?.Count ?? 0) ?? 0,
                 SprintCount = project.Sprints?.Count ?? 0,
                 AdditionalInformation = project.CustomFields?.Select(cf => new CustomFieldDTO
                 {
@@ -62,16 +57,12 @@ namespace PmtAdmin.Application.Handlers.Projects
                 Teams = project.Teams?.Select(t => new TeamDTO
                 {
                     Id = t.Id,
-                    Name = t.Name
+                    Name = t.Name,
+                    Description = t.Description,
+                    IsActive = t.IsActive,
+                    MemberCount = t.TeamMembers?.Count ?? 0,
+                    LeadName = t.Lead?.User?.Name
                 }).ToList() ?? new List<TeamDTO>(),
-                TeamMembers = project.ProjectMembers?.Select(pm => new TeamMemberDTO
-                {
-                    Id = pm.Id,
-                    Name = pm.User?.Name,
-                    Role = pm.ProjectRole,
-                    Email = pm.User?.Email,
-                    Team = pm.TeamId?.ToString()
-                }).ToList() ?? new List<TeamMemberDTO>(),
                 IsImportedFromJira = project.IsImportedFromJira,
                 CreatedAt = project.CreatedAt,
                 UpdatedAt = project.UpdatedAt

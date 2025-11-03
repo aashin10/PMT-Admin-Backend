@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Application.Dto;
-using RoleManagement.Application.Queries;
 
 namespace PmtAdmin.Application.Command
 {

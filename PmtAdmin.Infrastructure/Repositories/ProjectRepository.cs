@@ -2,11 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Infrastructure.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Infrastructure.Repositories
 {
@@ -28,7 +23,9 @@ namespace PmtAdmin.Infrastructure.Repositories
             List<int>? projectManagerIds)
         {
             // Start with base query - only include what's needed for table view
+            // Use AsNoTracking for read-only queries to improve performance
             var query = _context.Projects
+                .AsNoTracking()
                 .Include(p => p.Status)
                 .Include(p => p.DeliveryUnit)
                 .Include(p => p.ProjectManager)
@@ -85,13 +82,13 @@ namespace PmtAdmin.Infrastructure.Repositories
                 .Include(p => p.Status)
                 .Include(p => p.DeliveryUnit)
                 .Include(p => p.ProjectManager)
-                .Include(p => p.ProjectMembers)
-                    .ThenInclude(pm => pm.User)
-                .Include(p => p.ProjectMembers)
-                    .ThenInclude(pm => pm.Team)
                 .Include(p => p.Sprints)
                 .Include(p => p.CustomFields)
                 .Include(p => p.Teams)
+                    .ThenInclude(t => t.TeamMembers)
+                .Include(p => p.Teams)
+                    .ThenInclude(t => t.Lead)
+                        .ThenInclude(pm => pm!.User)
                 .Where(p => p.Id == id && p.DeletedAt == null)
                 .FirstOrDefaultAsync();
         }
@@ -125,6 +122,36 @@ namespace PmtAdmin.Infrastructure.Repositories
             return await _context.ProjectMembers
                 .Where(pm => pm.ProjectId == projectId)
                 .CountAsync();
+        }
+
+        public async Task<IReadOnlyList<ProjectManagerInfo>> GetUniqueProjectManagersAsync()
+        {
+            return await _context.Projects
+                .AsNoTracking()
+                .Where(p => p.DeletedAt == null && p.ProjectManagerId.HasValue)
+                .Include(p => p.ProjectManager)
+                .Select(p => new ProjectManagerInfo
+                {
+                    Id = p.ProjectManager!.Id,
+                    Name = p.ProjectManager.Name
+                })
+                .Distinct()
+                .OrderBy(pm => pm.Name)
+                .ToListAsync();
+        }
+
+        public async Task<Team?> GetTeamWithMembersAsync(int teamId, Guid projectId)
+        {
+            return await _context.Teams
+                .Include(t => t.TeamMembers)
+                    .ThenInclude(tm => tm.ProjectMember!)
+                        .ThenInclude(pm => pm.User!)
+                .Include(t => t.TeamMembers)
+                    .ThenInclude(tm => tm.ProjectMember!)
+                        .ThenInclude(pm => pm.Role!)
+                .Include(t => t.Lead)
+                    .ThenInclude(lead => lead!.User!)
+                .FirstOrDefaultAsync(t => t.Id == teamId && t.ProjectId == projectId);
         }
     }
 }

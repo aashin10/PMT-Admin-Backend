@@ -579,6 +579,16 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-30T09:00:34.837Z",
+=======
               "Title": "DashboardSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
@@ -587,6 +597,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:12:34.009Z",
+>>>>>>> 57afff95fd8b4a3038caa6726bd3f532e57ff661
               "EditorCaption": ""
             },
             {

@@ -43,6 +43,9 @@ namespace PmtAdmin.Application.Handlers.Settings
             user.IsDeleted = false;
             user.CreatedAt = DateTime.UtcNow;
 
+            // Add the CreatedBy field
+            user.CreatedBy = request.CreatedBy;
+
             // Save entity
             var savedUser = await _superAdminRepository.CreateAsync(user);
 

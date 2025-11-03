@@ -43,7 +43,7 @@ namespace BACKEND_CQRS.Application.Handler.Auth
             try
             {
                 _logger.LogInformation("Login attempt for email: {Email}", request.Email);
-
+                request.Email = request.Email.Trim().ToLower();
                 // Find user by email
                 var user = await _userRepository.GetByEmailAsync(request.Email);
 

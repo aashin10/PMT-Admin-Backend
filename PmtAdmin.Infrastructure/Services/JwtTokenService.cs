@@ -35,16 +35,24 @@ namespace BACKEND_CQRS.Infrastructure.Services
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            // Using standard JWT claim names (short format)
+            var claims = new List<Claim>
+    {
+        new Claim("sub", user.Id.ToString()),              // Subject (User ID)
+        new Claim("email", user.Email),                     // Email
+        new Claim("name", user.Name ?? string.Empty),      // Name
+        new Claim("jti", Guid.NewGuid().ToString()),       // JWT ID (unique token identifier)
+        new Claim("is_active", user.IsActive.ToString().ToLower()),         // Custom claim
+        new Claim("is_super_admin", user.IsSuperAdmin.ToString().ToLower()) // Custom claim
+    };
+
+            // Add role claims (using standard ClaimTypes.Role for authorization)
+            if (user.IsSuperAdmin == true)
             {
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Name, user.Name ?? string.Empty),
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim("is_active", user.IsActive.ToString() ?? "false"),
-                new Claim("is_super_admin", user.IsSuperAdmin.ToString() ?? "false"),
-                new Claim(ClaimTypes.Role, user.IsSuperAdmin == true ? "SuperAdmin" : "User")
-            };
+                claims.Add(new Claim(ClaimTypes.Role, "SuperAdmin"));
+            }
+            // All users get the base "User" role
+            claims.Add(new Claim(ClaimTypes.Role, "User"));
 
             var token = new JwtSecurityToken(
                 issuer: _issuer,

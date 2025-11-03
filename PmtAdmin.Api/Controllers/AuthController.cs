@@ -32,6 +32,7 @@ namespace BACKEND_CQRS.Api.Controllers
         public async Task<ApiResponse<LoginResponseDto>> Login([FromBody] LoginRequestDto request)
         {
             _logger.LogInformation("Login endpoint called for email: {Email}", request.Email);
+            // request.Email = request.Email.Trim().ToLower();
 
             var command = new LoginCommand
             {
@@ -93,28 +94,58 @@ namespace BACKEND_CQRS.Api.Controllers
         /// <summary>
         /// Get current authenticated user information
         /// </summary>
-        /// <returns>Current user details</returns>
         [HttpGet("me")]
         [Authorize]
         public IActionResult GetCurrentUser()
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? User.FindFirst("sub")?.Value;
-            var email = User.FindFirst(ClaimTypes.Email)?.Value ?? User.FindFirst("email")?.Value;
-            var name = User.FindFirst(ClaimTypes.Name)?.Value ?? User.FindFirst("name")?.Value;
-            var isSuperAdmin = User.FindFirst("is_super_admin")?.Value;
-            var isActive = User.FindFirst("is_active")?.Value;
-
-            var userInfo = new
+            try
             {
-                userId = userId,
-                email = email,
-                name = name,
-                isSuperAdmin = bool.Parse(isSuperAdmin ?? "false"),
-                isActive = bool.Parse(isActive ?? "false"),
-                roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList()
-            };
+                // Try multiple claim types for userId
+                var userId = User.FindFirst("sub")?.Value
+                          ?? User.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                          ?? User.FindFirst(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub)?.Value;
 
-            return Ok(ApiResponse<object>.Success(userInfo, "User information retrieved successfully"));
+                var email = User.FindFirst("email")?.Value
+                         ?? User.FindFirst(ClaimTypes.Email)?.Value;
+
+                var name = User.FindFirst("name")?.Value
+                        ?? User.FindFirst(ClaimTypes.Name)?.Value;
+
+                var isSuperAdminClaim = User.FindFirst("is_super_admin")?.Value;
+                var isActiveClaim = User.FindFirst("is_active")?.Value;
+
+                _logger.LogInformation("GetCurrentUser called. UserId: {UserId}, Email: {Email}", userId, email);
+
+                // Debug: Log ALL claims
+                _logger.LogInformation("All claims in token: {Claims}",
+                    string.Join(", ", User.Claims.Select(c => $"{c.Type}={c.Value}")));
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    _logger.LogWarning("GetCurrentUser failed: UserId claim not found in token");
+                    _logger.LogWarning("Available claims: {ClaimTypes}",
+                        string.Join(", ", User.Claims.Select(c => c.Type)));
+                    return Unauthorized(ApiResponse<object>.Fail("Invalid user session"));
+                }
+
+                var userInfo = new UserInfoDto
+                {
+                    UserId = userId,
+                    Email = email ?? "",
+                    Name = name ?? "Unknown User",
+                    IsSuperAdmin = !string.IsNullOrEmpty(isSuperAdminClaim) && bool.Parse(isSuperAdminClaim),
+                    IsActive = !string.IsNullOrEmpty(isActiveClaim) && bool.Parse(isActiveClaim),
+                    Roles = User.FindAll(ClaimTypes.Role).Select(c => c.Value).ToList()
+                };
+
+                _logger.LogInformation("User info retrieved successfully for UserId: {UserId}", userId);
+                return Ok(ApiResponse<UserInfoDto>.Success(userInfo, "User information retrieved successfully"));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving current user information");
+                return StatusCode(500, ApiResponse<object>.Fail("An error occurred while retrieving user information"));
+            }
         }
     }
 }

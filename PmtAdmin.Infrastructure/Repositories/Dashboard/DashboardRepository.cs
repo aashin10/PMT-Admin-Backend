@@ -24,9 +24,12 @@ namespace PmtAdmin.Infrastructure.Repositories.Dashboard
             var projects = await _context.Projects
                 .Include(p => p.Status)
                 .Include(p => p.DeliveryUnit)
+                .Where(p => p.DeletedAt == null)  // Only include non-deleted projects
                 .ToListAsync();
 
-            var deliveryUnits = await _context.DeliveryUnits.ToListAsync();
+            var deliveryUnits = await _context.DeliveryUnits
+                .Where(du => du.IsActive)  // Only include active delivery units
+                .ToListAsync();
 
             return (projects, deliveryUnits);
         }

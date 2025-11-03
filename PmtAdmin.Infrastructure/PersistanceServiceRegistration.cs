@@ -11,11 +11,7 @@ using PmtAdmin.Infrastructure.Repositories;
 using PmtAdmin.Infrastructure.Repositories.Dashboard;
 using PmtAdmin.Infrastructure.Repositories.Settings;
 using PmtAdmin.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PmtAdmin.Infrastructure.Services.Jira;
 
 namespace PmtAdmin.Infrastructure
 {
@@ -43,7 +39,14 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IRoleRepository, RoleRepository>();
             //services.AddAutoMapper(typeof(RoleProfile).Assembly);
             services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
+            services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
+            services.AddScoped<IBoardRepository, BoardRepository>();
 
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
+            services.AddScoped<IJiraService, JiraService>();
 
             return services;
         }

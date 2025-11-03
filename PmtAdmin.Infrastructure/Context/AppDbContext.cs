@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Domain.Entities;
-using PmtAdmin.Infrastructure.Context.Seeding;
 
 namespace PmtAdmin.Infrastructure.Context
 {
@@ -13,7 +12,7 @@ namespace PmtAdmin.Infrastructure.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            
+
             // Suppress non-deterministic model warnings
             optionsBuilder.ConfigureWarnings(warnings =>
                 warnings.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning));
@@ -778,7 +777,7 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // SEED DATA
             // ============================================
-            DatabaseSeeder.SeedData(modelBuilder);
+            //DatabaseSeeder.SeedData(modelBuilder);
         }
     }
 }

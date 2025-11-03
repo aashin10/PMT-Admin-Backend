@@ -29,7 +29,7 @@ namespace PmtAdmin.Application.Handlers.Settings
             var existingUser = await _superAdminRepository.GetByIdAsync(request.Id);
 
             if (existingUser == null)
-                return ApiResponse<SuperAdminDto>.Fail("SuperAdmin not found");
+                return ApiResponse<SuperAdminDto>.NotFound("SuperAdmin not found");
 
             // Check if the user is actually a super admin
             if (!existingUser.IsSuperAdmin)

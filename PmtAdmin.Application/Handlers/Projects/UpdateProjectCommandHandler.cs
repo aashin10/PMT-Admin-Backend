@@ -63,28 +63,59 @@ namespace PmtAdmin.Application.Handlers.Projects
                         return ApiResponse<ProjectDTO>.Fail("Metadata must be a valid JSON string.");
                     }
                 }
-                else
+                else if (request.Metadata == string.Empty)
                 {
                     project.Metadata = null;
                 }
 
-                // Update custom fields if provided
+                // Handle custom fields - only update/add, never delete existing ones
                 if (request.CustomFields != null)
                 {
-                    // Clear existing custom fields
-                    project.CustomFields.Clear();
-
-                    // Add new custom fields
-                    foreach (var customFieldDto in request.CustomFields)
+                    // Special case: if empty array is provided, clear all fields
+                    if (!request.CustomFields.Any())
                     {
-                        var customField = new CustomField
+                        project.CustomFields.Clear();
+                    }
+                    else
+                    {
+                        // Update existing fields and add new ones, but preserve unlisted fields
+                        foreach (var requestField in request.CustomFields)
                         {
-                            Id = customFieldDto.Id == Guid.Empty ? Guid.NewGuid() : customFieldDto.Id,
-                            ProjectId = project.Id,
-                            Name = customFieldDto.Name,
-                            Value = customFieldDto.Value
-                        };
-                        project.CustomFields.Add(customField);
+                            if (requestField.Id != Guid.Empty)
+                            {
+                                // Update existing field
+                                var existingField = project.CustomFields.FirstOrDefault(f => f.Id == requestField.Id);
+                                if (existingField != null)
+                                {
+                                    existingField.Name = requestField.Name;
+                                    existingField.Value = requestField.Value;
+                                }
+                                else
+                                {
+                                    // Field with this ID doesn't exist, create it
+                                    var newField = new CustomField
+                                    {
+                                        Id = requestField.Id,
+                                        ProjectId = project.Id,
+                                        Name = requestField.Name,
+                                        Value = requestField.Value
+                                    };
+                                    project.CustomFields.Add(newField);
+                                }
+                            }
+                            else
+                            {
+                                // Create new field
+                                var newField = new CustomField
+                                {
+                                    Id = Guid.NewGuid(),
+                                    ProjectId = project.Id,
+                                    Name = requestField.Name,
+                                    Value = requestField.Value
+                                };
+                                project.CustomFields.Add(newField);
+                            }
+                        }
                     }
                 }
 

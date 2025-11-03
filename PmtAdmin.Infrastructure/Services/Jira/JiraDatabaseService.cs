@@ -156,7 +156,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     var EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
                     var IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
                     var SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
-                    var IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
+                    var IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, int>();
 
                     foreach (var board in project.Boards)
                     {
@@ -249,6 +249,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
 
                                     boardcolumn.StatusId = statusToUse.Id;
+
                                     await _context.SaveChangesAsync();
 
                                     var boardColumnMapping = new BoardBoardColumnMap
@@ -258,8 +259,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     };
 
                                     _context.BoardBoardColumnMaps.Add(boardColumnMapping);
-                                    IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id.ToString();
+                                    IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id;
                                     await _context.SaveChangesAsync();
+                                }
+                                else
+                                {
+                                    i.StatusId = IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id];
                                 }
 
                                 if (issue.Epic != null)

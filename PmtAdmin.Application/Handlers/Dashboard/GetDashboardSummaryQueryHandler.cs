@@ -29,9 +29,10 @@ namespace PmtAdmin.Application.Handlers.Dashboard
 
             if (projects == null || !projects.Any())
             {
-                return ApiResponse<DashboardSummaryDto>.NotFound("No projects found.");
+                return ApiResponse<DashboardSummaryDto>.NotFound("No active projects found.");
             }
 
+            // Calculate totals from non-deleted projects only
             var totalProjects = projects.Count;
             var inProgressCount = projects.Count(p => p.Status?.Name == "Active");
             var onHoldCount = projects.Count(p => p.Status?.Name == "Inactive");
@@ -46,7 +47,9 @@ namespace PmtAdmin.Application.Handlers.Dashboard
                     OnHold = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status?.Name == "Inactive"),
                     Completed = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status?.Name == "Completed"),
                     Total = projects.Count(p => p.DeliveryUnitId == du.Id)
-                }).ToList();
+                })
+                .Where(ps => ps.Total > 0) // Only include delivery units with active projects
+                .ToList();
 
             var dashboardDto = new DashboardSummaryDto
             {

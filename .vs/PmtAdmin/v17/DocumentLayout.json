@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\dto\\dashboarddto\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\dashboarddto\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\repositories\\dashboard\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\dashboard\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\dashboard\\getdashboardsummaryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\dashboard\\getdashboardsummaryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\dto\\dashboarddto\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\dashboarddto\\dashboardsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\repositories\\dashboard\\projectreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\repositories\\dashboard\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\dashboard\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.domain\\persistance\\dashboard\\idashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -526,25 +526,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProjectReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T12:09:13.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PersistanceServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs*",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowCQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T11:37:13.831Z",
@@ -552,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
@@ -571,22 +558,48 @@
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAcwDEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAMwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T10:19:18.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DashboardSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:12:34.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:16:53.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T12:09:13.185Z",
               "EditorCaption": ""
             },
             {
@@ -600,19 +613,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T10:15:31.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DashboardRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T10:16:53.041Z",
               "EditorCaption": ""
             },
             {

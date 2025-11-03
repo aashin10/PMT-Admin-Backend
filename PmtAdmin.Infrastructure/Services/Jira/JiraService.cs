@@ -131,6 +131,13 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             }
                         }
 
+                        DateTime? ParseDate(JToken t)
+                        {
+                            if (t == null) return null;
+                            var s = t.ToString();
+                            if (string.IsNullOrWhiteSpace(s)) return null;
+                            return DateTime.TryParse(s, out var dt) ? dt : null;
+                        }
 
                         var issue = new JiraIssue
                         {
@@ -143,12 +150,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             StoryPoints = int.TryParse(fields?["customfield_10016"]?.ToString(), out var sp) ? sp : 0,
                             Creator = fields?["creator"]?.ToObject<JiraUser>(),
                             Description = fields?["description"]?.ToString(),
-                            ////DueDate = fields?["duedate"] != null
-                            //    ? DateTime.Parse(fields["duedate"]!.ToString())
-                            //    : (DateTime?)null,
-                            //StartDate = fields?["customfield_10015"] != null
-                            //    ? DateTime.Parse(fields["customfield_10015"]!.ToString())
-                            //    : (DateTime?)null,
+                            DueDate = ParseDate(fields?["duedate"]),
+                            StartDate = ParseDate(fields?["customfield_10015"]),
                             Comment = fields?["comment"]?["comments"]?.ToObject<List<JiraComment>>(),
                             //Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
                             UpdatedAt = fields?["updated"] != null

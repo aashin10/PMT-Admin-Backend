@@ -352,6 +352,14 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 i.Labels = JsonConvert.SerializeObject(issue.Labels);
                                 i.Status = null;
 
+                                i.StartDate = issue.StartDate.HasValue
+                                    ? new DateTimeOffset(issue.StartDate.Value.ToUniversalTime(), TimeSpan.Zero)
+                                    : null;
+
+                                i.DueDate = issue.DueDate.HasValue
+                                    ? new DateTimeOffset(issue.DueDate.Value.ToUniversalTime(), TimeSpan.Zero)
+                                    : null;
+
                                 issues.Add(i);
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                             }

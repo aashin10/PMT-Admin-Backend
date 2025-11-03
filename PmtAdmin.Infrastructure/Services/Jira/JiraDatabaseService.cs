@@ -63,6 +63,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     if (project.Project.Lead.AccountId == null)
                         throw new Exception("No Project Manager Assigned");
 
+                    if (_context.Projects.Any(prj => prj.Key == p.Key))
+                        throw new Exception("Project with the same Key already exists.");
+
                     p.IsImportedFromJira = true;
 
                     var user = await _context.User

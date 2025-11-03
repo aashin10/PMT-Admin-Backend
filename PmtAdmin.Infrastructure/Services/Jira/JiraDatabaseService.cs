@@ -40,6 +40,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 .Select(x => new Status { StatusName = x })
                 .ToList();
 
+            int PmRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Project Manager")?.Id ?? 1;
+            int MemberRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Developer")?.Id ?? 2;
+
             if (newStatuses.Any())
             {
                 _context.Statuses.AddRange(newStatuses);
@@ -60,6 +63,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     if (project.Project.Lead.AccountId == null)
                         throw new Exception("No Project Manager Assigned");
 
+                    if (_context.Projects.Any(prj => prj.Key == p.Key))
+                        throw new Exception("Project with the same Key already exists.");
+
                     p.IsImportedFromJira = true;
 
                     var user = await _context.User
@@ -74,7 +80,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     }
 
                     p.ProjectManagerId = user.Id;
-                    p.ProjectManagerRoleId = 1;
+                    p.ProjectManagerRoleId = PmRoleId;   // 2 for PM Role
 
                     _context.Projects.Add(p);
                     await _context.SaveChangesAsync();
@@ -89,7 +95,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             ProjectId = p.Id,
                             UserId = user.Id,
-                            RoleId = 1
+                            RoleId = PmRoleId //2 for PM Role
                         };
                         ProjectMembers.Add(user.Id);
                         await _context.ProjectMembers.AddAsync(pm);
@@ -128,7 +134,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     {
                                         ProjectId = p.Id,
                                         UserId = JiraIdToUserIdMappingScheme[u.AccountId],
-                                        RoleId = 2  //2 for Member Role
+                                        RoleId = MemberRoleId  //2 for Member Role
                                     };
 
                                     _context.ProjectMembers.Add(projectMember);
@@ -153,7 +159,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     var EpicEntityJiraEpicModelMappingScheme = new Dictionary<int, string>();
                     var IssueEntityJiraIssueModelMappingScheme = new Dictionary<int, string>();
                     var SprintEntityJiraSprintModelMappingScheme = new Dictionary<int, string>();
-                    var IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, string>();
+                    var IssueEntityStatusJiraIssueStatusMappingScheme = new Dictionary<int, int>();
 
                     foreach (var board in project.Boards)
                     {
@@ -246,6 +252,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
 
                                     boardcolumn.StatusId = statusToUse.Id;
+
                                     await _context.SaveChangesAsync();
 
                                     var boardColumnMapping = new BoardBoardColumnMap
@@ -255,8 +262,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     };
 
                                     _context.BoardBoardColumnMaps.Add(boardColumnMapping);
-                                    IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id.ToString();
+                                    IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id] = statusToUse.Id;
                                     await _context.SaveChangesAsync();
+                                }
+                                else
+                                {
+                                    i.StatusId = IssueEntityStatusJiraIssueStatusMappingScheme[issue.Status.Id];
                                 }
 
                                 if (issue.Epic != null)
@@ -285,7 +296,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             {
                                                 ProjectId = p.Id,
                                                 UserId = existingUser.Id,
-                                                RoleId = 2  //2 for Member Role
+                                                RoleId = MemberRoleId  //2 for Member Role
                                             };
 
                                             await _context.ProjectMembers.AddAsync(projectMember);
@@ -330,7 +341,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             {
                                                 ProjectId = p.Id,
                                                 UserId = existingUser.Id,
-                                                RoleId = 2  //2 for Member Role
+                                                RoleId = MemberRoleId  //2 for Member Role
                                             };
 
                                             await _context.ProjectMembers.AddAsync(projectMember);
@@ -348,6 +359,14 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                                 i.Labels = JsonConvert.SerializeObject(issue.Labels);
                                 i.Status = null;
+
+                                i.StartDate = issue.StartDate.HasValue
+                                    ? new DateTimeOffset(issue.StartDate.Value.ToUniversalTime(), TimeSpan.Zero)
+                                    : null;
+
+                                i.DueDate = issue.DueDate.HasValue
+                                    ? new DateTimeOffset(issue.DueDate.Value.ToUniversalTime(), TimeSpan.Zero)
+                                    : null;
 
                                 issues.Add(i);
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();

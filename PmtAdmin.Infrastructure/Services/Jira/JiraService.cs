@@ -100,6 +100,45 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     {
                         var fields = item["fields"];
 
+                        JiraSprint sprint = null;
+
+                        // Jira Sprint field. Usually array. Sometimes string.
+                        var sprintToken = fields?["customfield_10020"] ?? fields?["sprint"];
+
+                        if (sprintToken != null)
+                        {
+                            // array format
+                            if (sprintToken.Type == JTokenType.Array && sprintToken.HasValues)
+                            {
+                                sprint = sprintToken.First.ToObject<JiraSprint>();
+                            }
+                            // object format
+                            else if (sprintToken.Type == JTokenType.Object)
+                            {
+                                sprint = sprintToken.ToObject<JiraSprint>();
+                            }
+                            // string format "id=1,name=...,state=ACTIVE,..."
+                            else if (sprintToken.Type == JTokenType.String)
+                            {
+                                var s = sprintToken.ToString();
+                                var obj = new JObject();
+                                foreach (var p in s.Split(','))
+                                {
+                                    var kv = p.Split('=', 2);
+                                    if (kv.Length == 2) obj[kv[0]] = kv[1];
+                                }
+                                sprint = obj.ToObject<JiraSprint>();
+                            }
+                        }
+
+                        DateTime? ParseDate(JToken t)
+                        {
+                            if (t == null) return null;
+                            var s = t.ToString();
+                            if (string.IsNullOrWhiteSpace(s)) return null;
+                            return DateTime.TryParse(s, out var dt) ? dt : null;
+                        }
+
                         var issue = new JiraIssue
                         {
                             Id = item["id"] != null ? int.Parse(item["id"].ToString()) : 0,
@@ -111,12 +150,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             StoryPoints = int.TryParse(fields?["customfield_10016"]?.ToString(), out var sp) ? sp : 0,
                             Creator = fields?["creator"]?.ToObject<JiraUser>(),
                             Description = fields?["description"]?.ToString(),
-                            ////DueDate = fields?["duedate"] != null
-                            //    ? DateTime.Parse(fields["duedate"]!.ToString())
-                            //    : (DateTime?)null,
-                            //StartDate = fields?["customfield_10015"] != null
-                            //    ? DateTime.Parse(fields["customfield_10015"]!.ToString())
-                            //    : (DateTime?)null,
+                            DueDate = ParseDate(fields?["duedate"]),
+                            StartDate = ParseDate(fields?["customfield_10015"]),
                             Comment = fields?["comment"]?["comments"]?.ToObject<List<JiraComment>>(),
                             //Team = fields?["customfield_10001"]?.ToObject<JiraTeam>(),
                             UpdatedAt = fields?["updated"] != null
@@ -125,7 +160,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             IssueType = fields?["issuetype"]?.ToObject<JiraIssueType>(),
                             Status = fields?["status"]?["statusCategory"]?.ToObject<JiraStatus>(),
                             Priority = fields?["priority"]?.ToObject<JiraPriority>(),
-                            Sprint = fields?["sprint"]?.ToObject<JiraSprint>(),
+                            Sprint = sprint,
                             Epic = fields?["parent"]?.ToObject<JiraEpic>()
                         };
 

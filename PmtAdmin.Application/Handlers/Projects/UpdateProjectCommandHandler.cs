@@ -87,7 +87,7 @@ namespace PmtAdmin.Application.Handlers.Projects
                         return ApiResponse<ProjectDTO>.Fail("Metadata must be a valid JSON string.");
                     }
                 }
-                else
+                else if (request.Metadata == string.Empty)
                 {
                     project.Metadata = null;
                 }

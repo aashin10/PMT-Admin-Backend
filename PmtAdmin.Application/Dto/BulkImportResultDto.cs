@@ -10,10 +10,12 @@ namespace PmtAdmin.Application.Dto
     {
         public int SuccessCount { get; set; }
         public int DuplicateCount { get; set; }
+        public int SkippedCount { get; set; }
         public int ErrorCount { get; set; }
         public int TotalProcessed { get; set; }
         public List<string> Errors { get; set; } = new List<string>();
         public List<string> Duplicates { get; set; } = new List<string>();
+        public List<string> Skipped { get; set; } = new List<string>();
         public List<UserDto> CreatedUsers { get; set; } = new List<UserDto>();
     }
 }

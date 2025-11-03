@@ -23,5 +23,6 @@ namespace PmtAdmin.Domain.Persistance
             string? type,
             string? status,
             string? searchTerm);
+       
     }
 }

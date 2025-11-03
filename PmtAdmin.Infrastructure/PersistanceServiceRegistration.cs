@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.MappingProfiles;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Domain.Persistance.Dashboard;
@@ -10,11 +11,7 @@ using PmtAdmin.Infrastructure.Repositories;
 using PmtAdmin.Infrastructure.Repositories.Dashboard;
 using PmtAdmin.Infrastructure.Repositories.Settings;
 using PmtAdmin.Infrastructure.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PmtAdmin.Infrastructure.Services.Jira;
 
 namespace PmtAdmin.Infrastructure
 {
@@ -31,11 +28,25 @@ namespace PmtAdmin.Infrastructure
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
+            services.AddScoped<IDuRepository, DeliveryUnitRepository>();
+
             services.AddScoped<IPasswordHashingService, PasswordHashingService>();
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
+            services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
+            services.AddScoped<IBoardRepository, BoardRepository>();
 
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPermissionRepository, PermissionRepository>();
+            services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
+            services.AddScoped<IJiraService, JiraService>();
 
             return services;
         }

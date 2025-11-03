@@ -18,13 +18,13 @@ namespace PmtAdmin.Domain.Entities
         [Required]
         [MaxLength(150)]
         [Column("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Column("description")]
         public string? Description { get; set; }
 
         // Navigation properties
-        public ICollection<RolePermission> RolePermissions { get; set; }
+        public ICollection<RolePermission>? RolePermissions { get; set; }
     }
 
 }

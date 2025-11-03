@@ -38,6 +38,15 @@ namespace PmtAdmin.Application.Handlers.Users
 
             foreach (var userDto in request.Users)
             {
+                // Skip users with "Suspended" status
+                if (!string.IsNullOrWhiteSpace(userDto.Status) &&
+                    userDto.Status.Trim().Equals("Suspended", StringComparison.OrdinalIgnoreCase))
+                {
+                    result.Skipped.Add($"Suspended user skipped: {userDto.Name} ({userDto.Email})");
+                    result.SkippedCount++;
+                    continue;
+                }
+
                 // Validate required fields
                 if (string.IsNullOrWhiteSpace(userDto.Name))
                 {
@@ -46,28 +55,24 @@ namespace PmtAdmin.Application.Handlers.Users
                     continue;
                 }
 
-                if (string.IsNullOrWhiteSpace(userDto.Email))
+                // Validate email format if provided
+                if (!string.IsNullOrWhiteSpace(userDto.Email))
                 {
-                    result.Errors.Add($"Email is required for user: {userDto.Name}");
-                    result.ErrorCount++;
-                    continue;
-                }
+                    if (!IsValidEmail(userDto.Email))
+                    {
+                        result.Errors.Add($"Invalid email format: {userDto.Email}");
+                        result.ErrorCount++;
+                        continue;
+                    }
 
-                // Validate email format
-                if (!IsValidEmail(userDto.Email))
-                {
-                    result.Errors.Add($"Invalid email format: {userDto.Email}");
-                    result.ErrorCount++;
-                    continue;
-                }
-
-                // Check if user with this email already exists
-                var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
-                if (existingUserByEmail != null)
-                {
-                    result.Duplicates.Add($"Email already exists: {userDto.Email}");
-                    result.DuplicateCount++;
-                    continue;
+                    // Check if user with this email already exists
+                    var existingUserByEmail = await _userRepository.GetByEmailAsync(userDto.Email);
+                    if (existingUserByEmail != null)
+                    {
+                        result.Duplicates.Add($"Email already exists: {userDto.Email}");
+                        result.DuplicateCount++;
+                        continue;
+                    }
                 }
 
                 // Check if Jira ID already exists (if provided)
@@ -82,13 +87,13 @@ namespace PmtAdmin.Application.Handlers.Users
                     }
                 }
 
-                // Infer type from email domain
-                var type = InferTypeFromEmail(userDto.Email);
+                // Infer type from email domain (null if no email)
+                var type = string.IsNullOrEmpty(userDto.Email) ? null : InferTypeFromEmail(userDto.Email);
 
                 // Map Status to IsActive boolean
                 // "Active" -> true
                 // "Inactive" -> false
-                // "Suspended" -> false (convert to Inactive)
+                // "Suspended" users are already skipped above
                 bool isActive = MapStatusToIsActive(userDto.Status);
 
                 // Extract name parts
@@ -104,13 +109,13 @@ namespace PmtAdmin.Application.Handlers.Users
                 // Create user entity
                 var user = new User
                 {
-                    Email = userDto.Email,
+                    Email = string.IsNullOrWhiteSpace(userDto.Email) ? null : userDto.Email,
                     Name = userDto.Name,
                     PasswordHash = passwordHash,
                     AvatarUrl = avatarUrl,
                     IsActive = isActive,
                     IsSuperAdmin = false,
-                    JiraId = userDto.JiraId,
+                    JiraId = string.IsNullOrWhiteSpace(userDto.JiraId) ? null : userDto.JiraId,
                     Type = type,
                     CreatedBy = request.CreatedBy,
                     CreatedAt = DateTime.UtcNow,
@@ -181,7 +186,7 @@ namespace PmtAdmin.Application.Handlers.Users
 
             // "Active" -> true
             // "Inactive" -> false
-            // "Suspended" -> false (convert to Inactive)
+            // Note: "Suspended" users are skipped before reaching this method
             return normalizedStatus.Equals("Active", StringComparison.OrdinalIgnoreCase);
         }
 
@@ -205,6 +210,11 @@ namespace PmtAdmin.Application.Handlers.Users
                 $"Processed {result.TotalProcessed} users",
                 $"Successfully imported: {result.SuccessCount}"
             };
+
+            if (result.SkippedCount > 0)
+            {
+                messageParts.Add($"Suspended users skipped: {result.SkippedCount}");
+            }
 
             if (result.DuplicateCount > 0)
             {

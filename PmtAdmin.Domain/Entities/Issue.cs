@@ -31,6 +31,9 @@ namespace PmtAdmin.Domain.Entities
         [Column("parent_issue_id")]
         public Guid? ParentIssueId { get; set; }
 
+        [Column("attachment_url")]
+        public string? AttachmentUrl { get; set; }
+
         [Required]
         [Column("summary")]
         public string Summary { get; set; }
@@ -63,7 +66,7 @@ namespace PmtAdmin.Domain.Entities
         public int StoryPoints { get; set; } = 0;
 
         [Column("labels", TypeName = "jsonb")]
-        public string Labels { get; set; } = "[]";
+        public string? Labels { get; set; } = "[]";
 
         [Column("start_date")]
         public DateTime? StartDate { get; set; }

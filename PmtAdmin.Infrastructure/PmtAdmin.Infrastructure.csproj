@@ -23,4 +23,8 @@
 	<ProjectReference Include="..\PmtAdmin.Application\PmtAdmin.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations_OLD\" />
+  </ItemGroup>
+
 </Project>

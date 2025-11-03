@@ -3,60 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\auth\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\auth\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\dto\\settingsdto\\superadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\settingsdto\\superadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\dto\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\settings\\updatesuperadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\settings\\updatesuperadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\settings\\createsuperadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\settings\\createsuperadmincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\persistanceserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\persistanceserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\auth\\refreshtokencommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\auth\\refreshtokencommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\auth\\logoutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\auth\\logoutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\services\\passwordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\passwordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\auth\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\auth\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.domain\\services\\ipasswordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\services\\ipasswordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\auth\\logoutcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\auth\\logoutcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\auth\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\auth\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.domain\\services\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\services\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.domain\\persistance\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\persistance\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\dto\\auth\\refreshtokenrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\auth\\refreshtokenrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\common\\behaviour\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\common\\behaviour\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\auth\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\auth\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\context\\seeding\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\seeding\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\controllers\\jiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\jiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\controllers\\dashboard\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\controllers\\dashboard\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\auth\\logoutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\auth\\logoutcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\settings\\updatesuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\controllers\\settings\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,28 +115,8 @@
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\pmtadmin.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\services\\passwordhashingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\passwordhashingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.domain\\services\\ipasswordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\services\\ipasswordhashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\command\\auth\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\command\\auth\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\dto\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\auth\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\dto\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\dto\\auth\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.application\\handlers\\settings\\getsuperadminqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -262,10 +262,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251030041327_newtestdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\context\\seeding\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\seeding\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\aswin.raj\\documents\\project management backend\\pmt-admin-backend\\pmtadmin.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -340,293 +336,176 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RefreshTokenCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\RefreshTokenCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Auth\\RefreshTokenCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\RefreshTokenCommandHandler.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Auth\\RefreshTokenCommandHandler.cs*",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:56:48.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PersistanceServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:34:40.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RefreshTokenRepository.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\RefreshTokenRepository.cs*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\RefreshTokenRepository.cs*",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwAIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:36:16.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAqwFoAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:22:38.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAFgAAAAAAAAAAAASwE4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:37:37.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LogoutCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:54:15.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs*",
-              "ViewState": "AgIAAGMAAAAAAAAAAAASwGwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:53:38.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogoutCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\LogoutCommand.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Auth\\LogoutCommand.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\LogoutCommand.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Command\\Auth\\LogoutCommand.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:51:32.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\LoginCommand.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Auth\\LoginCommand.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\LoginCommand.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Command\\Auth\\LoginCommand.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:50:36.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IJwtTokenService.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Services\\IJwtTokenService.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Services\\IJwtTokenService.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Services\\IJwtTokenService.cs*",
-              "RelativeToolTip": "PmtAdmin.Domain\\Services\\IJwtTokenService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:20:55.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IRefreshTokenRepository.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Persistance\\IRefreshTokenRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IRefreshTokenRepository.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Persistance\\IRefreshTokenRepository.cs*",
-              "RelativeToolTip": "PmtAdmin.Domain\\Persistance\\IRefreshTokenRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:57:53.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RefreshTokenRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\RefreshTokenRequestDto.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\Auth\\RefreshTokenRequestDto.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\RefreshTokenRequestDto.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Dto\\Auth\\RefreshTokenRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:49:12.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ValidationBehaviour.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:18:12.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:52:29.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UpdateSuperAdminCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:52:18.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DeleteSuperAdminCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:52:17.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:03:58.531Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "CreateSuperAdminCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwAYAAAAiAAAAAAAAAA==",
+              "Title": "JiraController.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\JiraController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\JiraController.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\JiraController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\JiraController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:52:07.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T04:25:17.6Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SuperAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T03:47:20.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ProjectMember.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAzwC4AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:04:51.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
               "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAqwEcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-10-24T05:00:26.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PmtAdmin.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj*",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T12:35:08.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GetAllProjectStatusQueryHandlerTests.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
-              "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAcwAoAAAASAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Program.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Program.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:56:48.127Z",
+              "WhenOpened": "2025-10-28T05:19:17.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 0,
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Auth\\LoginCommandHandler.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAswGsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T06:17:31.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateSuperAdminCommand.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T06:16:58.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SuperAdminDto.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T06:17:26.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateSuperAdminCommand.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T06:17:02.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T17:48:31.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PasswordHashService.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\PasswordHashService.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\PasswordHashService.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\PasswordHashService.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\PasswordHashService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T08:51:20.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwAEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:34:53.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersistanceServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAswE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:42:38.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:37:32.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IPasswordHashService.cs",
               "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Services\\IPasswordHashService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Services\\IPasswordHashService.cs",
@@ -639,7 +518,165 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RefreshTokenCommand.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T17:52:02.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:52:29.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ValidationBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Common\\Behaviour\\ValidationBehaviour.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:35:01.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAPkCAAAAAAAAAAAswAsDAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T04:38:08.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LogoutCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Auth\\LogoutCommandHandler.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T17:54:15.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DatabaseSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
+              "ViewState": "AgIAANABAAAAAAAAAAAYwNoBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T04:09:37.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdateSuperAdminCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:52:18.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DeleteSuperAdminCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:52:17.088Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 22,
+              "Title": "CreateSuperAdminCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:52:07.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SuperAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T03:47:20.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProjectMember.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAzwC4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:04:51.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PmtAdmin.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-28T12:35:08.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetAllProjectStatusQueryHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAcwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T04:56:48.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "PmtAdmin.Api.csproj",
               "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
@@ -647,51 +684,11 @@
               "RelativeToolTip": "PmtAdmin.Api\\PmtAdmin.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-22T04:05:12.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T04:05:12.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PasswordHashingService.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\PasswordHashingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T08:51:20.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "RefreshTokenCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Command\\Auth\\RefreshTokenCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:52:02.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Dto\\Auth\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:48:31.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\Auth\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\Auth\\LoginRequestDto.cs",
@@ -699,8 +696,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Dto\\Auth\\LoginRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:47:18.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T17:47:18.617Z"
             },
             {
               "$type": "Document",
@@ -712,8 +708,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\GetSuperAdminQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:18:04.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T16:18:04.09Z"
             },
             {
               "$type": "Document",
@@ -725,21 +720,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Dashboard\\GetProjectActivityQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:18:01.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Program.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Program.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:19:17.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T16:18:01.836Z"
             },
             {
               "$type": "Document",
@@ -751,8 +732,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T16:17:55.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T16:17:55.802Z"
             },
             {
               "$type": "Document",
@@ -764,8 +744,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Services\\IPasswordHashingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T11:36:19.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-01T11:36:19.538Z"
             },
             {
               "$type": "Document",
@@ -777,8 +756,7 @@
               "RelativeToolTip": "PmtAdmin.Application\\Wrappers\\ApiResponse.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T07:10:41.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T07:10:41.953Z"
             },
             {
               "$type": "Document",
@@ -788,10 +766,9 @@
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T08:58:04.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T08:58:04.576Z"
             },
             {
               "$type": "Document",
@@ -801,10 +778,9 @@
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
               "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
               "RelativeToolTip": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-30T06:50:54.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T06:50:54.444Z"
             },
             {
               "$type": "Document",
@@ -840,8 +816,7 @@
               "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\Roles\\UpdateRoleCommandHandlerTest.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAkwEMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:00:56.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T06:00:56.917Z"
             },
             {
               "$type": "Document",
@@ -1013,18 +988,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "20251031035655_ForProjects.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
-              "ViewState": "AgIAAOsFAAAAAAAAAAAswP0FAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T03:56:56.175Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 53,
               "Title": "ProjectDTO.cs",
               "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Dto\\ProjectDTO.cs",
@@ -1157,15 +1120,195 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "DatabaseSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 66,
+              "Title": "GetAllPermissionsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T04:09:37.087Z"
+              "WhenOpened": "2025-10-29T11:33:22.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:40:33.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "GetAllPermissionsQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T11:36:02.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "PermissionProfile.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T11:37:11.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "RoleProfile.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T16:13:56.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "PermissionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T17:24:21.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ApplicationServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T09:00:38.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "GetRoleByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:14:59.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "PmtAdmin.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
+              "RelativeToolTip": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-28T12:34:43.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "GetRolesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRolesQuery.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRolesQuery.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRolesQuery.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetRolesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T09:31:31.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "GetAllUsersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T09:52:27.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "GetUserByIdQuery.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T09:47:03.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAqwKcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:53:54.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "DeleteRoleCommand.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T08:57:11.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "RolePermission.cs",
+              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
+              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
+              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T05:04:10.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "20251031035655_ForProjects.cs",
+              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
+              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Infrastructure\\Migrations\\20251031035655_ForProjects.cs",
+              "ViewState": "AgIAAOsFAAAAAAAAAAAswP0FAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T03:56:56.175Z"
             },
             {
               "$type": "Document",
@@ -1178,187 +1321,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T04:13:27.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "GetAllPermissionsQuery.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Query\\Permissions\\GetAllPermissionsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:33:22.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T10:40:33.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "GetAllPermissionsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:36:02.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "PermissionProfile.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\MappingProfiles\\PermissionProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:37:11.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "RoleProfile.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\MappingProfiles\\RoleProfile.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T16:13:56.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "PermissionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Repositories\\PermissionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:24:21.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "ApplicationServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\ApplicationServiceRegistration.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\ApplicationServiceRegistration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:00:38.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "GetRoleByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetRoleByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:14:59.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "PmtAdmin.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\PmtAdmin.Application.csproj*",
-              "RelativeToolTip": "PmtAdmin.Application\\PmtAdmin.Application.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T12:34:43.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "GetRolesQuery.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRolesQuery.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetRolesQuery.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetRolesQuery.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetRolesQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T09:31:31.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "GetAllUsersQuery.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:52:27.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "GetUserByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Query\\GetUserByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:47:03.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "CreateUserCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAqwKcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:53:54.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "DeleteRoleCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Command\\DeleteRoleCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T08:57:11.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "RolePermission.cs",
-              "DocumentMoniker": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
-              "ToolTip": "C:\\Users\\aswin.raj\\Documents\\Project Management Backend\\PMT-Admin-Backend\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
-              "RelativeToolTip": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:04:10.972Z"
             }
           ]
         }

@@ -777,7 +777,7 @@ namespace PmtAdmin.Infrastructure.Context
             // ============================================
             // SEED DATA
             // ============================================
-            DatabaseSeeder.SeedData(modelBuilder);
+            //DatabaseSeeder.SeedData(modelBuilder);
         }
     }
 }

@@ -83,8 +83,8 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                 {
                     UserId = user.Id,
                     Token = refreshToken,
-                    ExpiresAt = DateTime.UtcNow.AddDays(refreshTokenExpirationDays),
-                    CreatedAt = DateTime.UtcNow
+                    ExpiresAt = DateTimeOffset.UtcNow.AddDays(refreshTokenExpirationDays),
+                    CreatedAt = DateTimeOffset.UtcNow
                 };
 
                 await _refreshTokenRepository.CreateAsync(refreshTokenEntity);
@@ -103,10 +103,10 @@ namespace BACKEND_CQRS.Application.Handler.Auth
                     Name = user.Name,
                     AccessToken = accessToken,
                     RefreshToken = refreshToken,
-                    AccessTokenExpires = DateTime.UtcNow.AddMinutes(accessTokenExpirationMinutes),
+                    AccessTokenExpires = DateTimeOffset.UtcNow.AddMinutes(accessTokenExpirationMinutes),
                     RefreshTokenExpires = refreshTokenEntity.ExpiresAt,
                     IsActive = user.IsActive,
-                   // IsSuperAdmin = user.IsSuperAdmin ?? false
+                   IsSuperAdmin = user.IsSuperAdmin
                 };
 
                 return ApiResponse<LoginResponseDto>.Success(response, "Login successful");

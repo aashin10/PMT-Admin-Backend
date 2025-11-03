@@ -4,6 +4,7 @@ using PmtAdmin.Application.Command.Settings;
 using PmtAdmin.Application.Dto.SettingsDTO;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Persistance.Settings;
+using PmtAdmin.Application.CustomException;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace PmtAdmin.Application.Handlers.Settings
             var existingUser = await _superAdminRepository.GetByIdAsync(request.Id);
 
             if (existingUser == null)
-                return ApiResponse<SuperAdminDto>.Fail("SuperAdmin not found");
+                return ApiResponse<SuperAdminDto>.NotFound("SuperAdmin not found");
 
             // Check if the user is actually a super admin
             if (!existingUser.IsSuperAdmin)
@@ -54,12 +55,19 @@ namespace PmtAdmin.Application.Handlers.Settings
             existingUser.UpdatedBy = request.UpdatedBy; // If you want to track who updated it
 
             // Save changes
-            var updatedUser = await _superAdminRepository.UpdateAsync(existingUser);
+            try
+            {
+                var updatedUser = await _superAdminRepository.UpdateAsync(existingUser);
 
-            // Map to DTO
-            var dto = _mapper.Map<SuperAdminDto>(updatedUser);
+                // Map to DTO
+                var dto = _mapper.Map<SuperAdminDto>(updatedUser);
 
-            return ApiResponse<SuperAdminDto>.Success(dto, "SuperAdmin updated successfully");
+                return ApiResponse<SuperAdminDto>.Success(dto, "SuperAdmin updated successfully");
+            }
+            catch (DuplicateEntryException dex)
+            {
+                return ApiResponse<SuperAdminDto>.Fail(dex.Message);
+            }
         }
     }
 }

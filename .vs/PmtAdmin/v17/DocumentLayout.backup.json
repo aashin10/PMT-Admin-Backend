@@ -1,5 +1,12 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\nishan\\pmt-admin-backend\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+=======
   "WorkspaceRootPath": "C:\\.NetWorkspace\\PMT-.NET\\",
   "Documents": [
     {
@@ -309,6 +316,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
     }
   ],
   "DocumentGroupContainers": [
@@ -321,6 +329,38 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+<<<<<<< HEAD
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T05:32:22.773Z",
+=======
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "GetProjectByIdQueryHandlerTests.cs",
@@ -1318,6 +1358,7 @@
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T05:04:10.972Z",
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
               "EditorCaption": ""
             }
           ]

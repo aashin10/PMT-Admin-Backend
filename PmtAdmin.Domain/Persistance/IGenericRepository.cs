@@ -13,6 +13,7 @@ namespace PmtAdmin.Domain.Persistance
         Task<T> CreateAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task DeleteAsync(T entity);
+        Task SaveChangesAsync();
         IQueryable<T> GetQueryable();
     }
 }

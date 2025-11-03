@@ -1,7 +1,7 @@
 ﻿using PmtAdmin.Api.Middleware;
 using PmtAdmin.Application;
 using PmtAdmin.Infrastructure;
-using PmtAdmin.Infrastructure.Context.Seeding;
+//using PmtAdmin.Infrastructure.Context.Seeding;
 
 
 var builder = WebApplication.CreateBuilder(args);

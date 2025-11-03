@@ -4,11 +4,6 @@ using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Query.Projects;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Projects
 {

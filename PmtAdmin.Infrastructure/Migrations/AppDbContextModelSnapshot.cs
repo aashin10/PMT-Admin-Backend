@@ -63,18 +63,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("activity_log");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000046"),
-                            Action = "CREATE",
-                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            Description = "Project created successfully",
-                            EntityId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            EntityType = "Project",
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.AuditLog", b =>
@@ -124,19 +112,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("EntityType", "EntityId");
 
                     b.ToTable("audit_logs");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            Action = "USER_LOGIN",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Details = "{\"ip\": \"192.168.1.1\", \"userAgent\": \"Mozilla/5.0\"}",
-                            EntityId = 1,
-                            EntityType = "User",
-                            IpAddress = "192.168.1.1",
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Board", b =>
@@ -668,155 +643,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("ProjectId");
 
                     b.ToTable("custom_fields");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000049"),
-                            Name = "Budget",
-                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            Value = "$500,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000050"),
-                            Name = "Client Priority",
-                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            Value = "High"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000051"),
-                            Name = "Contract Type",
-                            ProjectId = new Guid("11111111-1111-1111-1111-111111111111"),
-                            Value = "Fixed Price"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000052"),
-                            Name = "Budget",
-                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
-                            Value = "$750,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000053"),
-                            Name = "Client Priority",
-                            ProjectId = new Guid("22222222-2222-2222-2222-222222222222"),
-                            Value = "Medium"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000054"),
-                            Name = "Budget",
-                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
-                            Value = "$300,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000055"),
-                            Name = "Technology Stack",
-                            ProjectId = new Guid("33333333-3333-3333-3333-333333333333"),
-                            Value = ".NET Core, React"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000056"),
-                            Name = "Budget",
-                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
-                            Value = "$1,000,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000057"),
-                            Name = "Compliance Required",
-                            ProjectId = new Guid("44444444-4444-4444-4444-444444444444"),
-                            Value = "GDPR, HIPAA"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000058"),
-                            Name = "Budget",
-                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
-                            Value = "$450,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000059"),
-                            Name = "Client Priority",
-                            ProjectId = new Guid("55555555-5555-5555-5555-555555555555"),
-                            Value = "Critical"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000060"),
-                            Name = "Budget",
-                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
-                            Value = "$600,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000061"),
-                            Name = "Region",
-                            ProjectId = new Guid("66666666-6666-6666-6666-666666666666"),
-                            Value = "APAC"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000062"),
-                            Name = "Budget",
-                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
-                            Value = "$850,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000063"),
-                            Name = "Industry",
-                            ProjectId = new Guid("77777777-7777-7777-7777-777777777777"),
-                            Value = "Healthcare"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000064"),
-                            Name = "Budget",
-                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
-                            Value = "$400,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000065"),
-                            Name = "Risk Level",
-                            ProjectId = new Guid("88888888-8888-8888-8888-888888888888"),
-                            Value = "Low"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000066"),
-                            Name = "Budget",
-                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
-                            Value = "$950,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000067"),
-                            Name = "Offshore Team",
-                            ProjectId = new Guid("99999999-9999-9999-9999-999999999999"),
-                            Value = "Yes"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000068"),
-                            Name = "Budget",
-                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
-                            Value = "$700,000"
-                        },
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000069"),
-                            Name = "Maintenance Period",
-                            ProjectId = new Guid("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"),
-                            Value = "12 months"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.DeliveryUnit", b =>
@@ -876,118 +702,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("delivery_units");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "AUTO",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Automotive Solutions",
-                            DuHeadEmail = "pm1@company.com",
-                            DuHeadName = "Project Manager 1",
-                            IsActive = true,
-                            Name = "Automotive"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "TNT",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Travel & Transportation Solutions",
-                            DuHeadEmail = "pm2@company.com",
-                            DuHeadName = "Project Manager 2",
-                            IsActive = true,
-                            Name = "Travel & Transportation"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "CONST",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Construction Solutions",
-                            DuHeadEmail = "pm1@company.com",
-                            DuHeadName = "Project Manager 1",
-                            IsActive = true,
-                            Name = "Construction Solutions"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "DCS",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Digital & Commerce Solutions",
-                            DuHeadEmail = "pm2@company.com",
-                            DuHeadName = "Project Manager 2",
-                            IsActive = true,
-                            Name = "Digital & Commerce Solutions"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "RWA",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Retail & Warehouse Automation Solutions",
-                            DuHeadEmail = "pm1@company.com",
-                            DuHeadName = "Project Manager 1",
-                            IsActive = true,
-                            Name = "Retail & Warehouse Automation Solutions"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "DAI",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Data & AI Solutions",
-                            DuHeadEmail = "pm2@company.com",
-                            DuHeadName = "Project Manager 2",
-                            IsActive = true,
-                            Name = "Data & AI Solutions"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "EDS",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Experience Design Studio",
-                            DuHeadEmail = "designer1@company.com",
-                            DuHeadName = "Designer 1",
-                            IsActive = true,
-                            Name = "Experience Design Studio"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Code = "DTS",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Digital Technology Services",
-                            DuHeadEmail = "pm1@company.com",
-                            DuHeadName = "Project Manager 1",
-                            IsActive = true,
-                            Name = "Digital Technology Services"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Code = "IOT",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "IOT & Embedded Solutions",
-                            DuHeadEmail = "pm2@company.com",
-                            DuHeadName = "Project Manager 2",
-                            IsActive = true,
-                            Name = "IOT & Embedded Solutions"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Code = "VFS",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "VantX Financial Solutions",
-                            DuHeadEmail = "pm1@company.com",
-                            DuHeadName = "Project Manager 1",
-                            IsActive = true,
-                            Name = "VantX Financial Solutions"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Epic", b =>
@@ -1248,20 +962,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("StartedBy");
 
                     b.ToTable("import_jobs");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            FinishedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Source = "Jira Cloud",
-                            StartedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            StartedBy = 1,
-                            Status = "completed",
-                            Summary = "{\"imported\": 50, \"failed\": 2}",
-                            Type = "JIRA"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Issue", b =>
@@ -1291,7 +991,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("description");
 
-                    b.Property<DateTime?>("DueDate")
+                    b.Property<DateTimeOffset?>("DueDate")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("due_date");
 
@@ -1312,16 +1012,14 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("parent_issue_id");
 
                     b.Property<string>("Priority")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                        .HasColumnType("text")
                         .HasColumnName("priority");
 
                     b.Property<Guid>("ProjectId")
                         .HasColumnType("uuid")
                         .HasColumnName("project_id");
 
-                    b.Property<int?>("ReporterId")
+                    b.Property<int>("ReporterId")
                         .HasColumnType("integer")
                         .HasColumnName("reporter_id");
 
@@ -1329,36 +1027,29 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("sprint_id");
 
-                    b.Property<DateTime?>("StartDate")
+                    b.Property<DateTimeOffset?>("StartDate")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("start_date");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                    b.Property<int?>("StatusId")
+                        .HasColumnType("integer")
                         .HasColumnName("status");
 
-                    b.Property<int>("StoryPoints")
+                    b.Property<int?>("StoryPoints")
                         .HasColumnType("integer")
                         .HasColumnName("story_points");
 
-                    b.Property<string>("Summary")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("summary");
-
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("title");
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                        .HasColumnType("text")
                         .HasColumnName("type");
 
-                    b.Property<DateTimeOffset>("UpdatedAt")
+                    b.Property<DateTimeOffset?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
@@ -1384,6 +1075,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("ReporterId");
 
                     b.HasIndex("SprintId");
+
+                    b.HasIndex("StatusId");
 
                     b.HasIndex("UpdatedBy");
 
@@ -1757,19 +1450,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("issue_comments");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000044"),
-                            AuthorId = 4,
-                            Body = "This is a sample comment mentioning another user.",
-                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            CreatedBy = 4,
-                            IssueId = new Guid("00000000-0000-0000-0000-000000000029"),
-                            MentionId = 5,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.JiraAuthorization", b =>
@@ -1939,17 +1619,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("mentions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000045"),
-                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            CreatedBy = 4,
-                            IssueCommentsId = new Guid("00000000-0000-0000-0000-000000000044"),
-                            MentionUserId = 5,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Message", b =>
@@ -2045,17 +1714,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("RecipientId");
 
                     b.ToTable("notification");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("00000000-0000-0000-0000-000000000047"),
-                            ActorId = 1,
-                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            IsRead = false,
-                            Message = "You have been assigned to a new issue",
-                            RecipientId = 4
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Permission", b =>
@@ -2083,44 +1741,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("permissions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Create projects",
-                            Name = "project.create"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "View projects",
-                            Name = "project.read"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Update projects",
-                            Name = "project.update"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Delete projects",
-                            Name = "project.delete"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Manage teams",
-                            Name = "team.manage"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Description = "Manage users",
-                            Name = "user.manage"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Project", b =>
@@ -2442,7 +2062,7 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddedBy");
+                    b.HasIndex("ProjectId");
 
                     b.HasIndex("RoleId");
 
@@ -2711,29 +2331,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("project_statuses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Active project",
-                            Name = "Active"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Inactive project",
-                            Name = "Inactive"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Completed project",
-                            Name = "Completed"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ProjectTemplate", b =>
@@ -2865,50 +2462,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "System Administrator",
-                            Name = "Admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Project Manager",
-                            Name = "Project Manager"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Team Lead",
-                            Name = "Team Lead"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Software Developer",
-                            Name = "Developer"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "Quality Assurance Engineer",
-                            Name = "QA Engineer"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Description = "UI/UX Designer",
-                            Name = "Designer"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.RolePermission", b =>
@@ -2940,78 +2493,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("role_permissions");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 2,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 3,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 4,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 5,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 6,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 1,
-                            RoleId = 2
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 2,
-                            RoleId = 2
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 3,
-                            RoleId = 2
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            PermissionId = 5,
-                            RoleId = 2
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Sprint", b =>
@@ -3021,7 +2502,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("id");
 
-                    b.Property<DateTimeOffset>("CreatedAt")
+                    b.Property<DateTimeOffset?>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
@@ -3034,10 +2515,11 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("due_date");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.Property<Guid>("ProjectId")
+                    b.Property<Guid?>("ProjectId")
                         .HasColumnType("uuid")
                         .HasColumnName("project_id");
 
@@ -3050,9 +2532,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("start_date");
 
                     b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                        .HasColumnType("text")
                         .HasColumnName("status");
 
                     b.Property<decimal?>("StoryPoint")
@@ -3072,8 +2552,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("updated_by");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CreatedBy");
 
                     b.HasIndex("ProjectId");
 
@@ -3097,7 +2575,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "ACTIVE",
                             StoryPoint = 30m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 11, 42, 5, 652, DateTimeKind.Unspecified).AddTicks(5621), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 38, 57, 343, DateTimeKind.Unspecified).AddTicks(6979), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3112,7 +2590,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "PLANNED",
                             StoryPoint = 35m,
                             TeamId = 1,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 11, 42, 5, 652, DateTimeKind.Unspecified).AddTicks(8427), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 38, 57, 344, DateTimeKind.Unspecified).AddTicks(3949), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
@@ -3127,7 +2605,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                             Status = "COMPLETED",
                             StoryPoint = 25m,
                             TeamId = 2,
-                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 11, 42, 5, 652, DateTimeKind.Unspecified).AddTicks(8433), new TimeSpan(0, 0, 0, 0, 0))
+                            UpdatedAt = new DateTimeOffset(new DateTime(2025, 11, 2, 7, 38, 57, 344, DateTimeKind.Unspecified).AddTicks(3955), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -3248,6 +2726,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("StatusName")
+                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("status_name");
 
@@ -3287,7 +2766,7 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at");
 
@@ -3299,7 +2778,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("description");
 
-                    b.Property<bool>("IsActive")
+                    b.Property<bool?>("IsActive")
                         .HasColumnType("boolean")
                         .HasColumnName("is_active");
 
@@ -3313,8 +2792,7 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)")
+                        .HasColumnType("text")
                         .HasColumnName("name");
 
                     b.Property<Guid>("ProjectId")
@@ -3579,7 +3057,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .HasColumnName("deleted_by");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)")
                         .HasColumnName("email");
@@ -3639,108 +3116,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasIndex("UpdatedBy");
 
                     b.ToTable("users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "admin@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = true,
-                            Name = "System Admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "pm1@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Project Manager 1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "pm2@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Project Manager 2"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev1@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Developer 1"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev2@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Developer 2"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev3@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Developer 3"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "dev4@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Developer 4"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "qa1@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "QA Engineer 1"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "qa2@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "QA Engineer 2"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Email = "designer1@company.com",
-                            IsActive = true,
-                            IsDeleted = false,
-                            IsSuperAdmin = false,
-                            Name = "Designer 1"
-                        });
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.ActivityLog", b =>
@@ -3777,9 +3152,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                         .IsRequired();
 
                     b.HasOne("PmtAdmin.Domain.Entities.Team", "Team")
-                        .WithMany("Boards")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .WithMany()
+                        .HasForeignKey("TeamId");
 
                     b.HasOne("PmtAdmin.Domain.Entities.User", "Updater")
                         .WithMany()
@@ -3826,9 +3200,8 @@ namespace PmtAdmin.Infrastructure.Migrations
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Channel", b =>
                 {
                     b.HasOne("PmtAdmin.Domain.Entities.Team", "Team")
-                        .WithMany("Channels")
-                        .HasForeignKey("TeamId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany()
+                        .HasForeignKey("TeamId");
 
                     b.Navigation("Team");
                 });
@@ -3931,12 +3304,16 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.HasOne("PmtAdmin.Domain.Entities.User", "Reporter")
                         .WithMany()
                         .HasForeignKey("ReporterId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .IsRequired();
 
                     b.HasOne("PmtAdmin.Domain.Entities.Sprint", "Sprint")
-                        .WithMany("Issues")
-                        .HasForeignKey("SprintId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .WithMany()
+                        .HasForeignKey("SprintId");
+
+                    b.HasOne("PmtAdmin.Domain.Entities.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId");
 
                     b.HasOne("PmtAdmin.Domain.Entities.User", "Updater")
                         .WithMany()
@@ -3956,6 +3333,8 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("Reporter");
 
                     b.Navigation("Sprint");
+
+                    b.Navigation("Status");
 
                     b.Navigation("Updater");
                 });
@@ -4004,14 +3383,12 @@ namespace PmtAdmin.Infrastructure.Migrations
             modelBuilder.Entity("PmtAdmin.Domain.Entities.JiraAuthorization", b =>
                 {
                     b.HasOne("PmtAdmin.Domain.Entities.Project", "Project")
-                        .WithMany("JiraAuthorizations")
-                        .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany()
+                        .HasForeignKey("ProjectId");
 
                     b.HasOne("PmtAdmin.Domain.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Project");
 
@@ -4221,12 +3598,7 @@ namespace PmtAdmin.Infrastructure.Migrations
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Sprint", b =>
                 {
-                    b.HasOne("PmtAdmin.Domain.Entities.User", "Creator")
-                        .WithMany()
-                        .HasForeignKey("CreatedBy")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("PmtAdmin.Domain.Entities.Project", "Project")
+                    b.HasOne("PmtAdmin.Domain.Entities.Project", null)
                         .WithMany("Sprints")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -4273,8 +3645,7 @@ namespace PmtAdmin.Infrastructure.Migrations
                 {
                     b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Creator")
                         .WithMany()
-                        .HasForeignKey("CreatedBy")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("CreatedBy");
 
                     b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Lead")
                         .WithMany()
@@ -4289,8 +3660,11 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.HasOne("PmtAdmin.Domain.Entities.ProjectMember", "Updater")
                         .WithMany()
-                        .HasForeignKey("UpdatedBy")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("UpdatedBy");
+
+                    b.HasOne("PmtAdmin.Domain.Entities.User", null)
+                        .WithMany("LeadTeams")
+                        .HasForeignKey("UserId");
 
                     b.HasOne("PmtAdmin.Domain.Entities.User", null)
                         .WithMany("LeadTeams")
@@ -4405,8 +3779,6 @@ namespace PmtAdmin.Infrastructure.Migrations
 
                     b.Navigation("Issues");
 
-                    b.Navigation("JiraAuthorizations");
-
                     b.Navigation("ProjectMembers");
 
                     b.Navigation("Sprints");
@@ -4433,11 +3805,6 @@ namespace PmtAdmin.Infrastructure.Migrations
                     b.Navigation("ProjectMembers");
 
                     b.Navigation("RolePermissions");
-                });
-
-            modelBuilder.Entity("PmtAdmin.Domain.Entities.Sprint", b =>
-                {
-                    b.Navigation("Issues");
                 });
 
             modelBuilder.Entity("PmtAdmin.Domain.Entities.Status", b =>

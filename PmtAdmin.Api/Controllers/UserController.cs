@@ -1,5 +1,4 @@
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
@@ -65,6 +64,13 @@ namespace PmtAdmin.Api.Controllers
         public async Task<ApiResponse<UserDto>> UpdateUser(int id, [FromBody] UpdateUserCommand command)
         {
             command.Id = id;
+            var result = await _mediator.Send(command);
+            return result;
+        }
+
+        [HttpPost("jira-import")]
+        public async Task<ApiResponse<JiraCsvImportResultDto>> JiraUsersImportCsv([FromBody] JiraCsvImportUsersCommand command)
+        {
             var result = await _mediator.Send(command);
             return result;
         }

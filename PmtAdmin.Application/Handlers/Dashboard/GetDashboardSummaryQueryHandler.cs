@@ -29,23 +29,27 @@ namespace PmtAdmin.Application.Handlers.Dashboard
 
             if (projects == null || !projects.Any())
             {
-                return ApiResponse<DashboardSummaryDto>.Fail("No projects found.");
+                return ApiResponse<DashboardSummaryDto>.NotFound("No active projects found.");
             }
 
+            // Calculate totals from non-deleted projects only
             var totalProjects = projects.Count;
-            var inProgressCount = projects.Count(p => p.Status != null && p.Status.Name == "Active");
-            var onHoldCount = projects.Count(p => p.Status != null && p.Status.Name == "Inactive");
-            var completedCount = projects.Count(p => p.Status != null && p.Status.Name == "Completed");
-            var totalDeliveryUnits = deliveryUnits.Count;
+            var inProgressCount = projects.Count(p => p.Status?.Name == "Active");
+            var onHoldCount = projects.Count(p => p.Status?.Name == "Inactive");
+            var completedCount = projects.Count(p => p.Status?.Name == "Completed");
+            var totalDeliveryUnits = deliveryUnits?.Count ?? 0;
 
-            var projectStatusList = deliveryUnits.Select(du => new ProjectStatusDto
-            {
-                DeliveryUnit = du.Name,
-                InProgress = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status != null && p.Status.Name == "Active"),
-                OnHold = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status != null && p.Status.Name == "Inactive"),
-                Completed = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status != null && p.Status.Name == "Completed"),
-                Total = projects.Count(p => p.DeliveryUnitId == du.Id)
-            }).ToList();
+            var projectStatusList = (deliveryUnits ?? Enumerable.Empty<Domain.Entities.DeliveryUnit>())
+                .Select(du => new ProjectStatusDto
+                {
+                    DeliveryUnit = du.Name,
+                    InProgress = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status?.Name == "Active"),
+                    OnHold = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status?.Name == "Inactive"),
+                    Completed = projects.Count(p => p.DeliveryUnitId == du.Id && p.Status?.Name == "Completed"),
+                    Total = projects.Count(p => p.DeliveryUnitId == du.Id)
+                })
+                .Where(ps => ps.Total > 0) // Only include delivery units with active projects
+                .ToList();
 
             var dashboardDto = new DashboardSummaryDto
             {

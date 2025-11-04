@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\",
+=======
   "WorkspaceRootPath": "C:\\.NetWorkspace\\PMT-.NET\\",
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\.networkspace\\pmt-.net\\pmt_admin.test\\handlers\\permissions\\getallpermissionsqueryhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,6 +69,8 @@
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+<<<<<<< HEAD
+=======
     },
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -329,10 +335,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\.networkspace\\pmt-.net\\pmtadmin.infrastructure\\migrations\\20251102114207_forprojects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\migrations\\20251102114207_forprojects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
     }
   ],
   "DocumentGroupContainers": [
@@ -342,62 +345,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+<<<<<<< HEAD
+          "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
-              "Title": "GetAllPermissionsQueryHandlerTest.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Permissions\\GetAllPermissionsQueryHandlerTest.cs",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Permissions\\GetAllPermissionsQueryHandlerTest.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Permissions\\GetAllPermissionsQueryHandlerTest.cs",
-              "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\Permissions\\GetAllPermissionsQueryHandlerTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T03:37:45.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateProjectCommandHandlerTest.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Projects\\CreateProjectCommandHandlerTest.cs",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\CreateProjectCommandHandlerTest.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Projects\\CreateProjectCommandHandlerTest.cs",
-              "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\Projects\\CreateProjectCommandHandlerTest.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwD4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T16:23:49.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateProjectCommandHandlerTest.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Projects\\UpdateProjectCommandHandlerTest.cs",
-              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\UpdateProjectCommandHandlerTest.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\Pmt_Admin.Test\\Handlers\\Projects\\UpdateProjectCommandHandlerTest.cs",
-              "RelativeToolTip": "Pmt_Admin.Test\\Handlers\\Projects\\UpdateProjectCommandHandlerTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T16:17:31.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllPermissionsQueryHandler.cs",
-              "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "ToolTip": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Permissions\\GetAllPermissionsQueryHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAIwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:36:02.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\nishan\\PMT-Admin-Backend\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-03T05:32:22.773Z",
+=======
               "DocumentIndex": 4,
               "Title": "CreateProjectCommandHandler.cs",
               "DocumentMoniker": "C:\\.NetWorkspace\\PMT-.NET\\PmtAdmin.Application\\Handlers\\Projects\\CreateProjectCommandHandler.cs",
@@ -1349,7 +1335,9 @@
               "RelativeToolTip": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T05:04:10.972Z"
+              "WhenOpened": "2025-10-28T05:04:10.972Z",
+>>>>>>> 938bd65f48052b18a306b7c8598df319d8036b33
+              "EditorCaption": ""
             }
           ]
         }

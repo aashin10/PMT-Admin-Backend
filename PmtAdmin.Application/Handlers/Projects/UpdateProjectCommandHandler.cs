@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using PmtAdmin.Application.Command.Projects;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Wrappers;
@@ -28,12 +29,36 @@ namespace PmtAdmin.Application.Handlers.Projects
         {
             try
             {
-                // Get the existing project with all details
-                var project = await _projectRepository.GetProjectByIdWithDetailsAsync(request.Id);
+                // Validate required fields FIRST
+                if (string.IsNullOrWhiteSpace(request.Name))
+                    return ApiResponse<ProjectDTO>.Fail("Project name is required.");
+                if (string.IsNullOrWhiteSpace(request.Key))
+                    return ApiResponse<ProjectDTO>.Fail("Project key is required.");
+                if (!request.StatusId.HasValue || request.StatusId <= 0)
+                    return ApiResponse<ProjectDTO>.Fail("Valid status is required.");
+                if (!request.DeliveryUnitId.HasValue || request.DeliveryUnitId <= 0)
+                    return ApiResponse<ProjectDTO>.Fail("Valid delivery unit is required.");
+
+                // Validate custom fields if provided
+                if (request.CustomFields != null)
+                {
+                    foreach (var cf in request.CustomFields)
+                    {
+                        if (string.IsNullOrWhiteSpace(cf.Name))
+                            return ApiResponse<ProjectDTO>.Fail("Custom field name cannot be empty.");
+                        if (string.IsNullOrWhiteSpace(cf.Value))
+                            return ApiResponse<ProjectDTO>.Fail("Custom field value cannot be empty.");
+                    }
+                }
+
+                // Load project WITHOUT including custom fields to avoid tracking conflicts
+                var project = await _projectRepository.GetQueryable()
+                    .FirstOrDefaultAsync(p => p.Id == request.Id && p.DeletedAt == null);
+                
                 if (project == null)
                     return ApiResponse<ProjectDTO>.NotFound("Project not found");
 
-                // Update basic project fields
+                // Update all project fields
                 project.Name = request.Name;
                 project.Key = request.Key;
                 project.Description = request.Description;
@@ -46,16 +71,15 @@ namespace PmtAdmin.Application.Handlers.Projects
                 project.ProjectManagerRoleId = request.ProjectManagerRoleId;
                 project.StatusId = request.StatusId;
                 project.DeliveryUnitId = request.DeliveryUnitId;
-                project.CreatedBy = request.CreatedBy;
-                project.UpdatedAt = DateTime.UtcNow;
                 project.TemplateId = request.TemplateId;
+                project.UpdatedAt = DateTime.UtcNow;
 
                 // Validate and update Metadata
                 if (!string.IsNullOrWhiteSpace(request.Metadata))
                 {
                     try
                     {
-                        JsonDocument.Parse(request.Metadata); // Validates JSON format
+                        JsonDocument.Parse(request.Metadata);
                         project.Metadata = request.Metadata;
                     }
                     catch (JsonException)
@@ -68,61 +92,10 @@ namespace PmtAdmin.Application.Handlers.Projects
                     project.Metadata = null;
                 }
 
-                // Handle custom fields - only update/add, never delete existing ones
-                if (request.CustomFields != null)
-                {
-                    // Special case: if empty array is provided, clear all fields
-                    if (!request.CustomFields.Any())
-                    {
-                        project.CustomFields.Clear();
-                    }
-                    else
-                    {
-                        // Update existing fields and add new ones, but preserve unlisted fields
-                        foreach (var requestField in request.CustomFields)
-                        {
-                            if (requestField.Id != Guid.Empty)
-                            {
-                                // Update existing field
-                                var existingField = project.CustomFields.FirstOrDefault(f => f.Id == requestField.Id);
-                                if (existingField != null)
-                                {
-                                    existingField.Name = requestField.Name;
-                                    existingField.Value = requestField.Value;
-                                }
-                                else
-                                {
-                                    // Field with this ID doesn't exist, create it
-                                    var newField = new CustomField
-                                    {
-                                        Id = requestField.Id,
-                                        ProjectId = project.Id,
-                                        Name = requestField.Name,
-                                        Value = requestField.Value
-                                    };
-                                    project.CustomFields.Add(newField);
-                                }
-                            }
-                            else
-                            {
-                                // Create new field
-                                var newField = new CustomField
-                                {
-                                    Id = Guid.NewGuid(),
-                                    ProjectId = project.Id,
-                                    Name = requestField.Name,
-                                    Value = requestField.Value
-                                };
-                                project.CustomFields.Add(newField);
-                            }
-                        }
-                    }
-                }
+                // Save project changes
+                await _projectRepository.SaveChangesAsync();
 
-                // Update the project
-                await _projectRepository.UpdateAsync(project);
-
-                // Fetch the updated project with all related data
+                // Fetch fresh data for response  
                 var updatedProject = await _projectRepository.GetProjectByIdWithDetailsAsync(request.Id);
                 var projectDto = _mapper.Map<ProjectDTO>(updatedProject);
 

@@ -25,7 +25,7 @@ namespace PmtAdmin.Api.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
-        
+
         [HttpDelete("delete/{id}")]
         public async Task<ActionResult<ApiResponse<string>>> DeleteCustomField(Guid id)
         {

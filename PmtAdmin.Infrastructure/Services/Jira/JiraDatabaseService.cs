@@ -114,9 +114,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             RoleId = PmRoleId //2 for PM Role
                         };
                         ProjectMembers.Add(user.Id);
-                        pm_id = pm.Id;
                         await _context.ProjectMembers.AddAsync(pm);
                         await _context.SaveChangesAsync();
+                        pm_id = pm.Id;
                     }
 
 

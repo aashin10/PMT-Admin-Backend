@@ -35,9 +35,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
             var JiraSprintStateToProjectStatusMappingScheme = new Dictionary<string, string>
             {
-                { "active", "Active" },
-                { "closed", "Completed" },
-                { "future", "Planned" }
+                { "active", "ACTIVE" },
+                { "closed", "COMPLETED" },
+                { "future", "PLANNED" }
             };
 
 
@@ -52,6 +52,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             int MemberRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Developer")?.Id ?? 2;
 
             int projectActiveStatusId = _context.ProjectStatuses.FirstOrDefault(s => s.Name == "Active")?.Id ?? 1;
+
+
 
             if (newStatuses.Any())
             {
@@ -417,7 +419,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         Message = $"Success: {p.Name} imported successfully."
                     });
 
-                    returnUsers.Add(user);
+                    //returnUsers.Add(user);
                     returnUsers.AddRange(tempUsers);
                     returnProjects.Add(p);
                     await transaction.CommitAsync();

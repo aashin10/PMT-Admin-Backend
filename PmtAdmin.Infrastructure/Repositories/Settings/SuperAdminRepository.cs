@@ -83,5 +83,6 @@ namespace PmtAdmin.Infrastructure.Repositories.Settings
             await _context.SaveChangesAsync();
             return user;
         }
+
     }
 }

@@ -34,7 +34,7 @@ namespace PmtAdmin.Application.Handlers.Settings
 
             var deletedUser = await _superAdminRepository.SoftDeleteAsync(user);
             var superAdminDto = _mapper.Map<SuperAdminDto>(deletedUser);
-            
+
             return ApiResponse<SuperAdminDto>.Success(superAdminDto, "Super admin deleted successfully");
         }
     }

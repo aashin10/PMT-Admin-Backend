@@ -48,6 +48,7 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
             services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
             services.AddScoped<IBoardRepository, BoardRepository>();
+            services.AddScoped<IProjectMemberRepository, ProjectMemberRepository>();
 
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IPermissionRepository, PermissionRepository>();

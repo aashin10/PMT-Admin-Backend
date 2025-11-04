@@ -33,6 +33,14 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 .Select(s => s.StatusName)
                 .ToList();
 
+            var JiraSprintStateToProjectStatusMappingScheme = new Dictionary<string, string>
+            {
+                { "active", "ACTIVE" },
+                { "closed", "COMPLETED" },
+                { "future", "PLANNED" }
+            };
+
+
             HashSet<int> ProjectMembers = new HashSet<int>();
 
             var newStatuses = issueStatuses
@@ -42,6 +50,10 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
             int PmRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Project Manager")?.Id ?? 1;
             int MemberRoleId = _context.Roles.FirstOrDefault(r => r.Name == "Developer")?.Id ?? 2;
+
+            int projectActiveStatusId = _context.ProjectStatuses.FirstOrDefault(s => s.Name == "Active")?.Id ?? 1;
+
+
 
             if (newStatuses.Any())
             {
@@ -67,6 +79,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         throw new Exception("Project with the same Key already exists.");
 
                     p.IsImportedFromJira = true;
+                    p.StatusId = projectActiveStatusId;
 
                     var user = await _context.User
                         .FirstOrDefaultAsync(u => u.JiraId == project.Project.Lead.AccountId);
@@ -193,6 +206,10 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             {
                                 var sp = _mapper.Map<Sprint>(sprint);
                                 sp.ProjectId = p.Id;
+                                sp.TeamId = t.Id;
+                                sp.Status = JiraSprintStateToProjectStatusMappingScheme.ContainsKey(sprint.State)
+                                    ? JiraSprintStateToProjectStatusMappingScheme[sprint.State]
+                                    : "Planned";
                                 sprints.Add(sp);
                                 SprintEntityJiraSprintModelMappingScheme[sprint.Id] = sp.Id.ToString();
                             }
@@ -214,6 +231,10 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             if (!IssueEntityJiraIssueModelMappingScheme.ContainsKey(issue.Id))
                             {
                                 var i = _mapper.Map<Issue>(issue);
+
+                                if (string.Equals(i.Type, "subtask", StringComparison.OrdinalIgnoreCase))
+                                    continue;
+
                                 i.ProjectId = p.Id;
                                 i.Title = issue.Summary;
 
@@ -402,7 +423,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         Message = $"Success: {p.Name} imported successfully."
                     });
 
-                    returnUsers.Add(user);
+                    //returnUsers.Add(user);
                     returnUsers.AddRange(tempUsers);
                     returnProjects.Add(p);
                     await transaction.CommitAsync();

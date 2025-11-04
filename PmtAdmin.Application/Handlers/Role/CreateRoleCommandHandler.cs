@@ -33,34 +33,40 @@ namespace PmtAdmin.Application.Handlers.Role
         {
             try
             {
-                // Step 1: Create the role entity
+                // 1. Check for unique role name
+                var existingRoles = await _rolesRepository.GetAllAsync();
+                if (existingRoles.Any(r => r.Name != null && r.Name.Equals(request.Name, StringComparison.OrdinalIgnoreCase)))
+                {
+                    return ApiResponse<RoleDto>.Fail("Role name already exists.");
+                }
+
+                // 2. Check that permissions are assigned
+                if (request.PermissionIds == null || !request.PermissionIds.Any())
+                {
+                    return ApiResponse<RoleDto>.Fail("At least one permission must be assigned to the role.");
+                }
+
+                // 3. Create the role
                 var role = new PmtAdmin.Domain.Entities.Role
                 {
                     Name = request.Name,
                     Description = request.Description,
+                    Metadata = request.Metadata,
                     CreatedAt = DateTime.UtcNow
                 };
 
-                // Step 2: Save role first (so it has an Id)
                 var createdRole = await _rolesRepository.CreateAsync(role);
 
-                // Step 3: If permissions were sent, fetch and assign them
-                if (request.PermissionIds != null && request.PermissionIds.Any())
+                // 4. Assign permissions
+                var permissions = await _permissionRepository.GetByIdAsync(request.PermissionIds);
+                if (permissions == null || permissions.Count != request.PermissionIds.Count)
                 {
-                    var permissions = await _permissionRepository.GetByIdAsync(request.PermissionIds);
-
-                    createdRole.RolePermissions = permissions.Select(p => new RolePermission
-                    {
-                        RoleId = createdRole.Id,
-                        PermissionId = p.Id
-                    }).ToList();
-
-                    await _rolesRepository.UpdateAsync(createdRole);
+                    return ApiResponse<RoleDto>.Fail("One or more permissions are invalid.");
                 }
 
-                // Step 4: Map to DTO (after permissions are attached)
-                var roleDto = _mapper.Map<RoleDto>(createdRole);
+                await _rolesRepository.UpdateRolePermissionsAsync(createdRole, request.PermissionIds);
 
+                var roleDto = _mapper.Map<RoleDto>(createdRole);
                 return ApiResponse<RoleDto>.Created(roleDto, "Role created successfully");
             }
             catch (Exception ex)

@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
@@ -7,6 +8,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

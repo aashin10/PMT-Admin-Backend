@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command.Settings;
 using PmtAdmin.Application.Dto.SettingsDTO;
@@ -7,6 +8,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Api.Controllers.Settings
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class SuperAdminController : ControllerBase

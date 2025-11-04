@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command.CustomFields;
 using PmtAdmin.Application.Dto;
@@ -6,6 +7,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CustomFieldsController : ControllerBase
@@ -16,7 +18,6 @@ namespace PmtAdmin.Api.Controllers
         {
             _mediator = mediator;
         }
-
         [HttpPost("create")]
         public async Task<ActionResult<ApiResponse<CustomFieldDTO>>> CreateCustomField([FromBody] CreateCustomFieldCommand command)
         {

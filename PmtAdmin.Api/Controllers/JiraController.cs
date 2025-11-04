@@ -5,6 +5,7 @@ using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Wrappers;
 using System.Net;
+using System.Security.Claims;
 using static PmtAdmin.Domain.Models.JiraImportModels;
 
 
@@ -33,14 +34,35 @@ namespace PmtAdmin.Api.Controllers
             var ids = projectIds.Split(','); // Split comma-separated IDs
             var results = new List<JiraProjectData>();
 
+            var currentUser = GetCurrentUserId();
+
             var users = await _mediator.Send(new ImportFromJiraCommand
             {
                 BaseUrl = decodedUrl,
                 ProjectIds = ids,
-                JiraAccessToken = jiraToken
+                JiraAccessToken = jiraToken,
+                ImportedBy = currentUser
             });
 
             return users;
         }
+
+        private int GetCurrentUserId()
+        {
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userIdClaim))
+            {
+                throw new UnauthorizedAccessException("User ID claim not found in token");
+            }
+
+            if (!int.TryParse(userIdClaim, out int userId))
+            {
+                throw new UnauthorizedAccessException("Invalid user ID format in token");
+            }
+
+            return userId;
+        }
     }
+
 }

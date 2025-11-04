@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProjectsController : ControllerBase
@@ -30,8 +31,7 @@ namespace PmtAdmin.Api.Controllers
         /// <param name="searchTerm">Search by project name, key, or manager name</param>
         /// <param name="statusIds">Filter by multiple project status IDs (comma-separated)</param>
         /// <param name="deliveryUnitIds">Filter by multiple delivery unit IDs (comma-separated)</param>
-        /// <param name="projectManagerIds">Filter by multiple project manager IDs (comma-separated)</param>
-        [Authorize]
+        /// <param name="projectManagerIds">Filter by multiple project manager IDs (comma-separated)</param
         [HttpGet]
         public async Task<IActionResult> GetAllProjects(
             [FromQuery] int page = 1,
@@ -103,7 +103,6 @@ namespace PmtAdmin.Api.Controllers
             }
             return StatusCode(result.Status, result);
         }
-
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(Guid id)
         {
@@ -116,7 +115,6 @@ namespace PmtAdmin.Api.Controllers
             }
             return StatusCode(result.Status, result);
         }
-
         [HttpGet("managers")]
         public async Task<IActionResult> GetUniqueProjectManagers()
         {
@@ -129,7 +127,6 @@ namespace PmtAdmin.Api.Controllers
             }
             return StatusCode(result.Status, result);
         }
-
         [HttpGet("{projectId}/teams/{teamId}/members")]
         public async Task<IActionResult> GetTeamMembers(Guid projectId, int teamId)
         {

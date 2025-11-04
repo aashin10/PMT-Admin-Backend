@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
@@ -9,6 +10,7 @@ using static PmtAdmin.Domain.Models.JiraImportModels;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class JiraController : ControllerBase

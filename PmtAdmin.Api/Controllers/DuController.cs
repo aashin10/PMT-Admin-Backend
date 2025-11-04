@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Command.Du;
@@ -8,6 +9,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/delivery-unit")]
     [Produces("application/json")]

@@ -1,10 +1,12 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Query.Permissions;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
         public class PermissionsController : ControllerBase

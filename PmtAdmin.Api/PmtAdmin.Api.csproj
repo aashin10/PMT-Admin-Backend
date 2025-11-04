@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PmtAdmin.Application\PmtAdmin.Application.csproj" />
     <ProjectReference Include="..\PmtAdmin.Infrastructure\PmtAdmin.Infrastructure.csproj" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

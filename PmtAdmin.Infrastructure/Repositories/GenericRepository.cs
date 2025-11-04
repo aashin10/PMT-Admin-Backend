@@ -48,9 +48,25 @@ namespace PmtAdmin.Infrastructure.Repositories
             return _context.Set<T>();
         }
 
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<T> UpdateAsync(T entity)
         {
-            _context.Set<T>().Update(entity);
+            // Get the entry for the entity
+            var entry = _context.Entry(entity);
+            
+            // If the entity is detached, attach it
+            if (entry.State == EntityState.Detached)
+            {
+                _context.Set<T>().Attach(entity);
+            }
+            
+            // Mark the entity as modified
+            entry.State = EntityState.Modified;
+            
             await _context.SaveChangesAsync();
             return entity;
         }

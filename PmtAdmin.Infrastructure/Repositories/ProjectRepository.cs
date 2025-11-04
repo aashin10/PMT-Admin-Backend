@@ -22,58 +22,65 @@ namespace PmtAdmin.Infrastructure.Repositories
             List<int>? deliveryUnitIds,
             List<int>? projectManagerIds)
         {
-            // Start with base query - only include what's needed for table view
-            // Use AsNoTracking for read-only queries to improve performance
-            var query = _context.Projects
-                .AsNoTracking()
-                .Include(p => p.Status)
-                .Include(p => p.DeliveryUnit)
-                .Include(p => p.ProjectManager)
-                .Include(p => p.ProjectMembers) // For team size calculation
-                .Where(p => p.DeletedAt == null)
-                .AsQueryable();
-
-            // Apply search filter (project name, key, or manager name)
-            if (!string.IsNullOrWhiteSpace(searchTerm))
+            try
             {
-                var search = searchTerm.ToLower();
-                query = query.Where(p =>
-                    (p.Name != null && p.Name.ToLower().Contains(search)) ||
-                    (p.Key != null && p.Key.ToLower().Contains(search)) ||
-                    (p.ProjectManager != null && p.ProjectManager.Name != null &&
-                     p.ProjectManager.Name.ToLower().Contains(search))
-                );
-            }
+                // Start with base query - only include what's needed for table view
+                // Use AsNoTracking for read-only queries to improve performance
+                var query = _context.Projects
+                    .AsNoTracking()
+                    .Include(p => p.Status)
+                    .Include(p => p.DeliveryUnit)
+                    .Include(p => p.ProjectManager)
+                    .Include(p => p.ProjectMembers) // For team size calculation
+                    .Where(p => p.DeletedAt == null)
+                    .AsQueryable();
 
-            // Apply multi-select status filter
-            if (statusIds != null && statusIds.Any())
+                // Apply search filter (project name, key, or manager name)
+                if (!string.IsNullOrWhiteSpace(searchTerm))
+                {
+                    var search = searchTerm.ToLower();
+                    query = query.Where(p =>
+                        (p.Name != null && p.Name.ToLower().Contains(search)) ||
+                        (p.Key != null && p.Key.ToLower().Contains(search)) ||
+                        (p.ProjectManager != null && p.ProjectManager.Name != null &&
+                         p.ProjectManager.Name.ToLower().Contains(search))
+                    );
+                }
+
+                // Apply multi-select status filter
+                if (statusIds != null && statusIds.Any())
+                {
+                    query = query.Where(p => p.StatusId.HasValue && statusIds.Contains(p.StatusId.Value));
+                }
+
+                // Apply multi-select delivery unit filter
+                if (deliveryUnitIds != null && deliveryUnitIds.Any())
+                {
+                    query = query.Where(p => p.DeliveryUnitId.HasValue && deliveryUnitIds.Contains(p.DeliveryUnitId.Value));
+                }
+
+                // Apply multi-select project manager filter
+                if (projectManagerIds != null && projectManagerIds.Any())
+                {
+                    query = query.Where(p => p.ProjectManagerId.HasValue && projectManagerIds.Contains(p.ProjectManagerId.Value));
+                }
+
+                // Get total count before pagination
+                var totalCount = await query.CountAsync();
+
+                // Apply pagination with default sorting by CreatedAt descending
+                var projects = await query
+                    .OrderByDescending(p => p.CreatedAt)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                return (projects, totalCount);
+            }
+            catch (Exception ex)
             {
-                query = query.Where(p => p.StatusId.HasValue && statusIds.Contains(p.StatusId.Value));
+                throw new ApplicationException($"Error fetching projects for table: {ex.Message}", ex);
             }
-
-            // Apply multi-select delivery unit filter
-            if (deliveryUnitIds != null && deliveryUnitIds.Any())
-            {
-                query = query.Where(p => p.DeliveryUnitId.HasValue && deliveryUnitIds.Contains(p.DeliveryUnitId.Value));
-            }
-
-            // Apply multi-select project manager filter
-            if (projectManagerIds != null && projectManagerIds.Any())
-            {
-                query = query.Where(p => p.ProjectManagerId.HasValue && projectManagerIds.Contains(p.ProjectManagerId.Value));
-            }
-
-            // Get total count before pagination
-            var totalCount = await query.CountAsync();
-
-            // Apply pagination with default sorting by CreatedAt descending
-            var projects = await query
-                .OrderByDescending(p => p.CreatedAt)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-
-            return (projects, totalCount);
         }
 
         public async Task<Project?> GetProjectByIdWithDetailsAsync(Guid id)

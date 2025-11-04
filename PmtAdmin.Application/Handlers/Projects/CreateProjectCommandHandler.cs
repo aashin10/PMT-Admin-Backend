@@ -97,7 +97,7 @@ namespace PmtAdmin.Application.Handlers.Projects
                 TeamId = null, // As per requirement
                 Name = $"{projectName}-Board", // Changed to use ProjectName-Board format
                 Description = "Default project board",
-                Type = "kanban", // Default type
+                Type = "default", // Default type
                 IsActive = true,
                 CreatedBy = createdBy,
                 CreatedAt = DateTime.UtcNow

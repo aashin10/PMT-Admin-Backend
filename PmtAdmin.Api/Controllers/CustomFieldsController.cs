@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command.CustomFields;
 using PmtAdmin.Application.Dto;
@@ -6,6 +7,7 @@ using PmtAdmin.Application.Wrappers;
 
 namespace PmtAdmin.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CustomFieldsController : ControllerBase
@@ -23,7 +25,7 @@ namespace PmtAdmin.Api.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
-
+        
         [HttpDelete("delete/{id}")]
         public async Task<ActionResult<ApiResponse<string>>> DeleteCustomField(Guid id)
         {

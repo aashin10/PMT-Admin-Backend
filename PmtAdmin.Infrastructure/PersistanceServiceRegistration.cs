@@ -1,8 +1,13 @@
+using BACKEND_CQRS.Domain.Persistance;
+using BACKEND_CQRS.Domain.Services;
+using BACKEND_CQRS.Infrastructure.Repository;
+using BACKEND_CQRS.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Application.MappingProfiles;
+using BACKEND_CQRS.Infrastructure.Services;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Persistance;
 using PmtAdmin.Domain.Persistance.Dashboard;
@@ -30,10 +35,11 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<ICustomFieldRepository, CustomFieldRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
             services.AddScoped<IDuRepository, DeliveryUnitRepository>();
 
-            services.AddScoped<IPasswordHashingService, PasswordHashingService>();
+            //services.AddScoped<IPasswordHashingService, PasswordHashingService>();
             services.AddScoped<IDashboardRepository, DashboardRepository>();
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
@@ -47,6 +53,26 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IPermissionRepository, PermissionRepository>();
             services.AddScoped<IJiraDatabaseService, JiraDatabaseService>();
             services.AddScoped<IJiraService, JiraService>();
+
+            // Authentication & Security
+            services.AddScoped<IJwtTokenService, JwtTokenService>();
+            services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+            //.AddScoped<IPasswordHashService, PasswordHashService>();
+            //services.AddScoped<IPasswordHashingService, PasswordHashService>();
+
+            //using BACKEND_CQRS.Domain.Services;
+            //using BACKEND_CQRS.Infrastructure.Services;
+
+            //services.AddScoped<IPasswordHashingService, PasswordHashService>();
+            services.AddScoped<IPasswordHashService, PasswordHashService>();
+          services.AddScoped<IPasswordHashingService, PasswordHashService>();
+
+            // Register JWT token service
+            services.AddScoped<IJwtTokenService, JwtTokenService>();
+
+            // Register refresh token repository
+            services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+
 
             // Add Email Service
             services.AddScoped<IEmailService, EmailService>();

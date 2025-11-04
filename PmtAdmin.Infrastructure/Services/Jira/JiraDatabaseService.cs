@@ -231,6 +231,10 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             if (!IssueEntityJiraIssueModelMappingScheme.ContainsKey(issue.Id))
                             {
                                 var i = _mapper.Map<Issue>(issue);
+
+                                if (string.Equals(i.Type, "subtask", StringComparison.OrdinalIgnoreCase))
+                                    continue;
+
                                 i.ProjectId = p.Id;
                                 i.Title = issue.Summary;
 

@@ -192,7 +192,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             Name = b.Name + " Team",
                             ProjectId = p.Id,
                             LeadId = pm_id,
-                            CreatedBy = importedBy
+                            // CreatedBy = importedBy
                         };
 
                         _context.Teams.Add(t);
@@ -282,6 +282,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
 
                                     boardcolumn.StatusId = statusToUse.Id;
+                                    i.StatusId = statusToUse.Id;
 
                                     await _context.SaveChangesAsync();
 

@@ -110,7 +110,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             // array format
                             if (sprintToken.Type == JTokenType.Array && sprintToken.HasValues)
                             {
-                                sprint = sprintToken.First.ToObject<JiraSprint>();
+                                sprint = sprintToken.Last.ToObject<JiraSprint>();
                             }
                             // object format
                             else if (sprintToken.Type == JTokenType.Object)

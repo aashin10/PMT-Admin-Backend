@@ -34,6 +34,7 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<ICustomFieldRepository, CustomFieldRepository>();
             services.AddScoped<IProjectStatusRepository, ProjectStatusRepository>();
             services.AddScoped<IDuRepository, DeliveryUnitRepository>();
 

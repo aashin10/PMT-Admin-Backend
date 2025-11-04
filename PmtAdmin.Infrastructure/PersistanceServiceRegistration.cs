@@ -5,6 +5,7 @@ using BACKEND_CQRS.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Application.MappingProfiles;
 using BACKEND_CQRS.Infrastructure.Services;
 using PmtAdmin.Application.Services;
@@ -43,7 +44,6 @@ namespace PmtAdmin.Infrastructure
             services.AddScoped<IProjectReadRepository, ProjectReadRepository>();
             services.AddScoped<ISuperAdminRepository, SuperAdminRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
-            //services.AddAutoMapper(typeof(RoleProfile).Assembly);
             services.AddScoped<IPermissionRepository, PermissionRepository>();
             services.AddScoped<IBoardBoardColumnMapRepository, BoardBoardColumnMapRepository>();
             services.AddScoped<IBoardColumnRepository, BoardColumnRepository>();
@@ -74,6 +74,9 @@ namespace PmtAdmin.Infrastructure
             // Register refresh token repository
             services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
+
+            // Add Email Service
+            services.AddScoped<IEmailService, EmailService>();
 
             return services;
         }

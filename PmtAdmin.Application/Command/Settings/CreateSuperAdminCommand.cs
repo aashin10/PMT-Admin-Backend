@@ -20,5 +20,7 @@ namespace PmtAdmin.Application.Command.Settings
 
         // Optional: default active status
         public bool IsActive { get; set; } = true;
+
+        public int? CreatedBy { get; set; }
     }
 }

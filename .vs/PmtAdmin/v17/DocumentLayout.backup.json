@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\users\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\users\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -399,10 +403,6 @@
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\query\\getallusersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\users\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\users\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\query\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\query\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -554,7 +554,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -562,46 +562,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PasswordGenerator.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs*",
-              "RelativeToolTip": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T13:31:49.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
-              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-23T11:37:20.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T13:31:38.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IPasswordHashingService.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Services\\IPasswordHashingService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Services\\IPasswordHashingService.cs",
@@ -614,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Interfaces\\IEmailService.cs",
@@ -633,14 +607,53 @@
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAuwD0AAABOAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAUwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T17:26:02.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
+              "ViewState": "AgIAACIBAAAAAAAAAAAAwCwBAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T11:45:30.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
+              "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T13:31:38.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
+              "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-23T11:37:20.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
@@ -653,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "DatabaseSeeder.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
@@ -666,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PersistanceServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
@@ -679,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CreateSuperAdminCommandHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Settings\\Handler\\CreateSuperAdminCommandHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\CreateSuperAdminCommandHandlerTest.cs",
@@ -692,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PmtAdmin.Application",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\PmtAdmin.Application.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\PmtAdmin.Application.csproj",
@@ -705,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PmtAdmin.Infrastructure",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj",
@@ -718,7 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PmtAdmin.Domain",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\PmtAdmin.Domain.csproj",
@@ -731,7 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CreateSuperAdminCommand.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Settings\\CreateSuperAdminCommand.cs",
@@ -744,7 +757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "UpdateSuperAdminCommand.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Settings\\UpdateSuperAdminCommand.cs",
@@ -757,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "DeleteSuperAdminCommand.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Command\\Settings\\DeleteSuperAdminCommand.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Command\\Settings\\DeleteSuperAdminCommand.cs",
@@ -770,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SuperAdminController.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
@@ -783,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "UpdateSuperAdminCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\UpdateSuperAdminCommandHandler.cs",
@@ -796,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "DeleteSuperAdminCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\DeleteSuperAdminCommandHandler.cs",
@@ -809,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\User.cs",
@@ -822,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "SuperAdminDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\SettingsDTO\\SuperAdminDto.cs",
@@ -835,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "SuperAdminProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\SuperAdminProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\SuperAdminProfile.cs",
@@ -848,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "GetDashboardSummaryQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Dashboard\\GetDashboardSummaryQueryHandler.cs",
@@ -861,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "DashboardRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\DashboardRepository.cs",
@@ -874,7 +887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "DashboardSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\DashboardSummaryDto.cs",
@@ -887,7 +900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ProjectReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Dashboard\\ProjectReadRepository.cs",
@@ -900,7 +913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "IDashboardRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\Dashboard\\IDashboardRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\Dashboard\\IDashboardRepository.cs",
@@ -913,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ProjectStatusDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\ProjectStatusDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\ProjectStatusDto.cs",
@@ -926,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ProjectStatusProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\ProjectStatusProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\ProjectStatusProfile.cs",
@@ -939,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "ProjectProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\ProjectProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\ProjectProfile.cs",
@@ -952,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ProjectDTO.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\ProjectDTO.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\ProjectDTO.cs",
@@ -965,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "DuProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\DuProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\DuProfile.cs",
@@ -978,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ProjectStatusDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\ProjectStatusDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\ProjectStatusDto.cs",
@@ -991,7 +1004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "GetDashboardSummaryQueryHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Dashboard\\Handler\\GetDashboardSummaryQueryHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Dashboard\\Handler\\GetDashboardSummaryQueryHandlerTest.cs",
@@ -1004,7 +1017,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
@@ -1017,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "GetProjectActivityQueryHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Dashboard\\Handler\\GetProjectActivityQueryHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Dashboard\\Handler\\GetProjectActivityQueryHandlerTest.cs",
@@ -1030,7 +1043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "Pmt_Admin.Test",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
@@ -1043,7 +1056,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "JiraController.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Controllers\\JiraController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\JiraController.cs",
@@ -1056,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "GetProjectActivityQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Dashboard\\GetProjectActivityQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Dashboard\\GetProjectActivityQueryHandler.cs",
@@ -1069,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "DashboardMock.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Dashboard\\Mock\\DashboardMock.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Dashboard\\Mock\\DashboardMock.cs",
@@ -1082,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "GetSuperAdminQueryHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Settings\\Handler\\GetSuperAdminQueryHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\GetSuperAdminQueryHandlerTest.cs",
@@ -1095,7 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UpdateSuperAdminCommandHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Settings\\Handler\\UpdateSuperAdminCommandHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\UpdateSuperAdminCommandHandlerTest.cs",
@@ -1108,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "DeleteSuperAdminCommandHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Settings\\Handler\\DeleteSuperAdminCommandHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\DeleteSuperAdminCommandHandlerTest.cs",
@@ -1121,7 +1134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "SuperAdminMock.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
@@ -1134,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "GetSuperAdminQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\GetSuperAdminQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\GetSuperAdminQueryHandler.cs",
@@ -1147,7 +1160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "ISuperAdminRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\Settings\\ISuperAdminRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\Settings\\ISuperAdminRepository.cs",
@@ -1160,7 +1173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "SuperAdminRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\Settings\\SuperAdminRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\Settings\\SuperAdminRepository.cs",
@@ -1173,7 +1186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
@@ -1186,7 +1199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\AppDbContextModelSnapshot.cs",
@@ -1199,7 +1212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "20251031115329_LocalNew.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031115329_LocalNew.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031115329_LocalNew.cs",
@@ -1212,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "Issue.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Issue.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Issue.cs",
@@ -1225,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "Status.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Status.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Status.cs",
@@ -1238,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Team.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Team.cs",
@@ -1251,7 +1264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "Epic.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Epic.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Epic.cs",
@@ -1264,7 +1277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "20251031115857_SupabaseCombined.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031115857_SupabaseCombined.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031115857_SupabaseCombined.cs",
@@ -1277,7 +1290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "ProjectMember.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
@@ -1290,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "DeliveryUnit.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\DeliveryUnit.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\DeliveryUnit.cs",
@@ -1303,7 +1316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "Channel.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Channel.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Channel.cs",
@@ -1316,7 +1329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "BoardColumn.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\BoardColumn.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\BoardColumn.cs",
@@ -1329,7 +1342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "Mention.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Mention.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Mention.cs",
@@ -1342,7 +1355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\MappingProfiles\\UserProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\UserProfile.cs",
@@ -1355,7 +1368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "ActivityLog.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ActivityLog.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ActivityLog.cs",
@@ -1368,7 +1381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Project.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Project.cs",
@@ -1381,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Notification.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Notification.cs",
@@ -1394,7 +1407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Message.cs",
@@ -1407,7 +1420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "ImportJob.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ImportJob.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ImportJob.cs",
@@ -1420,7 +1433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Board.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Board.cs",
@@ -1433,7 +1446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "PmtAdmin.Api.http",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\PmtAdmin.Api.http",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\PmtAdmin.Api.http",
@@ -1446,7 +1459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "20251031115245_LocalNew.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031115245_LocalNew.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031115245_LocalNew.cs",
@@ -1457,7 +1470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "20251031115157_SupabaseCombined.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031115157_SupabaseCombined.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031115157_SupabaseCombined.cs",
@@ -1468,7 +1481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "20251031114936_SupabaseCombined.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031114936_SupabaseCombined.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031114936_SupabaseCombined.cs",
@@ -1479,7 +1492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "20251031114827_SupabaseCombined.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031114827_SupabaseCombined.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031114827_SupabaseCombined.cs",
@@ -1490,7 +1503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "20251031114726_SupabaseCombined.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031114726_SupabaseCombined.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031114726_SupabaseCombined.cs",
@@ -1501,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "20251031111807_fullDB.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031111807_fullDB.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031111807_fullDB.cs",
@@ -1512,7 +1525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "20251031111417_fullDB.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031111417_fullDB.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031111417_fullDB.cs",
@@ -1523,7 +1536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "20251031110832_fullDB.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251031110832_fullDB.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251031110832_fullDB.cs",
@@ -1534,7 +1547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "Sprint.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Sprint.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Sprint.cs",
@@ -1547,7 +1560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Role.cs",
@@ -1560,7 +1573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "ProjectStatus.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
@@ -1573,7 +1586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "RolePermission.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\RolePermission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\RolePermission.cs",
@@ -1586,7 +1599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "ProjectTemplate.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\ProjectTemplate.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectTemplate.cs",
@@ -1599,7 +1612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\Permission.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Permission.cs",
@@ -1612,7 +1625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "JiraAuthorization.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\JiraAuthorization.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\JiraAuthorization.cs",
@@ -1625,7 +1638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "IssueComment.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\IssueComment.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\IssueComment.cs",
@@ -1638,7 +1651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "CustomField.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\CustomField.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\CustomField.cs",
@@ -1651,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Entities\\AuditLog.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\AuditLog.cs",
@@ -1664,7 +1677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IUserRepository.cs",
@@ -1677,7 +1690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\UserRepository.cs",
@@ -1690,7 +1703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
@@ -1703,7 +1716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Wrappers\\ApiResponse.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Wrappers\\ApiResponse.cs",
@@ -1716,7 +1729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "GetDashboardSummaryQuery.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Query\\Dashboard\\GetDashboardSummaryQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Dashboard\\GetDashboardSummaryQuery.cs",
@@ -1729,7 +1742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "GetProjectActivityQuery.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Query\\Dashboard\\GetProjectActivityQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Dashboard\\GetProjectActivityQuery.cs",
@@ -1742,7 +1755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "20251028124609_localprojectdatachange.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Migrations\\20251028124609_localprojectdatachange.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251028124609_localprojectdatachange.cs",
@@ -1753,7 +1766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
@@ -1766,7 +1779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "IProjectReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Domain\\Persistance\\Dashboard\\IProjectReadRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\Dashboard\\IProjectReadRepository.cs",
@@ -1779,7 +1792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "ChartDataDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\ChartDataDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\ChartDataDto.cs",
@@ -1792,7 +1805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "ChartPointDto.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Dto\\DashboardDTO\\ChartPointDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\DashboardDTO\\ChartPointDto.cs",
@@ -1805,7 +1818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "GetAllUsersQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Users\\GetAllUsersQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\GetAllUsersQueryHandler.cs",
@@ -1818,7 +1831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "GetAllUsersQuery.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\GetAllUsersQuery.cs",
@@ -1827,19 +1840,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T13:09:29.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 99,
-              "Title": "CreateUserCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Users\\CreateUserCommandHandler.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:45:30.945Z",
               "EditorCaption": ""
             },
             {

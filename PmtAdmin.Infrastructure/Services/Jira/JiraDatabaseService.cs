@@ -34,6 +34,15 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                 .Select(s => s.StatusName)
                 .ToList();
 
+            var issuePriorityMappingScheme = new Dictionary<string, string>
+{
+    { "Highest", "CRITICAL" },
+    { "High", "HIGH" },
+    { "Medium", "MEDIUM" },
+    { "Low", "LOW" },
+    { "Lowest", "LOW" }
+};
+
             var JiraSprintStateToProjectStatusMappingScheme = new Dictionary<string, string>
             {
                 { "active", "ACTIVE" },
@@ -240,6 +249,12 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             {
                                 var i = _mapper.Map<Issue>(issue);
 
+                                if (!string.IsNullOrWhiteSpace(i.Priority) && issuePriorityMappingScheme.ContainsKey(i.Priority))
+                                {
+                                    i.Priority = issuePriorityMappingScheme[i.Priority];
+                                }
+
+
                                 if (string.Equals(i.Type, "subtask", StringComparison.OrdinalIgnoreCase))
                                     continue;
 
@@ -400,6 +415,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 i.DueDate = issue.DueDate.HasValue
                                     ? new DateTimeOffset(issue.DueDate.Value.ToUniversalTime(), TimeSpan.Zero)
                                     : null;
+
+
 
                                 issues.Add(i);
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();

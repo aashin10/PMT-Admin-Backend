@@ -370,16 +370,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:38:29.092Z",
@@ -391,9 +411,9 @@
               "Title": "SuperAdminController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs*",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwAoAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Settings\\SuperAdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:38:21.715Z",
               "EditorCaption": ""
@@ -404,8 +424,8 @@
               "Title": "PermissionController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\PermissionController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\PermissionController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\PermissionController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:36:59.676Z",
@@ -417,8 +437,8 @@
               "Title": "JiraController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\JiraController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\JiraController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\JiraController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\JiraController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\JiraController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\JiraController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:36:34.655Z",
@@ -430,8 +450,8 @@
               "Title": "DuController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\DuController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\DuController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\DuController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\DuController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\DuController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\DuController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:36:16.194Z",
@@ -443,8 +463,8 @@
               "Title": "CustomFieldsController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\CustomFieldsController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\CustomFieldsController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\CustomFieldsController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\CustomFieldsController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\CustomFieldsController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\CustomFieldsController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:35:12.847Z",
@@ -469,32 +489,12 @@
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\UserController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T04:35:02.221Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
@@ -550,8 +550,8 @@
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\RoleController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\RoleController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T05:49:12.629Z",
@@ -1308,8 +1308,8 @@
               "Title": "StatusController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\StatusController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\StatusController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\StatusController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\StatusController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\StatusController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\StatusController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:22:38.663Z",
@@ -1393,8 +1393,8 @@
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
-              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\ProjectsController.cs*",
-              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\ProjectsController.cs*",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:13:18.286Z",

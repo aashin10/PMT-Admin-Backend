@@ -2,16 +2,11 @@ using AutoMapper;
 using MediatR;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
+using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Application.Wrappers;
-using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Users
 {
@@ -111,7 +106,7 @@ namespace PmtAdmin.Application.Handlers.Users
                     IsSuperAdmin = false,
                     JiraId = string.IsNullOrWhiteSpace(userDto.JiraId) ? null : userDto.JiraId,
                     Type = normalizedType,
-                    CreatedBy = userDto.CreatedBy,
+                    //CreatedBy = userDto.CreatedBy,
                     CreatedAt = DateTime.UtcNow,
                     IsDeleted = false
                 };
@@ -125,7 +120,7 @@ namespace PmtAdmin.Application.Handlers.Users
                     try
                     {
                         var emailBody = $@"
-                            <h2>Welcome to PMT Admin</h2>
+                            <h2>Welcome to PMT </h2>
                             <p>Dear {savedUser.Name},</p>
                             <p>Your account has been created successfully.</p>
                             <p>Here are your login credentials:</p>

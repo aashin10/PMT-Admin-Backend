@@ -318,6 +318,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Assignee);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+                                            returnUsers.Add(existingUser);
 
                                         }
 
@@ -361,6 +362,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Reporter);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+                                            returnUsers.Add(existingUser);
 
                                         }
 
@@ -434,7 +436,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     });
 
                     //returnUsers.Add(user);
-                    returnUsers.AddRange(tempUsers);
+                    //returnUsers.AddRange(tempUsers);
                     returnProjects.Add(p);
                     await transaction.CommitAsync();
                 }

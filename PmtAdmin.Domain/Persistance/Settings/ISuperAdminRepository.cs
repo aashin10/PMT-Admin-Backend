@@ -13,6 +13,9 @@ namespace PmtAdmin.Domain.Persistance.Settings
         Task<List<User>> GetSuperAdminsAsync();
         //Task<bool> DeleteSuperAdminAsync(int id);
 
+        // ✅ New method
+        Task<int> CountActiveSuperAdminsAsync();
+        Task<int> CountActiveEnabledSuperAdminsAsync();
 
 
     }

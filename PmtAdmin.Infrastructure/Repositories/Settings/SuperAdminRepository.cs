@@ -31,6 +31,20 @@ namespace PmtAdmin.Infrastructure.Repositories.Settings
                 .FirstOrDefaultAsync(u => u.Id == id && !u.IsDeleted);
         }
 
+        public async Task<int> CountActiveSuperAdminsAsync()
+        {
+            return await _context.User
+                .CountAsync(u => u.IsSuperAdmin && !u.IsDeleted);
+        }
+
+        public async Task<int> CountActiveEnabledSuperAdminsAsync()
+        {
+            return await _context.User
+                .CountAsync(u => u.IsSuperAdmin && !u.IsDeleted && u.IsActive);
+        }
+
+
+
 
         //public async Task<bool> DeleteSuperAdminAsync(int id)
         //{

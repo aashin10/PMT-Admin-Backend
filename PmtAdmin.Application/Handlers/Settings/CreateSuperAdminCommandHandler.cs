@@ -5,6 +5,7 @@ using PmtAdmin.Application.Dto.SettingsDTO;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance.Settings;
+using PmtAdmin.Application.CustomException;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,13 @@ namespace PmtAdmin.Application.Handlers.Settings
 
         public async Task<ApiResponse<SuperAdminDto>> Handle(CreateSuperAdminCommand request, CancellationToken cancellationToken)
         {
+            // Basic validation
+            if (request == null)
+                throw new ValidationException("Request cannot be null");
+
+            if (string.IsNullOrWhiteSpace(request.Email))
+                throw new ValidationException("Email is required");
+
             // Map command to User entity
             var user = _mapper.Map<User>(request);
 

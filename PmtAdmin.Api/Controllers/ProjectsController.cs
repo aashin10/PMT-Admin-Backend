@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PmtAdmin.Application.Command.Projects;
 using PmtAdmin.Application.Query.Projects;
@@ -30,6 +31,7 @@ namespace PmtAdmin.Api.Controllers
         /// <param name="statusIds">Filter by multiple project status IDs (comma-separated)</param>
         /// <param name="deliveryUnitIds">Filter by multiple delivery unit IDs (comma-separated)</param>
         /// <param name="projectManagerIds">Filter by multiple project manager IDs (comma-separated)</param>
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllProjects(
             [FromQuery] int page = 1,

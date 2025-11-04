@@ -1,3 +1,4 @@
+
 using AutoMapper;
 using FluentAssertions;
 using Moq;
@@ -83,10 +84,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
                 },
                 Teams = new List<Team>
                 {
-                    new Team 
-                    { 
-                        Id = 1, 
-                        Name = "Team Alpha", 
+                    new Team
+                    {
+                        Id = 1,
+                        Name = "Team Alpha",
                         TeamMembers = new List<TeamMember>
                         {
                             new TeamMember { TeamMemberId = 1, TeamId = 1, ProjectMemberId = 1, ProjectMember = new ProjectMember { Id = 1, User = new User { Id = 1, Name = "Developer 1", Email = "dev1@test.com" } } },
@@ -110,7 +111,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
             result.Data.Should().NotBeNull();
-            
+
             var projectDto = result.Data;
             projectDto.Id.Should().Be(projectId);
             projectDto.Name.Should().Be("Test Project");
@@ -187,7 +188,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
             result.Data.Should().NotBeNull();
-            
+
             var projectDto = result.Data;
             projectDto.TeamSize.Should().Be(0);
             projectDto.SprintCount.Should().Be(0);
@@ -205,7 +206,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var projectId = Guid.NewGuid();
             var customFieldId1 = Guid.NewGuid();
             var customFieldId2 = Guid.NewGuid();
-            
+
             var leadProjectMember = new ProjectMember
             {
                 Id = 5,
@@ -259,9 +260,9 @@ namespace Pmt_Admin.Test.Handlers.Projects
                 },
                 Teams = new List<Team>
                 {
-                    new Team 
-                    { 
-                        Id = 5, 
+                    new Team
+                    {
+                        Id = 5,
                         Name = "Core Team",
                         Description = "Main development team",
                         IsActive = true,
@@ -288,7 +289,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
             // Assert
             result.Should().NotBeNull();
             result.Status.Should().Be(200);
-            
+
             var dto = result.Data;
             dto.Id.Should().Be(projectId);
             dto.Name.Should().Be("Complete Project");

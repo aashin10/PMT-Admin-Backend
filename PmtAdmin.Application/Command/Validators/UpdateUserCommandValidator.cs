@@ -16,6 +16,13 @@ namespace PmtAdmin.Application.Command.Validators
                 .GreaterThan(0)
                 .WithMessage("User ID must be greater than 0");
 
+            RuleFor(x => x.Email)
+                .MaximumLength(255)
+                .WithMessage("Email cannot exceed 255 characters")
+                .EmailAddress()
+                .WithMessage("Email must be a valid email address")
+                .When(x => !string.IsNullOrEmpty(x.Email));
+
             RuleFor(x => x.JiraId)
                 .MaximumLength(1024)
                 .WithMessage("Jira ID cannot exceed 1024 characters")

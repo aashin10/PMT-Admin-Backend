@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.application\\handlers\\projects\\getprojectbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\projects\\getprojectbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9ABD11B1-C73F-4391-9F21-E41F73FBFBAD}|PmtAdmin.Domain\\PmtAdmin.Domain.csproj|solutionrelative:pmtadmin.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.api\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -161,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\handlers\\projects\\deleteprojectcommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\handlers\\projects\\deleteprojectcommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.application\\handlers\\projects\\getprojectbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\projects\\getprojectbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.application\\dto\\projectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -338,28 +338,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 47,
+          "SelectedChildIndex": 23,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 80,
@@ -410,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\RoleController.cs",
@@ -446,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GetRoleByIdQueryHandlerTest.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Handlers\\Roles\\GetRoleByIdQueryHandlerTest.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Roles\\GetRoleByIdQueryHandlerTest.cs",
@@ -482,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UpdateRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Handlers\\Role\\UpdateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Role\\UpdateRoleCommandHandler.cs",
@@ -614,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RoleDto.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\RoleDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\RoleDto.cs",
@@ -626,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ProjectProfile.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\MappingProfiles\\ProjectProfile.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\MappingProfiles\\ProjectProfile.cs",
@@ -638,15 +618,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Program.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
               "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Program.cs",
               "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T05:34:53.233Z"
+              "WhenOpened": "2025-11-02T05:34:53.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -662,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20251102015211_localprojectdatachange.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Migrations\\20251102015211_localprojectdatachange.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251102015211_localprojectdatachange.cs",
@@ -674,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ENTITY_CHANGES_FIX_SUMMARY.md",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\ENTITY_CHANGES_FIX_SUMMARY.md",
               "RelativeDocumentMoniker": "ENTITY_CHANGES_FIX_SUMMARY.md",
@@ -686,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\AppDbContext.cs",
@@ -698,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\Team.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Team.cs",
@@ -710,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\Board.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Board.cs",
@@ -722,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\AuditLog.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\AuditLog.cs",
@@ -734,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Message.cs",
@@ -746,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ImportJob.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\ImportJob.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ImportJob.cs",
@@ -842,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "TEST_COVERAGE_ANALYSIS.md",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\TEST_COVERAGE_ANALYSIS.md",
               "RelativeDocumentMoniker": "TEST_COVERAGE_ANALYSIS.md",
@@ -853,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "20251030090305_localtest.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Migrations\\20251030090305_localtest.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Migrations\\20251030090305_localtest.cs",
@@ -865,16 +846,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
               "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\appsettings.json",
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-30T09:00:34.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:00:34.837Z"
             },
             {
               "$type": "Document",
@@ -902,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "GETALLPROJECTS_IMPLEMENTATION.md",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\GETALLPROJECTS_IMPLEMENTATION.md",
               "RelativeDocumentMoniker": "GETALLPROJECTS_IMPLEMENTATION.md",
@@ -914,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "PaginatedResponse.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\PaginatedResponse.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\PaginatedResponse.cs",
@@ -926,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ProjectTableDTO.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\ProjectTableDTO.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\ProjectTableDTO.cs",
@@ -938,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "GetAllProjectStatusQuery.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Query\\ProjectStatus\\GetAllProjectStatusQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\ProjectStatus\\GetAllProjectStatusQuery.cs",
@@ -962,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "GetAllProjectStatusQueryHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\ProjectStatus\\GetAllProjectStatusQueryHandlerTests.cs",
@@ -974,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "DeleteProjectCommandHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Handlers\\Projects\\DeleteProjectCommandHandlerTests.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\DeleteProjectCommandHandlerTests.cs",
@@ -986,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "GetProjectByIdQueryHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Handlers\\Projects\\GetProjectByIdQueryHandlerTests.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\GetProjectByIdQueryHandlerTests.cs",
@@ -998,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "GetAllProjectsQueryHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Handlers\\Projects\\GetAllProjectsQueryHandlerTests.cs",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Handlers\\Projects\\GetAllProjectsQueryHandlerTests.cs",
@@ -1010,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Pmt_Admin.Test.csproj",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
               "RelativeDocumentMoniker": "Pmt_Admin.Test\\Pmt_Admin.Test.csproj",
@@ -1022,7 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "TeamMemberDTO.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\TeamMemberDTO.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\TeamMemberDTO.cs",
@@ -1034,7 +1014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "TeamDTO.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\TeamDTO.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\TeamDTO.cs",
@@ -1058,7 +1038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\Project.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\Project.cs",
@@ -1094,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ProjectStatus.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectStatus.cs",
@@ -1118,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProjectMember.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Entities\\ProjectMember.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Entities\\ProjectMember.cs",
@@ -1154,7 +1134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ProjectRepository.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\ProjectRepository.cs",
@@ -1178,19 +1158,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 2,
               "Title": "GetProjectByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
               "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
               "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Projects\\GetProjectByIdQueryHandler.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAKBrwE4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:20:38.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "GetAllProjectsQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Handlers\\Projects\\GetAllProjectsQueryHandler.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Projects\\GetAllProjectsQueryHandler.cs",
@@ -1214,7 +1194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "GetAllProjectsQuery.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Query\\Projects\\GetAllProjectsQuery.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Query\\Projects\\GetAllProjectsQuery.cs",
@@ -1238,7 +1218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ProjectStatusDto.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Application\\Dto\\ProjectStatusDto.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Dto\\ProjectStatusDto.cs",
@@ -1250,7 +1230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
@@ -1262,7 +1242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\GenericRepository.cs",
@@ -1286,7 +1266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PersistanceServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\PersistanceServiceRegistration.cs",
@@ -1310,7 +1290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Domain\\Persistance\\IGenericRepository.cs",
@@ -1322,7 +1302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "ProjectStatusRepository.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Infrastructure\\Repositories\\ProjectStatusRepository.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Repositories\\ProjectStatusRepository.cs",
@@ -1343,6 +1323,26 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-28T08:39:46.316Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }

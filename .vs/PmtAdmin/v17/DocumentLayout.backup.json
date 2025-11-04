@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{042DBBCC-9A29-4B7F-8305-63E3E10AAAB1}|PmtAdmin.Api\\PmtAdmin.Api.csproj|solutionrelative:pmtadmin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\utilities\\passwordgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\services\\ipasswordhashingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\context\\seeding\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA445B6D-D901-447C-A140-AE08B8817A02}|PmtAdmin.Application\\PmtAdmin.Application.csproj|solutionrelative:pmtadmin.application\\handlers\\settings\\createsuperadmincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\fuhad.k\\onedrive\\experion\\.net\\myproject\\pmtadmin.infrastructure\\persistanceserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -554,7 +554,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -562,20 +562,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PasswordGenerator.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Utilities\\PasswordGenerator.cs*",
+              "RelativeToolTip": "PmtAdmin.Application\\Utilities\\PasswordGenerator.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T13:31:49.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\appsettings.json",
               "RelativeDocumentMoniker": "PmtAdmin.Api\\appsettings.json",
@@ -588,33 +588,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
-              "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:38:02.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
               "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Services\\EmailService.cs",
               "RelativeToolTip": "PmtAdmin.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowAkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T13:31:38.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IPasswordHashingService.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Services\\IPasswordHashingService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Services\\IPasswordHashingService.cs",
@@ -627,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Application\\Interfaces\\IEmailService.cs",
@@ -640,7 +627,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateSuperAdminCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAuwD0AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T17:26:02.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
+              "RelativeDocumentMoniker": "PmtAdmin.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Api\\Program.cs",
+              "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T11:38:02.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DatabaseSeeder.cs",
               "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
               "RelativeDocumentMoniker": "PmtAdmin.Infrastructure\\Context\\Seeding\\DatabaseSeeder.cs",
@@ -649,19 +662,6 @@
               "ViewState": "AgIAAD8CAAAAAAAAAAAcwIMDAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T12:58:26.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateSuperAdminCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "RelativeDocumentMoniker": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "ToolTip": "C:\\Users\\fuhad.k\\OneDrive\\Experion\\.NET\\MyProject\\PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "RelativeToolTip": "PmtAdmin.Application\\Handlers\\Settings\\CreateSuperAdminCommandHandler.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowEQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T17:26:02.328Z",
               "EditorCaption": ""
             },
             {

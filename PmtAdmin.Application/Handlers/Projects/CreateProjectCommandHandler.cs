@@ -17,15 +17,18 @@ namespace PmtAdmin.Application.Handlers.Projects
     {
         private readonly IProjectRepository _projectRepository;
         private readonly IBoardRepository _boardRepository;
+        private readonly IProjectMemberRepository _projectMemberRepository;
         private readonly IMapper _mapper;
 
         public CreateProjectCommandHandler(
             IProjectRepository projectRepository,
             IBoardRepository boardRepository,
+            IProjectMemberRepository projectMemberRepository,
             IMapper mapper)
         {
             _projectRepository = projectRepository;
             _boardRepository = boardRepository;
+            _projectMemberRepository = projectMemberRepository;
             _mapper = mapper;
         }
 
@@ -72,6 +75,16 @@ namespace PmtAdmin.Application.Handlers.Projects
                 // Create the project
                 var createdProject = await _projectRepository.CreateAsync(project);
 
+                // Add project manager as project member if ProjectManagerId is provided
+                if (request.ProjectManagerId.HasValue)
+                {
+                    await AddProjectManagerAsProjectMemberAsync(
+                        createdProject.Id, 
+                        request.ProjectManagerId.Value, 
+                        request.ProjectManagerRoleId, 
+                        request.CreatedBy);
+                }
+
                 // Create default board with columns using project name
                 await CreateDefaultBoardAsync(createdProject.Id, createdProject.Name, request.CreatedBy);
 
@@ -85,6 +98,37 @@ namespace PmtAdmin.Application.Handlers.Projects
             {
                 var message = ex.InnerException?.Message ?? ex.Message;
                 return ApiResponse<ProjectDTO>.Fail($"Error creating project: {message}");
+            }
+        }
+
+        private async Task AddProjectManagerAsProjectMemberAsync(Guid projectId, int projectManagerId, int? projectManagerRoleId, int? createdBy)
+        {
+            try
+            {
+                // Check if project manager is already added as project member
+                var existingMember = await _projectMemberRepository.GetByProjectAndUserAsync(projectId, projectManagerId);
+                if (existingMember != null)
+                {
+                    return; // Already exists, no need to add again
+                }
+
+                var projectMember = new ProjectMember
+                {
+                    ProjectId = projectId,
+                    UserId = projectManagerId,
+                    RoleId = projectManagerRoleId, // Use the ProjectManagerRoleId from the project
+                    IsOwner = true, // Project manager can be considered as owner
+                    AddedAt = DateTimeOffset.UtcNow,
+                    AddedBy = createdBy
+                };
+
+                await _projectMemberRepository.CreateAsync(projectMember);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception but don't fail the entire project creation
+                // You might want to log this or handle it according to your logging strategy
+                throw new Exception($"Error adding project manager as project member: {ex.Message}", ex);
             }
         }
 

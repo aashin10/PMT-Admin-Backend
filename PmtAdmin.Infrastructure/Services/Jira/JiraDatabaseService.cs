@@ -19,7 +19,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             _mapper = mapper;
         }
 
-        public async Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects)
+        public async Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects, int importedBy)
         {
             List<OperationResult> operationResults = new List<OperationResult>();
             var response = new JiraImportDatabaseResult();
@@ -191,7 +191,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         {
                             Name = b.Name + " Team",
                             ProjectId = p.Id,
-                            LeadId = pm_id
+                            LeadId = pm_id,
+                            CreatedBy = importedBy
                         };
 
                         _context.Teams.Add(t);
@@ -199,6 +200,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                         b.TeamId = t.Id;
                         b.ProjectId = p.Id;
+                        b.CreatedBy = importedBy;
+
                         boards.Add(b);
                         _context.Boards.Add(b);
                         await _context.SaveChangesAsync();

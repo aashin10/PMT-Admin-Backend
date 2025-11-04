@@ -5,6 +5,6 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 {
     public interface IJiraDatabaseService
     {
-        public Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects);
+        public Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects, int importedby);
     }
 }

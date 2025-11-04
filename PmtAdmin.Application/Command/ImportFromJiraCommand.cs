@@ -11,5 +11,7 @@ namespace PmtAdmin.Application.Command
         public string[] ProjectIds { get; set; }
 
         public String JiraAccessToken { get; set; } = string.Empty;
+
+        public int ImportedBy { get; set; }
     }
 }

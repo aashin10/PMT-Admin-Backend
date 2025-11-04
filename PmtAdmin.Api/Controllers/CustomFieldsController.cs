@@ -18,13 +18,14 @@ namespace PmtAdmin.Api.Controllers
         {
             _mediator = mediator;
         }
+
         [HttpPost("create")]
         public async Task<ActionResult<ApiResponse<CustomFieldDTO>>> CreateCustomField([FromBody] CreateCustomFieldCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);
         }
-        
+
         [HttpDelete("delete/{id}")]
         public async Task<ActionResult<ApiResponse<string>>> DeleteCustomField(Guid id)
         {

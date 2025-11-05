@@ -19,7 +19,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             _mapper = mapper;
         }
 
-        public async Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects)
+        public async Task<JiraImportDatabaseResult> PopulateDataBase(List<JiraProjectData> projects, int importedBy)
         {
             List<OperationResult> operationResults = new List<OperationResult>();
             var response = new JiraImportDatabaseResult();
@@ -27,11 +27,21 @@ namespace PmtAdmin.Infrastructure.Services.Jira
             var returnUsers = new List<User>();
             var returnProjects = new List<Project>();
 
-            var issueStatuses = new List<string> { "To Do", "In Progress", "Done" };
+            var issueStatuses = new List<string> { "TO_DO", "IN_PROGRESS", "DONE" };
+
             var existingStatuses = _context.Statuses
                 .Where(s => issueStatuses.Contains(s.StatusName))
                 .Select(s => s.StatusName)
                 .ToList();
+
+            var issuePriorityMappingScheme = new Dictionary<string, string>
+{
+    { "Highest", "CRITICAL" },
+    { "High", "HIGH" },
+    { "Medium", "MEDIUM" },
+    { "Low", "LOW" },
+    { "Lowest", "LOW" }
+};
 
             var JiraSprintStateToProjectStatusMappingScheme = new Dictionary<string, string>
             {
@@ -102,6 +112,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     bool pmExists = await _context.ProjectMembers
                         .AnyAsync(pm => pm.ProjectId == p.Id && pm.UserId == user.Id);
 
+                    int pm_id = 0;
+
                     if (!pmExists)
                     {
                         var pm = new ProjectMember
@@ -113,6 +125,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         ProjectMembers.Add(user.Id);
                         await _context.ProjectMembers.AddAsync(pm);
                         await _context.SaveChangesAsync();
+                        pm_id = pm.Id;
                     }
 
 
@@ -186,7 +199,9 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                         var t = new Team
                         {
                             Name = b.Name + " Team",
-                            ProjectId = p.Id
+                            ProjectId = p.Id,
+                            LeadId = pm_id,
+                            // CreatedBy = importedBy
                         };
 
                         _context.Teams.Add(t);
@@ -194,6 +209,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
 
                         b.TeamId = t.Id;
                         b.ProjectId = p.Id;
+                        b.CreatedBy = importedBy;
+
                         boards.Add(b);
                         _context.Boards.Add(b);
                         await _context.SaveChangesAsync();
@@ -209,7 +226,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                 sp.TeamId = t.Id;
                                 sp.Status = JiraSprintStateToProjectStatusMappingScheme.ContainsKey(sprint.State)
                                     ? JiraSprintStateToProjectStatusMappingScheme[sprint.State]
-                                    : "Planned";
+                                    : "PLANNED";
                                 sprints.Add(sp);
                                 SprintEntityJiraSprintModelMappingScheme[sprint.Id] = sp.Id.ToString();
                             }
@@ -232,11 +249,18 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                             {
                                 var i = _mapper.Map<Issue>(issue);
 
+                                if (!string.IsNullOrWhiteSpace(i.Priority) && issuePriorityMappingScheme.ContainsKey(i.Priority))
+                                {
+                                    i.Priority = issuePriorityMappingScheme[i.Priority];
+                                }
+
+
                                 if (string.Equals(i.Type, "subtask", StringComparison.OrdinalIgnoreCase))
                                     continue;
 
                                 i.ProjectId = p.Id;
                                 i.Title = issue.Summary;
+                                i.Type = issue.IssueType.Name.ToUpper();
 
                                 if (issue.Sprint != null)
                                     i.SprintId = SprintEntityJiraSprintModelMappingScheme.ContainsKey(issue.Sprint.Id)
@@ -256,7 +280,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     _context.BoardColumns.Add(boardcolumn);
                                     await _context.SaveChangesAsync();
 
-                                    var tempStatusName = issue.Status.Name.ToUpper().Replace(" ", "");
+                                    var tempStatusName = issue.Status.Name.ToUpper().Replace(" ", "_");
                                     var searchedStatus = allStatuses.Find(s => s.StatusName == tempStatusName);
 
                                     Status statusToUse;
@@ -273,6 +297,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     }
 
                                     boardcolumn.StatusId = statusToUse.Id;
+                                    i.StatusId = statusToUse.Id;
 
                                     await _context.SaveChangesAsync();
 
@@ -308,6 +333,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Assignee);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+                                            returnUsers.Add(existingUser);
 
                                         }
 
@@ -351,6 +377,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                             existingUser = _mapper.Map<User>(issue.Reporter);
                                             await _context.User.AddAsync(existingUser);
                                             await _context.SaveChangesAsync();
+                                            returnUsers.Add(existingUser);
 
                                         }
 
@@ -389,6 +416,8 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                                     ? new DateTimeOffset(issue.DueDate.Value.ToUniversalTime(), TimeSpan.Zero)
                                     : null;
 
+
+
                                 issues.Add(i);
                                 IssueEntityJiraIssueModelMappingScheme[issue.Id] = i.Id.ToString();
                             }
@@ -424,7 +453,7 @@ namespace PmtAdmin.Infrastructure.Services.Jira
                     });
 
                     //returnUsers.Add(user);
-                    returnUsers.AddRange(tempUsers);
+                    //returnUsers.AddRange(tempUsers);
                     returnProjects.Add(p);
                     await transaction.CommitAsync();
                 }

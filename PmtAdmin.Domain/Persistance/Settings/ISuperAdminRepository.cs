@@ -17,5 +17,6 @@ namespace PmtAdmin.Domain.Persistance.Settings
         Task<int> CountActiveSuperAdminsAsync();
         Task<int> CountActiveEnabledSuperAdminsAsync();
         Task<User> SoftDeleteAsync(User user);
+
     }
 }

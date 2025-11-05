@@ -28,7 +28,7 @@ namespace PmtAdmin.Application.Handlers.Jira
                 var project = await _jiraService.GetFullProjectDataAsync(request.BaseUrl, request.JiraAccessToken, id.Trim());
                 results.Add(project);
             }
-            var users = await _jiraDatabaseService.PopulateDataBase(results);
+            var users = await _jiraDatabaseService.PopulateDataBase(results, request.ImportedBy);
 
             var usersDto = _mapper.Map<List<UserDto>>(users.Users);
             var projectsDto = _mapper.Map<List<ProjectDTO>>(users.Projects);

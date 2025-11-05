@@ -361,6 +361,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmtadmin.infrastructure\\migrations\\20251102015242_localprojectdatachange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65B42A82-A3DF-449A-8624-E2470FAF02E5}|PmtAdmin.Infrastructure\\PmtAdmin.Infrastructure.csproj|solutionrelative:pmtadmin.infrastructure\\migrations\\20251102015242_localprojectdatachange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\settings\\handler\\comprehensivecreatesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\settings\\handler\\comprehensivecreatesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\settings\\handler\\comprehensivegetsuperadminqueryhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\settings\\handler\\comprehensivegetsuperadminqueryhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\settings\\handler\\comprehensiveupdatesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\settings\\handler\\comprehensiveupdatesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\settings\\handler\\comprehensivedeletesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\settings\\handler\\comprehensivedeletesuperadmincommandhandlertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|c:\\users\\mohamed.nishan\\onedrive - experion technologies (india) pvt. ltd\\desktop\\test\\backend\\pmt_admin.test\\settings\\mock\\superadminmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B085CF7-5359-4D97-AABC-187D4F325F7A}|Pmt_Admin.Test\\Pmt_Admin.Test.csproj|solutionrelative:pmt_admin.test\\settings\\mock\\superadminmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -370,7 +390,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -394,6 +414,66 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "SuperAdminMock.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Settings\\Mock\\SuperAdminMock.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAMBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:53:56.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "ComprehensiveDeleteSuperAdminCommandHandlerTest.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveDeleteSuperAdminCommandHandlerTest.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveDeleteSuperAdminCommandHandlerTest.cs",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveDeleteSuperAdminCommandHandlerTest.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveDeleteSuperAdminCommandHandlerTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:20:26.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "ComprehensiveUpdateSuperAdminCommandHandlerTest.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveUpdateSuperAdminCommandHandlerTest.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveUpdateSuperAdminCommandHandlerTest.cs",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveUpdateSuperAdminCommandHandlerTest.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveUpdateSuperAdminCommandHandlerTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIICAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:19:11.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "ComprehensiveGetSuperAdminQueryHandlerTest.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveGetSuperAdminQueryHandlerTest.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveGetSuperAdminQueryHandlerTest.cs",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveGetSuperAdminQueryHandlerTest.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveGetSuperAdminQueryHandlerTest.cs",
+              "ViewState": "AgIAAMkBAAAAAAAAAABBwMoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:17:08.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "ComprehensiveCreateSuperAdminCommandHandlerTest.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveCreateSuperAdminCommandHandlerTest.cs",
+              "RelativeDocumentMoniker": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveCreateSuperAdminCommandHandlerTest.cs",
+              "ToolTip": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveCreateSuperAdminCommandHandlerTest.cs",
+              "RelativeToolTip": "Pmt_Admin.Test\\Settings\\Handler\\ComprehensiveCreateSuperAdminCommandHandlerTest.cs",
+              "ViewState": "AgIAAA8CAAAAAAAAAABBwBACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:15:58.897Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\mohamed.nishan\\OneDrive - Experion Technologies (India) Pvt. Ltd\\Desktop\\test\\backend\\PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
@@ -402,8 +482,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\Dashboard\\DashboardController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:38:29.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:38:29.092Z"
             },
             {
               "$type": "Document",
@@ -428,8 +507,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\PermissionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:36:59.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:36:59.676Z"
             },
             {
               "$type": "Document",
@@ -441,8 +519,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\JiraController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:36:34.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:36:34.655Z"
             },
             {
               "$type": "Document",
@@ -454,8 +531,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\DuController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwAsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:36:16.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:36:16.194Z"
             },
             {
               "$type": "Document",
@@ -467,8 +543,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\CustomFieldsController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:35:12.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:35:12.847Z"
             },
             {
               "$type": "Document",
@@ -480,8 +555,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\AuthController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:35:06.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:35:06.073Z"
             },
             {
               "$type": "Document",
@@ -493,8 +567,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T04:35:02.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-04T04:35:02.221Z"
             },
             {
               "$type": "Document",
@@ -554,8 +627,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T05:49:12.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T05:49:12.629Z"
             },
             {
               "$type": "Document",
@@ -783,8 +855,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Program.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T05:34:53.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T05:34:53.233Z"
             },
             {
               "$type": "Document",
@@ -1011,8 +1082,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-30T09:00:34.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:00:34.837Z"
             },
             {
               "$type": "Document",
@@ -1312,8 +1382,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\StatusController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:22:38.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T09:22:38.663Z"
             },
             {
               "$type": "Document",
@@ -1397,8 +1466,7 @@
               "RelativeToolTip": "PmtAdmin.Api\\Controllers\\ProjectsController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:13:18.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T09:13:18.286Z"
             },
             {
               "$type": "Document",

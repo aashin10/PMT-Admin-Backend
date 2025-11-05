@@ -49,8 +49,23 @@ namespace Pmt_Admin.Test.Settings.Handler
             };
 
             var mappedUser = new User { Name = command.Name, Email = command.Email };
-            var savedUser = SuperAdminMock.CreateSavedSuperAdmin();
-            var expectedDto = SuperAdminMock.CreateNewSuperAdminDto();
+            var savedUser = new User 
+            { 
+                Id = 100,
+                Name = command.Name, 
+                Email = command.Email,
+                IsSuperAdmin = true,
+                IsActive = true,
+                IsDeleted = false,
+                CreatedAt = DateTime.UtcNow
+            };
+            var expectedDto = new SuperAdminDto
+            {
+                Id = 100,
+                Name = command.Name,
+                Email = command.Email,
+                IsActive = true
+            };
 
             _mapperMock.Setup(m => m.Map<User>(command)).Returns(mappedUser);
             _superAdminRepositoryMock.Setup(repo => repo.CreateAsync(It.IsAny<User>())).ReturnsAsync(savedUser);

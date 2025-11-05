@@ -73,7 +73,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(allUsers);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act
@@ -102,7 +102,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(allUsers);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act
@@ -136,7 +136,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(superAdmins);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act
@@ -166,7 +166,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(superAdmins);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act
@@ -194,7 +194,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(superAdmins);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act
@@ -223,7 +223,7 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock.Setup(repo => repo.GetAllAsync())
                 .ReturnsAsync(superAdmins);
             _mapperMock.Setup(m => m.Map<List<SuperAdminDto>>(It.IsAny<List<User>>()))
-                .Callback<List<User>>(users => capturedUsers = users)
+                .Callback<object>(users => capturedUsers = (List<User>)users)
                 .Returns(new List<SuperAdminDto>());
 
             // Act

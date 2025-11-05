@@ -5,6 +5,7 @@ using PmtAdmin.Application.Command.Settings;
 using PmtAdmin.Application.CustomException;
 using PmtAdmin.Application.Dto.SettingsDTO;
 using PmtAdmin.Application.Handlers.Settings;
+using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance.Settings;
 using Shouldly;
@@ -15,15 +16,18 @@ namespace Pmt_Admin.Test.Settings.Handler
     {
         private readonly Mock<IMapper> _mapperMock;
         private readonly Mock<ISuperAdminRepository> _superAdminRepositoryMock;
+        private readonly Mock<IEmailService> _emailServiceMock;
         private readonly CreateSuperAdminCommandHandler _handler;
 
         public CreateSuperAdminCommandHandlerTest()
         {
             _mapperMock = new Mock<IMapper>();
             _superAdminRepositoryMock = new Mock<ISuperAdminRepository>();
+            _emailServiceMock = new Mock<IEmailService>();
             _handler = new CreateSuperAdminCommandHandler(
                 _superAdminRepositoryMock.Object,
-                _mapperMock.Object);
+                _mapperMock.Object,
+                _emailServiceMock.Object);
         }
 
         [Fact]
@@ -51,6 +55,10 @@ namespace Pmt_Admin.Test.Settings.Handler
             _mapperMock
                 .Setup(m => m.Map<SuperAdminDto>(savedUser))
                 .Returns(expectedDto);
+
+            _emailServiceMock
+                .Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -108,6 +116,10 @@ namespace Pmt_Admin.Test.Settings.Handler
                 .Setup(m => m.Map<SuperAdminDto>(It.IsAny<User>()))
                 .Returns(new SuperAdminDto());
 
+            _emailServiceMock
+                .Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
             // Act
             await _handler.Handle(command, CancellationToken.None);
 
@@ -137,6 +149,10 @@ namespace Pmt_Admin.Test.Settings.Handler
             _superAdminRepositoryMock
                 .Setup(repo => repo.CreateAsync(It.IsAny<User>()))
                 .ThrowsAsync(new DuplicateEntryException("Email already exists"));
+
+            _emailServiceMock
+                .Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act & Assert
             var exception = await Should.ThrowAsync<DuplicateEntryException>(
@@ -195,6 +211,10 @@ namespace Pmt_Admin.Test.Settings.Handler
                 .Setup(m => m.Map<SuperAdminDto>(It.IsAny<User>()))
                 .Returns(new SuperAdminDto());
 
+            _emailServiceMock
+                .Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
+
             // Act
             await _handler.Handle(command, CancellationToken.None);
 
@@ -229,6 +249,10 @@ namespace Pmt_Admin.Test.Settings.Handler
             _mapperMock
                 .Setup(m => m.Map<SuperAdminDto>(It.IsAny<User>()))
                 .Returns(new SuperAdminDto());
+
+            _emailServiceMock
+                .Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             var beforeTest = DateTime.UtcNow;
 

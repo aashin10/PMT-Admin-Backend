@@ -4,6 +4,7 @@ using Moq;
 using PmtAdmin.Application.Command;
 using PmtAdmin.Application.Dto;
 using PmtAdmin.Application.Handlers.Users;
+using PmtAdmin.Application.Interfaces;
 using PmtAdmin.Application.Services;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
@@ -21,6 +22,7 @@ namespace Pmt_Admin.Test.Handlers.Users
         private readonly Mock<IUserRepository> _userRepositoryMock;
         private readonly Mock<IMapper> _mapperMock;
         private readonly Mock<IPasswordHashingService> _passwordHashingServiceMock;
+        private readonly Mock<IEmailService> _emailServiceMock;
         private readonly CreateUserCommandHandler _handler;
 
         public CreateUserCommandHandlerTests()
@@ -28,10 +30,12 @@ namespace Pmt_Admin.Test.Handlers.Users
             _userRepositoryMock = new Mock<IUserRepository>();
             _mapperMock = new Mock<IMapper>();
             _passwordHashingServiceMock = new Mock<IPasswordHashingService>();
+            _emailServiceMock = new Mock<IEmailService>();
             _handler = new CreateUserCommandHandler(
                 _userRepositoryMock.Object,
                 _mapperMock.Object,
-                _passwordHashingServiceMock.Object);
+                _passwordHashingServiceMock.Object,
+                _emailServiceMock.Object);
         }
 
         [Fact]
@@ -79,6 +83,8 @@ namespace Pmt_Admin.Test.Handlers.Users
             _passwordHashingServiceMock.Setup(x => x.HashPassword(It.IsAny<string>())).Returns("hashed_password");
             _userRepositoryMock.Setup(x => x.CreateAsync(It.IsAny<User>())).ReturnsAsync(createdUser);
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>())).Returns(new List<UserDto> { userDto });
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -188,15 +194,12 @@ namespace Pmt_Admin.Test.Handlers.Users
         public async Task Handle_WhenMissingRequiredFields_ReturnsError()
         {
             // Arrange
-            var command = new CreateUserCommand
+            var command = new List<CreateUserDto>
             {
-                Users = new List<CreateUserDto>
+                new CreateUserDto
                 {
-                    new CreateUserDto
-                    {
-                        Email = "", // Missing email
-                        Name = "John Doe"
-                    }
+                    Email = "", // Missing email
+                    Name = "John Doe"
                 }
             };
 
@@ -246,6 +249,8 @@ namespace Pmt_Admin.Test.Handlers.Users
                 .ReturnsAsync(createdUsers[1])
                 .ReturnsAsync(createdUsers[2]);
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>())).Returns(userDtos);
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -291,6 +296,8 @@ namespace Pmt_Admin.Test.Handlers.Users
                 .ReturnsAsync(createdUsers[0])
                 .ReturnsAsync(createdUsers[1]);
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>())).Returns(userDtos);
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -330,6 +337,8 @@ namespace Pmt_Admin.Test.Handlers.Users
                 .ReturnsAsync((User u) => u);
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>()))
                 .Returns(new List<UserDto> { new UserDto() });
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -365,6 +374,8 @@ namespace Pmt_Admin.Test.Handlers.Users
                 .ReturnsAsync((User u) => u);
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>()))
                 .Returns(new List<UserDto> { new UserDto() });
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);
@@ -400,6 +411,8 @@ namespace Pmt_Admin.Test.Handlers.Users
             _userRepositoryMock.Setup(x => x.CreateAsync(It.IsAny<User>())).ReturnsAsync(new User());
             _mapperMock.Setup(x => x.Map<List<UserDto>>(It.IsAny<List<User>>()))
                 .Returns(new List<UserDto> { new UserDto() });
+            _emailServiceMock.Setup(e => e.SendEmailAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.CompletedTask);
 
             // Act
             var result = await _handler.Handle(command, CancellationToken.None);

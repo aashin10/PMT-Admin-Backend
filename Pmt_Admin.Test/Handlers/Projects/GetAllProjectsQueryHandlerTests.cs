@@ -1,4 +1,5 @@
 
+
 using AutoMapper;
 using FluentAssertions;
 using Moq;
@@ -367,7 +368,7 @@ namespace Pmt_Admin.Test.Handlers.Projects
 
             // Assert
             result.Should().NotBeNull();
-            result.Data.Items.First().IsImportedFromJira.Should().BeNull();
+            result.Data.Items.First().IsImportedFromJira.Should().NotHaveValue();
         }
     }
 }

@@ -85,7 +85,7 @@ namespace PmtAdmin.Application.Handlers.Projects
                         Id = p.ProjectManager.Id,
                         Name = p.ProjectManager.Name ?? string.Empty
                     } : null,
-                    IsImportedFromJira = p.IsImportedFromJira ?? false
+                    IsImportedFromJira = p.IsImportedFromJira
                 }).ToList();
 
                 // Calculate total pages

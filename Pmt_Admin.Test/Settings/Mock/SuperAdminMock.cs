@@ -47,6 +47,9 @@ namespace Pmt_Admin.Test.Settings.Mock
             };
         }
 
+        // Alias method for compatibility
+        public static List<User> GetAllSuperAdmins() => GetSuperAdminList();
+
         public static List<SuperAdminDto> GetSuperAdminDtoList()
         {
             return new List<SuperAdminDto>
@@ -74,6 +77,9 @@ namespace Pmt_Admin.Test.Settings.Mock
                 }
             };
         }
+
+        // Alias method for compatibility
+        public static List<SuperAdminDto> GetSuperAdminDtos() => GetSuperAdminDtoList();
 
         public static User GetSuperAdminWithIdOne()
         {

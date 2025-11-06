@@ -26,7 +26,7 @@ namespace PmtAdmin.Application.Handlers.Role
                 var existingRole = await _rolesRepository.GetById(request.Id);
                 if (existingRole == null)
                 {
-                    return ApiResponse<string>.Fail("Role not found");
+                    return ApiResponse<string>.NotFound("Role not found");
                 }
 
                 // Delete the role

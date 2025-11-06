@@ -110,7 +110,7 @@ namespace Pmt_Admin.Test.Dashboard.Handler
             // Assert
             result.ShouldNotBeNull();
             result.Status.ShouldBe(404); // Not Found status
-            result.Message.ShouldBe("No projects found.");
+            result.Message.ShouldBe("No active projects found.");
             result.Data.ShouldBeNull();
 
             _dashboardRepositoryMock.Verify(repo => repo.GetDashboardDataAsync(), Times.Once);
@@ -132,7 +132,7 @@ namespace Pmt_Admin.Test.Dashboard.Handler
             // Assert
             result.ShouldNotBeNull();
             result.Status.ShouldBe(404); // Not Found status
-            result.Message.ShouldBe("No projects found.");
+            result.Message.ShouldBe("No active projects found.");
             result.Data.ShouldBeNull();
         }
 

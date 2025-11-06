@@ -31,7 +31,14 @@ namespace Pmt_Admin.Test.Handlers.Projects
         public async Task Handle_ProjectNotFound_ReturnsNotFound()
         {
             // Arrange
-            var command = new UpdateProjectCommand { Id = Guid.NewGuid() };
+            var command = new UpdateProjectCommand 
+            { 
+                Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1
+            };
             _projectRepositoryMock.Setup(r => r.GetProjectByIdWithDetailsAsync(command.Id))
                 .ReturnsAsync((Project)null);
 
@@ -49,6 +56,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var command = new UpdateProjectCommand
             {
                 Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1,
                 Metadata = "{invalidJson"
             };
             var project = new Project { Id = command.Id, CustomFields = new List<CustomField>() };
@@ -69,6 +80,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var command = new UpdateProjectCommand
             {
                 Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1,
                 Metadata = string.Empty
             };
             var project = new Project { Id = command.Id, CustomFields = new List<CustomField>() };
@@ -96,6 +111,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var command = new UpdateProjectCommand
             {
                 Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1,
                 CustomFields = new List<CustomFieldDTO>() // empty list
             };
             var project = new Project
@@ -131,6 +150,10 @@ namespace Pmt_Admin.Test.Handlers.Projects
             var command = new UpdateProjectCommand
             {
                 Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1,
                 CustomFields = new List<CustomFieldDTO>
             {
                 new CustomFieldDTO { Id = existingFieldId, Name = "UpdatedName", Value = "UpdatedValue" },
@@ -171,6 +194,9 @@ namespace Pmt_Admin.Test.Handlers.Projects
             {
                 Id = Guid.NewGuid(),
                 Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1,
                 CustomFields = null
             };
             var project = new Project { Id = command.Id, CustomFields = new List<CustomField>() };
@@ -196,7 +222,14 @@ namespace Pmt_Admin.Test.Handlers.Projects
         public async Task Handle_RepositoryThrowsException_ReturnsFail()
         {
             // Arrange
-            var command = new UpdateProjectCommand { Id = Guid.NewGuid() };
+            var command = new UpdateProjectCommand 
+            { 
+                Id = Guid.NewGuid(),
+                Name = "Test Project",
+                Key = "TEST001",
+                StatusId = 1,
+                DeliveryUnitId = 1
+            };
             _projectRepositoryMock.Setup(r => r.GetProjectByIdWithDetailsAsync(command.Id))
                 .ThrowsAsync(new Exception("DB error"));
 

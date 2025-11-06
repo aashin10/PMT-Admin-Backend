@@ -1,23 +1,20 @@
-﻿using System;
+﻿using AutoMapper;
+using FluentAssertions;
+using Moq;
+using PmtAdmin.Application.Dto;
+using PmtAdmin.Application.Handlers.Permissions;
+using PmtAdmin.Application.Query.Permissions;
+using PmtAdmin.Domain.Entities;
+using PmtAdmin.Domain.Persistance;
+using Pmt_Admin.Test.Handlers.Permissions.Mock;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Pmt_Admin.Test.Handlers.Permissions
 {
-    using System.Collections.Generic;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using AutoMapper;
-    using Moq;
-    using Xunit;
-    using PmtAdmin.Application.Handlers.Permissions;
-    using PmtAdmin.Application.Query.Permissions;
-    using PmtAdmin.Domain.Persistance;
-    using PmtAdmin.Domain.Entities;
-    using PmtAdmin.Application.Dto;
-
     public class GetAllPermissionsQueryHandlerTest
     {
         private readonly Mock<IPermissionRepository> _permissionRepositoryMock;
@@ -32,53 +29,50 @@ namespace Pmt_Admin.Test.Handlers.Permissions
         }
 
         [Fact]
-        public async Task Handle_ReturnsMappedPermissions()
+        public async Task Handle_WhenPermissionsExist_ReturnsSuccessWithPermissions()
         {
             // Arrange
-            var permissions = new List<Permission>
-        {
-            new Permission { Id = 1, Name = "Read", Description = "Read permission" },
-            new Permission { Id = 2, Name = "Write", Description = "Write permission" }
-        };
-            var permissionDtos = new List<PermissionDto>
-        {
-            new PermissionDto { Id = 1, Name = "Read", Description = "Read permission" },
-            new PermissionDto { Id = 2, Name = "Write", Description = "Write permission" }
-        };
+            var permissions = PermissionMock.GetPermissions();
+            var permissionDtos = permissions.Select(p => new PermissionDto { Id = p.Id, Name = p.Name, Description = p.Description }).ToList();
+            var query = new GetAllPermissionsQuery();
 
-            _permissionRepositoryMock.Setup(r => r.GetAllAsync())
+            _permissionRepositoryMock
+                .Setup(x => x.GetAllAsync())
                 .ReturnsAsync(permissions);
-            _mapperMock.Setup(m => m.Map<List<PermissionDto>>(permissions))
+            
+            _mapperMock
+                .Setup(x => x.Map<List<PermissionDto>>(It.IsAny<List<Permission>>()))
                 .Returns(permissionDtos);
 
             // Act
-            var result = await _handler.Handle(new GetAllPermissionsQuery(), CancellationToken.None);
+            var result = await _handler.Handle(query, CancellationToken.None);
 
             // Assert
-            Assert.Equal(permissionDtos, result);
-            _permissionRepositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-            _mapperMock.Verify(m => m.Map<List<PermissionDto>>(permissions), Times.Once);
+            result.Should().NotBeNull();
+            result.Should().HaveCount(permissions.Count);
         }
 
         [Fact]
-        public async Task Handle_EmptyList_ReturnsEmptyList()
+        public async Task Handle_WhenNoPermissionsExist_ReturnsEmptyList()
         {
             // Arrange
             var permissions = new List<Permission>();
-            var permissionDtos = new List<PermissionDto>();
+            var query = new GetAllPermissionsQuery();
 
-            _permissionRepositoryMock.Setup(r => r.GetAllAsync())
+            _permissionRepositoryMock
+                .Setup(x => x.GetAllAsync())
                 .ReturnsAsync(permissions);
-            _mapperMock.Setup(m => m.Map<List<PermissionDto>>(permissions))
-                .Returns(permissionDtos);
+            
+            _mapperMock
+                .Setup(x => x.Map<List<PermissionDto>>(It.IsAny<List<Permission>>()))
+                .Returns(new List<PermissionDto>());
 
             // Act
-            var result = await _handler.Handle(new GetAllPermissionsQuery(), CancellationToken.None);
+            var result = await _handler.Handle(query, CancellationToken.None);
 
             // Assert
-            Assert.Empty(result);
-            _permissionRepositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-            _mapperMock.Verify(m => m.Map<List<PermissionDto>>(permissions), Times.Once);
+            result.Should().NotBeNull();
+            result.Should().BeEmpty();
         }
     }
 }

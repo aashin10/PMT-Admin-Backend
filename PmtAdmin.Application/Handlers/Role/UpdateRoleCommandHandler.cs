@@ -34,7 +34,7 @@ namespace PmtAdmin.Application.Handlers.Role
                 // Step 1: Get the existing role with its permissions (tracked by EF)
                 var role = await _rolesRepository.GetById(request.Id);
                 if (role == null)
-                    return ApiResponse<RoleDto>.Fail("Role not found.");
+                    return ApiResponse<RoleDto>.NotFound("Role not found.");
 
                 // Step 2: Update basic fields
                 role.Name = request.Name;

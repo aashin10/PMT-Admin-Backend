@@ -5,10 +5,7 @@ using PmtAdmin.Application.Query.Delivery_Unit;
 using PmtAdmin.Application.Wrappers;
 using PmtAdmin.Domain.Entities;
 using PmtAdmin.Domain.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PmtAdmin.Application.Handlers.Du
@@ -27,10 +24,9 @@ namespace PmtAdmin.Application.Handlers.Du
         public async Task<ApiResponse<DuDto>> Handle(CreateDuCommand request, CancellationToken cancellationToken)
         {
             var duEntity = _mapper.Map<DeliveryUnit>(request);
-            // await _repository.CreateNewDu(duEntity);
             await _repository.CreateNewDu(duEntity, cancellationToken);
             var duDto = _mapper.Map<DuDto>(duEntity);
-            return ApiResponse<DuDto>.Success(duDto, "Delivery Unit created successfully");
+            return ApiResponse<DuDto>.Created(duDto, "Delivery Unit created successfully");
         }
 
     }
